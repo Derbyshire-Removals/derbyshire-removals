@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-between">
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
-            <h3 className="text-xl font-bold mb-4">Derbyshire Home Removals</h3>
+            <h3 className="text-xl font-bold mb-4">Derbyshire Removals</h3>
             <p>Professional moving services across Derbyshire</p>
           </div>
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
@@ -28,7 +28,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="border-t border-gray-700 mt-8 pt-6 text-center">
-          <p>&copy; 2024 Derbyshire Home Removals. All rights reserved.</p>
+          <p>&copy; 2024 Derbyshire Removals. All rights reserved.</p>
         </div>
       </div>
     </footer>
