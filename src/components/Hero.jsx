@@ -4,17 +4,35 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
-const ContactForm = ({ title, buttonText }) => (
+const ContactForm = ({ fields, buttonText }) => (
   <form className="space-y-4">
-    <Input type="text" placeholder="Name" />
-    <Input type="email" placeholder="Email" />
-    <Input type="tel" placeholder="Phone" />
-    <Textarea placeholder="Message" />
+    {fields.map((field, index) => (
+      field.type === 'textarea' ? (
+        <Textarea key={index} placeholder={field.placeholder} />
+      ) : (
+        <Input key={index} type={field.type} placeholder={field.placeholder} />
+      )
+    ))}
     <Button type="submit" className="w-full">{buttonText}</Button>
   </form>
 );
 
 const Hero = () => {
+  const callbackFields = [
+    { type: 'text', placeholder: 'Name' },
+    { type: 'email', placeholder: 'Email' },
+    { type: 'tel', placeholder: 'Phone' },
+    { type: 'date', placeholder: 'Preferred Callback Date' },
+  ];
+
+  const visitFields = [
+    { type: 'text', placeholder: 'Name' },
+    { type: 'email', placeholder: 'Email' },
+    { type: 'tel', placeholder: 'Phone' },
+    { type: 'date', placeholder: 'Preferred Visit Date' },
+    { type: 'textarea', placeholder: 'Address' },
+  ];
+
   return (
     <section className="bg-blue-600 text-white py-20">
       <div className="container mx-auto px-4 flex flex-wrap items-center">
@@ -32,10 +50,10 @@ const Hero = () => {
                 <TabsTrigger value="visit">Home Visit Request</TabsTrigger>
               </TabsList>
               <TabsContent value="callback">
-                <ContactForm title="Request Callback" buttonText="Request Callback" />
+                <ContactForm fields={callbackFields} buttonText="Request Callback" />
               </TabsContent>
               <TabsContent value="visit">
-                <ContactForm title="Home Visit Request" buttonText="Request Home Visit" />
+                <ContactForm fields={visitFields} buttonText="Request Home Visit" />
               </TabsContent>
             </Tabs>
           </div>
