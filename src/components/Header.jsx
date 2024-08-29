@@ -15,17 +15,17 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="text-2xl font-bold text-blue-600">Derbyshire Removals</Link>
           
-          <nav className="hidden md:block">
-            <ul className="flex space-x-6">
-              <li><Link to="/move-checklist" className="text-gray-600 hover:text-blue-600">Move Checklist</Link></li>
-              <li><Link to="/storage" className="text-gray-600 hover:text-blue-600">Storage</Link></li>
-              <li><Link to="/packaging-material" className="text-gray-600 hover:text-blue-600">Packaging Material</Link></li>
-              <li><Link to="/testimonials" className="text-gray-600 hover:text-blue-600">Testimonials</Link></li>
-              <li><Link to="/contact" className="text-gray-600 hover:text-blue-600">Contact</Link></li>
-            </ul>
-          </nav>
-          
           <div className="flex items-center">
+            <nav className="hidden md:block mr-8">
+              <ul className="flex space-x-6">
+                <li><Link to="/move-checklist" className="text-gray-600 hover:text-blue-600">Move Checklist</Link></li>
+                <li><Link to="/storage" className="text-gray-600 hover:text-blue-600">Storage</Link></li>
+                <li><Link to="/packaging-material" className="text-gray-600 hover:text-blue-600">Packaging Material</Link></li>
+                <li><Link to="/testimonials" className="text-gray-600 hover:text-blue-600">Testimonials</Link></li>
+                <li><Link to="/contact" className="text-gray-600 hover:text-blue-600">Contact</Link></li>
+              </ul>
+            </nav>
+            
             <a href="tel:01234567890" className="flex items-center text-blue-600">
               <Phone size={18} className="mr-2" />
               <span>01234 567890</span>
