@@ -38,8 +38,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 flex flex-wrap items-center">
         <div className="w-full lg:w-1/2 mb-10 lg:mb-0">
           <h1 className="text-4xl font-bold mb-4">Professional Removals in Derbyshire</h1>
-          <p className="text-xl mb-8">Stress-free moving services for your peace of mind</p>
-          <Button variant="secondary" size="lg">Get a Free Quote</Button>
+          <p className="text-xl">Stress-free moving services for your peace of mind</p>
         </div>
         <div className="w-full lg:w-1/2 lg:pl-10">
           <div className="bg-white p-6 rounded-lg shadow-md">
