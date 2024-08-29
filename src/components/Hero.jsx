@@ -37,7 +37,7 @@ const Hero = () => {
     <section className="bg-blue-600 text-white py-20">
       <div className="container mx-auto px-4 flex flex-wrap items-center">
         <div className="w-full lg:w-1/2 mb-10 lg:mb-0">
-          <h1 className="text-4xl font-bold mb-4">Professional Home Removals in Yorkshire</h1>
+          <h1 className="text-4xl font-bold mb-4">Professional Home Removals in Derbyshire</h1>
           <p className="text-xl mb-8">Stress-free moving services for your peace of mind</p>
           <Button variant="secondary" size="lg">Get a Free Quote</Button>
         </div>

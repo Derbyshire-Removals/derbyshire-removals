@@ -2,8 +2,8 @@ import React from 'react';
 
 const AreasCovered = () => {
   const areas = [
-    "Leeds", "York", "Sheffield", "Bradford", "Huddersfield", "Wakefield",
-    "Halifax", "Harrogate", "Doncaster", "Rotherham", "Barnsley", "Scarborough"
+    "Derby", "Chesterfield", "Swadlincote", "Ilkeston", "Long Eaton", "Buxton",
+    "Glossop", "Belper", "Ripley", "Ashbourne", "Matlock", "Dronfield"
   ];
 
   return (
