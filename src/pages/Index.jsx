@@ -13,13 +13,15 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gray-100">
       <Header />
-      <Hero />
-      <Authority />
-      <Services />
-      <WhyUs />
-      <GetInTouch />
-      <AreasCovered />
-      <HowWeWork />
+      <div className="pt-20"> {/* Add padding-top to account for fixed header */}
+        <Hero />
+        <Authority />
+        <Services />
+        <WhyUs />
+        <GetInTouch />
+        <AreasCovered />
+        <HowWeWork />
+      </div>
       <Footer />
     </div>
   );
