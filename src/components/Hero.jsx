@@ -3,19 +3,54 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Calendar } from "@/components/ui/calendar"
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
+import { cn } from "@/lib/utils"
+import { format } from "date-fns"
+import { Calendar as CalendarIcon } from "lucide-react"
 
-const ContactForm = ({ fields, buttonText }) => (
-  <form className="space-y-4">
-    {fields.map((field, index) => (
-      field.type === 'textarea' ? (
-        <Textarea key={index} placeholder={field.placeholder} />
-      ) : (
-        <Input key={index} type={field.type} placeholder={field.placeholder} />
-      )
-    ))}
-    <Button type="submit" className="w-full">{buttonText}</Button>
-  </form>
-);
+const ContactForm = ({ fields, buttonText }) => {
+  const [date, setDate] = React.useState()
+
+  return (
+    <form className="space-y-4">
+      {fields.map((field, index) => {
+        if (field.type === 'textarea') {
+          return <Textarea key={index} placeholder={field.placeholder} className="text-black" />
+        } else if (field.type === 'date') {
+          return (
+            <Popover key={index}>
+              <PopoverTrigger asChild>
+                <Button
+                  variant={"outline"}
+                  className={cn(
+                    "w-full justify-start text-left font-normal",
+                    !date && "text-muted-foreground"
+                  )}
+                >
+                  <CalendarIcon className="mr-2 h-4 w-4" />
+                  {date ? format(date, "PPP") : <span className="text-black">{field.placeholder}</span>}
+                </Button>
+              </PopoverTrigger>
+              <PopoverContent className="w-auto p-0">
+                <Calendar
+                  mode="single"
+                  selected={date}
+                  onSelect={setDate}
+                  initialFocus
+                  disabled={(date) => date < new Date(new Date().setHours(0, 0, 0, 0))}
+                />
+              </PopoverContent>
+            </Popover>
+          )
+        } else {
+          return <Input key={index} type={field.type} placeholder={field.placeholder} className="text-black" />
+        }
+      })}
+      <Button type="submit" className="w-full">{buttonText}</Button>
+    </form>
+  )
+};
 
 const Hero = () => {
   const callbackFields = [
