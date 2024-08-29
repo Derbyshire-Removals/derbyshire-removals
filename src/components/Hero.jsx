@@ -43,7 +43,7 @@ const Hero = () => {
         </div>
         <div className="w-full lg:w-1/2 lg:pl-10">
           <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-2xl font-semibold text-gray-800 mb-4">Get a free quote</h3>
+            <h3 className="text-2xl font-semibold text-gray-800 mb-4">Get Free Quote</h3>
             <Tabs defaultValue="callback" className="w-full">
               <TabsList className="grid w-full grid-cols-2">
                 <TabsTrigger value="callback">Request Callback</TabsTrigger>
