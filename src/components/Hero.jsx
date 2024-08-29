@@ -28,11 +28,11 @@ const ContactForm = ({ fields, buttonText }) => {
                     !date && "text-muted-foreground"
                   )}
                 >
-                  <CalendarIcon className="mr-2 h-4 w-4" />
+                  <CalendarIcon className="mr-2 h-4 w-4 text-gray-500" />
                   {date ? (
                     <span className="text-black">{format(date, "PPP")}</span>
                   ) : (
-                    <span className="text-black">{field.placeholder}</span>
+                    <span className="text-gray-500">{field.placeholder}</span>
                   )}
                 </Button>
               </PopoverTrigger>
