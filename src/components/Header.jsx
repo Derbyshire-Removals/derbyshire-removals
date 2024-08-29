@@ -13,20 +13,20 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link to="/" className="text-2xl font-bold text-blue-600">Derbyshire Removals</Link>
+          <Link to="/" className="text-2xl font-bold text-[#071059]">Derbyshire Removals</Link>
           
           <div className="flex items-center">
             <nav className="hidden md:block mr-8">
               <ul className="flex space-x-6">
-                <li><Link to="/move-checklist" className="text-gray-600 hover:text-blue-600">Move Checklist</Link></li>
-                <li><Link to="/storage" className="text-gray-600 hover:text-blue-600">Storage</Link></li>
-                <li><Link to="/packaging-material" className="text-gray-600 hover:text-blue-600">Packaging Material</Link></li>
-                <li><Link to="/testimonials" className="text-gray-600 hover:text-blue-600">Testimonials</Link></li>
-                <li><Link to="/contact" className="text-gray-600 hover:text-blue-600">Contact</Link></li>
+                <li><Link to="/move-checklist" className="text-gray-600 hover:text-[#071059]">Move Checklist</Link></li>
+                <li><Link to="/storage" className="text-gray-600 hover:text-[#071059]">Storage</Link></li>
+                <li><Link to="/packaging-material" className="text-gray-600 hover:text-[#071059]">Packaging Material</Link></li>
+                <li><Link to="/testimonials" className="text-gray-600 hover:text-[#071059]">Testimonials</Link></li>
+                <li><Link to="/contact" className="text-gray-600 hover:text-[#071059]">Contact</Link></li>
               </ul>
             </nav>
             
-            <a href="tel:01234567890" className="flex items-center text-blue-600">
+            <a href="tel:01234567890" className="flex items-center text-[#071059]">
               <Phone size={18} className="mr-2" />
               <span>01234 567890</span>
             </a>
@@ -39,11 +39,11 @@ const Header = () => {
         {isMenuOpen && (
           <nav className="mt-4 md:hidden">
             <ul className="flex flex-col space-y-2">
-              <li><Link to="/move-checklist" className="block py-2 text-gray-600 hover:text-blue-600">Move Checklist</Link></li>
-              <li><Link to="/storage" className="block py-2 text-gray-600 hover:text-blue-600">Storage</Link></li>
-              <li><Link to="/packaging-material" className="block py-2 text-gray-600 hover:text-blue-600">Packaging Material</Link></li>
-              <li><Link to="/testimonials" className="block py-2 text-gray-600 hover:text-blue-600">Testimonials</Link></li>
-              <li><Link to="/contact" className="block py-2 text-gray-600 hover:text-blue-600">Contact</Link></li>
+              <li><Link to="/move-checklist" className="block py-2 text-gray-600 hover:text-[#071059]">Move Checklist</Link></li>
+              <li><Link to="/storage" className="block py-2 text-gray-600 hover:text-[#071059]">Storage</Link></li>
+              <li><Link to="/packaging-material" className="block py-2 text-gray-600 hover:text-[#071059]">Packaging Material</Link></li>
+              <li><Link to="/testimonials" className="block py-2 text-gray-600 hover:text-[#071059]">Testimonials</Link></li>
+              <li><Link to="/contact" className="block py-2 text-gray-600 hover:text-[#071059]">Contact</Link></li>
             </ul>
           </nav>
         )}
