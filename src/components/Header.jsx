@@ -22,6 +22,7 @@ const Header = () => {
                 <li><Link to="/storage" className="text-gray-600 hover:text-[#071059]">Storage</Link></li>
                 <li><Link to="/packaging-material" className="text-gray-600 hover:text-[#071059]">Packaging Material</Link></li>
                 <li><Link to="/testimonials" className="text-gray-600 hover:text-[#071059]">Testimonials</Link></li>
+                <li><Link to="/faq" className="text-gray-600 hover:text-[#071059]">FAQ</Link></li>
                 <li><Link to="/contact" className="text-gray-600 hover:text-[#071059]">Contact</Link></li>
               </ul>
             </nav>
@@ -43,6 +44,7 @@ const Header = () => {
               <li><Link to="/storage" className="block py-2 text-gray-600 hover:text-[#071059]">Storage</Link></li>
               <li><Link to="/packaging-material" className="block py-2 text-gray-600 hover:text-[#071059]">Packaging Material</Link></li>
               <li><Link to="/testimonials" className="block py-2 text-gray-600 hover:text-[#071059]">Testimonials</Link></li>
+              <li><Link to="/faq" className="block py-2 text-gray-600 hover:text-[#071059]">FAQ</Link></li>
               <li><Link to="/contact" className="block py-2 text-gray-600 hover:text-[#071059]">Contact</Link></li>
             </ul>
           </nav>

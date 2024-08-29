@@ -1,9 +1,10 @@
-import { HomeIcon, CheckSquare, Package, Box, MessageSquare, PhoneCall } from "lucide-react";
+import { HomeIcon, CheckSquare, Package, Box, MessageSquare, HelpCircle, PhoneCall } from "lucide-react";
 import Index from "./pages/Index.jsx";
 import MoveChecklist from "./pages/MoveChecklist.jsx";
 import Storage from "./pages/Storage.jsx";
 import PackagingMaterial from "./pages/PackagingMaterial.jsx";
 import Testimonials from "./pages/Testimonials.jsx";
+import FAQ from "./pages/FAQ.jsx";
 import Contact from "./pages/Contact.jsx";
 
 /**
@@ -39,6 +40,12 @@ export const navItems = [
     to: "/testimonials",
     icon: <MessageSquare className="h-4 w-4" />,
     page: <Testimonials />,
+  },
+  {
+    title: "FAQ",
+    to: "/faq",
+    icon: <HelpCircle className="h-4 w-4" />,
+    page: <FAQ />,
   },
   {
     title: "Contact",
