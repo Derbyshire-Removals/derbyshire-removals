@@ -73,8 +73,13 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative bg-cover bg-center py-20" style={{ backgroundImage: "url('/placeholder.svg')" }}>
+    <section className="relative bg-cover bg-center py-20" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1600518464441-9154a4dea21b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')" }}>
+      <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className="container mx-auto px-4 flex flex-wrap items-center relative z-10">
+        <div className="w-full lg:w-1/2 mb-10 lg:mb-0 text-white">
+          <h1 className="text-4xl font-bold mb-4 text-shadow-md">Professional Removals in Derbyshire</h1>
+          <p className="text-xl mb-6 text-shadow-sm">Handling with care since 1988</p>
+        </div>
         <div className="w-full lg:w-1/2 mb-10 lg:mb-0 text-white">
           <h1 className="text-4xl font-bold mb-4">Professional Removals in Derbyshire</h1>
           <p className="text-xl mb-6">Handling with care since 1988</p>
