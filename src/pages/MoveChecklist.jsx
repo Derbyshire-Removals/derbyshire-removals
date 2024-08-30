@@ -30,7 +30,7 @@ const MoveChecklist = () => {
             <li>Start to organise your packing.</li>
             <li>Pay any outstanding milk, newspaper, window cleaner bills and so on.</li>
             <li>Post your change of address cards.</li>
-            <li>Find the mains water supply stop valve</li>
+            <li>Find the mains water supply stop valve.</li>
             <li>If you have pets, arrange for them to be looked after on the day of the move.</li>
           </ul>
         </section>
