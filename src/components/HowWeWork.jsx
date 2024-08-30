@@ -1,10 +1,13 @@
 import React from 'react';
 import { PhoneCall, Truck, ClipboardCheck, Home } from 'lucide-react';
 
-const Step = ({ icon, title, description }) => (
+const Step = ({ icon, title, description, number }) => (
   <div className="flex flex-col items-center text-center">
-    <div className="bg-[#071059] text-white p-4 rounded-full mb-4">
+    <div className="bg-[#071059] text-white p-4 rounded-full mb-4 relative">
       {icon}
+      <span className="absolute -top-2 -left-2 bg-red-500 text-white text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center">
+        {number}
+      </span>
     </div>
     <h3 className="text-xl font-semibold mb-2">{title}</h3>
     <p>{description}</p>
@@ -25,7 +28,7 @@ const HowWeWork = () => {
         <h2 className="text-3xl font-bold text-center mb-10">How We Work</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {steps.map((step, index) => (
-            <Step key={index} {...step} />
+            <Step key={index} {...step} number={index + 1} />
           ))}
         </div>
       </div>
