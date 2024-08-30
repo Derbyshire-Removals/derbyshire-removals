@@ -65,6 +65,7 @@ const ContactForm = ({ fields, buttonText }) => {
                       placeholder={field.placeholder}
                       className="text-black"
                       readOnly={isSubmitted}
+                      required
                     />
                   ) : (
                     <Input {...formField} type={field.type} placeholder={field.placeholder} className="text-black" readOnly={isSubmitted} required />
