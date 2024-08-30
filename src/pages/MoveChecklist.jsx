@@ -11,7 +11,7 @@ const MoveChecklist = () => {
         <p className="mb-8">Follow our checklist to ensure your move is as stress free as possible.</p>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">ONE MONTH BEFORE YOU MOVE (OR AS SOON AS YOU HAVE A MOVING DATE)</h2>
+          <h2 className="text-2xl font-semibold mb-4">One Month Before You Move (or as Soon as You Have a Moving Date)</h2>
           <ul className="list-disc pl-5 space-y-2">
             <li>Contact Derbyshire Removals and arrange for a free inventory and quote.</li>
             <li>Tell your phone company that you are moving. Give them the date to close your account and arrange reconnection at your new home. Give your solicitor your new telephone number.</li>
@@ -24,7 +24,7 @@ const MoveChecklist = () => {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">ONE WEEK BEFORE YOU MOVE</h2>
+          <h2 className="text-2xl font-semibold mb-4">One Week Before You Move</h2>
           <ul className="list-disc pl-5 space-y-2">
             <li>Confirm the details of your move with Derbyshire Removals.</li>
             <li>Start to organise your packing.</li>
@@ -36,7 +36,7 @@ const MoveChecklist = () => {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">ONE DAY BEFORE YOU MOVE</h2>
+          <h2 className="text-2xl font-semibold mb-4">One Day Before You Move</h2>
           <ul className="list-disc pl-5 space-y-2">
             <li>Finish off your packing apart from your overnight essentials.</li>
             <li>Put all your valuables and documents away safely where you can find them later!</li>
@@ -47,7 +47,7 @@ const MoveChecklist = () => {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">ON THE DAY ITSELF</h2>
+          <h2 className="text-2xl font-semibold mb-4">On the Day Itself</h2>
           <ul className="list-disc pl-5 space-y-2">
             <li>Supervise the loading and tell our removal supervisor of the order you would like your items at the new address.</li>
             <li>Make sure that nothing is left behind!</li>
@@ -58,7 +58,7 @@ const MoveChecklist = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold mb-4">USEFUL NUMBERS</h2>
+          <h2 className="text-2xl font-semibold mb-4">Useful Numbers</h2>
           <ul className="space-y-2">
             <li><strong>Gas:</strong> 08459 60 50 40</li>
             <li><strong>Telephone:</strong> 150</li>
