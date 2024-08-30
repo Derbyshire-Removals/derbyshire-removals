@@ -27,9 +27,9 @@ const Header = () => {
               </ul>
             </nav>
             
-            <a href="tel:01234567890" className="flex items-center text-[#071059]">
+            <a href="tel:07774422561" className="flex items-center text-[#071059]">
               <Phone size={18} className="mr-2" />
-              <span>01234 567890</span>
+              <span>07774 422561</span>
             </a>
             <button onClick={toggleMenu} className="ml-4 md:hidden">
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
