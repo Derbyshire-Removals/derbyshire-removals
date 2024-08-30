@@ -41,12 +41,14 @@ const ContactForm = ({ fields, buttonText }) => {
     // Handle form submission
     setSubmissionMessage("Thank you for your submission! We appreciate your interest. One of our team members will be in touch with you shortly to discuss your request.");
     setIsSubmitted(true);
-    form.reset();
   };
 
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+        {submissionMessage && (
+          <p className="text-green-600 text-sm mb-4">{submissionMessage}</p>
+        )}
         {fields.map((field) => (
           <FormField
             key={field.name}
@@ -57,7 +59,7 @@ const ContactForm = ({ fields, buttonText }) => {
                 <FormLabel>{field.label}</FormLabel>
                 <FormControl>
                   {field.type === 'textarea' ? (
-                    <Textarea {...formField} placeholder={field.placeholder} className="text-black" />
+                    <Textarea {...formField} placeholder={field.placeholder} className="text-black" readOnly={isSubmitted} />
                   ) : field.type === 'date' ? (
                     <Popover>
                       <PopoverTrigger asChild>
@@ -67,6 +69,7 @@ const ContactForm = ({ fields, buttonText }) => {
                             "w-full justify-start text-left font-normal",
                             !formField.value && "text-muted-foreground"
                           )}
+                          disabled={isSubmitted}
                         >
                           <CalendarIcon className="mr-2 h-4 w-4 text-gray-500" />
                           {formField.value ? (
@@ -81,12 +84,12 @@ const ContactForm = ({ fields, buttonText }) => {
                           mode="single"
                           selected={formField.value}
                           onSelect={formField.onChange}
-                          disabled={(date) => date < new Date(new Date().setHours(0, 0, 0, 0))}
+                          disabled={(date) => date < new Date(new Date().setHours(0, 0, 0, 0)) || isSubmitted}
                         />
                       </PopoverContent>
                     </Popover>
                   ) : (
-                    <Input {...formField} type={field.type} placeholder={field.placeholder} className="text-black" />
+                    <Input {...formField} type={field.type} placeholder={field.placeholder} className="text-black" readOnly={isSubmitted} />
                   )}
                 </FormControl>
                 <FormMessage />
@@ -94,9 +97,6 @@ const ContactForm = ({ fields, buttonText }) => {
             )}
           />
         ))}
-        {submissionMessage && (
-          <p className="text-green-600 text-sm">{submissionMessage}</p>
-        )}
         <Button type="submit" className="w-full" disabled={isSubmitted}>{buttonText}</Button>
       </form>
     </Form>
