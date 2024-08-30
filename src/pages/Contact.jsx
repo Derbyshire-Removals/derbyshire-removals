@@ -8,11 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Calendar } from "@/components/ui/calendar"
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
-import { cn } from "@/lib/utils"
-import { format } from "date-fns"
-import { Calendar as CalendarIcon, Phone, Mail } from "lucide-react"
+import { Phone, Mail } from "lucide-react"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { useToast } from "@/components/ui/use-toast"
 
@@ -62,33 +58,14 @@ const ContactForm = ({ fields, buttonText }) => {
                   {field.type === 'textarea' ? (
                     <Textarea {...formField} placeholder={field.placeholder} className="text-black" readOnly={isSubmitted} />
                   ) : field.type === 'date' ? (
-                    <Popover>
-                      <PopoverTrigger asChild>
-                        <Button
-                          variant={"outline"}
-                          className={cn(
-                            "w-full justify-start text-left font-normal",
-                            !formField.value && "text-muted-foreground"
-                          )}
-                          disabled={isSubmitted}
-                        >
-                          <CalendarIcon className="mr-2 h-4 w-4 text-gray-500" />
-                          {formField.value ? (
-                            <span className="text-black">{format(formField.value, "PPP")}</span>
-                          ) : (
-                            <span className="text-gray-500">{field.placeholder}</span>
-                          )}
-                        </Button>
-                      </PopoverTrigger>
-                      <PopoverContent className="w-auto p-0">
-                        <Calendar
-                          mode="single"
-                          selected={formField.value}
-                          onSelect={formField.onChange}
-                          disabled={(date) => date < new Date(new Date().setHours(0, 0, 0, 0)) || isSubmitted}
-                        />
-                      </PopoverContent>
-                    </Popover>
+                    <Input
+                      {...formField}
+                      type="date"
+                      min={new Date().toISOString().split('T')[0]}
+                      placeholder={field.placeholder}
+                      className="text-black"
+                      readOnly={isSubmitted}
+                    />
                   ) : (
                     <Input {...formField} type={field.type} placeholder={field.placeholder} className="text-black" readOnly={isSubmitted} />
                   )}
@@ -112,14 +89,14 @@ const Contact = () => {
     { name: 'name', type: 'text', label: 'Name', placeholder: 'Your Name' },
     { name: 'email', type: 'email', label: 'Email', placeholder: 'Your Email' },
     { name: 'phone', type: 'tel', label: 'Phone', placeholder: 'Your Phone Number' },
-    { name: 'date', type: 'date', label: 'Preferred Callback Date', placeholder: 'Select Date' },
+    { name: 'date', type: 'date', label: 'Preferred Callback Date', placeholder: 'YYYY-MM-DD' },
   ];
 
   const visitFields = [
     { name: 'name', type: 'text', label: 'Name', placeholder: 'Your Name' },
     { name: 'email', type: 'email', label: 'Email', placeholder: 'Your Email' },
     { name: 'phone', type: 'tel', label: 'Phone', placeholder: 'Your Phone Number' },
-    { name: 'date', type: 'date', label: 'Preferred Visit Date', placeholder: 'Select Date' },
+    { name: 'date', type: 'date', label: 'Preferred Visit Date', placeholder: 'YYYY-MM-DD' },
     { name: 'address', type: 'textarea', label: 'Address', placeholder: 'Your Address (required)' },
   ];
 
