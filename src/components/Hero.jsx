@@ -58,7 +58,7 @@ const ContactForm = ({ fields, buttonText }) => {
                 <FormLabel>{field.label}</FormLabel>
                 <FormControl>
                   {field.type === 'textarea' ? (
-                    <Textarea {...formField} placeholder={field.placeholder} className="text-black" readOnly={isSubmitted} />
+                    <Textarea {...formField} placeholder={field.placeholder} className="text-black" readOnly={isSubmitted} required />
                   ) : field.type === 'date' ? (
                     <Input
                       {...formField}
@@ -69,7 +69,7 @@ const ContactForm = ({ fields, buttonText }) => {
                       readOnly={isSubmitted}
                     />
                   ) : (
-                    <Input {...formField} type={field.type} placeholder={field.placeholder} className="text-black" readOnly={isSubmitted} />
+                    <Input {...formField} type={field.type} placeholder={field.placeholder} className="text-black" readOnly={isSubmitted} required />
                   )}
                 </FormControl>
                 <FormMessage />
