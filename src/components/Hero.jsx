@@ -38,6 +38,7 @@ const ContactForm = ({ fields, buttonText }) => {
 
   const onSubmit = async (data) => {
     try {
+      console.log('Submitting form data:', data);
       const formData = new FormData();
       Object.keys(data).forEach(key => {
         if (key === 'date') {
@@ -48,17 +49,23 @@ const ContactForm = ({ fields, buttonText }) => {
       });
       formData.append('access_key', 'a76a98d9-1d8e-419f-85b6-34407a6e50a8');
 
+      console.log('Sending request to Web3Forms API');
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         body: formData
       });
-  
+
+      console.log('Response received:', response);
       const result = await response.json();
+      console.log('Response JSON:', result);
+
       if (result.success) {
+        console.log('Form submission successful');
         setSubmissionMessage("Thank you for your submission! We appreciate your interest. One of our team members will be in touch with you shortly to discuss your request.");
         setIsSubmitted(true);
         form.reset();
       } else {
+        console.error('Form submission failed:', result);
         throw new Error('Form submission failed');
       }
     } catch (error) {
