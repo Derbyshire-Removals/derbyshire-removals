@@ -23,7 +23,7 @@ const schema = z.object({
 });
 
 const ContactForm = ({ fields, buttonText }) => {
-  const { toast } = useToast()
+  const [submissionMessage, setSubmissionMessage] = React.useState('');
   const form = useForm({
     resolver: zodResolver(schema),
     defaultValues: {
@@ -38,12 +38,10 @@ const ContactForm = ({ fields, buttonText }) => {
   const onSubmit = (data) => {
     console.log(data);
     // Handle form submission
-    toast({
-      title: "Thank you for your submission!",
-      description: "We appreciate your interest. One of our team members will be in touch with you shortly to discuss your request.",
-      duration: 5000,
-    })
+    setSubmissionMessage("Thank you for your submission! We appreciate your interest. One of our team members will be in touch with you shortly to discuss your request.");
     form.reset();
+    // Clear the message after 5 seconds
+    setTimeout(() => setSubmissionMessage(''), 5000);
   };
 
   return (
@@ -97,6 +95,9 @@ const ContactForm = ({ fields, buttonText }) => {
           />
         ))}
         <Button type="submit" className="w-full">{buttonText}</Button>
+        {submissionMessage && (
+          <p className="mt-4 text-green-600 text-sm">{submissionMessage}</p>
+        )}
       </form>
     </Form>
   );
