@@ -21,7 +21,7 @@ const schema = z.object({
   email: z.string().email({ message: "Invalid email address." }),
   phone: z.string().min(10, { message: "Phone number must be at least 10 digits." }),
   date: z.date({ required_error: "Please select a date." }),
-  address: z.string().optional(),
+  address: z.string().min(1, { message: "Address is required." }),
 });
 
 const ContactForm = ({ fields, buttonText }) => {
@@ -118,7 +118,7 @@ const Contact = () => {
     { name: 'email', type: 'email', label: 'Email', placeholder: 'Your Email' },
     { name: 'phone', type: 'tel', label: 'Phone', placeholder: 'Your Phone Number' },
     { name: 'date', type: 'date', label: 'Preferred Visit Date', placeholder: 'Select Date' },
-    { name: 'address', type: 'textarea', label: 'Address', placeholder: 'Your Address' },
+    { name: 'address', type: 'textarea', label: 'Address', placeholder: 'Your Address (required)' },
   ];
 
   return (
