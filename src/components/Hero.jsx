@@ -1,5 +1,5 @@
 import React from 'react';
-import { useForm } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { Button } from "@/components/ui/button"
@@ -10,7 +10,8 @@ import { Calendar } from "@/components/ui/calendar"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 import { cn } from "@/lib/utils"
 import { format } from "date-fns"
-import { Calendar as CalendarIcon } from "lucide-react"
+import { CalendarIcon } from "lucide-react"
+import { Button } from "@/components/ui/button"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { useToast } from "@/components/ui/use-toast"
 
@@ -36,47 +37,16 @@ const ContactForm = ({ fields, buttonText }) => {
     },
   });
 
-  const onSubmit = async (data) => {
-    try {
-      console.log('Submitting form data:', data);
-      const formData = new FormData();
-      Object.keys(data).forEach(key => {
-        if (key === 'date') {
-          formData.append(key, data[key].toISOString().split('T')[0]); // Format date as YYYY-MM-DD
-        } else {
-          formData.append(key, data[key]);
-        }
-      });
-      formData.append('access_key', 'a76a98d9-1d8e-419f-85b6-34407a6e50a8');
-
-      console.log('Sending request to Web3Forms API');
-      const response = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        body: formData
-      });
-
-      console.log('Response received:', response);
-      const result = await response.json();
-      console.log('Response JSON:', result);
-
-      if (result.success) {
-        console.log('Form submission successful');
-        setSubmissionMessage("Thank you for your submission! We appreciate your interest. One of our team members will be in touch with you shortly to discuss your request.");
-        setIsSubmitted(true);
-        form.reset();
-      } else {
-        console.error('Form submission failed:', result);
-        throw new Error('Form submission failed');
-      }
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      setSubmissionMessage("There was an error submitting your form. Please try again later.");
-    }
+  const onSubmit = (data) => {
+    console.log(data);
+    // Handle form submission
+    setSubmissionMessage("Thank you for your submission! We appreciate your interest. One of our team members will be in touch with you shortly to discuss your request.");
+    setIsSubmitted(true);
   };
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+      <form action="https://api.web3forms.com/submit" method="POST" className="space-y-4">
         <input type="hidden" name="access_key" value="a76a98d9-1d8e-419f-85b6-34407a6e50a8" />
         <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
         {fields.map((field) => (
@@ -93,31 +63,23 @@ const ContactForm = ({ fields, buttonText }) => {
                   ) : field.type === 'date' ? (
                     <Popover>
                       <PopoverTrigger asChild>
-                        <FormControl>
-                          <Button
-                            variant={"outline"}
-                            className={cn(
-                              "w-full pl-3 text-left font-normal",
-                              !formField.value && "text-muted-foreground"
-                            )}
-                          >
-                            {formField.value ? (
-                              format(formField.value, "PPP")
-                            ) : (
-                              <span>Pick a date</span>
-                            )}
-                            <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
-                          </Button>
-                        </FormControl>
+                        <Button
+                          variant={"outline"}
+                          className={cn(
+                            "w-full justify-start text-left font-normal",
+                            !formField.value && "text-muted-foreground"
+                          )}
+                        >
+                          <CalendarIcon className="mr-2 h-4 w-4" />
+                          {formField.value ? format(formField.value, "PPP") : <span>{field.placeholder}</span>}
+                        </Button>
                       </PopoverTrigger>
                       <PopoverContent className="w-auto p-0" align="start">
                         <Calendar
                           mode="single"
                           selected={formField.value}
                           onSelect={formField.onChange}
-                          disabled={(date) =>
-                            date < new Date() || date < new Date("1900-01-01")
-                          }
+                          disabled={(date) => date < new Date()}
                           initialFocus
                         />
                       </PopoverContent>
@@ -145,7 +107,7 @@ const Hero = () => {
     { name: 'name', type: 'text', label: 'Name', placeholder: 'Your Name' },
     { name: 'email', type: 'email', label: 'Email', placeholder: 'Your Email' },
     { name: 'phone', type: 'tel', label: 'Phone', placeholder: 'Your Phone Number' },
-    { name: 'date', type: 'date', label: 'Preferred Callback Date', placeholder: 'YYYY-MM-DD' },
+    { name: 'date', type: 'date', label: 'Preferred Callback Date', placeholder: 'Pick a date' },
   ];
 
   const visitFields = [
