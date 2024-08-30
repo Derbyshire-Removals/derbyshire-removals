@@ -47,7 +47,9 @@ const ContactForm = ({ fields, buttonText }) => {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+      <form action="https://api.web3forms.com/submit" method="POST" className="space-y-4">
+        <input type="hidden" name="access_key" value="a76a98d9-1d8e-419f-85b6-34407a6e50a8" />
+        <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
         {fields.map((field) => (
           <FormField
             key={field.name}
