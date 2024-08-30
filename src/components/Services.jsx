@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Truck, Package, Home, ClipboardList, Building2, Clock, Palette } from 'lucide-react';
+import { Truck, Package, Home, ClipboardList, Building2, Clock, Frame } from 'lucide-react';
 
 const ServiceCard = ({ icon, title, description }) => (
   <Card>
@@ -24,7 +24,7 @@ const Services = () => {
     { icon: <ClipboardList size={24} />, title: "Move Planning", description: "Comprehensive move planning and management" },
     { icon: <Building2 size={24} />, title: "Office Removals", description: "Efficient relocation services for businesses" },
     { icon: <Clock size={24} />, title: "Last Minute Removals", description: "Quick and reliable moving solutions for urgent needs" },
-    { icon: <Palette size={24} />, title: "Antique and Fine Arts", description: "Specialized handling for valuable and delicate items" },
+    { icon: <Frame size={24} />, title: "Antique and Fine Arts", description: "Specialized handling for valuable and delicate items" },
   ];
 
   return (
