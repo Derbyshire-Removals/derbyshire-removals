@@ -3,7 +3,8 @@ import React from 'react';
 const AreasCovered = () => {
   const areas = [
     "Derby", "Chesterfield", "Swadlincote", "Ilkeston", "Long Eaton", "Buxton",
-    "Glossop", "Belper", "Ripley", "Ashbourne", "Matlock", "Dronfield"
+    "Glossop", "Belper", "Ripley", "Ashbourne", "Matlock", "Dronfield",
+    "Nottingham", "West Bridgford", "Beeston", "Arnold", "Hucknall", "Carlton"
   ];
 
   return (
@@ -17,6 +18,9 @@ const AreasCovered = () => {
             </div>
           ))}
         </div>
+        <p className="text-center mt-6 text-gray-600">
+          We also cover surrounding areas of Derbyshire and Nottinghamshire. Contact us for more information.
+        </p>
       </div>
     </section>
   );
