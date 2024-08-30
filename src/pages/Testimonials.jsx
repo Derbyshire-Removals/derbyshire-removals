@@ -90,6 +90,58 @@ const testimonials = [
   {
     name: "Isabella Cedar",
     review: "Excellent professional service. Arrived on time and handled everything with care. This is the second time we have used Derbyshire Removals - would definitely recommend them."
+  },
+  {
+    name: "Penelope Fawcett",
+    review: "Two day move to a penthouse with 25 steps up to it. Both Mike and colleague were exceptional. So good, careful and cheerful that we tipped them well!"
+  },
+  {
+    name: "Gregory Lakeside",
+    review: "Derbyshire Removals did an outstanding job moving us to the lakes. I cannot say enough how much easier they made it for us - well done!"
+  },
+  {
+    name: "Amelia Thornton",
+    review: "Very professional and helpful people. Thank you for making a daunting task easy."
+  },
+  {
+    name: "Benjamin Archer",
+    review: "Excellent service, very satisfied & would definitely recommend to anyone."
+  },
+  {
+    name: "Harriet Sinclair",
+    review: "Mike and his team were extremely polite & professional & fitted us in at late notice. Fantastic service."
+  },
+  {
+    name: "Frederick Weston",
+    review: "Excellent workers who got on with their job, were respectful of my furniture and were pleasant and helpful at all times."
+  },
+  {
+    name: "Beatrice Holloway",
+    review: "Very good and professional service. Would use again."
+  },
+  {
+    name: "Rupert Grayson",
+    review: "Excellent job done. The team worked very hard and were extremely efficient, friendly & nothing was too much trouble."
+  },
+  {
+    name: "Imogen Fairfax",
+    review: "Very punctual, very polite and helpful. Very careful with the furniture."
+  },
+  {
+    name: "Nathaniel Blackwood",
+    review: "The removal men were very friendly and provided an excellent service. Thank you."
+  },
+  {
+    name: "Cordelia Ashworth",
+    review: "A very professional service carried out by two very pleasant gentlemen."
+  },
+  {
+    name: "Jasper Whitfield",
+    review: "Arrived promptly! Worked through packing contents of our large house, friendly, very efficient, nothing too much trouble for them. We would recommend Derbyshire removals."
+  },
+  {
+    name: "Evangeline Sutton",
+    review: "Outstanding: took the time to understand specific needs of the removal, careful and experienced move, helpful guidance and friendly at all times. Strong recommendation."
   }
 ];
 
