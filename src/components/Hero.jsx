@@ -12,6 +12,7 @@ import { cn } from "@/lib/utils"
 import { format } from "date-fns"
 import { Calendar as CalendarIcon } from "lucide-react"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
+import { useToast } from "@/components/ui/use-toast"
 
 const schema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -22,6 +23,7 @@ const schema = z.object({
 });
 
 const ContactForm = ({ fields, buttonText }) => {
+  const { toast } = useToast()
   const form = useForm({
     resolver: zodResolver(schema),
     defaultValues: {
@@ -36,6 +38,11 @@ const ContactForm = ({ fields, buttonText }) => {
   const onSubmit = (data) => {
     console.log(data);
     // Handle form submission
+    toast({
+      title: "Thank you for your submission!",
+      description: "Someone will be in touch with you shortly.",
+    })
+    form.reset();
   };
 
   return (
