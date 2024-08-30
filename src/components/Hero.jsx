@@ -24,6 +24,7 @@ const schema = z.object({
 
 const ContactForm = ({ fields, buttonText }) => {
   const [submissionMessage, setSubmissionMessage] = React.useState('');
+  const [isSubmitted, setIsSubmitted] = React.useState(false);
   const form = useForm({
     resolver: zodResolver(schema),
     defaultValues: {
@@ -39,9 +40,8 @@ const ContactForm = ({ fields, buttonText }) => {
     console.log(data);
     // Handle form submission
     setSubmissionMessage("Thank you for your submission! We appreciate your interest. One of our team members will be in touch with you shortly to discuss your request.");
+    setIsSubmitted(true);
     form.reset();
-    // Clear the message after 5 seconds
-    setTimeout(() => setSubmissionMessage(''), 5000);
   };
 
   return (
@@ -94,10 +94,10 @@ const ContactForm = ({ fields, buttonText }) => {
             )}
           />
         ))}
-        <Button type="submit" className="w-full">{buttonText}</Button>
         {submissionMessage && (
-          <p className="mt-4 text-green-600 text-sm">{submissionMessage}</p>
+          <p className="text-green-600 text-sm">{submissionMessage}</p>
         )}
+        <Button type="submit" className="w-full" disabled={isSubmitted}>{buttonText}</Button>
       </form>
     </Form>
   );
