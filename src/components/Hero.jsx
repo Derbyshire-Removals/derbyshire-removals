@@ -1,8 +1,7 @@
 import React from 'react';
-import { useForm } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import axios from 'axios';
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -23,10 +22,9 @@ const schema = z.object({
   address: z.string().min(1, { message: "Address is required." }),
 });
 
-const ContactForm = ({ fields, buttonText, formType }) => {
+const ContactForm = ({ fields, buttonText }) => {
   const [submissionMessage, setSubmissionMessage] = React.useState('');
   const [isSubmitted, setIsSubmitted] = React.useState(false);
-  const { toast } = useToast();
   const form = useForm({
     resolver: zodResolver(schema),
     defaultValues: {
@@ -38,33 +36,11 @@ const ContactForm = ({ fields, buttonText, formType }) => {
     },
   });
 
-  const onSubmit = async (data) => {
-    try {
-      const formData = {
-        ...data,
-        date: format(data.date, "PPP"),
-        access_key: "a76a98d9-1d8e-419f-85b6-34407a6e50a8",
-        subject: formType === 'callback' ? 'Callback Request' : 'Home Visit Request',
-      };
-
-      const response = await axios.post('https://api.web3forms.com/submit', formData);
-
-      if (response.status === 200) {
-        setSubmissionMessage("Thank you for your submission! We appreciate your interest. One of our team members will be in touch with you shortly to discuss your request.");
-        setIsSubmitted(true);
-        toast({
-          title: "Success",
-          description: "Your message has been sent successfully.",
-        });
-      }
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      toast({
-        title: "Error",
-        description: "There was an error sending your message. Please try again.",
-        variant: "destructive",
-      });
-    }
+  const onSubmit = (data) => {
+    console.log(data);
+    // Handle form submission
+    setSubmissionMessage("Thank you for your submission! We appreciate your interest. One of our team members will be in touch with you shortly to discuss your request.");
+    setIsSubmitted(true);
   };
 
   return (
@@ -117,7 +93,7 @@ const ContactForm = ({ fields, buttonText, formType }) => {
               </FormItem>
             )}
           />
-        )}
+        ))}
         {submissionMessage && (
           <p className="text-green-600 text-sm mb-4">{submissionMessage}</p>
         )}
@@ -133,7 +109,6 @@ const Hero = () => {
     { name: 'email', type: 'email', label: 'Email', placeholder: 'Your Email' },
     { name: 'phone', type: 'tel', label: 'Phone', placeholder: 'Your Phone Number' },
     { name: 'date', type: 'date', label: 'Preferred Callback Date', placeholder: 'Select Date' },
-    { name: 'address', type: 'textarea', label: 'Address', placeholder: 'Your Address (required)' },
   ];
 
   const visitFields = [
@@ -161,10 +136,10 @@ const Hero = () => {
                 <TabsTrigger value="visit">Home Visit Request</TabsTrigger>
               </TabsList>
               <TabsContent value="callback">
-                <ContactForm fields={callbackFields} buttonText="Request Callback" formType="callback" />
+                <ContactForm fields={callbackFields} buttonText="Request Callback" />
               </TabsContent>
               <TabsContent value="visit">
-                <ContactForm fields={visitFields} buttonText="Request Home Visit" formType="visit" />
+                <ContactForm fields={visitFields} buttonText="Request Home Visit" />
               </TabsContent>
             </Tabs>
           </div>
