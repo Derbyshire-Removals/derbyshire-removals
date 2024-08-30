@@ -16,7 +16,7 @@ const WhyUs = () => {
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-10">Why Choose Us</h2>
         <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 justify-items-start">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 justify-items-center md:justify-items-start">
             {reasons.map((reason, index) => (
               <div key={index} className="flex items-start w-full max-w-xs">
                 <CheckCircle className="text-green-500 mr-3 flex-shrink-0 mt-1" size={24} />
