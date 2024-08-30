@@ -1,3 +1,4 @@
+import React, { Suspense } from 'react';
 import { HomeIcon, CheckSquare, Package, Box, MessageSquare, HelpCircle, PhoneCall, MapPin } from "lucide-react";
 import Index from "./pages/Index.jsx";
 import MoveChecklist from "./pages/MoveChecklist.jsx";
@@ -12,8 +13,6 @@ const PackagingMaterial = React.lazy(() => import("./pages/PackagingMaterial.jsx
 /**
  * Central place for defining the navigation items. Used for navigation components and routing.
  */
-import React, { Suspense } from 'react';
-
 export const navItems = [
   {
     title: "Home",
