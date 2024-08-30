@@ -1,5 +1,5 @@
 import React from 'react';
-import { useForm, Controller } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { Button } from "@/components/ui/button"
@@ -45,7 +45,7 @@ const ContactForm = ({ fields, buttonText }) => {
 
   return (
     <Form {...form}>
-      <form action="https://api.web3forms.com/submit" method="POST" className="space-y-4">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
         <input type="hidden" name="access_key" value="a76a98d9-1d8e-419f-85b6-34407a6e50a8" />
         <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
         {fields.map((field) => (
@@ -60,14 +60,37 @@ const ContactForm = ({ fields, buttonText }) => {
                   {field.type === 'textarea' ? (
                     <Textarea {...formField} placeholder={field.placeholder} className="text-black" readOnly={isSubmitted} />
                   ) : field.type === 'date' ? (
-                    <Input
-                      {...formField}
-                      type="date"
-                      min={new Date().toISOString().split('T')[0]}
-                      placeholder={field.placeholder}
-                      className="text-black"
-                      readOnly={isSubmitted}
-                    />
+                    <Popover>
+                      <PopoverTrigger asChild>
+                        <FormControl>
+                          <Button
+                            variant={"outline"}
+                            className={cn(
+                              "w-full pl-3 text-left font-normal",
+                              !formField.value && "text-muted-foreground"
+                            )}
+                          >
+                            {formField.value ? (
+                              format(formField.value, "PPP")
+                            ) : (
+                              <span>Pick a date</span>
+                            )}
+                            <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
+                          </Button>
+                        </FormControl>
+                      </PopoverTrigger>
+                      <PopoverContent className="w-auto p-0" align="start">
+                        <Calendar
+                          mode="single"
+                          selected={formField.value}
+                          onSelect={formField.onChange}
+                          disabled={(date) =>
+                            date < new Date() || date < new Date("1900-01-01")
+                          }
+                          initialFocus
+                        />
+                      </PopoverContent>
+                    </Popover>
                   ) : (
                     <Input {...formField} type={field.type} placeholder={field.placeholder} className="text-black" readOnly={isSubmitted} />
                   )}
