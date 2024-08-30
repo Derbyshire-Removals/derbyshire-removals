@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import TopBar from './TopBar';
 
@@ -19,7 +19,7 @@ const Header = () => {
             <Link to="/" className="text-2xl font-bold text-[#071059]">Derbyshire Removals</Link>
             
             <div className="flex items-center">
-              <nav className="hidden md:block mr-8">
+              <nav className="hidden md:block">
                 <ul className="flex space-x-6">
                   <li><Link to="/move-checklist" className="text-gray-600 hover:text-[#071059]">Move Checklist</Link></li>
                   <li><Link to="/storage" className="text-gray-600 hover:text-[#071059]">Storage</Link></li>
@@ -30,10 +30,6 @@ const Header = () => {
                 </ul>
               </nav>
               
-              <a href="tel:07774422561" className="flex items-center text-[#071059]">
-                <Phone size={18} className="mr-2" />
-                <span>07774 422561</span>
-              </a>
               <button onClick={toggleMenu} className="ml-4 md:hidden">
                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
