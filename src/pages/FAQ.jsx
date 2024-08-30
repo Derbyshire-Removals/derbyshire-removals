@@ -23,7 +23,7 @@ const FAQ = () => {
     },
     {
       question: "What payment methods do you accept?",
-      answer: "We accept various payment methods including credit cards, debit cards, bank transfers, and cash. Payment is typically due upon completion of the move unless other arrangements have been made in advance."
+      answer: "We accept various payment methods including credit cards, debit cards, bank transfers, and cash."
     }
   ];
 
