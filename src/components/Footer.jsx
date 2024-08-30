@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Twitter, Instagram } from 'lucide-react';
+import { MessageCircle } from 'lucide-react';
 import { navItems } from '../nav-items';
 
 const Footer = () => {
@@ -26,10 +26,16 @@ const Footer = () => {
           </div>
           <div className="w-full md:w-1/3">
             <h4 className="text-lg font-semibold mb-4">Connect With Us</h4>
-            <div className="flex space-x-4">
-              <a href="#" className="hover:text-blue-400"><Facebook /></a>
-              <a href="#" className="hover:text-blue-400"><Twitter /></a>
-              <a href="#" className="hover:text-blue-400"><Instagram /></a>
+            <div className="flex items-center">
+              <a 
+                href="https://wa.me/447774422561" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="flex items-center text-white hover:text-green-400 transition-colors duration-300"
+              >
+                <MessageCircle className="mr-2" />
+                <span>WhatsApp Us</span>
+              </a>
             </div>
           </div>
         </div>
