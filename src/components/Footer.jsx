@@ -12,6 +12,7 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">Derbyshire Removals</h3>
             <p>Matlock: 01629 584953</p>
             <p>Mob: 07774422561</p>
+            <p>Email: derbyshireremovals@yahoo.co.uk</p>
           </div>
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
