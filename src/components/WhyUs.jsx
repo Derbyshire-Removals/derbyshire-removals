@@ -3,7 +3,7 @@ import { CheckCircle } from 'lucide-react';
 
 const WhyUs = () => {
   const reasons = [
-    "Experienced and professional team",
+    "Over 30 years of experience",
     "Fully insured and licensed",
     "Customized moving plans",
     "Competitive pricing",
