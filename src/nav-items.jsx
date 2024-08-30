@@ -1,4 +1,4 @@
-import { HomeIcon, CheckSquare, Package, Box, MessageSquare, HelpCircle, PhoneCall } from "lucide-react";
+import { HomeIcon, CheckSquare, Package, Box, MessageSquare, HelpCircle, PhoneCall, MapPin } from "lucide-react";
 import Index from "./pages/Index.jsx";
 import MoveChecklist from "./pages/MoveChecklist.jsx";
 import Storage from "./pages/Storage.jsx";
@@ -6,6 +6,7 @@ import PackagingMaterial from "./pages/PackagingMaterial.jsx";
 import Testimonials from "./pages/Testimonials.jsx";
 import FAQ from "./pages/FAQ.jsx";
 import Contact from "./pages/Contact.jsx";
+import AreasWeCover from "./pages/AreasWeCover.jsx";
 
 /**
  * Central place for defining the navigation items. Used for navigation components and routing.
@@ -34,6 +35,12 @@ export const navItems = [
     to: "/packaging-material",
     icon: <Box className="h-4 w-4" />,
     page: <PackagingMaterial />,
+  },
+  {
+    title: "Areas We Cover",
+    to: "/areas-we-cover",
+    icon: <MapPin className="h-4 w-4" />,
+    page: <AreasWeCover />,
   },
   {
     title: "Testimonials",
