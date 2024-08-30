@@ -11,7 +11,6 @@ const Footer = () => {
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
             <h3 className="text-xl font-bold mb-4">Derbyshire Removals</h3>
             <p>Matlock: 01629 584953</p>
-            <p>Chesterfield: 01246 381677</p>
             <p>Mob: 07774422561</p>
           </div>
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
