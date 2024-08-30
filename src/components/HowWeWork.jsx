@@ -10,7 +10,7 @@ const Step = ({ icon, title, description, isLast }) => (
     <p>{description}</p>
     {!isLast && (
       <div className="absolute top-8 left-1/2 w-full h-0.5 bg-[#071059] hidden lg:block">
-        <ArrowRight className="absolute right-0 top-1/2 transform -translate-y-1/2 text-[#071059]" size={20} />
+        <ArrowRight className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-1/2 text-[#071059]" size={24} />
       </div>
     )}
   </div>
@@ -30,7 +30,17 @@ const HowWeWork = () => {
         <h2 className="text-3xl font-bold text-center mb-10">How We Work</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
           {steps.map((step, index) => (
-            <Step key={index} {...step} isLast={index === steps.length - 1} />
+            <React.Fragment key={index}>
+              <Step {...step} isLast={index === steps.length - 1} />
+              {index < steps.length - 1 && (
+                <div className="hidden md:block absolute top-8 left-1/2 w-full h-0.5 bg-[#071059] z-0" style={{
+                  left: `calc(${(index + 1) * 25}% - ${(index + 1) * 1}rem)`,
+                  width: 'calc(25% + 2rem)'
+                }}>
+                  <ArrowRight className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-1/2 text-[#071059]" size={24} />
+                </div>
+              )}
+            </React.Fragment>
           ))}
         </div>
       </div>
