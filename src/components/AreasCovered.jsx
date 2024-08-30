@@ -19,7 +19,7 @@ const AreasCovered = () => {
           ))}
         </div>
         <p className="text-center mt-6 text-gray-600">
-          We also cover surrounding areas of Derbyshire and Nottinghamshire. Contact us for more information.
+          We cover surrounding areas of Derbyshire and Nottinghamshire. Contact us for more information.
         </p>
       </div>
     </section>
