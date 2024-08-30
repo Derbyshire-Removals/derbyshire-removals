@@ -1,5 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Instagram } from 'lucide-react';
+import { navItems } from '../nav-items';
 
 const Footer = () => {
   return (
@@ -14,9 +16,11 @@ const Footer = () => {
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul>
-              <li><a href="#services" className="hover:text-blue-400">Services</a></li>
-              <li><a href="#areas" className="hover:text-blue-400">Areas Covered</a></li>
-              <li><a href="#contact" className="hover:text-blue-400">Contact Us</a></li>
+              {navItems.map((item, index) => (
+                <li key={index}>
+                  <Link to={item.to} className="hover:text-blue-400">{item.title}</Link>
+                </li>
+              ))}
             </ul>
           </div>
           <div className="w-full md:w-1/3">
