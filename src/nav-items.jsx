@@ -3,7 +3,7 @@ import { HomeIcon, CheckSquare, Package, Box, MessageSquare, HelpCircle, PhoneCa
 import Index from "./pages/Index.jsx";
 import MoveChecklist from "./pages/MoveChecklist.jsx";
 import Storage from "./pages/Storage.jsx";
-import Testimonials from "./pages/Testimonials.jsx";
+const Testimonials = React.lazy(() => import("./pages/Testimonials.jsx"));
 import FAQ from "./pages/FAQ.jsx";
 import Contact from "./pages/Contact.jsx";
 import AreasWeCover from "./pages/AreasWeCover.jsx";
@@ -48,7 +48,7 @@ export const navItems = [
     title: "Testimonials",
     to: "/testimonials",
     icon: <MessageSquare className="h-4 w-4" />,
-    page: <Testimonials />,
+    page: <Suspense fallback={<div>Loading...</div>}><Testimonials /></Suspense>,
   },
   {
     title: "FAQ",
