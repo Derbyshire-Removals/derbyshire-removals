@@ -40,7 +40,8 @@ const ContactForm = ({ fields, buttonText }) => {
     // Handle form submission
     toast({
       title: "Thank you for your submission!",
-      description: "Someone will be in touch with you shortly.",
+      description: "We appreciate your interest. One of our team members will be in touch with you shortly to discuss your request.",
+      duration: 5000,
     })
     form.reset();
   };

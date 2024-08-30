@@ -41,8 +41,9 @@ const ContactForm = ({ fields, buttonText }) => {
     console.log(data);
     // Handle form submission
     toast({
-      title: "Thank you for your submission!",
-      description: "Someone will be in touch with you shortly.",
+      title: "Thank you for contacting us!",
+      description: "We've received your message and appreciate your interest. A member of our team will reach out to you shortly to address your inquiry.",
+      duration: 5000,
     })
     form.reset();
   };
