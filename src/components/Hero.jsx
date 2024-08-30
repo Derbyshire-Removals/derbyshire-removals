@@ -36,11 +36,32 @@ const ContactForm = ({ fields, buttonText }) => {
     },
   });
 
-  const onSubmit = (data) => {
-    console.log(data);
-    // Handle form submission
-    setSubmissionMessage("Thank you for your submission! We appreciate your interest. One of our team members will be in touch with you shortly to discuss your request.");
-    setIsSubmitted(true);
+  const onSubmit = (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    fetch(event.target.action, {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        setSubmissionMessage("Thank you for your submission! We appreciate your interest. One of our team members will be in touch with you shortly to discuss your request.");
+        setIsSubmitted(true);
+        form.reset();
+      } else {
+        response.json().then(data => {
+          if (Object.hasOwn(data, 'errors')) {
+            setSubmissionMessage(data["errors"].map(error => error["message"]).join(", "));
+          } else {
+            setSubmissionMessage("Oops! There was a problem submitting your form");
+          }
+        })
+      }
+    }).catch(error => {
+      setSubmissionMessage("Oops! There was a problem submitting your form");
+    });
   };
 
   return (
