@@ -48,9 +48,6 @@ const ContactForm = ({ fields, buttonText }) => {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-        {submissionMessage && (
-          <p className="text-green-600 text-sm mb-4">{submissionMessage}</p>
-        )}
         {fields.map((field) => (
           <FormField
             key={field.name}
@@ -99,6 +96,9 @@ const ContactForm = ({ fields, buttonText }) => {
             )}
           />
         ))}
+        {submissionMessage && (
+          <p className="text-green-600 text-sm mb-4">{submissionMessage}</p>
+        )}
         <Button type="submit" className="w-full" disabled={isSubmitted}>{buttonText}</Button>
       </form>
     </Form>
