@@ -2,15 +2,18 @@ import { HomeIcon, CheckSquare, Package, Box, MessageSquare, HelpCircle, PhoneCa
 import Index from "./pages/Index.jsx";
 import MoveChecklist from "./pages/MoveChecklist.jsx";
 import Storage from "./pages/Storage.jsx";
-import PackagingMaterial from "./pages/PackagingMaterial.jsx";
 import Testimonials from "./pages/Testimonials.jsx";
 import FAQ from "./pages/FAQ.jsx";
 import Contact from "./pages/Contact.jsx";
 import AreasWeCover from "./pages/AreasWeCover.jsx";
 
+const PackagingMaterial = React.lazy(() => import("./pages/PackagingMaterial.jsx"));
+
 /**
  * Central place for defining the navigation items. Used for navigation components and routing.
  */
+import React, { Suspense } from 'react';
+
 export const navItems = [
   {
     title: "Home",
@@ -34,7 +37,7 @@ export const navItems = [
     title: "Packaging Material",
     to: "/packaging-material",
     icon: <Box className="h-4 w-4" />,
-    page: <PackagingMaterial />,
+    page: <Suspense fallback={<div>Loading...</div>}><PackagingMaterial /></Suspense>,
   },
   {
     title: "Areas We Cover",
