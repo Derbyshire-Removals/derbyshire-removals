@@ -10,8 +10,9 @@ const Footer = () => {
         <div className="flex flex-wrap justify-between">
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
             <h3 className="text-xl font-bold mb-4">Derbyshire Removals</h3>
-            <p>Professional moving services across Derbyshire</p>
-            <p className="mt-2">Call us: 07774 422561</p>
+            <p>Matlock: 01629 584953</p>
+            <p>Chesterfield: 01246 381677</p>
+            <p>Mob: 07774422561</p>
           </div>
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
