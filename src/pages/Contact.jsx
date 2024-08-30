@@ -21,7 +21,7 @@ const schema = z.object({
   email: z.string().email({ message: "Invalid email address." }),
   phone: z.string().min(10, { message: "Phone number must be at least 10 digits." }),
   date: z.date({ required_error: "Please select a date." }),
-  address: z.string().min(1, { message: "Address is required." }),
+  address: z.string().optional(),
 });
 
 const ContactForm = ({ fields, buttonText }) => {
@@ -48,6 +48,9 @@ const ContactForm = ({ fields, buttonText }) => {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+        {submissionMessage && (
+          <p className="text-green-600 text-sm mb-4">{submissionMessage}</p>
+        )}
         {fields.map((field) => (
           <FormField
             key={field.name}
@@ -95,10 +98,7 @@ const ContactForm = ({ fields, buttonText }) => {
               </FormItem>
             )}
           />
-        )}
-        {submissionMessage && (
-          <p className="text-green-600 text-sm">{submissionMessage}</p>
-        )}
+        ))}
         <Button type="submit" className="w-full" disabled={isSubmitted}>{buttonText}</Button>
       </form>
     </Form>
