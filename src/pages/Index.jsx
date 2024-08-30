@@ -13,7 +13,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gray-100">
       <Header />
-      <div className="pt-20"> {/* Add padding-top to account for fixed header */}
+      <div> {/* Removed padding-top as it's handled in Hero component */}
         <Hero />
         <Authority />
         <Services />

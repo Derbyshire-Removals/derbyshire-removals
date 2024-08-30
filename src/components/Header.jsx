@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Phone, Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import TopBar from './TopBar';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,8 +11,10 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
-      <div className="container mx-auto px-4 py-4">
+    <header className="fixed top-0 left-0 right-0 z-50">
+      <TopBar />
+      <div className="bg-white shadow-md">
+        <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="text-2xl font-bold text-[#071059]">Derbyshire Removals</Link>
           
