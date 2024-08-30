@@ -36,39 +36,16 @@ const ContactForm = ({ fields, buttonText }) => {
     },
   });
 
-  const onSubmit = async (data) => {
-    try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          access_key: "a76a98d9-1d8e-419f-85b6-34407a6e50a8",
-          ...data,
-          date: data.date ? format(data.date, "yyyy-MM-dd") : undefined,
-        }),
-      });
-      
-      if (response.ok) {
-        setSubmissionMessage("Thank you for your submission! We appreciate your interest. One of our team members will be in touch with you shortly to discuss your request.");
-        setIsSubmitted(true);
-        form.reset();
-      } else {
-        throw new Error("Form submission failed");
-      }
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      setSubmissionMessage("There was an error submitting your form. Please try again later.");
-    }
+  const onSubmit = (data) => {
+    console.log(data);
+    // Handle form submission
+    setSubmissionMessage("Thank you for your submission! We appreciate your interest. One of our team members will be in touch with you shortly to discuss your request.");
+    setIsSubmitted(true);
   };
 
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-        <input type="hidden" name="access_key" value="a76a98d9-1d8e-419f-85b6-34407a6e50a8" />
-        <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
         {fields.map((field) => (
           <FormField
             key={field.name}
