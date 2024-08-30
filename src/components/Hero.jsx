@@ -10,8 +10,7 @@ import { Calendar } from "@/components/ui/calendar"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 import { cn } from "@/lib/utils"
 import { format } from "date-fns"
-import { CalendarIcon } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Calendar as CalendarIcon } from "lucide-react"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { useToast } from "@/components/ui/use-toast"
 
@@ -61,29 +60,14 @@ const ContactForm = ({ fields, buttonText }) => {
                   {field.type === 'textarea' ? (
                     <Textarea {...formField} placeholder={field.placeholder} className="text-black" readOnly={isSubmitted} />
                   ) : field.type === 'date' ? (
-                    <Popover>
-                      <PopoverTrigger asChild>
-                        <Button
-                          variant={"outline"}
-                          className={cn(
-                            "w-full justify-start text-left font-normal",
-                            !formField.value && "text-muted-foreground"
-                          )}
-                        >
-                          <CalendarIcon className="mr-2 h-4 w-4" />
-                          {formField.value ? format(formField.value, "PPP") : <span>{field.placeholder}</span>}
-                        </Button>
-                      </PopoverTrigger>
-                      <PopoverContent className="w-auto p-0" align="start">
-                        <Calendar
-                          mode="single"
-                          selected={formField.value}
-                          onSelect={formField.onChange}
-                          disabled={(date) => date < new Date()}
-                          initialFocus
-                        />
-                      </PopoverContent>
-                    </Popover>
+                    <Input
+                      {...formField}
+                      type="date"
+                      min={new Date().toISOString().split('T')[0]}
+                      placeholder={field.placeholder}
+                      className="text-black"
+                      readOnly={isSubmitted}
+                    />
                   ) : (
                     <Input {...formField} type={field.type} placeholder={field.placeholder} className="text-black" readOnly={isSubmitted} />
                   )}
@@ -107,7 +91,7 @@ const Hero = () => {
     { name: 'name', type: 'text', label: 'Name', placeholder: 'Your Name' },
     { name: 'email', type: 'email', label: 'Email', placeholder: 'Your Email' },
     { name: 'phone', type: 'tel', label: 'Phone', placeholder: 'Your Phone Number' },
-    { name: 'date', type: 'date', label: 'Preferred Callback Date', placeholder: 'Pick a date' },
+    { name: 'date', type: 'date', label: 'Preferred Callback Date', placeholder: 'YYYY-MM-DD' },
   ];
 
   const visitFields = [
