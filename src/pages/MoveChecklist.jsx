@@ -18,7 +18,7 @@ const MoveChecklist = () => {
             <li>Tell your phone company that you are moving. Give them the date to close your account and arrange reconnection at your new home. Give your solicitor your new telephone number.</li>
             <li>Arrange meter readings and disconnection at your present address.</li>
             <li>Confirm that you are taking over gas and electricity at the new address.</li>
-            <li>Start to plan your packing and what you will need. Click on <Link to="/packaging-material" className="text-blue-600 hover:underline">PackagingMaterial</Link> on our home page for help and advice.</li>
+            <li>Start to plan your packing and what you will need. Click on <Link to="/packaging-material" className="text-blue-600 hover:underline">Packaging Material</Link> on our home page for help and advice.</li>
             <li>Redirect your mail.</li>
             <li>Check that your home and contents insurers know about your move make sure that cover will continue and that they have your new contact address.</li>
           </ul>
