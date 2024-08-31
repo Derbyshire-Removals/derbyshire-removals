@@ -109,7 +109,7 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative bg-cover bg-center py-20 mt-[88px]" style={{ backgroundImage: "url('https://derbyshireremovals.com/wp-content/uploads/2017/11/41.jpg')" }}>
+    <section className="relative bg-cover bg-center py-20 mt-[88px]" style={{ backgroundImage: "url('images/van.jpg')" }}>
       <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className="container mx-auto px-4 flex flex-wrap items-center justify-center relative z-10">
         <div className="w-full lg:w-1/2 mb-10 lg:mb-0 text-white text-center">
