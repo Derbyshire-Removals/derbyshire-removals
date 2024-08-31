@@ -2,7 +2,7 @@
 
 ## Project info
 
-**Project**: yorkshire-removals-hub
+**Project**: derbyshire-removals-hub
 
 **URL**: https://run.gptengineer.app/projects/af1385e6-7733-4b6c-b932-4331005cace3/improve
 
