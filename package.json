@@ -9,7 +9,7 @@
     "build:dev": "vite build --mode development",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "deploy-github": "gh-pages -d dist"
+    "deploy-github": "echo 'derbyshireremovals.com' > dist/CNAME && gh-pages -d dist"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.6.0",
