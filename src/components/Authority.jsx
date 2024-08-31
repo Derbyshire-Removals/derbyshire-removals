@@ -6,13 +6,11 @@ const Authority = () => {
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-10">Derbyshire's Trusted Trader</h2>
         <div className="flex justify-center items-center">
-          <a href="https://apps.derbyshire.gov.uk/applications/trusted-trader/profile.asp?tid=56236&d=&p=&q=&Letter=R" target="_blank" rel="noopener noreferrer">
-            <img 
-              src="images/derbyshire-trusted-trader-logo.gif" 
-              alt="Derbyshire's Trusted Trader Logo" 
-              className="h-32 w-auto"
-            />
-          </a>
+          <img 
+            src="images/derbyshire-trusted-trader-logo.gif" 
+            alt="Derbyshire's Trusted Trader Logo" 
+            className="h-32 w-auto"
+          />
         </div>
       </div>
     </section>
