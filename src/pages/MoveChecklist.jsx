@@ -7,7 +7,7 @@ const MoveChecklist = () => {
   return (
     <div className="min-h-screen bg-gray-100">
       <Header />
-      <main className="container mx-auto px-4 py-8 pt-40"> {/* Updated pt-32 to pt-40 */}
+      <main className="container mx-auto px-4 py-8 pt-44">
         <h1 className="text-3xl font-bold mb-6">Move Checklist</h1>
         <p className="mb-8">Follow our checklist to ensure your move is as stress free as possible.</p>
 
