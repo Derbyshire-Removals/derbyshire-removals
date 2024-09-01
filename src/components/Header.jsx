@@ -16,7 +16,9 @@ const Header = () => {
       <div className="bg-white shadow-md">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <Link to="/" className="text-2xl font-bold text-[#071059]">Derbyshire Removals</Link>
+            <Link to="/" className="flex items-center">
+              <img src="/images/logo.png" alt="Derbyshire Removals" className="h-12 w-auto" />
+            </Link>
             
             <div className="flex items-center">
               <nav className="hidden md:block">
