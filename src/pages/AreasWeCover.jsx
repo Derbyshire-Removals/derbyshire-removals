@@ -35,7 +35,7 @@ const AreasWeCover = () => {
   return (
     <div className="min-h-screen bg-gray-100">
       <Header />
-      <main className="container mx-auto px-4 py-8 pt-48">
+      <main className="container mx-auto px-4 py-8 pt-44">
         <h1 className="text-3xl font-bold mb-6">Detailed Areas We Cover</h1>
         {regions.map((region, index) => (
           <div key={index} className="mb-8">
