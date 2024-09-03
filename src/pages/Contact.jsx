@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -91,6 +91,10 @@ const ContactForm = ({ fields, buttonText }) => {
 };
 
 const Contact = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const callbackFields = [
     { name: 'name', type: 'text', label: 'Name', placeholder: 'Your Name' },
     { name: 'email', type: 'email', label: 'Email', placeholder: 'Your Email' },
@@ -109,7 +113,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-gray-100">
       <Header />
-      <main className="container mx-auto px-4 py-8 pt-44">
+      <main className="container mx-auto px-4 py-8 pt-48">
         <h1 className="text-3xl font-bold mb-6">Contact Us</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>

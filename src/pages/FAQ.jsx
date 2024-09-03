@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
 const FAQ = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const faqItems = [
     {
       question: "How far in advance should I book my move?",
@@ -30,7 +34,7 @@ const FAQ = () => {
   return (
     <div className="min-h-screen bg-gray-100">
       <Header />
-      <main className="container mx-auto px-4 py-8 pt-44">
+      <main className="container mx-auto px-4 py-8 pt-48">
         <h1 className="text-3xl font-bold mb-6">Frequently Asked Questions</h1>
         <Accordion type="single" collapsible className="w-full">
           {faqItems.map((item, index) => (

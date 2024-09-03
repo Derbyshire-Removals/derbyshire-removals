@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import {
@@ -37,10 +37,14 @@ const packagingMaterials = [
 ];
 
 const PackagingMaterial = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-100">
       <Header />
-      <main className="container mx-auto px-4 py-8 pt-44">
+      <main className="container mx-auto px-4 py-8 pt-48">
         <h1 className="text-3xl font-bold mb-6">Packaging Material</h1>
         <Table>
           <TableHeader>
