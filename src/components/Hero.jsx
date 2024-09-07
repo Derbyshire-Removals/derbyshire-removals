@@ -4,7 +4,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 
@@ -13,7 +12,8 @@ const schema = z.object({
   email: z.string().email({ message: "Invalid email address." }),
   phone: z.string().min(10, { message: "Phone number must be at least 10 digits." }),
   preferred_callback_date: z.date({ required_error: "Please select a date." }),
-  address: z.string().min(1, { message: "Address is required." })
+  address: z.string().min(1, { message: "Address is required." }),
+  homeVisit: z.boolean().optional()
 });
 
 const ContactForm = () => {
@@ -26,13 +26,13 @@ const ContactForm = () => {
       email: "",
       phone: "",
       date: undefined,
-      address: ""
+      address: "",
+      homeVisit: false,
     },
   });
 
   const onSubmit = (data) => {
     console.log(data);
-    // Handle form submission
     setSubmissionMessage("Thank you for your submission! We appreciate your interest. One of our team members will be in touch with you shortly to discuss your request.");
     setIsSubmitted(true);
   };
@@ -113,11 +113,37 @@ const ContactForm = () => {
             </FormItem>
           )}
         />
+        <FormField
+          control={form.control}
+          name="homeVisit"
+          render={({ field }) => (
+            <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+              <FormControl>
+                <Checkbox
+                  checked={field.value}
+                  onCheckedChange={field.onChange}
+                />
+              </FormControl>
+              <div className="space-y-1 leading-none">
+                <FormLabel>
+                  Request a home visit (for larger moves)
+                </FormLabel>
+              </div>
+            </FormItem>
+          )}
+        />
         {submissionMessage && (
           <p className="text-green-600 text-sm mb-4">{submissionMessage}</p>
         )}
         <Button type="submit" className="w-full" disabled={isSubmitted}>Get Free Quote</Button>
       </form>
+      <p className="text-sm mt-4">
+        For larger moves, we may need to visit your home. Alternatively, you can send us your videos via{' '}
+        <a href="https://wa.me/447774422561" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+          WhatsApp
+        </a>
+        .
+      </p>
     </Form>
   );
 };

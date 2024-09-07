@@ -6,7 +6,6 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Phone, Mail } from "lucide-react"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
@@ -16,7 +15,8 @@ const schema = z.object({
   email: z.string().email({ message: "Invalid email address." }),
   phone: z.string().min(10, { message: "Phone number must be at least 10 digits." }),
   preferred_callback_date: z.date({ required_error: "Please select a date." }),
-  address: z.string().min(1, { message: "Address is required." })
+  address: z.string().min(1, { message: "Address is required." }),
+  homeVisit: z.boolean().optional()
 });
 
 const ContactForm = () => {
@@ -46,82 +46,61 @@ const ContactForm = () => {
         <input type="hidden" name="access_key" value="a76a98d9-1d8e-419f-85b6-34407a6e50a8" />
         <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
 
+        {['name', 'email', 'phone', 'preferred_callback_date', 'address'].map((fieldName) => (
+          <FormField
+            key={fieldName}
+            control={form.control}
+            name={fieldName}
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>{fieldName.charAt(0).toUpperCase() + fieldName.slice(1).replace('_', ' ')}</FormLabel>
+                <FormControl>
+                  <Input
+                    type={fieldName === 'email' ? 'email' : fieldName === 'phone' ? 'tel' : fieldName === 'preferred_callback_date' ? 'date' : 'text'}
+                    placeholder={`Your ${fieldName.charAt(0).toUpperCase() + fieldName.slice(1).replace('_', ' ')}`}
+                    {...field}
+                    value={fieldName === 'preferred_callback_date' && field.value ? field.value.toISOString().split('T')[0] : field.value}
+                    onChange={(e) => fieldName === 'preferred_callback_date' ? field.onChange(new Date(e.target.value)) : field.onChange(e)}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        ))}
+
         <FormField
           control={form.control}
-          name="name"
+          name="homeVisit"
           render={({ field }) => (
-            <FormItem>
-              <FormLabel>Name</FormLabel>
+            <FormItem className="flex flex-row items-start space-x-3 space-y-0">
               <FormControl>
-                <Input placeholder="Your Name" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="email"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Email</FormLabel>
-              <FormControl>
-                <Input type="email" placeholder="Your Email" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="phone"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Phone</FormLabel>
-              <FormControl>
-                <Input type="tel" placeholder="Your Phone Number" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="preferred_callback_date"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Preferred Callback Date</FormLabel>
-              <FormControl>
-                <Input
-                  type="date"
-                  min={new Date().toISOString().split('T')[0]}
-                  {...field}
-                  value={field.value ? field.value.toISOString().split('T')[0] : ''}
-                  onChange={(e) => field.onChange(new Date(e.target.value))}
+                <Checkbox
+                  checked={field.value}
+                  onCheckedChange={field.onChange}
                 />
               </FormControl>
-              <FormMessage />
+              <div className="space-y-1 leading-none">
+                <FormLabel>
+                  Request a home visit (for larger moves)
+                </FormLabel>
+              </div>
             </FormItem>
           )}
         />
-        <FormField
-          control={form.control}
-          name="address"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Address</FormLabel>
-              <FormControl>
-                <Input placeholder="Your Address" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+
         {submissionMessage && (
           <p className="text-green-600 text-sm mb-4">{submissionMessage}</p>
         )}
         <Button type="submit" className="w-full" disabled={isSubmitted}>Send Message</Button>
       </form>
+      <p className="text-sm mt-4">
+        For larger moves, we may need to visit your home. Alternatively, you can send us your videos via{' '}
+        <a href="https://wa.me/447774422561" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+          WhatsApp
+        </a>
+        .
+      </p>
     </Form>
   );
 };
