@@ -12,9 +12,8 @@ const schema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   email: z.string().email({ message: "Invalid email address." }),
   phone: z.string().min(10, { message: "Phone number must be at least 10 digits." }),
-  date: z.date({ required_error: "Please select a date." }),
-  address: z.string().min(1, { message: "Address is required." }),
-  homeVisit: z.boolean().optional(),
+  preferred_callback_date: z.date({ required_error: "Please select a date." }),
+  address: z.string().min(1, { message: "Address is required." })
 });
 
 const ContactForm = () => {
@@ -27,8 +26,7 @@ const ContactForm = () => {
       email: "",
       phone: "",
       date: undefined,
-      address: "",
-      homeVisit: false,
+      address: ""
     },
   });
 
@@ -42,6 +40,8 @@ const ContactForm = () => {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+        <input type="hidden" name="access_key" value="a76a98d9-1d8e-419f-85b6-34407a6e50a8" />
+        <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
         <FormField
           control={form.control}
           name="name"
@@ -83,10 +83,10 @@ const ContactForm = () => {
         />
         <FormField
           control={form.control}
-          name="date"
+          name="preferred_callback_date"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Preferred Date</FormLabel>
+              <FormLabel>Preferred Callback Date</FormLabel>
               <FormControl>
                 <Input
                   type="date"
@@ -107,28 +107,9 @@ const ContactForm = () => {
             <FormItem>
               <FormLabel>Address</FormLabel>
               <FormControl>
-                <Textarea placeholder="Your Address" {...field} />
+                <Input placeholder="Your Address" {...field} />
               </FormControl>
               <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="homeVisit"
-          render={({ field }) => (
-            <FormItem className="flex flex-row items-start space-x-3 space-y-0">
-              <FormControl>
-                <Checkbox
-                  checked={field.value}
-                  onCheckedChange={field.onChange}
-                />
-              </FormControl>
-              <div className="space-y-1 leading-none">
-                <FormLabel>
-                  Request a home visit
-                </FormLabel>
-              </div>
             </FormItem>
           )}
         />
