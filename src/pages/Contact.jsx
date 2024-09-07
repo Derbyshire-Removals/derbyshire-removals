@@ -14,6 +14,7 @@ const schema = z.object({
   email: z.string().email({ message: "Invalid email address." }),
   phone: z.string().min(10, { message: "Phone number must be at least 10 digits." }),
   preferred_callback_date: z.date({ required_error: "Please select a date." }),
+  move_date: z.date({ required_error: "Please select a move date." }),
   address: z.string().min(1, { message: "Address is required." }),
 });
 
@@ -26,7 +27,8 @@ const ContactForm = () => {
       name: "",
       email: "",
       phone: "",
-      date: undefined,
+      preferred_callback_date: undefined,
+      move_date: undefined,
       address: "",
     },
   });
@@ -37,27 +39,37 @@ const ContactForm = () => {
     setIsSubmitted(true);
   };
 
+  const formFields = [
+    { name: 'name', label: 'Name', type: 'text', placeholder: 'Your Name' },
+    { name: 'email', label: 'Email', type: 'email', placeholder: 'Your Email' },
+    { name: 'phone', label: 'Phone', type: 'tel', placeholder: 'Your Phone Number' },
+    { name: 'preferred_callback_date', label: 'Preferred Callback Date', type: 'date' },
+    { name: 'move_date', label: 'Move Date', type: 'date' },
+    { name: 'address', label: 'Address', type: 'text', placeholder: 'Your Address' },
+  ];
+
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
         <input type="hidden" name="access_key" value="a76a98d9-1d8e-419f-85b6-34407a6e50a8" />
         <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
 
-        {['name', 'email', 'phone', 'preferred_callback_date', 'address'].map((fieldName) => (
+        {formFields.map((field) => (
           <FormField
-            key={fieldName}
+            key={field.name}
             control={form.control}
-            name={fieldName}
-            render={({ field }) => (
+            name={field.name}
+            render={({ field: formField }) => (
               <FormItem>
-                <FormLabel>{fieldName.charAt(0).toUpperCase() + fieldName.slice(1).replace('_', ' ')}</FormLabel>
+                <FormLabel>{field.label}</FormLabel>
                 <FormControl>
                   <Input
-                    type={fieldName === 'email' ? 'email' : fieldName === 'phone' ? 'tel' : fieldName === 'preferred_callback_date' ? 'date' : 'text'}
-                    placeholder={`Your ${fieldName.charAt(0).toUpperCase() + fieldName.slice(1).replace('_', ' ')}`}
-                    {...field}
-                    value={fieldName === 'preferred_callback_date' && field.value ? field.value.toISOString().split('T')[0] : field.value}
-                    onChange={(e) => fieldName === 'preferred_callback_date' ? field.onChange(new Date(e.target.value)) : field.onChange(e)}
+                    type={field.type}
+                    placeholder={field.placeholder}
+                    {...formField}
+                    value={field.type === 'date' && formField.value ? formField.value.toISOString().split('T')[0] : formField.value}
+                    onChange={(e) => field.type === 'date' ? formField.onChange(new Date(e.target.value)) : formField.onChange(e)}
+                    min={field.type === 'date' ? new Date().toISOString().split('T')[0] : undefined}
                   />
                 </FormControl>
                 <FormMessage />

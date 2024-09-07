@@ -11,6 +11,7 @@ const schema = z.object({
   email: z.string().email({ message: "Invalid email address." }),
   phone: z.string().min(10, { message: "Phone number must be at least 10 digits." }),
   preferred_callback_date: z.date({ required_error: "Please select a date." }),
+  move_date: z.date({ required_error: "Please select a move date." }),
   address: z.string().min(1, { message: "Address is required." }),
 });
 
@@ -23,7 +24,8 @@ const ContactForm = () => {
       name: "",
       email: "",
       phone: "",
-      date: undefined,
+      preferred_callback_date: undefined,
+      move_date: undefined,
       address: "",
     },
   });
@@ -84,6 +86,25 @@ const ContactForm = () => {
           render={({ field }) => (
             <FormItem>
               <FormLabel>Preferred Callback Date</FormLabel>
+              <FormControl>
+                <Input
+                  type="date"
+                  min={new Date().toISOString().split('T')[0]}
+                  {...field}
+                  value={field.value ? field.value.toISOString().split('T')[0] : ''}
+                  onChange={(e) => field.onChange(new Date(e.target.value))}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="move_date"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Move Date</FormLabel>
               <FormControl>
                 <Input
                   type="date"
