@@ -4,7 +4,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Checkbox } from "@/components/ui/checkbox"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 
 const schema = z.object({
@@ -13,7 +12,6 @@ const schema = z.object({
   phone: z.string().min(10, { message: "Phone number must be at least 10 digits." }),
   preferred_callback_date: z.date({ required_error: "Please select a date." }),
   address: z.string().min(1, { message: "Address is required." }),
-  homeVisit: z.boolean().optional()
 });
 
 const ContactForm = () => {
@@ -27,7 +25,6 @@ const ContactForm = () => {
       phone: "",
       date: undefined,
       address: "",
-      homeVisit: false,
     },
   });
 
@@ -110,25 +107,6 @@ const ContactForm = () => {
                 <Input placeholder="Your Address" {...field} />
               </FormControl>
               <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="homeVisit"
-          render={({ field }) => (
-            <FormItem className="flex flex-row items-start space-x-3 space-y-0">
-              <FormControl>
-                <Checkbox
-                  checked={field.value}
-                  onCheckedChange={field.onChange}
-                />
-              </FormControl>
-              <div className="space-y-1 leading-none">
-                <FormLabel>
-                  Request a home visit (for larger moves)
-                </FormLabel>
-              </div>
             </FormItem>
           )}
         />
