@@ -90,7 +90,7 @@ const ContactForm = () => {
         <Button type="submit" className="w-full" disabled={isSubmitted}>Send Message</Button>
       </form>
       <p className="text-sm mt-4">
-        To help plan the move, we may need to visit your home. Alternatively, you can send us your videos via{' '}
+        To help assess the move, we may need to visit your home/office. Alternatively, you can send us your videos via{' '}
         <a href="https://wa.me/447774422561" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
           WhatsApp
         </a>
