@@ -1,18 +1,12 @@
 import React from 'react';
-import { useForm, Controller } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Calendar } from "@/components/ui/calendar"
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
-import { cn } from "@/lib/utils"
-import { format } from "date-fns"
-import { Calendar as CalendarIcon } from "lucide-react"
+import { Checkbox } from "@/components/ui/checkbox"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
-import { useToast } from "@/components/ui/use-toast"
 
 const schema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -20,9 +14,11 @@ const schema = z.object({
   phone: z.string().min(10, { message: "Phone number must be at least 10 digits." }),
   date: z.date({ required_error: "Please select a date." }),
   address: z.string().min(1, { message: "Address is required." }),
+  homeVisit: z.boolean().optional(),
+  whatsappVideo: z.boolean().optional(),
 });
 
-const ContactForm = ({ fields, buttonText }) => {
+const ContactForm = () => {
   const [submissionMessage, setSubmissionMessage] = React.useState('');
   const [isSubmitted, setIsSubmitted] = React.useState(false);
   const form = useForm({
@@ -33,6 +29,8 @@ const ContactForm = ({ fields, buttonText }) => {
       phone: "",
       date: undefined,
       address: "",
+      homeVisit: false,
+      whatsappVideo: false,
     },
   });
 
@@ -45,69 +43,126 @@ const ContactForm = ({ fields, buttonText }) => {
 
   return (
     <Form {...form}>
-      <form action="https://api.web3forms.com/submit" method="POST" className="space-y-4">
-        <input type="hidden" name="access_key" value="a76a98d9-1d8e-419f-85b6-34407a6e50a8" />
-        <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
-        <input 
-          type="hidden" 
-          name="subject" 
-          value={fields.some(f => f.name === 'address') ? "Derbyshire Removals: Home visit requested" : "Derbyshire Removals: Callback requested"} 
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+        <FormField
+          control={form.control}
+          name="name"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Name</FormLabel>
+              <FormControl>
+                <Input placeholder="Your Name" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
         />
-        {fields.map((field) => (
-          <FormField
-            key={field.name}
-            control={form.control}
-            name={field.name}
-            render={({ field: formField }) => (
-              <FormItem>
-                <FormLabel>{field.label}</FormLabel>
-                <FormControl>
-                  {field.type === 'textarea' ? (
-                    <Textarea {...formField} placeholder={field.placeholder} className="text-black" readOnly={isSubmitted} required />
-                  ) : field.type === 'date' ? (
-                    <Input
-                      {...formField}
-                      type="date"
-                      min={new Date().toISOString().split('T')[0]}
-                      placeholder={field.placeholder}
-                      className="text-black"
-                      readOnly={isSubmitted}
-                      required
-                    />
-                  ) : (
-                    <Input {...formField} type={field.type} placeholder={field.placeholder} className="text-black" readOnly={isSubmitted} required />
-                  )}
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-        ))}
+        <FormField
+          control={form.control}
+          name="email"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Email</FormLabel>
+              <FormControl>
+                <Input type="email" placeholder="Your Email" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="phone"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Phone</FormLabel>
+              <FormControl>
+                <Input type="tel" placeholder="Your Phone Number" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="date"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Preferred Date</FormLabel>
+              <FormControl>
+                <Input
+                  type="date"
+                  min={new Date().toISOString().split('T')[0]}
+                  {...field}
+                  value={field.value ? field.value.toISOString().split('T')[0] : ''}
+                  onChange={(e) => field.onChange(new Date(e.target.value))}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="address"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Address</FormLabel>
+              <FormControl>
+                <Textarea placeholder="Your Address" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="homeVisit"
+          render={({ field }) => (
+            <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+              <FormControl>
+                <Checkbox
+                  checked={field.value}
+                  onCheckedChange={field.onChange}
+                />
+              </FormControl>
+              <div className="space-y-1 leading-none">
+                <FormLabel>
+                  Request a home visit
+                </FormLabel>
+              </div>
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="whatsappVideo"
+          render={({ field }) => (
+            <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+              <FormControl>
+                <Checkbox
+                  checked={field.value}
+                  onCheckedChange={field.onChange}
+                />
+              </FormControl>
+              <div className="space-y-1 leading-none">
+                <FormLabel>
+                  I can provide a video via WhatsApp
+                </FormLabel>
+              </div>
+            </FormItem>
+          )}
+        />
         {submissionMessage && (
           <p className="text-green-600 text-sm mb-4">{submissionMessage}</p>
         )}
-        <Button type="submit" className="w-full" disabled={isSubmitted}>{buttonText}</Button>
+        <Button type="submit" className="w-full" disabled={isSubmitted}>Get Free Quote</Button>
       </form>
     </Form>
   );
 };
 
 const Hero = () => {
-  const callbackFields = [
-    { name: 'name', type: 'text', label: 'Name', placeholder: 'Your Name' },
-    { name: 'email', type: 'email', label: 'Email', placeholder: 'Your Email' },
-    { name: 'phone', type: 'tel', label: 'Phone', placeholder: 'Your Phone Number' },
-    { name: 'date', type: 'date', label: 'Preferred Callback Date', placeholder: 'YYYY-MM-DD' },
-  ];
-
-  const visitFields = [
-    { name: 'name', type: 'text', label: 'Name', placeholder: 'Your Name' },
-    { name: 'email', type: 'email', label: 'Email', placeholder: 'Your Email' },
-    { name: 'phone', type: 'tel', label: 'Phone', placeholder: 'Your Phone Number' },
-    { name: 'date', type: 'date', label: 'Preferred Visit Date', placeholder: 'YYYY-MM-DD' },
-    { name: 'address', type: 'textarea', label: 'Address', placeholder: 'Your Address (required)' },
-  ];
-
   return (
     <section className="relative bg-cover bg-center py-20 mt-[88px]" style={{ backgroundImage: "url('images/van.jpg')" }}>
       <div className="absolute inset-0 bg-black opacity-50"></div>
@@ -119,18 +174,7 @@ const Hero = () => {
         <div className="w-full lg:w-1/2 lg:pl-10">
           <div className="bg-white p-6 rounded-lg shadow-md">
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Get Free Quote</h3>
-            <Tabs defaultValue="callback" className="w-full">
-              <TabsList className="grid w-full grid-cols-2">
-                <TabsTrigger value="callback">Request Callback</TabsTrigger>
-                <TabsTrigger value="visit">Home Visit Request</TabsTrigger>
-              </TabsList>
-              <TabsContent value="callback">
-                <ContactForm fields={callbackFields} buttonText="Request Callback" />
-              </TabsContent>
-              <TabsContent value="visit">
-                <ContactForm fields={visitFields} buttonText="Request Home Visit" />
-              </TabsContent>
-            </Tabs>
+            <ContactForm />
           </div>
         </div>
       </div>
