@@ -18,7 +18,6 @@ const schema = z.object({
   date: z.date({ required_error: "Please select a date." }),
   address: z.string().min(1, { message: "Address is required." }),
   homeVisit: z.boolean().optional(),
-  whatsappVideo: z.boolean().optional(),
 });
 
 const ContactForm = () => {
@@ -33,13 +32,11 @@ const ContactForm = () => {
       date: undefined,
       address: "",
       homeVisit: false,
-      whatsappVideo: false,
     },
   });
 
   const onSubmit = (data) => {
     console.log(data);
-    // Handle form submission
     setSubmissionMessage("Thank you for contacting us! We've received your message and appreciate your interest. A member of our team will reach out to you shortly to address your inquiry.");
     setIsSubmitted(true);
   };
@@ -132,25 +129,6 @@ const ContactForm = () => {
               <div className="space-y-1 leading-none">
                 <FormLabel>
                   Request a home visit
-                </FormLabel>
-              </div>
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="whatsappVideo"
-          render={({ field }) => (
-            <FormItem className="flex flex-row items-start space-x-3 space-y-0">
-              <FormControl>
-                <Checkbox
-                  checked={field.value}
-                  onCheckedChange={field.onChange}
-                />
-              </FormControl>
-              <div className="space-y-1 leading-none">
-                <FormLabel>
-                  I can provide a video via WhatsApp
                 </FormLabel>
               </div>
             </FormItem>
