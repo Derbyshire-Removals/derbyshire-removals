@@ -14,7 +14,7 @@ const schema = z.object({
   email: z.string().email({ message: "Invalid email address." }),
   phone: z.string().min(10, { message: "Phone number must be at least 10 digits." }),
   preferred_callback_date: z.date({ required_error: "Please select a date." }),
-  move_date: z.date({ required_error: "Please select a move date." }),
+  move_date: z.date().optional(),
   address: z.string().min(1, { message: "Address is required." }),
 });
 
@@ -44,7 +44,7 @@ const ContactForm = () => {
     { name: 'email', label: 'Email', type: 'email', placeholder: 'Your Email' },
     { name: 'phone', label: 'Phone', type: 'tel', placeholder: 'Your Phone Number' },
     { name: 'preferred_callback_date', label: 'Preferred Callback Date', type: 'date' },
-    { name: 'move_date', label: 'Move Date', type: 'date' },
+    { name: 'move_date', label: 'Move Date (if known)', type: 'date' },
     { name: 'address', label: 'Address', type: 'text', placeholder: 'Your Address' },
   ];
 
@@ -68,7 +68,13 @@ const ContactForm = () => {
                     placeholder={field.placeholder}
                     {...formField}
                     value={field.type === 'date' && formField.value ? formField.value.toISOString().split('T')[0] : formField.value}
-                    onChange={(e) => field.type === 'date' ? formField.onChange(new Date(e.target.value)) : formField.onChange(e)}
+                    onChange={(e) => {
+                      if (field.type === 'date') {
+                        formField.onChange(e.target.value ? new Date(e.target.value) : undefined);
+                      } else {
+                        formField.onChange(e);
+                      }
+                    }}
                     min={field.type === 'date' ? new Date().toISOString().split('T')[0] : undefined}
                   />
                 </FormControl>
