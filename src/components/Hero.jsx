@@ -7,6 +7,9 @@ import { Input } from "@/components/ui/input"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 
 const schema = z.object({
+  access_key: z.string().optional(),
+  botcheck: z.boolean().optional(),
+  page: z.string().optional(),
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   email: z.string().email({ message: "Invalid email address." }),
   phone: z.string().min(10, { message: "Phone number must be at least 10 digits." }),
@@ -21,26 +24,85 @@ const ContactForm = () => {
   const form = useForm({
     resolver: zodResolver(schema),
     defaultValues: {
+      access_key: "a76a98d9-1d8e-419f-85b6-34407a6e50a8",
+      botcheck: undefined,
+      page: "Homepage",
       name: "",
       email: "",
       phone: "",
       preferred_callback_date: undefined,
       move_date: undefined,
-      address: "",
+      address: ""
     },
   });
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data, event) => {
     console.log(data);
-    setSubmissionMessage("Thank you for your submission! We appreciate your interest. One of our team members will be in touch with you shortly to discuss your request.");
-    setIsSubmitted(true);
+
+    await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(data, null, 2),
+    })
+    .then(async (response) => {
+      let json = await response.json();
+
+      if (json.success) {
+        setSubmissionMessage("Thank you for your submission! We appreciate your interest. One of our team members will be in touch with you shortly to discuss your request.");
+        setIsSubmitted(true);
+      } else {
+        setIsSubmitted(false);
+      }
+    })
+    .catch((error) => {
+      // setIsSuccess(false);
+      // setMessage("Client Error. Please check the console.log for more info");
+      console.log(error);
+    });
   };
 
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-        <input type="hidden" name="access_key" value="a76a98d9-1d8e-419f-85b6-34407a6e50a8" />
-        <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
+        <FormField
+          control={form.control}
+          name="access_key"
+          render={({ field }) => (
+            <FormItem>
+              <FormControl>
+                <Input type="hidden" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="botcheck"
+          render={({ field }) => (
+            <FormItem>
+              <FormControl>
+                <Input type="checkbox" className="hidden" style={{ display: 'none' }} {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="page"
+          render={({ field }) => (
+            <FormItem>
+              <FormControl>
+                <Input type="hidden" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
         <FormField
           control={form.control}
           name="name"
@@ -134,7 +196,7 @@ const ContactForm = () => {
         {submissionMessage && (
           <p className="text-green-600 text-sm mb-4">{submissionMessage}</p>
         )}
-        <Button type="submit" className="w-full" disabled={isSubmitted}>Get Free Quote</Button>
+        <Button type="submit" className="w-full" disabled={isSubmitted}>Submit Enquiry</Button>
       </form>
       <p className="text-sm mt-4">
         To help assess the move, we may need to visit your home/office. Alternatively, you can send us your videos via{' '}

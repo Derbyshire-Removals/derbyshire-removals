@@ -10,6 +10,9 @@ import { Phone, Mail } from "lucide-react"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 
 const schema = z.object({
+  access_key: z.string().optional(),
+  botcheck: z.boolean().optional(),
+  page: z.string().optional(),
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   email: z.string().email({ message: "Invalid email address." }),
   phone: z.string().min(10, { message: "Phone number must be at least 10 digits." }),
@@ -24,70 +27,179 @@ const ContactForm = () => {
   const form = useForm({
     resolver: zodResolver(schema),
     defaultValues: {
+      access_key: "a76a98d9-1d8e-419f-85b6-34407a6e50a8",
+      botcheck: undefined,
+      page: "Contact Us",
       name: "",
       email: "",
       phone: "",
       preferred_callback_date: undefined,
       move_date: undefined,
-      address: "",
+      address: ""
     },
   });
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data, event) => {
     console.log(data);
-    setSubmissionMessage("Thank you for contacting us! We've received your message and appreciate your interest. A member of our team will reach out to you shortly to address your inquiry.");
-    setIsSubmitted(true);
-  };
 
-  const formFields = [
-    { name: 'name', label: 'Name', type: 'text', placeholder: 'Your Name' },
-    { name: 'email', label: 'Email', type: 'email', placeholder: 'Your Email' },
-    { name: 'phone', label: 'Phone', type: 'tel', placeholder: 'Your Phone Number' },
-    { name: 'preferred_callback_date', label: 'Preferred Callback Date', type: 'date' },
-    { name: 'move_date', label: 'Move Date (if known)', type: 'date' },
-    { name: 'address', label: 'Address', type: 'text', placeholder: 'Your Address' },
-  ];
+    await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(data, null, 2),
+    })
+    .then(async (response) => {
+      let json = await response.json();
+
+      if (json.success) {
+        setSubmissionMessage("Thank you for your submission! We appreciate your interest. One of our team members will be in touch with you shortly to discuss your request.");
+        setIsSubmitted(true);
+      } else {
+        setIsSubmitted(false);
+      }
+    })
+    .catch((error) => {
+      // setIsSuccess(false);
+      // setMessage("Client Error. Please check the console.log for more info");
+      console.log(error);
+    });
+  };
 
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-        <input type="hidden" name="access_key" value="a76a98d9-1d8e-419f-85b6-34407a6e50a8" />
-        <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
-
-        {formFields.map((field) => (
-          <FormField
-            key={field.name}
-            control={form.control}
-            name={field.name}
-            render={({ field: formField }) => (
-              <FormItem>
-                <FormLabel>{field.label}</FormLabel>
-                <FormControl>
-                  <Input
-                    type={field.type}
-                    placeholder={field.placeholder}
-                    {...formField}
-                    value={field.type === 'date' && formField.value ? formField.value.toISOString().split('T')[0] : formField.value}
-                    onChange={(e) => {
-                      if (field.type === 'date') {
-                        formField.onChange(e.target.value ? new Date(e.target.value) : undefined);
-                      } else {
-                        formField.onChange(e);
-                      }
-                    }}
-                    min={field.type === 'date' ? new Date().toISOString().split('T')[0] : undefined}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-        ))}
-
+        <FormField
+          control={form.control}
+          name="access_key"
+          render={({ field }) => (
+            <FormItem>
+              <FormControl>
+                <Input type="hidden" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="botcheck"
+          render={({ field }) => (
+            <FormItem>
+              <FormControl>
+                <Input type="checkbox" className="hidden" style={{ display: 'none' }} {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="page"
+          render={({ field }) => (
+            <FormItem>
+              <FormControl>
+                <Input type="hidden" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="name"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Name</FormLabel>
+              <FormControl>
+                <Input placeholder="Your Name" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="email"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Email</FormLabel>
+              <FormControl>
+                <Input type="email" placeholder="Your Email" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="phone"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Phone</FormLabel>
+              <FormControl>
+                <Input type="tel" placeholder="Your Phone Number" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="preferred_callback_date"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Preferred Callback Date</FormLabel>
+              <FormControl>
+                <Input
+                  type="date"
+                  min={new Date().toISOString().split('T')[0]}
+                  {...field}
+                  value={field.value ? field.value.toISOString().split('T')[0] : ''}
+                  onChange={(e) => field.onChange(new Date(e.target.value))}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="move_date"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Move Date (if known)</FormLabel>
+              <FormControl>
+                <Input
+                  type="date"
+                  min={new Date().toISOString().split('T')[0]}
+                  {...field}
+                  value={field.value ? field.value.toISOString().split('T')[0] : ''}
+                  onChange={(e) => field.onChange(e.target.value ? new Date(e.target.value) : undefined)}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="address"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Address</FormLabel>
+              <FormControl>
+                <Input placeholder="Your Address" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
         {submissionMessage && (
           <p className="text-green-600 text-sm mb-4">{submissionMessage}</p>
         )}
-        <Button type="submit" className="w-full" disabled={isSubmitted}>Send Message</Button>
+        <Button type="submit" className="w-full" disabled={isSubmitted}>Submit Enquiry</Button>
       </form>
       <p className="text-sm mt-4">
         To help assess the move, we may need to visit your home/office. Alternatively, you can send us your videos via{' '}
