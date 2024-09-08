@@ -101,25 +101,6 @@ const ContactFormFields = ({ form }) => {
       />
       <FormField
         control={form.control}
-        name="move_date"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>Move Date (if known)</FormLabel>
-            <FormControl>
-              <Input
-                type="date"
-                min={new Date().toISOString().split('T')[0]}
-                {...field}
-                value={field.value ? field.value.toISOString().split('T')[0] : ''}
-                onChange={(e) => field.onChange(e.target.value ? new Date(e.target.value) : undefined)}
-              />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-      <FormField
-        control={form.control}
         name="address"
         render={({ field }) => (
           <FormItem>

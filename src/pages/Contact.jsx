@@ -17,7 +17,6 @@ const schema = z.object({
   email: z.string().email({ message: "Invalid email address." }),
   phone: z.string().min(10, { message: "Phone number must be at least 10 digits." }),
   preferred_callback_date: z.date({ required_error: "Please select a date." }),
-  move_date: z.date().optional(),
   address: z.string().min(1, { message: "Address is required." }),
 });
 
@@ -35,7 +34,6 @@ const ContactForm = () => {
       email: "",
       phone: "",
       preferred_callback_date: undefined,
-      move_date: undefined,
       address: ""
     },
   });
