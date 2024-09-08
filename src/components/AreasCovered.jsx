@@ -33,7 +33,7 @@ const AreasCovered = () => {
           While we specialize in the East and West Midlands, our services extend nationwide. 
           Our extensive network allows us to provide professional removal services across the entire UK. 
           Whether you're moving within the Midlands or to any other part of the country, we've got you covered. 
-          For a detailed list of towns we serve, please visit our <a href="/areas-we-cover" className="text-blue-600 hover:underline">Areas We Cover</a> page. 
+          For a detailed list of towns we serve, please visit our  <Link to="/areas-we-cover" className="text-blue-600 hover:underline">areas we cover</Link> page.
           Contact us for more information about our coverage in your specific area.
         </p>
       </div>
