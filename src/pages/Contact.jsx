@@ -5,9 +5,9 @@ import * as z from "zod";
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
+import { Form } from "@/components/ui/form"
 import { Phone, Mail } from "lucide-react"
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
+import ContactFormFields from '../components/ContactFormFields';
 
 const schema = z.object({
   access_key: z.string().optional(),
@@ -24,6 +24,7 @@ const schema = z.object({
 const ContactForm = () => {
   const [submissionMessage, setSubmissionMessage] = React.useState('');
   const [isSubmitted, setIsSubmitted] = React.useState(false);
+  const [isError, setIsError] = React.useState(false);
   const form = useForm({
     resolver: zodResolver(schema),
     defaultValues: {
@@ -39,165 +40,39 @@ const ContactForm = () => {
     },
   });
 
-  const onSubmit = async (data, event) => {
-    console.log(data);
+  const onSubmit = async (data) => {
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(data, null, 2),
+      });
 
-    await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(data, null, 2),
-    })
-    .then(async (response) => {
-      let json = await response.json();
+      const json = await response.json();
 
       if (json.success) {
         setSubmissionMessage("Thank you for your submission! We appreciate your interest. One of our team members will be in touch with you shortly to discuss your request.");
         setIsSubmitted(true);
+        setIsError(false);
       } else {
-        setIsSubmitted(false);
+        throw new Error("Submission failed");
       }
-    })
-    .catch((error) => {
-      // setIsSuccess(false);
-      // setMessage("Client Error. Please check the console.log for more info");
-      console.log(error);
-    });
+    } catch (error) {
+      setIsError(true);
+      setSubmissionMessage("An error has occurred submitting the form. Please contact us directly by calling us or emailing us at info@derbyshireremovals.com");
+      console.error(error);
+    }
   };
 
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-        <FormField
-          control={form.control}
-          name="access_key"
-          render={({ field }) => (
-            <FormItem>
-              <FormControl>
-                <Input type="hidden" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="botcheck"
-          render={({ field }) => (
-            <FormItem>
-              <FormControl>
-                <Input type="checkbox" className="hidden" style={{ display: 'none' }} {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="page"
-          render={({ field }) => (
-            <FormItem>
-              <FormControl>
-                <Input type="hidden" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="name"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Name</FormLabel>
-              <FormControl>
-                <Input placeholder="Your Name" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="email"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Email</FormLabel>
-              <FormControl>
-                <Input type="email" placeholder="Your Email" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="phone"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Phone</FormLabel>
-              <FormControl>
-                <Input type="tel" placeholder="Your Phone Number" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="preferred_callback_date"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Preferred Callback Date</FormLabel>
-              <FormControl>
-                <Input
-                  type="date"
-                  min={new Date().toISOString().split('T')[0]}
-                  {...field}
-                  value={field.value ? field.value.toISOString().split('T')[0] : ''}
-                  onChange={(e) => field.onChange(new Date(e.target.value))}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="move_date"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Move Date (if known)</FormLabel>
-              <FormControl>
-                <Input
-                  type="date"
-                  min={new Date().toISOString().split('T')[0]}
-                  {...field}
-                  value={field.value ? field.value.toISOString().split('T')[0] : ''}
-                  onChange={(e) => field.onChange(e.target.value ? new Date(e.target.value) : undefined)}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="address"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Address</FormLabel>
-              <FormControl>
-                <Input placeholder="Your Address" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+        <ContactFormFields form={form} />
         {submissionMessage && (
-          <p className="text-green-600 text-sm mb-4">{submissionMessage}</p>
+          <p className={`text-sm mb-4 ${isError ? 'text-red-600' : 'text-green-600'}`}>{submissionMessage}</p>
         )}
         <Button type="submit" className="w-full" disabled={isSubmitted}>Submit Enquiry</Button>
       </form>
