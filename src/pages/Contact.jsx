@@ -116,7 +116,7 @@ const Contact = () => {
                 </div>
                 <div className="flex items-center">
                   <Mail className="mr-2" size={20} />
-                  <p>Email: derbyshireremovals@yahoo.co.uk</p>
+                  <p>Email: info@derbyshireremovals.com</p>
                 </div>
               </div>
             </div>
