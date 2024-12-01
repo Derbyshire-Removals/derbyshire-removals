@@ -6,7 +6,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Button } from "@/components/ui/button"
 import { Form } from "@/components/ui/form"
-import { Phone, Mail, MessageCircle } from "lucide-react"
+import { Phone, Mail, MessageCircle, MapPin } from "lucide-react"
 import ContactFormFields from '../components/ContactFormFields';
 
 const schema = z.object({
@@ -117,6 +117,10 @@ const Contact = () => {
                 <div className="flex items-center">
                   <Mail className="mr-2" size={20} />
                   <p>Email: info@derbyshireremovals.com</p>
+                </div>
+                <div className="flex items-center">
+                  <MapPin className="mr-2" size={20} />
+                  <p>48 Farmhouse Road, Derby, DE24 3DB</p>
                 </div>
                 <div className="flex items-center">
                   <MessageCircle className="mr-2" size={20} />
