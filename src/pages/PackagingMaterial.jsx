@@ -65,6 +65,8 @@ const PackagingMaterial = () => {
       <main className="container mx-auto px-4 py-8 pt-44">
         <h1 className="text-3xl font-bold mb-6">Packaging Material</h1>
         
+        <p className="text-sm text-gray-600 mb-4 italic">All prices +VAT</p>
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {packagingMaterials.map((item, index) => (
             <Card key={index} className="flex flex-col md:flex-row items-center p-4 hover:shadow-lg transition-shadow">
@@ -85,8 +87,6 @@ const PackagingMaterial = () => {
             </Card>
           ))}
         </div>
-        
-        <p className="mt-8 font-bold text-lg text-center">All prices +VAT</p>
       </main>
       <Footer />
     </div>
