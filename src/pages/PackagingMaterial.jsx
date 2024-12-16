@@ -11,14 +11,14 @@ import {
 } from "@/components/ui/table"
 
 const packagingMaterials = [
-  { description: "Medium box", dimensions: "18x13x13 inch - Book Box", price: "£3.30" },
-  { description: "Large box", dimensions: "18x18x20 inch - Glass/China Linen etc", price: "£4.20" },
+  { description: "Medium box", dimensions: "18x13x13 inch - Book Box", price: "£2.95" },
+  { description: "Large box", dimensions: "18x18x20 inch - Glass/China Linen etc", price: "£3.95" },
   { description: "Wardrobe Cartons (Rental)", dimensions: "", price: "£7.50" },
-  { description: "Tape (brown)", dimensions: "", price: "£1.60 per roll" },
-  { description: "Tape (fragile)", dimensions: "", price: "£1.60 per roll" },
-  { description: "Thick White Paper", dimensions: "20 x 30 inch - 5kg", price: "£15.95" },
-  { description: "Bubble wrap", dimensions: "750mm x 25meters - Green BIO", price: "£16.95" },
-  { description: "Black Marker Pen", dimensions: "", price: "£1.75" },
+  { description: "Tape (brown)", dimensions: "", price: "£1.50 per roll" },
+  { description: "Tape (fragile)", dimensions: "", price: "£1.50 per roll" },
+  { description: "Thick White Paper", dimensions: "20 x 30 inch - 5kg", price: "£16.25" },
+  { description: "Bubble wrap", dimensions: "750mm x 25meters - Green BIO", price: "£16.25" },
+  { description: "Black Marker Pen", dimensions: "", price: "£1.60" },
 ];
 
 const PackagingMaterial = () => {
