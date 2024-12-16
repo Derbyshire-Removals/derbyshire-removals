@@ -68,14 +68,14 @@ const PackagingMaterial = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {packagingMaterials.map((item, index) => (
             <Card key={index} className="flex flex-col md:flex-row items-center p-4 hover:shadow-lg transition-shadow">
-              <div className="w-1/3 flex-shrink-0">
+              <div className="w-2/5 flex-shrink-0">
                 <img 
                   src={item.image} 
                   alt={item.description}
-                  className="w-full h-24 object-contain rounded-lg"
+                  className="w-full h-32 object-contain rounded-lg"
                 />
               </div>
-              <div className="w-2/3 pl-4 flex flex-col justify-center">
+              <div className="w-3/5 pl-4 flex flex-col justify-center">
                 <h3 className="font-bold text-lg">{item.description}</h3>
                 {item.dimensions && (
                   <p className="text-sm text-gray-600">{item.dimensions}</p>
