@@ -67,21 +67,21 @@ const PackagingMaterial = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {packagingMaterials.map((item, index) => (
-            <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
-              <div className="flex justify-center items-center p-4">
+            <Card key={index} className="flex flex-col md:flex-row items-center p-4 hover:shadow-lg transition-shadow">
+              <div className="w-1/3 flex-shrink-0">
                 <img 
                   src={item.image} 
                   alt={item.description}
-                  className="w-auto h-32 object-contain"
+                  className="w-full h-24 object-contain rounded-lg"
                 />
               </div>
-              <CardContent className="p-4">
-                <h3 className="font-bold text-lg mb-2">{item.description}</h3>
+              <div className="w-2/3 pl-4 flex flex-col justify-center">
+                <h3 className="font-bold text-lg">{item.description}</h3>
                 {item.dimensions && (
-                  <p className="text-gray-600 mb-2">{item.dimensions}</p>
+                  <p className="text-sm text-gray-600">{item.dimensions}</p>
                 )}
-                <p className="text-primary font-semibold">{item.price}</p>
-              </CardContent>
+                <p className="text-primary font-semibold mt-2">{item.price}</p>
+              </div>
             </Card>
           ))}
         </div>
