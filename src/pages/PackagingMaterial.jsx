@@ -68,11 +68,13 @@ const PackagingMaterial = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {packagingMaterials.map((item, index) => (
             <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
-              <img 
-                src={item.image} 
-                alt={item.description}
-                className="w-full h-48 object-cover"
-              />
+              <div className="flex justify-center items-center p-4">
+                <img 
+                  src={item.image} 
+                  alt={item.description}
+                  className="w-auto h-32 object-contain"
+                />
+              </div>
               <CardContent className="p-4">
                 <h3 className="font-bold text-lg mb-2">{item.description}</h3>
                 {item.dimensions && (
