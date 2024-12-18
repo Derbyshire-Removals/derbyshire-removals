@@ -43,6 +43,11 @@ const packagingMaterials = [
     description: "Black Marker Pen",
     dimensions: "",
     price: "£1.60"
+  },
+  {
+    description: "Shrink Wrap",
+    dimensions: "400mmx300mtr - medium duty",
+    price: "£9.95"
   }
 ];
 
