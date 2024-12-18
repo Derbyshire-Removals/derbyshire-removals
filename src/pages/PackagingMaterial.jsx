@@ -30,7 +30,7 @@ const packagingMaterials = [
     price: "£1.50 per roll"
   },
   {
-    description: "Thick White Paper",
+    description: "Packing White Paper",
     dimensions: "20 x 30 inch - 5kg",
     price: "£16.25"
   },
@@ -46,7 +46,7 @@ const packagingMaterials = [
   },
   {
     description: "Shrink Wrap",
-    dimensions: "400mmx300mtr - medium duty",
+    dimensions: "400mmx300mtr - Medium Duty",
     price: "£9.95"
   }
 ];
