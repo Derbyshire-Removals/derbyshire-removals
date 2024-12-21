@@ -74,7 +74,7 @@ const ContactForm = () => {
       </form>
       <p className="text-sm mt-4">
         To help assess the move, we may need to visit your home/office. Alternatively, you can send us your videos via{' '}
-        <a href="https://wa.me/441332314312" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+        <a href="https://wa.me/441332314312?text=Hi!%20I'm%20interested%20in%20your%20removal%20services.%20Can%20you%20help%20me%20with%20a%20move?%20Here%20are%20some%20details:%0A-%20Pickup%20location:%20%5BEnter%20here%5D%0A-%20Delivery%20location:%20%5BEnter%20here%5D%0A-%20Preferred%20date:%20%5BEnter%20here%5D%0A-%20Additional%20information:%20%5BEnter%20here%5D%0ALooking%20forward%20to%20your%20reply!" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
           WhatsApp
         </a>
         .
