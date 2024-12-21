@@ -108,6 +108,10 @@ const Contact = () => {
               <div className="space-y-4">
                 <div className="flex items-center">
                   <Phone className="mr-2" size={20} />
+                  <p>Derby: 01332 314312</p>
+                </div>
+                <div className="flex items-center">
+                  <Phone className="mr-2" size={20} />
                   <p>Matlock: 01629 584953</p>
                 </div>
                 <div className="flex items-center">
