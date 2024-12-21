@@ -76,7 +76,7 @@ const ContactForm = () => {
       </form>
       <p className="text-sm mt-4">
         To help assess the move, we may need to visit your home/office. Alternatively, you can send us your videos via{' '}
-        <a href="https://wa.me/447774422561" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+        <a href="https://wa.me/441332314312" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
           WhatsApp
         </a>
         .
@@ -128,7 +128,7 @@ const Contact = () => {
                 </div>
                 <div className="flex items-center">
                   <MessageCircle className="mr-2" size={20} />
-                  <a href="https://wa.me/447774422561" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                  <a href="https://wa.me/441332314312" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
                     WhatsApp Us
                   </a>
                 </div>

@@ -28,7 +28,7 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Connect With Us</h4>
             <div className="flex items-center">
               <a 
-                href="https://wa.me/447774422561" 
+                href="https://wa.me/441332314312" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="flex items-center text-white hover:text-green-400 transition-colors duration-300"
