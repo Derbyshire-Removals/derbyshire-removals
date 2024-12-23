@@ -41,7 +41,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="border-t border-gray-700 mt-8 pt-6 text-center">
-          <p>&copy; 2024 Derbyshire Removals. All rights reserved.</p>
+          <p>© 2024 Nexus Deliveries Ltd trading as Derbyshire Removals | Company No: 15060349 | VAT No: GB 446566171</p>
         </div>
       </div>
     </footer>
