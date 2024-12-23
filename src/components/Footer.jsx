@@ -14,12 +14,6 @@ const Footer = () => {
             <p>Matlock: 01629 584953</p>
             <p>Mob: 07774422561</p>
             <p>Email: info@derbyshireremovals.com</p>
-            <div className="mt-4 text-sm">
-              <p>Trading Name: Derbyshire Removals</p>
-              <p>Registered Company: Nexus Deliveries Ltd</p>
-              <p>Company Number: 15060349</p>
-              <p>VAT Number: GB 446566171</p>
-            </div>
           </div>
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
