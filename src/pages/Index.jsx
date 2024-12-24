@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import Authority from '../components/Authority';
@@ -10,10 +10,14 @@ import HowWeWork from '../components/HowWeWork';
 import Footer from '../components/Footer';
 
 const Index = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-100">
       <Header />
-      <div> {/* Removed padding-top as it's handled in Hero component */}
+      <div>
         <Hero />
         <Authority />
         <Services />
