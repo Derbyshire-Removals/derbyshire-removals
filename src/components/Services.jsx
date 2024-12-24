@@ -1,15 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Truck, Package, Home, ClipboardList, Building2, Clock, Frame } from 'lucide-react';
+import { Truck, Package, Home, ClipboardList, Building2, Clock, Frame, ArrowRight } from 'lucide-react';
 
 const ServiceCard = ({ icon, title, description, to }) => (
   <Link to={to}>
-    <Card className="transition-all duration-300 hover:shadow-lg">
+    <Card className="transition-all duration-300 hover:shadow-lg group cursor-pointer">
       <CardHeader>
-        <CardTitle className="flex items-center">
-          {icon}
-          <span className="ml-2">{title}</span>
+        <CardTitle className="flex items-center justify-between">
+          <div className="flex items-center">
+            {icon}
+            <span className="ml-2">{title}</span>
+          </div>
+          <ArrowRight className="h-5 w-5 transform transition-transform group-hover:translate-x-1" />
         </CardTitle>
       </CardHeader>
       <CardContent>
