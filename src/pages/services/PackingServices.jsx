@@ -26,7 +26,6 @@ const PackingServices = () => {
             <li>Special care for fragile items</li>
             <li>Professional packing materials</li>
             <li>Systematic labeling system</li>
-            <li>Unpacking service available</li>
           </ul>
 
           <p className="text-gray-700 mt-6">
