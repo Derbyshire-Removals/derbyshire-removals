@@ -9,6 +9,9 @@ import HomeRemovals from "./pages/services/HomeRemovals.jsx";
 import PackingServices from "./pages/services/PackingServices.jsx";
 import StorageSolutions from "./pages/services/StorageSolutions.jsx";
 import MovePlanning from "./pages/services/MovePlanning.jsx";
+import OfficeRemovals from "./pages/services/OfficeRemovals.jsx";
+import LastMinuteRemovals from "./pages/services/LastMinuteRemovals.jsx";
+import AntiqueAndFineArts from "./pages/services/AntiqueAndFineArts.jsx";
 const Testimonials = React.lazy(() => import("./pages/Testimonials.jsx"));
 import FAQ from "./pages/FAQ.jsx";
 import Contact from "./pages/Contact.jsx";
@@ -95,5 +98,20 @@ export const navItems = [
     title: "Move Planning",
     to: "/services/move-planning",
     page: <MovePlanning />,
+  },
+  {
+    title: "Office Removals",
+    to: "/services/office-removals",
+    page: <OfficeRemovals />,
+  },
+  {
+    title: "Last Minute Removals",
+    to: "/services/last-minute-removals",
+    page: <LastMinuteRemovals />,
+  },
+  {
+    title: "Antique and Fine Arts",
+    to: "/services/antique-and-fine-arts",
+    page: <AntiqueAndFineArts />,
   },
 ];
