@@ -29,8 +29,24 @@ const MovePlanning = () => {
             <li>Move day scheduling</li>
           </ul>
 
+          <div className="bg-yellow-50 border-l-4 border-yellow-500 p-4 mt-6">
+            <h3 className="text-xl font-semibold text-yellow-800 mb-2">Moving Day Challenges</h3>
+            <p className="text-gray-700">
+              Moving day can be incredibly stressful, especially when you have strict time constraints. 
+              Whether you're required to vacate your current property by a specific time or have a narrow window 
+              for moving into your new home, the pressure can be overwhelming.
+            </p>
+            <ul className="list-disc pl-6 space-y-2 text-gray-700 mt-4">
+              <li>Coordinating precise move-out times</li>
+              <li>Managing property handover deadlines</li>
+              <li>Dealing with unexpected delays</li>
+              <li>Ensuring all items are packed and loaded on time</li>
+            </ul>
+          </div>
+
           <p className="text-gray-700 mt-6">
-            Let us help you plan your perfect move. Contact us to start planning today.
+            Let our expert planners take the stress out of your move. We'll help you navigate 
+            the complexities of moving day, ensuring a smooth and timely transition.
           </p>
         </div>
       </main>
