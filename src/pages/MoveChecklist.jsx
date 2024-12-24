@@ -69,7 +69,7 @@ const MoveChecklist = () => {
             <li><strong>Telephone:</strong> 150</li>
             <li><strong>Water:</strong> 0845 750 0500</li>
             <li><strong>Royal Mail:</strong> 0845 774 0740</li>
-            <li><strong>Derbyshire Removals and Storage:</strong> 01629 582762</li>
+            <li><strong>Derbyshire Removals and Storage:</strong> 01332 314312</li>
           </ul>
         </section>
       </main>
