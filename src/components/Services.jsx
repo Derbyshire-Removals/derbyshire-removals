@@ -1,30 +1,68 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Truck, Package, Home, ClipboardList, Building2, Clock, Frame } from 'lucide-react';
 
-const ServiceCard = ({ icon, title, description }) => (
-  <Card>
-    <CardHeader>
-      <CardTitle className="flex items-center">
-        {icon}
-        <span className="ml-2">{title}</span>
-      </CardTitle>
-    </CardHeader>
-    <CardContent>
-      <CardDescription>{description}</CardDescription>
-    </CardContent>
-  </Card>
+const ServiceCard = ({ icon, title, description, to }) => (
+  <Link to={to}>
+    <Card className="transition-all duration-300 hover:shadow-lg">
+      <CardHeader>
+        <CardTitle className="flex items-center">
+          {icon}
+          <span className="ml-2">{title}</span>
+        </CardTitle>
+      </CardHeader>
+      <CardContent>
+        <CardDescription>{description}</CardDescription>
+      </CardContent>
+    </Card>
+  </Link>
 );
 
 const Services = () => {
   const services = [
-    { icon: <Truck size={24} />, title: "Home Removals", description: "Full service home moving solutions" },
-    { icon: <Package size={24} />, title: "Packing Services", description: "Professional packing for a stress-free move" },
-    { icon: <Home size={24} />, title: "Storage Solutions", description: "Secure storage options for your belongings" },
-    { icon: <ClipboardList size={24} />, title: "Move Planning", description: "Comprehensive move planning and management" },
-    { icon: <Building2 size={24} />, title: "Office Removals", description: "Efficient relocation services for businesses" },
-    { icon: <Clock size={24} />, title: "Last Minute Removals", description: "Quick and reliable moving solutions for urgent needs" },
-    { icon: <Frame size={24} />, title: "Antique and Fine Arts", description: "Specialized handling for valuable and delicate items" },
+    { 
+      icon: <Truck size={24} />, 
+      title: "Home Removals", 
+      description: "Full service home moving solutions",
+      to: "/services/home-removals"
+    },
+    { 
+      icon: <Package size={24} />, 
+      title: "Packing Services", 
+      description: "Professional packing for a stress-free move",
+      to: "/services/packing-services"
+    },
+    { 
+      icon: <Home size={24} />, 
+      title: "Storage Solutions", 
+      description: "Secure storage options for your belongings",
+      to: "/services/storage-solutions"
+    },
+    { 
+      icon: <ClipboardList size={24} />, 
+      title: "Move Planning", 
+      description: "Comprehensive move planning and management",
+      to: "/services/move-planning"
+    },
+    { 
+      icon: <Building2 size={24} />, 
+      title: "Office Removals", 
+      description: "Efficient relocation services for businesses",
+      to: "/services/office-removals"
+    },
+    { 
+      icon: <Clock size={24} />, 
+      title: "Last Minute Removals", 
+      description: "Quick and reliable moving solutions for urgent needs",
+      to: "/services/last-minute-removals"
+    },
+    { 
+      icon: <Frame size={24} />, 
+      title: "Antique and Fine Arts", 
+      description: "Specialized handling for valuable and delicate items",
+      to: "/services/antique-and-fine-arts"
+    },
   ];
 
   return (

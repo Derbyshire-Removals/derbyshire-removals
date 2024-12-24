@@ -5,6 +5,10 @@ import MoveChecklist from "./pages/MoveChecklist.jsx";
 import Storage from "./pages/Storage.jsx";
 import TermsAndConditions from "./pages/TermsAndConditions.jsx";
 import AboutUs from "./pages/AboutUs.jsx";
+import HomeRemovals from "./pages/services/HomeRemovals.jsx";
+import PackingServices from "./pages/services/PackingServices.jsx";
+import StorageSolutions from "./pages/services/StorageSolutions.jsx";
+import MovePlanning from "./pages/services/MovePlanning.jsx";
 const Testimonials = React.lazy(() => import("./pages/Testimonials.jsx"));
 import FAQ from "./pages/FAQ.jsx";
 import Contact from "./pages/Contact.jsx";
@@ -71,5 +75,25 @@ export const navItems = [
     title: "Terms & Conditions",
     to: "/terms-and-conditions",
     page: <TermsAndConditions />,
+  },
+  {
+    title: "Home Removals",
+    to: "/services/home-removals",
+    page: <HomeRemovals />,
+  },
+  {
+    title: "Packing Services",
+    to: "/services/packing-services",
+    page: <PackingServices />,
+  },
+  {
+    title: "Storage Solutions",
+    to: "/services/storage-solutions",
+    page: <StorageSolutions />,
+  },
+  {
+    title: "Move Planning",
+    to: "/services/move-planning",
+    page: <MovePlanning />,
   },
 ];
