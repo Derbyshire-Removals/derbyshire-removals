@@ -17,7 +17,7 @@ const AboutUs = () => {
           <section>
             <h2 className="text-2xl font-semibold mb-4 text-[#071059]">Our Story</h2>
             <p className="text-gray-700">
-              Derbyshire Removals is a family-run business with over 20 years of experience in the removals industry. 
+              Derbyshire Removals is a family-run business with over 30 years of experience in the removals industry. 
               We take pride in providing professional and reliable removal services to customers throughout Derbyshire and beyond.
             </p>
           </section>
