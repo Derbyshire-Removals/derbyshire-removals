@@ -10,7 +10,7 @@ const AntiqueAndFineArts = () => {
   return (
     <div className="min-h-screen bg-gray-100">
       <Header />
-      <main className="container mx-auto px-4 pt-44">
+      <main className="container mx-auto px-4 pt-44 pb-16">
         <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-md p-8">
           <h1 className="text-3xl font-bold mb-6">Antique and Fine Arts Removal</h1>
           <p className="text-gray-700 mb-6">
