@@ -3,6 +3,7 @@ import { HomeIcon, CheckSquare, Package, Box, MessageSquare, HelpCircle, PhoneCa
 import Index from "./pages/Index.jsx";
 import MoveChecklist from "./pages/MoveChecklist.jsx";
 import Storage from "./pages/Storage.jsx";
+import TermsAndConditions from "./pages/TermsAndConditions.jsx";
 const Testimonials = React.lazy(() => import("./pages/Testimonials.jsx"));
 import FAQ from "./pages/FAQ.jsx";
 import Contact from "./pages/Contact.jsx";
@@ -61,5 +62,10 @@ export const navItems = [
     to: "/contact",
     icon: <PhoneCall className="h-4 w-4" />,
     page: <Contact />,
+  },
+  {
+    title: "Terms & Conditions",
+    to: "/terms-and-conditions",
+    page: <TermsAndConditions />,
   },
 ];
