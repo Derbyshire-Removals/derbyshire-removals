@@ -1,28 +1,43 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
 const OfficeRemovals = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-100">
       <Header />
-      <div className="container mx-auto px-4 pt-44">
-        <h1 className="text-4xl font-bold mb-8">Office Removals</h1>
-        <div className="prose max-w-none">
-          <p className="mb-4">
-            Our office removal service is designed to minimize disruption to your business operations. We understand that time is money, and we work efficiently to get you back up and running as quickly as possible.
+      <main className="container mx-auto px-4 py-8">
+        <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-md p-8">
+          <h1 className="text-3xl font-bold mb-6">Office Removals</h1>
+          <p className="text-gray-700 mb-6">
+            We understand that moving an office requires minimal disruption to your business operations. 
+            Our specialized office removal service ensures a smooth transition to your new premises.
           </p>
-          <h2 className="text-2xl font-semibold mt-6 mb-4">Our Office Removal Services Include:</h2>
-          <ul className="list-disc pl-6 mb-6">
-            <li>Pre-move planning and consultation</li>
-            <li>IT and equipment relocation</li>
+
+          <h2 className="text-2xl font-semibold mb-4">Our Office Removal Services Include:</h2>
+          <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-6">
+            <li>Detailed planning and project management</li>
+            <li>IT equipment and sensitive document handling</li>
             <li>Furniture dismantling and reassembly</li>
             <li>Weekend and out-of-hours moves available</li>
-            <li>Secure document and file transportation</li>
-            <li>Full insurance coverage</li>
+            <li>Professional packing and labeling</li>
+            <li>Storage solutions if required</li>
           </ul>
+
+          <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mt-6">
+            <h3 className="text-xl font-semibold text-blue-800 mb-2">Minimize Business Downtime</h3>
+            <p className="text-gray-700">
+              Our efficient office removal service is designed to minimize disruption to your business. 
+              We can work outside of business hours to ensure your team can resume work as quickly as possible 
+              in the new location.
+            </p>
+          </div>
         </div>
-      </div>
+      </main>
       <Footer />
     </div>
   );
