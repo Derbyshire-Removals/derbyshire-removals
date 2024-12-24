@@ -26,6 +26,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://derbyshireremovals.com/#/about-us</loc>
+    <lastmod>2024-03-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://derbyshireremovals.com/#/testimonials</loc>
     <lastmod>2024-03-21</lastmod>
     <priority>0.7</priority>
@@ -44,5 +49,40 @@
     <loc>https://derbyshireremovals.com/#/terms-and-conditions</loc>
     <lastmod>2024-03-21</lastmod>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://derbyshireremovals.com/#/services/home-removals</loc>
+    <lastmod>2024-03-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://derbyshireremovals.com/#/services/packing-services</loc>
+    <lastmod>2024-03-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://derbyshireremovals.com/#/services/storage-solutions</loc>
+    <lastmod>2024-03-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://derbyshireremovals.com/#/services/move-planning</loc>
+    <lastmod>2024-03-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://derbyshireremovals.com/#/services/office-removals</loc>
+    <lastmod>2024-03-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://derbyshireremovals.com/#/services/last-minute-removals</loc>
+    <lastmod>2024-03-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://derbyshireremovals.com/#/services/antique-and-fine-arts</loc>
+    <lastmod>2024-03-21</lastmod>
+    <priority>0.8</priority>
   </url>
 </urlset>
