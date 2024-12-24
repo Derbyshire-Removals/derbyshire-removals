@@ -124,7 +124,7 @@ const Contact = () => {
                 </div>
                 <div className="flex items-center">
                   <MapPin className="mr-2" size={20} />
-                  <p>48 Farmhouse Road, Derby, DE24 3DB</p>
+                  <p>Address: 48 Farmhouse Road, Derby, DE24 3DB</p>
                 </div>
                 <div className="flex items-center">
                   <MessageCircle className="mr-2" size={20} />
