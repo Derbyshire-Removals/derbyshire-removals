@@ -12,6 +12,8 @@ import MovePlanning from "./pages/services/MovePlanning.jsx";
 import OfficeRemovals from "./pages/services/OfficeRemovals.jsx";
 import LastMinuteRemovals from "./pages/services/LastMinuteRemovals.jsx";
 import AntiqueAndFineArts from "./pages/services/AntiqueAndFineArts.jsx";
+import Derby from "./pages/locations/Derby.jsx";
+import Matlock from "./pages/locations/Matlock.jsx";
 const Testimonials = React.lazy(() => import("./pages/Testimonials.jsx"));
 import FAQ from "./pages/FAQ.jsx";
 import Contact from "./pages/Contact.jsx";
@@ -113,5 +115,15 @@ export const navItems = [
     title: "Antique and Fine Arts",
     to: "/services/antique-and-fine-arts",
     page: <AntiqueAndFineArts />,
+  },
+  {
+    title: "Derby",
+    to: "/locations/derby",
+    page: <Derby />,
+  },
+  {
+    title: "Matlock",
+    to: "/locations/matlock",
+    page: <Matlock />,
   },
 ];
