@@ -22,4 +22,16 @@ export default defineConfig({
       },
     ],
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+          'ui-vendor': ['@radix-ui/react-toast', '@radix-ui/react-tooltip'],
+          'query-vendor': ['@tanstack/react-query'],
+        }
+      }
+    },
+    chunkSizeWarningLimit: 500
+  }
 });

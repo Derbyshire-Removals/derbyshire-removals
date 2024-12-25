@@ -1,27 +1,28 @@
-import React, { Suspense } from 'react';
+import React, { lazy } from 'react';
 import { HomeIcon, CheckSquare, Package, Box, MessageSquare, HelpCircle, PhoneCall, MapPin, Info } from "lucide-react";
-import Index from "./pages/Index.jsx";
-import MoveChecklist from "./pages/MoveChecklist.jsx";
-import Storage from "./pages/Storage.jsx";
-import TermsAndConditions from "./pages/TermsAndConditions.jsx";
-import AboutUs from "./pages/AboutUs.jsx";
-import HomeRemovals from "./pages/services/HomeRemovals.jsx";
-import PackingServices from "./pages/services/PackingServices.jsx";
-import StorageSolutions from "./pages/services/StorageSolutions.jsx";
-import MovePlanning from "./pages/services/MovePlanning.jsx";
-import OfficeRemovals from "./pages/services/OfficeRemovals.jsx";
-import LastMinuteRemovals from "./pages/services/LastMinuteRemovals.jsx";
-import AntiqueAndFineArts from "./pages/services/AntiqueAndFineArts.jsx";
-import Derby from "./pages/locations/Derby.jsx";
-import Matlock from "./pages/locations/Matlock.jsx";
-import Chesterfield from "./pages/locations/Chesterfield.jsx";
-import Alfreton from "./pages/locations/Alfreton.jsx";
-const Testimonials = React.lazy(() => import("./pages/Testimonials.jsx"));
-import FAQ from "./pages/FAQ.jsx";
-import Contact from "./pages/Contact.jsx";
-import AreasWeCover from "./pages/AreasWeCover.jsx";
 
-const PackagingMaterial = React.lazy(() => import("./pages/PackagingMaterial.jsx"));
+// Lazy load all pages
+const Index = lazy(() => import("./pages/Index.jsx"));
+const MoveChecklist = lazy(() => import("./pages/MoveChecklist.jsx"));
+const Storage = lazy(() => import("./pages/Storage.jsx"));
+const TermsAndConditions = lazy(() => import("./pages/TermsAndConditions.jsx"));
+const AboutUs = lazy(() => import("./pages/AboutUs.jsx"));
+const HomeRemovals = lazy(() => import("./pages/services/HomeRemovals.jsx"));
+const PackingServices = lazy(() => import("./pages/services/PackingServices.jsx"));
+const StorageSolutions = lazy(() => import("./pages/services/StorageSolutions.jsx"));
+const MovePlanning = lazy(() => import("./pages/services/MovePlanning.jsx"));
+const OfficeRemovals = lazy(() => import("./pages/services/OfficeRemovals.jsx"));
+const LastMinuteRemovals = lazy(() => import("./pages/services/LastMinuteRemovals.jsx"));
+const AntiqueAndFineArts = lazy(() => import("./pages/services/AntiqueAndFineArts.jsx"));
+const Derby = lazy(() => import("./pages/locations/Derby.jsx"));
+const Matlock = lazy(() => import("./pages/locations/Matlock.jsx"));
+const Chesterfield = lazy(() => import("./pages/locations/Chesterfield.jsx"));
+const Alfreton = lazy(() => import("./pages/locations/Alfreton.jsx"));
+const Testimonials = lazy(() => import("./pages/Testimonials.jsx"));
+const FAQ = lazy(() => import("./pages/FAQ.jsx"));
+const Contact = lazy(() => import("./pages/Contact.jsx"));
+const AreasWeCover = lazy(() => import("./pages/AreasWeCover.jsx"));
+const PackagingMaterial = lazy(() => import("./pages/PackagingMaterial.jsx"));
 
 export const navItems = [
   {
@@ -46,7 +47,7 @@ export const navItems = [
     title: "Packaging Material",
     to: "/packaging-material",
     icon: <Box className="h-4 w-4" />,
-    page: <Suspense fallback={<div>Loading...</div>}><PackagingMaterial /></Suspense>,
+    page: <PackagingMaterial />,
   },
   {
     title: "Areas We Cover",
@@ -64,7 +65,7 @@ export const navItems = [
     title: "Testimonials",
     to: "/testimonials",
     icon: <MessageSquare className="h-4 w-4" />,
-    page: <Suspense fallback={<div>Loading...</div>}><Testimonials /></Suspense>,
+    page: <Testimonials />,
   },
   {
     title: "FAQ",
