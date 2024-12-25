@@ -14,6 +14,8 @@ import LastMinuteRemovals from "./pages/services/LastMinuteRemovals.jsx";
 import AntiqueAndFineArts from "./pages/services/AntiqueAndFineArts.jsx";
 import Derby from "./pages/locations/Derby.jsx";
 import Matlock from "./pages/locations/Matlock.jsx";
+import Chesterfield from "./pages/locations/Chesterfield.jsx";
+import Alfreton from "./pages/locations/Alfreton.jsx";
 const Testimonials = React.lazy(() => import("./pages/Testimonials.jsx"));
 import FAQ from "./pages/FAQ.jsx";
 import Contact from "./pages/Contact.jsx";
@@ -125,5 +127,15 @@ export const navItems = [
     title: "Matlock",
     to: "/locations/matlock",
     page: <Matlock />,
+  },
+  {
+    title: "Chesterfield",
+    to: "/locations/chesterfield",
+    page: <Chesterfield />,
+  },
+  {
+    title: "Alfreton",
+    to: "/locations/alfreton",
+    page: <Alfreton />,
   },
 ];
