@@ -17,27 +17,27 @@ const ReviewStats = () => {
         </p>
         
         <div className="space-y-3">
-          <Button variant="outline" className="w-full" asChild>
+          <Button variant="outline" className="w-full" size="sm" asChild>
             <a 
               href="https://www.google.com/search?q=derbyshrie+removals#lrd=0x48798e96bb172501:0x823e3a1119d6cc3c,1,,,,"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2"
+              className="flex items-center justify-center gap-2 text-sm"
             >
               <ExternalLink className="h-4 w-4" />
               Read our Google Reviews
             </a>
           </Button>
           
-          <Button variant="outline" className="w-full" asChild>
+          <Button variant="outline" className="w-full" size="sm" asChild>
             <a 
               href="https://apps.derbyshire.gov.uk/applications/trusted-trader/profile.asp?tid=56236"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2"
+              className="flex items-center justify-center gap-2 text-sm"
             >
               <ExternalLink className="h-4 w-4" />
-              View our Trusted Trader Profile
+              Derbyshire Trusted Trader Profile
             </a>
           </Button>
         </div>
