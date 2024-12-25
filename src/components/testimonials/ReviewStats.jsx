@@ -1,7 +1,5 @@
 import React from 'react';
-import { MessageSquare } from 'lucide-react';
-import { Button } from "@/components/ui/button";
-import { ExternalLink } from 'lucide-react';
+import { MessageSquare, ExternalLink } from 'lucide-react';
 
 const ReviewStats = () => {
   return (
@@ -16,30 +14,27 @@ const ReviewStats = () => {
           Verified customer reviews
         </p>
         
-        <div className="space-y-3">
-          <Button variant="outline" className="w-full" size="sm" asChild>
+        <div className="space-y-2 text-sm">
+          <p>
+            Check out our reviews on{' '}
             <a 
-              href="https://www.google.com/search?q=derbyshrie+removals#lrd=0x48798e96bb172501:0x823e3a1119d6cc3c,1,,,,"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 text-sm"
+              href="https://www.google.com/search?q=derbyshrie+removals#lrd=0x48798e96bb172501:0x823e3a1119d6cc3c,1,,,," 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-primary hover:underline inline-flex items-center gap-1"
             >
-              <ExternalLink className="h-4 w-4" />
-              Read our Google Reviews
-            </a>
-          </Button>
-          
-          <Button variant="outline" className="w-full" size="sm" asChild>
+              Google <ExternalLink className="h-3 w-3" />
+            </a>{' '}
+            and{' '}
             <a 
-              href="https://apps.derbyshire.gov.uk/applications/trusted-trader/profile.asp?tid=56236"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 text-sm"
+              href="https://apps.derbyshire.gov.uk/applications/trusted-trader/profile.asp?tid=56236" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-primary hover:underline inline-flex items-center gap-1"
             >
-              <ExternalLink className="h-4 w-4" />
-              Derbyshire Trusted Trader Profile
+              Derbyshire Trusted Trader <ExternalLink className="h-3 w-3" />
             </a>
-          </Button>
+          </p>
         </div>
       </div>
     </div>
