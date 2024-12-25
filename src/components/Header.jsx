@@ -17,7 +17,11 @@ const Header = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <Link to="/" className="flex items-center">
-              <img src="/images/logo.png" alt="Derbyshire Removals" className="h-20 w-auto" /> {/* Updated height to 5rem (20 in Tailwind) */}
+              <img 
+                src="/images/logo.png" 
+                alt="Derbyshire Removals Company Logo - Professional Moving Services Since 1988" 
+                className="h-20 w-auto" 
+              />
             </Link>
             
             <div className="flex items-center">
@@ -32,7 +36,11 @@ const Header = () => {
                 </ul>
               </nav>
               
-              <button onClick={toggleMenu} className="ml-4 md:hidden">
+              <button 
+                onClick={toggleMenu} 
+                className="ml-4 md:hidden"
+                aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+              >
                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
             </div>

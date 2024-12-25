@@ -9,7 +9,7 @@ const Authority = () => {
           <a href="https://apps.derbyshire.gov.uk/applications/trusted-trader/profile.asp?tid=56236">
             <img
               src="images/derbyshire-trusted-trader-logo.gif" 
-              alt="Derbyshire's Trusted Trader Logo" 
+              alt="Derbyshire County Council Trusted Trader Certification Badge" 
               className="h-32 w-auto"
             />
           </a>
