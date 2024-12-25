@@ -1,53 +1,124 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import { ClipboardCheck, Calendar, Users, Truck } from 'lucide-react';
 
 const MovePlanning = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
+    console.log('Move Planning page mounted');
   }, []);
+
+  const planningFeatures = [
+    {
+      icon: <ClipboardCheck className="w-6 h-6 text-[#071059]" />,
+      title: "Detailed Planning",
+      description: "Comprehensive moving checklist and timeline creation"
+    },
+    {
+      icon: <Calendar className="w-6 h-6 text-[#071059]" />,
+      title: "Flexible Scheduling",
+      description: "Choose moving dates that work best for you"
+    },
+    {
+      icon: <Users className="w-6 h-6 text-[#071059]" />,
+      title: "Expert Team",
+      description: "Professional move coordinators at your service"
+    },
+    {
+      icon: <Truck className="w-6 h-6 text-[#071059]" />,
+      title: "Resource Allocation",
+      description: "Right-sized vehicles and equipment for your move"
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-gray-100">
+      <Helmet>
+        <title>Professional Move Planning Services Derby | Derbyshire Removals</title>
+        <meta name="description" content="Expert move planning services in Derby and across the Midlands. Our professional team helps coordinate and execute your move efficiently. Get your personalized moving plan today!" />
+        <meta name="keywords" content="move planning derby, moving coordinator derbyshire, house move planning, office relocation planning, moving timeline, moving checklist derby" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "Move Planning",
+            "provider": {
+              "@type": "MovingCompany",
+              "name": "Derbyshire Removals",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "48 Farmhouse Road",
+                "addressLocality": "Derby",
+                "postalCode": "DE24 3DB",
+                "addressCountry": "GB"
+              }
+            },
+            "areaServed": {
+              "@type": "State",
+              "name": ["Derbyshire", "East Midlands", "West Midlands"]
+            },
+            "description": "Professional move planning services including comprehensive timeline creation, resource allocation, and expert coordination for a stress-free moving experience."
+          })}
+        </script>
+      </Helmet>
+      
       <Header />
       <main className="container mx-auto px-4 pt-44 pb-24">
-        <h1 className="text-4xl font-bold mb-8 text-[#071059]">Move Planning</h1>
-        
-        <div className="bg-white rounded-lg shadow-md p-8 space-y-6">
-          <p className="text-gray-700">
-            Our comprehensive move planning service helps you organize and execute your move efficiently. 
-            We take care of all the details so you can focus on settling into your new home.
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl font-bold mb-6 text-[#071059]">Professional Move Planning Services</h1>
+          
+          <p className="text-lg mb-8 text-gray-700">
+            Our expert move planning service takes the stress out of your relocation. We create a 
+            comprehensive moving strategy tailored to your specific needs, ensuring a smooth and 
+            efficient move from start to finish.
           </p>
 
-          <h2 className="text-2xl font-semibold text-[#071059] mt-6">Planning Services Include</h2>
-          <ul className="list-disc pl-6 space-y-2 text-gray-700">
-            <li>Pre-move consultation</li>
-            <li>Customized moving timeline</li>
-            <li>Resource allocation</li>
-            <li>Logistics coordination</li>
-            <li>Special items planning</li>
-            <li>Move day scheduling</li>
-          </ul>
-
-          <div className="bg-yellow-50 border-l-4 border-yellow-500 p-4 mt-6">
-            <h3 className="text-xl font-semibold text-yellow-800 mb-2">Moving Day Challenges</h3>
-            <p className="text-gray-700">
-              Moving day can be incredibly stressful, especially when you have strict time constraints. 
-              Whether you're required to vacate your current property by a specific time or have a narrow window 
-              for moving into your new home, the pressure can be overwhelming.
-            </p>
-            <ul className="list-disc pl-6 space-y-2 text-gray-700 mt-4">
-              <li>Coordinating precise move-out times</li>
-              <li>Managing property handover deadlines</li>
-              <li>Dealing with unexpected delays</li>
-              <li>Ensuring all items are packed and loaded on time</li>
-            </ul>
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            {planningFeatures.map((feature, index) => (
+              <div key={index} className="bg-white p-6 rounded-lg shadow-md">
+                <div className="flex items-center mb-4">
+                  {feature.icon}
+                  <h3 className="text-xl font-semibold ml-3">{feature.title}</h3>
+                </div>
+                <p className="text-gray-600">{feature.description}</p>
+              </div>
+            ))}
           </div>
 
-          <p className="text-gray-700 mt-6">
-            Let our expert planners take the stress out of your move. We'll help you navigate 
-            the complexities of moving day, ensuring a smooth and timely transition.
-          </p>
+          <section className="bg-white p-8 rounded-lg shadow-md mb-12">
+            <h2 className="text-2xl font-bold mb-4 text-[#071059]">Our Planning Process</h2>
+            <div className="space-y-4">
+              <div>
+                <h3 className="text-xl font-medium mb-2">Initial Consultation</h3>
+                <p className="text-gray-700">We begin with a detailed discussion of your moving requirements, timeline, and any special considerations.</p>
+              </div>
+              <div>
+                <h3 className="text-xl font-medium mb-2">Custom Moving Plan</h3>
+                <p className="text-gray-700">Our team creates a tailored moving plan including timeline, resource allocation, and specific requirements.</p>
+              </div>
+              <div>
+                <h3 className="text-xl font-medium mb-2">Coordination</h3>
+                <p className="text-gray-700">We coordinate all aspects of your move, from packing services to transportation logistics.</p>
+              </div>
+              <div>
+                <h3 className="text-xl font-medium mb-2">Execution</h3>
+                <p className="text-gray-700">On moving day, we follow the plan to ensure everything runs smoothly and efficiently.</p>
+              </div>
+            </div>
+          </section>
+
+          <div className="bg-[#071059] text-white p-8 rounded-lg">
+            <h2 className="text-2xl font-bold mb-4">Get Your Moving Plan Started</h2>
+            <p className="mb-6">
+              Contact us today to discuss your move and receive a comprehensive moving plan 
+              tailored to your needs.
+            </p>
+            <p className="font-semibold">
+              Call us: 01332 314312 | Email: info@derbyshireremovals.com
+            </p>
+          </div>
         </div>
       </main>
       <Footer />
