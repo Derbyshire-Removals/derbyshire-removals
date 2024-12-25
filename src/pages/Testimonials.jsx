@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { MessageSquare, Star } from 'lucide-react';
 
 const testimonials = [
   {
@@ -150,20 +152,79 @@ const Testimonials = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  // Calculate average rating (assuming 5 stars for all testimonials)
+  const averageRating = 5;
+  const totalReviews = testimonials.length;
+
   return (
     <div className="min-h-screen bg-gray-100">
+      <Helmet>
+        <title>Customer Reviews & Testimonials | Derbyshire Removals</title>
+        <meta name="description" content="Read genuine customer reviews and testimonials about Derbyshire Removals. Over 30 years of trusted moving services across Derby, Matlock, Chesterfield, and surrounding areas." />
+        <meta name="keywords" content="derbyshire removals reviews, customer testimonials derby, moving company reviews, removal company feedback, derby movers testimonials" />
+        <link rel="canonical" href="https://derbyshireremovals.com/#/testimonials" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Derbyshire Removals",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": averageRating,
+              "reviewCount": totalReviews,
+              "bestRating": "5",
+              "worstRating": "1"
+            },
+            "review": testimonials.map(t => ({
+              "@type": "Review",
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5"
+              },
+              "author": {
+                "@type": "Person",
+                "name": t.name
+              },
+              "reviewBody": t.review
+            }))
+          })}
+        </script>
+      </Helmet>
+
       <Header />
+      
       <main className="container mx-auto px-4 py-8 pt-44">
-        <h1 className="text-3xl font-bold mb-6">Testimonials</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-md">
-              <p className="text-gray-600 mb-4">"{testimonial.review}"</p>
-              <p className="font-semibold text-right">- {testimonial.name}</p>
+        <div className="max-w-4xl mx-auto">
+          <div className="flex items-center gap-3 mb-6">
+            <MessageSquare className="h-6 w-6 text-primary" />
+            <h1 className="text-3xl font-bold">Customer Testimonials</h1>
+          </div>
+
+          <div className="bg-white p-4 rounded-lg shadow-sm mb-8">
+            <div className="flex items-center gap-2">
+              <Star className="h-5 w-5 text-yellow-400" />
+              <p className="text-lg font-semibold">
+                {averageRating} out of 5 stars | {totalReviews} customer reviews
+              </p>
             </div>
-          ))}
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {testimonials.map((testimonial, index) => (
+              <article 
+                key={index} 
+                className="bg-white p-6 rounded-lg shadow-md"
+                itemScope 
+                itemType="https://schema.org/Review"
+              >
+                <p className="text-gray-600 mb-4" itemProp="reviewBody">"{testimonial.review}"</p>
+                <p className="font-semibold text-right" itemProp="author">{testimonial.name}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </main>
+      
       <Footer />
     </div>
   );
