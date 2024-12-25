@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import ContactFormFields from './ContactFormFields';
 
@@ -85,7 +84,12 @@ const ContactForm = () => {
 
 const Hero = () => {
   return (
-    <section className="relative bg-cover bg-center py-20 mt-[88px]" style={{ backgroundImage: "url('images/van.jpg')" }}>
+    <section 
+      className="relative bg-cover bg-center py-20 mt-[88px]" 
+      style={{ backgroundImage: "url('images/van.jpg')" }}
+      role="banner"
+      aria-label="Professional removals in Derbyshire banner"
+    >
       <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className="container mx-auto px-4 flex flex-wrap items-center justify-center relative z-10">
         <div className="w-full lg:w-1/2 mb-10 lg:mb-0 text-white text-center">
@@ -93,8 +97,12 @@ const Hero = () => {
           <p className="text-xl mb-6">Handling with care since 1988</p>
         </div>
         <div className="w-full lg:w-1/2 lg:pl-10">
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-2xl font-semibold text-gray-800 mb-4">Get Free Quote</h3>
+          <div 
+            className="bg-white p-6 rounded-lg shadow-md"
+            role="region"
+            aria-label="Get free quote form"
+          >
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4">Get Free Quote</h2>
             <ContactForm />
           </div>
         </div>

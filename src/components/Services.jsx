@@ -4,15 +4,15 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Truck, Package, Home, ClipboardList, Building2, Clock, Frame, ArrowRight } from 'lucide-react';
 
 const ServiceCard = ({ icon, title, description, to }) => (
-  <Link to={to}>
+  <Link to={to} aria-label={`Learn more about ${title}`}>
     <Card className="transition-all duration-300 hover:shadow-lg group cursor-pointer">
       <CardHeader>
         <CardTitle className="flex items-center justify-between">
           <div className="flex items-center">
-            {icon}
+            {React.cloneElement(icon, { 'aria-hidden': 'true' })}
             <span className="ml-2">{title}</span>
           </div>
-          <ArrowRight className="h-5 w-5 transform transition-transform group-hover:translate-x-1" />
+          <ArrowRight className="h-5 w-5 transform transition-transform group-hover:translate-x-1" aria-hidden="true" />
         </CardTitle>
       </CardHeader>
       <CardContent>
@@ -72,9 +72,15 @@ const Services = () => {
     <section id="services" className="py-16">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-10">Our Services</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          role="list"
+          aria-label="Our services"
+        >
           {services.map((service, index) => (
-            <ServiceCard key={index} {...service} />
+            <div key={index} role="listitem">
+              <ServiceCard {...service} />
+            </div>
           ))}
         </div>
       </div>
