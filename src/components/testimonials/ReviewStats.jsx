@@ -3,7 +3,7 @@ import { MessageSquare } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from 'lucide-react';
 
-const ReviewStats = ({ totalReviews }) => {
+const ReviewStats = () => {
   return (
     <div className="space-y-6">
       <div className="flex items-center gap-3">
@@ -13,7 +13,7 @@ const ReviewStats = ({ totalReviews }) => {
 
       <div className="bg-white p-6 rounded-lg shadow-sm space-y-4">
         <p className="text-lg font-semibold">
-          {totalReviews} verified customer reviews
+          Verified customer reviews
         </p>
         
         <div className="space-y-3">
