@@ -2,7 +2,8 @@ import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { MessageSquare, Star } from 'lucide-react';
+import ReviewStats from '../components/testimonials/ReviewStats';
+import TestimonialCard from '../components/testimonials/TestimonialCard';
 
 const testimonials = [
   {
@@ -152,8 +153,6 @@ const Testimonials = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  // Calculate average rating (assuming 5 stars for all testimonials)
-  const averageRating = 5;
   const totalReviews = testimonials.length;
 
   return (
@@ -170,7 +169,7 @@ const Testimonials = () => {
             "name": "Derbyshire Removals",
             "aggregateRating": {
               "@type": "AggregateRating",
-              "ratingValue": averageRating,
+              "ratingValue": "5",
               "reviewCount": totalReviews,
               "bestRating": "5",
               "worstRating": "1"
@@ -195,31 +194,11 @@ const Testimonials = () => {
       
       <main className="container mx-auto px-4 py-8 pt-44">
         <div className="max-w-4xl mx-auto">
-          <div className="flex items-center gap-3 mb-6">
-            <MessageSquare className="h-6 w-6 text-primary" />
-            <h1 className="text-3xl font-bold">Customer Testimonials</h1>
-          </div>
+          <ReviewStats totalReviews={totalReviews} />
 
-          <div className="bg-white p-4 rounded-lg shadow-sm mb-8">
-            <div className="flex items-center gap-2">
-              <Star className="h-5 w-5 text-yellow-400" />
-              <p className="text-lg font-semibold">
-                {averageRating} out of 5 stars | {totalReviews} customer reviews
-              </p>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
             {testimonials.map((testimonial, index) => (
-              <article 
-                key={index} 
-                className="bg-white p-6 rounded-lg shadow-md"
-                itemScope 
-                itemType="https://schema.org/Review"
-              >
-                <p className="text-gray-600 mb-4" itemProp="reviewBody">"{testimonial.review}"</p>
-                <p className="font-semibold text-right" itemProp="author">{testimonial.name}</p>
-              </article>
+              <TestimonialCard key={index} testimonial={testimonial} />
             ))}
           </div>
         </div>
