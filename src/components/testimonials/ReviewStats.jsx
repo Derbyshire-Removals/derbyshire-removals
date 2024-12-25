@@ -32,7 +32,7 @@ const ReviewStats = () => {
               rel="noopener noreferrer" 
               className="text-primary hover:underline inline-flex items-center gap-1"
             >
-              Derbyshire Trusted Trader <ExternalLink className="h-3 w-3" />
+              Trusted Trader <ExternalLink className="h-3 w-3" />
             </a>
           </p>
         </div>
