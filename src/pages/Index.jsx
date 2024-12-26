@@ -10,6 +10,78 @@ import AreasCovered from '../components/AreasCovered';
 import HowWeWork from '../components/HowWeWork';
 import Footer from '../components/Footer';
 
+const FeaturedSection = () => (
+  <section className="py-16 bg-gray-50">
+    <div className="container mx-auto px-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h2 className="text-3xl font-bold mb-4">Professional Moving Services</h2>
+          <p className="text-gray-600 mb-6">
+            Our experienced team ensures your belongings are handled with the utmost care,
+            making your move stress-free and efficient.
+          </p>
+        </div>
+        <div>
+          <img 
+            src="https://images.unsplash.com/photo-1473091534298-04dcbce3278c"
+            alt="Professional movers carefully packing items into boxes"
+            className="rounded-lg shadow-lg w-full h-auto"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
+const TrustedPartners = () => (
+  <section className="py-16">
+    <div className="container mx-auto px-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div>
+          <img 
+            src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+            alt="Modern office space being prepared for relocation"
+            className="rounded-lg shadow-lg w-full h-auto"
+            loading="lazy"
+          />
+        </div>
+        <div>
+          <h2 className="text-3xl font-bold mb-4">Trusted by Businesses</h2>
+          <p className="text-gray-600 mb-6">
+            From small offices to large corporations, we provide reliable commercial moving
+            services that minimize downtime and protect your valuable assets.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
+const StorageSolutions = () => (
+  <section className="py-16 bg-gray-50">
+    <div className="container mx-auto px-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h2 className="text-3xl font-bold mb-4">Secure Storage Solutions</h2>
+          <p className="text-gray-600 mb-6">
+            Need temporary storage? Our secure facilities provide the perfect solution
+            for both short-term and long-term storage needs.
+          </p>
+        </div>
+        <div>
+          <img 
+            src="https://images.unsplash.com/photo-1721322800607-8c38375eef04"
+            alt="Clean and organized storage facility with modern security features"
+            className="rounded-lg shadow-lg w-full h-auto"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
 const Index = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -29,8 +101,11 @@ const Index = () => {
       <main>
         <Hero />
         <Authority />
+        <FeaturedSection />
         <Services />
+        <TrustedPartners />
         <WhyUs />
+        <StorageSolutions />
         <HowWeWork />
         <AreasCovered />
         <GetInTouch />
