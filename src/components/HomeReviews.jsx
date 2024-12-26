@@ -1,5 +1,5 @@
 import React from 'react';
-import { Star } from 'lucide-react';
+import { Star, ExternalLink } from 'lucide-react';
 
 const reviews = [
   {
@@ -41,6 +41,27 @@ const HomeReviews = () => {
               <p className="font-semibold text-right" itemProp="author">{review.name}</p>
             </article>
           ))}
+        </div>
+        <div className="text-center mt-8 space-y-2">
+          <p className="text-gray-600">Check out our reviews on:</p>
+          <div className="flex justify-center gap-6">
+            <a 
+              href="https://www.google.com/search?q=derbyshrie+removals#lrd=0x48798e96bb172501:0x823e3a1119d6cc3c,1,,,," 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-primary hover:underline inline-flex items-center gap-1"
+            >
+              Google <ExternalLink className="h-3 w-3" />
+            </a>
+            <a 
+              href="https://apps.derbyshire.gov.uk/applications/trusted-trader/profile.asp?tid=56236" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-primary hover:underline inline-flex items-center gap-1"
+            >
+              Trusted Trader <ExternalLink className="h-3 w-3" />
+            </a>
+          </div>
         </div>
       </div>
     </section>
