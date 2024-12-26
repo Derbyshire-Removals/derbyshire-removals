@@ -95,6 +95,15 @@ const Hero = () => {
         <div className="w-full lg:w-1/2 mb-10 lg:mb-0 text-white text-center">
           <h1 className="text-4xl font-bold mb-4">Professional removals in Derbyshire</h1>
           <p className="text-xl mb-6">Handling with care since 1988</p>
+          <div className="flex justify-center items-center mt-8">
+            <a href="https://apps.derbyshire.gov.uk/applications/trusted-trader/profile.asp?tid=56236">
+              <img
+                src="images/derbyshire-trusted-trader-logo.gif" 
+                alt="Derbyshire County Council Trusted Trader Certification Badge" 
+                className="h-24 w-auto"
+              />
+            </a>
+          </div>
         </div>
         <div className="w-full lg:w-1/2 lg:pl-10">
           <div 

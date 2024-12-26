@@ -2,13 +2,13 @@ import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
-import Authority from '../components/Authority';
 import Services from '../components/Services';
 import WhyUs from '../components/WhyUs';
 import GetInTouch from '../components/GetInTouch';
 import AreasCovered from '../components/AreasCovered';
 import HowWeWork from '../components/HowWeWork';
 import Footer from '../components/Footer';
+import HomeReviews from '../components/HomeReviews';
 
 const FeaturedSection = () => (
   <section className="py-16 bg-gray-50">
@@ -100,7 +100,7 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <Authority />
+        <HomeReviews />
         <FeaturedSection />
         <Services />
         <TrustedPartners />
