@@ -29,7 +29,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <h3 className="text-xl font-bold mb-4">Derbyshire Removals</h3>
             <p>Derby: 01332 314312</p>
-            <p>Matlock: 01629 584953</p>
+            <p>Mansfield: 01623 912345</p>
             <p>Mob: 07774422561</p>
             <p>Email: info@derbyshireremovals.com</p>
           </div>

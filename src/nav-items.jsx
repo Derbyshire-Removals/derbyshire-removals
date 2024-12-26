@@ -14,9 +14,10 @@ const OfficeRemovals = lazy(() => import("./pages/services/OfficeRemovals.jsx"))
 const LastMinuteRemovals = lazy(() => import("./pages/services/LastMinuteRemovals.jsx"));
 const AntiqueAndFineArts = lazy(() => import("./pages/services/AntiqueAndFineArts.jsx"));
 const Derby = lazy(() => import("./pages/locations/Derby.jsx"));
-const Matlock = lazy(() => import("./pages/locations/Matlock.jsx"));
+const Mansfield = lazy(() => import("./pages/locations/Mansfield.jsx"));
 const Chesterfield = lazy(() => import("./pages/locations/Chesterfield.jsx"));
-const Alfreton = lazy(() => import("./pages/locations/Alfreton.jsx"));
+const Buxton = lazy(() => import("./pages/locations/Buxton.jsx"));
+const Loughborough = lazy(() => import("./pages/locations/Loughborough.jsx"));
 const Testimonials = lazy(() => import("./pages/Testimonials.jsx"));
 const FAQ = lazy(() => import("./pages/FAQ.jsx"));
 const Contact = lazy(() => import("./pages/Contact.jsx"));
@@ -119,9 +120,9 @@ export const navItems = [
     page: <Derby />,
   },
   {
-    title: "Matlock",
-    to: "/locations/matlock",
-    page: <Matlock />,
+    title: "Mansfield",
+    to: "/locations/mansfield",
+    page: <Mansfield />,
   },
   {
     title: "Chesterfield",
@@ -129,8 +130,13 @@ export const navItems = [
     page: <Chesterfield />,
   },
   {
-    title: "Alfreton",
-    to: "/locations/alfreton",
-    page: <Alfreton />,
+    title: "Buxton",
+    to: "/locations/buxton",
+    page: <Buxton />,
+  },
+  {
+    title: "Loughborough",
+    to: "/locations/loughborough",
+    page: <Loughborough />,
   },
 ];
