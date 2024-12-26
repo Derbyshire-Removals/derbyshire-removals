@@ -36,6 +36,15 @@ const HomeRemovals = () => {
       <main className="container mx-auto px-4 pt-44 pb-24">
         <h1 className="text-4xl font-bold mb-8 text-[#071059]">Professional Home Removals Services</h1>
         
+        <div className="mb-8">
+          <img 
+            src="https://images.unsplash.com/photo-1473091534298-04dcbce3278c"
+            alt="Professional movers carefully handling furniture during a home move"
+            className="w-full h-[400px] object-cover rounded-lg shadow-lg mb-6"
+            loading="lazy"
+          />
+        </div>
+
         <div className="bg-white rounded-lg shadow-md p-8 space-y-6">
           <section>
             <h2 className="text-2xl font-semibold text-[#071059] mb-4">Comprehensive Home Moving Solutions</h2>

@@ -71,6 +71,15 @@ const StorageSolutions = () => {
       <main className="container mx-auto px-4 pt-44 pb-24">
         <h1 className="text-4xl font-bold mb-8 text-[#071059]">Professional Storage Solutions</h1>
         
+        <div className="mb-8">
+          <img 
+            src="https://images.unsplash.com/photo-1600776922845-14d24b558c85"
+            alt="Modern, secure storage facility with climate-controlled units"
+            className="w-full h-[400px] object-cover rounded-lg shadow-lg"
+            loading="lazy"
+          />
+        </div>
+
         <div className="bg-white rounded-lg shadow-md p-8 space-y-6">
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-[#071059] mb-4">Secure Storage for Every Need</h2>

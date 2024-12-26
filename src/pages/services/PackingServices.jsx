@@ -81,6 +81,15 @@ const PackingServices = () => {
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl font-bold mb-6 text-[#071059]">Professional Packing Services</h1>
           
+          <div className="mb-8">
+            <img 
+              src="https://images.unsplash.com/photo-1600776bbe38-0b55537b0096"
+              alt="Professional packing materials and boxes being prepared for a move"
+              className="w-full h-[400px] object-cover rounded-lg shadow-lg"
+              loading="lazy"
+            />
+          </div>
+
           <p className="text-lg mb-8 text-gray-700">
             Trust our expert packers to carefully handle and protect your belongings during your move. 
             We use premium packing materials and proven techniques to ensure everything arrives safely at your new location.

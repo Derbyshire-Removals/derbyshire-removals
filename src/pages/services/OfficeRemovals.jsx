@@ -70,11 +70,19 @@ const OfficeRemovals = () => {
       </Helmet>
 
       <Header />
-      
-      <main className="container mx-auto px-4 pt-44 pb-16">
+      <main className="container mx-auto px-4 pt-44 pb-24">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Professional Office Removals Services</h1>
           
+          <div className="mb-8">
+            <img 
+              src="https://images.unsplash.com/photo-1497366216548-37526070297c"
+              alt="Professional office relocation with organized packing and moving"
+              className="w-full h-[400px] object-cover rounded-lg shadow-lg"
+              loading="lazy"
+            />
+          </div>
+
           <p className="text-lg text-gray-700 mb-8">
             Relocating your office requires careful planning and execution to minimize business disruption. 
             Our specialized office removal service ensures a smooth transition to your new premises, 
@@ -132,7 +140,6 @@ const OfficeRemovals = () => {
           </div>
         </div>
       </main>
-      
       <Footer />
     </div>
   );
