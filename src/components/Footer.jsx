@@ -18,7 +18,7 @@ const Footer = () => {
   );
   
   const resourceLinks = navItems.filter(item => 
-    ['/move-checklist', '/storage', '/packaging-material', '/terms-and-conditions'].includes(item.to)
+    ['/move-checklist', '/storage', '/packaging-material', '/terms-and-conditions', '/privacy-policy'].includes(item.to)
   );
 
   return (
