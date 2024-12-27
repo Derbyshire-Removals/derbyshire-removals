@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { Building2, Clock, CheckCircle, Package, Truck, Shield } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const OfficeRemovals = () => {
   useEffect(() => {
@@ -125,18 +126,18 @@ const OfficeRemovals = () => {
             </ol>
           </div>
 
-          <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg">
-            <h3 className="text-xl font-semibold text-blue-800 mb-2">Ready to Plan Your Office Move?</h3>
-            <p className="text-gray-700 mb-4">
+          <div className="bg-[#071059] text-white p-8 rounded-lg">
+            <h2 className="text-2xl font-bold mb-4">Ready to Plan Your Office Move?</h2>
+            <p className="mb-6">
               Contact us today for a free consultation and quote. We'll help you plan a smooth office 
               relocation that minimizes disruption to your business operations.
             </p>
-            <a 
-              href="/contact" 
-              className="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+            <Link 
+              to="/contact" 
+              className="inline-block bg-white text-[#071059] px-6 py-2 rounded-lg hover:bg-gray-100 transition-colors"
             >
-              Get in Touch
-            </a>
+              Contact Us
+            </Link>
           </div>
         </div>
       </main>

@@ -117,23 +117,12 @@ const LastMinuteRemovals = () => {
         <section className="bg-[#071059] text-white rounded-lg shadow-md p-8 text-center">
           <h2 className="text-2xl font-semibold mb-4">Need Urgent Removal Services?</h2>
           <p className="mb-6">Contact us now for immediate assistance with your emergency move</p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link to="/contact">
-              <Button variant="secondary" className="w-full sm:w-auto">
-                <PhoneCall className="mr-2 h-4 w-4" />
-                Contact Us Now
-              </Button>
-            </Link>
-            <a 
-              href="https://wa.me/441332314312?text=Hi!%20I%20need%20urgent%20removal%20services.%20Can%20you%20help?" 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-              <Button variant="outline" className="w-full sm:w-auto bg-white">
-                WhatsApp Us
-              </Button>
-            </a>
-          </div>
+          <Link to="/contact">
+            <Button variant="secondary" className="w-full sm:w-auto">
+              <PhoneCall className="mr-2 h-4 w-4" />
+              Contact Us Now
+            </Button>
+          </Link>
         </section>
       </main>
 

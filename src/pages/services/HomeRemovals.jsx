@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 
 const HomeRemovals = () => {
   useEffect(() => {
@@ -92,6 +93,20 @@ const HomeRemovals = () => {
               we ensure a professional and reliable service.
             </p>
           </section>
+
+          <div className="bg-[#071059] text-white p-8 rounded-lg">
+            <h2 className="text-2xl font-bold mb-4">Get Your Free Quote Today</h2>
+            <p className="mb-6">
+              Contact us today to discuss your home removal needs and receive a comprehensive quote 
+              tailored to your requirements.
+            </p>
+            <Link 
+              to="/contact" 
+              className="inline-block bg-white text-[#071059] px-6 py-2 rounded-lg hover:bg-gray-100 transition-colors"
+            >
+              Contact Us
+            </Link>
+          </div>
         </div>
       </main>
       <Footer />

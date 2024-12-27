@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { ClipboardCheck, Calendar, Users, Truck } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const MovePlanning = () => {
   useEffect(() => {
@@ -115,9 +116,12 @@ const MovePlanning = () => {
               Contact us today to discuss your move and receive a comprehensive moving plan 
               tailored to your needs.
             </p>
-            <p className="font-semibold">
-              Call us: 01332 314312 | Email: info@derbyshireremovals.com
-            </p>
+            <Link 
+              to="/contact" 
+              className="inline-block bg-white text-[#071059] px-6 py-2 rounded-lg hover:bg-gray-100 transition-colors"
+            >
+              Contact Us
+            </Link>
           </div>
         </div>
       </main>

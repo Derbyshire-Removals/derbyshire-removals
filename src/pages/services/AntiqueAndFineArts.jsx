@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import { Link } from 'react-router-dom';
 
 const AntiqueAndFineArts = () => {
   useEffect(() => {
@@ -45,6 +46,20 @@ const AntiqueAndFineArts = () => {
                 trained in handling delicate and valuable items, ensuring they arrive at their destination 
                 in perfect condition.
               </p>
+            </div>
+
+            <div className="bg-[#071059] text-white p-8 rounded-lg mt-8">
+              <h2 className="text-2xl font-bold mb-4">Get Your Free Quote Today</h2>
+              <p className="mb-6">
+                Contact us today to discuss your antique and fine art moving needs and receive a comprehensive quote 
+                tailored to your requirements.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-white text-[#071059] px-6 py-2 rounded-lg hover:bg-gray-100 transition-colors"
+              >
+                Contact Us
+              </Link>
             </div>
           </div>
         </div>
