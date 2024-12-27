@@ -5,14 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Derbyshire Removals - Professional Moving Services Since 1988</title>
     
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TGVG5CNLD4"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    <!-- Google tag (gtag.js) - only in production -->
+    <script type="text/javascript">
+      if (window.location.hostname === 'derbyshireremovals.com') {
+        const gtagScript = document.createElement('script');
+        gtagScript.async = true;
+        gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-TGVG5CNLD4';
+        document.head.appendChild(gtagScript);
 
-      gtag('config', 'G-TGVG5CNLD4');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-TGVG5CNLD4');
+      } else {
+        console.log('Google Analytics disabled in development');
+      }
     </script>
     
     <!-- Primary Meta Tags -->
