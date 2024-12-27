@@ -23,6 +23,7 @@ const FAQ = lazy(() => import("./pages/FAQ.jsx"));
 const Contact = lazy(() => import("./pages/Contact.jsx"));
 const AreasWeCover = lazy(() => import("./pages/AreasWeCover.jsx"));
 const PackagingMaterial = lazy(() => import("./pages/PackagingMaterial.jsx"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy.jsx"));
 
 export const navItems = [
   {
@@ -138,5 +139,10 @@ export const navItems = [
     title: "Loughborough",
     to: "/locations/loughborough",
     page: <Loughborough />,
+  },
+  {
+    title: "Privacy Policy",
+    to: "/privacy-policy",
+    page: <PrivacyPolicy />,
   },
 ];
