@@ -11,7 +11,7 @@ const ReviewStats = () => {
 
       <div className="bg-white p-6 rounded-lg shadow-sm space-y-4">
         <p className="text-lg font-semibold">
-          Verified customer reviews
+          Genuine Customer Experiences
         </p>
         
         <div className="space-y-2 text-sm">
