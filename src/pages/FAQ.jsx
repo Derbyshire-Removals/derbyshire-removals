@@ -28,7 +28,7 @@ const FAQ = () => {
     },
     {
       question: "What payment methods do you accept?",
-      answer: "We accept various payment methods including credit cards, debit cards, bank transfers, and cash."
+      answer: "We accept bank transfers and cash."
     }
   ];
 
