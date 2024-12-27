@@ -11,7 +11,7 @@ import Footer from '../components/Footer';
 import HomeReviews from '../components/HomeReviews';
 
 const FeaturedSection = () => (
-  <section className="py-16 bg-gray-50">
+  <section className="py-16 bg-white">
     <div className="container mx-auto px-4">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div>
@@ -59,7 +59,7 @@ const TrustedPartners = () => (
 );
 
 const StorageSolutions = () => (
-  <section className="py-16 bg-gray-50">
+  <section className="py-16 bg-white">
     <div className="container mx-auto px-4">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div>
@@ -89,7 +89,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen">
       <Helmet>
         <title>Derbyshire Removals - Professional Moving Services Since 1988</title>
         <meta name="description" content="Trusted removal services across East & West Midlands. Family-run business since 1988 offering home removals, office relocations, packing & storage solutions. Free quotes available." />
