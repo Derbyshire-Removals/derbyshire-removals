@@ -112,7 +112,7 @@ const MoveChecklist = () => {
           <h2 className="text-2xl font-semibold mb-6 text-[#071059]">One Month Before Moving</h2>
           <div className="space-y-4">
             {[
-              "Contact Derbyshire Removals and arrange a free quote",
+              <>Contact <Link to="/contact" className="text-blue-600 hover:underline">Derbyshire Removals</Link> and arrange a free quote</>,
               "Notify your landlord if renting",
               "Begin packing non-essential items",
               "Arrange home insurance for your new property",
