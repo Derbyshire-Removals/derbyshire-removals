@@ -1,0 +1,24 @@
+import{j as e}from"./ui-vendor-3hGaalYV.js";import{r as i}from"./react-vendor-CE3g5kWp.js";import{H as l}from"./Helmet-wJj5apoZ.js";import{H as n,F as c}from"./Footer-Ci-0j8G6.js";import{G as m}from"./GetInTouch-CJ7iBEqK.js";import{M as o}from"./index-C5GysoLN.js";import{C as s}from"./circle-check-big-DP9f25fs.js";import"./button-DRzlghzS.js";import"./query-vendor-CUgj9Mo7.js";const u=()=>{i.useEffect(()=>{window.scrollTo(0,0),console.log("Derby location page mounted")},[]);const t=["Home Removals","Office Relocations","Packing Services","Storage Solutions","Student Moves","Single Item Delivery"];return e.jsxs("div",{className:"min-h-screen bg-gray-100",children:[e.jsxs(l,{children:[e.jsx("title",{children:"Professional Removal Services in Derby | Derbyshire Removals"}),e.jsx("meta",{name:"description",content:"Expert removal services in Derby. Local knowledge, competitive rates, and professional moving solutions for homes and businesses across Derby and surrounding areas."}),e.jsx("meta",{name:"keywords",content:"removals derby, house moves derby, office relocations derby, moving company derby, storage solutions derby"}),e.jsx("link",{rel:"canonical",href:"https://derbyshireremovals.com/#/locations/derby"}),e.jsx("script",{type:"application/ld+json",children:`
+            {
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "Derbyshire Removals - Derby",
+              "image": "https://derbyshireremovals.com/images/van.jpg",
+              "description": "Professional removal services in Derby",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "48 Farmhouse Road",
+                "addressLocality": "Derby",
+                "postalCode": "DE24 3DB",
+                "addressCountry": "GB"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "52.9225",
+                "longitude": "-1.4746"
+              },
+              "url": "https://derbyshireremovals.com/#/locations/derby",
+              "telephone": "+441332314312",
+              "areaServed": "Derby"
+            }
+          `})]}),e.jsx(n,{}),e.jsx("main",{className:"container mx-auto px-4 pt-44 pb-16",children:e.jsxs("div",{className:"max-w-4xl mx-auto",children:[e.jsxs("div",{className:"flex items-center mb-6",children:[e.jsx(o,{className:"h-6 w-6 text-[#071059] mr-2"}),e.jsx("h1",{className:"text-4xl font-bold text-[#071059]",children:"Removal Services in Derby"})]}),e.jsxs("section",{className:"bg-white rounded-lg shadow-md p-8 mb-8",children:[e.jsx("h2",{className:"text-2xl font-semibold mb-4",children:"Your Local Derby Removal Company"}),e.jsx("p",{className:"text-gray-700 mb-6",children:"As Derby's trusted removal company, we provide comprehensive moving services throughout the city and surrounding areas. With our local knowledge and expertise, we ensure a smooth and efficient moving experience for all our Derby customers."}),e.jsx("div",{className:"grid md:grid-cols-2 gap-6",children:t.map((r,a)=>e.jsxs("div",{className:"flex items-center space-x-2",children:[e.jsx(s,{className:"h-5 w-5 text-green-500"}),e.jsx("span",{children:r})]},a))})]}),e.jsxs("section",{className:"bg-white rounded-lg shadow-md p-8 mb-8",children:[e.jsx("h2",{className:"text-2xl font-semibold mb-4",children:"Areas We Cover in Derby"}),e.jsx("div",{className:"grid md:grid-cols-3 gap-4",children:["Allestree","Alvaston","Borrowash","Chaddesden","Chellaston","Darley Abbey","Littleover","Mackworth","Mickleover","Oakwood","Sinfin","Spondon"].map((r,a)=>e.jsxs("div",{className:"flex items-center space-x-2",children:[e.jsx(o,{className:"h-4 w-4 text-[#071059]"}),e.jsx("span",{children:r})]},a))})]}),e.jsxs("section",{className:"bg-[#071059] text-white rounded-lg shadow-md p-8",children:[e.jsx("h2",{className:"text-2xl font-semibold mb-4",children:"Why Choose Us for Your Derby Move?"}),e.jsxs("ul",{className:"space-y-4",children:[e.jsxs("li",{className:"flex items-start space-x-3",children:[e.jsx(s,{className:"h-6 w-6 text-green-400 flex-shrink-0 mt-1"}),e.jsx("span",{children:"Local expertise and knowledge of Derby's areas and routes"})]}),e.jsxs("li",{className:"flex items-start space-x-3",children:[e.jsx(s,{className:"h-6 w-6 text-green-400 flex-shrink-0 mt-1"}),e.jsx("span",{children:"Fully insured and professionally trained removal team"})]}),e.jsxs("li",{className:"flex items-start space-x-3",children:[e.jsx(s,{className:"h-6 w-6 text-green-400 flex-shrink-0 mt-1"}),e.jsx("span",{children:"Competitive rates with no hidden charges"})]}),e.jsxs("li",{className:"flex items-start space-x-3",children:[e.jsx(s,{className:"h-6 w-6 text-green-400 flex-shrink-0 mt-1"}),e.jsx("span",{children:"Flexible scheduling to suit your needs"})]})]})]})]})}),e.jsx(m,{}),e.jsx(c,{})]})};export{u as default};
