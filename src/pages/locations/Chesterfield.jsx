@@ -42,7 +42,7 @@ const Chesterfield = () => {
                 "addressCountry": "GB"
               },
               "url": "https://derbyshireremovals.com/#/locations/chesterfield",
-              "telephone": "+441246912345",
+              "telephone": "+441246922192",
               "areaServed": "Chesterfield"
             }
           `}
