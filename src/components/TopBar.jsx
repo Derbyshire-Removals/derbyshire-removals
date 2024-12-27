@@ -10,9 +10,9 @@ const TopBar = () => {
             <Phone size={14} className="mr-1" />
             <span>Derby: 01332 314312</span>
           </a>
-          <a href="tel:01629584953" className="flex items-center hover:text-gray-300">
+          <a href="tel:01246922192" className="flex items-center hover:text-gray-300">
             <Phone size={14} className="mr-1" />
-            <span>Matlock: 01629 584953</span>
+            <span>Chesterfield: 01246 922192</span>
           </a>
           <a href="tel:07774422561" className="flex items-center hover:text-gray-300">
             <Phone size={14} className="mr-1" />
