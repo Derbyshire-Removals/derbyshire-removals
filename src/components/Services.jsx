@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Truck, Package, Home, ClipboardList, Building2, Clock, Frame, ArrowRight } from 'lucide-react';
+import { Truck, Package, Home, Building2, Clock, Frame, ArrowRight } from 'lucide-react';
 
 const ServiceCard = ({ icon, title, description, to }) => (
   <Link to={to} aria-label={`Learn more about ${title}`}>
@@ -41,12 +41,6 @@ const Services = () => {
       title: "Storage Solutions", 
       description: "Secure storage options for your belongings",
       to: "/storage"
-    },
-    { 
-      icon: <ClipboardList size={24} />, 
-      title: "Move Planning", 
-      description: "Comprehensive move planning and management",
-      to: "/services/move-planning"
     },
     { 
       icon: <Building2 size={24} />, 
