@@ -10,8 +10,8 @@ import HowWeWork from '../components/HowWeWork';
 import Footer from '../components/Footer';
 import HomeReviews from '../components/HomeReviews';
 
-const FeaturedSection = () => (
-  <section className="py-16 bg-white">
+const ProfessionalMovingServices = () => (
+  <section className="py-16">
     <div className="container mx-auto px-4">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div>
@@ -35,7 +35,7 @@ const FeaturedSection = () => (
 );
 
 const TrustedPartners = () => (
-  <section className="py-16">
+  <section className="py-16 bg-white">
     <div className="container mx-auto px-4">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div>
@@ -59,7 +59,7 @@ const TrustedPartners = () => (
 );
 
 const StorageSolutions = () => (
-  <section className="py-16 bg-white">
+  <section className="py-16">
     <div className="container mx-auto px-4">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div>
@@ -101,7 +101,7 @@ const Index = () => {
       <main>
         <Hero />
         <HomeReviews />
-        <FeaturedSection />
+        <ProfessionalMovingServices />
         <Services />
         <TrustedPartners />
         <WhyUs />
