@@ -26,23 +26,23 @@ const MoveChecklist = () => {
             "step": [
               {
                 "@type": "HowToStep",
+                "name": "Two Months Before",
+                "text": "Start planning, research removal companies, begin decluttering"
+              },
+              {
+                "@type": "HowToStep",
                 "name": "One Month Before",
-                "text": "Contact removals company, arrange utilities, start planning packing"
+                "text": "Book removals, arrange utilities, start packing non-essentials"
               },
               {
                 "@type": "HowToStep",
-                "name": "One Week Before",
-                "text": "Confirm details, organize packing, settle bills"
-              },
-              {
-                "@type": "HowToStep",
-                "name": "Day Before",
-                "text": "Final packing, prepare essentials, secure valuables"
+                "name": "Two Weeks Before",
+                "text": "Notify important contacts, arrange parking permits, continue packing"
               },
               {
                 "@type": "HowToStep",
                 "name": "Moving Day",
-                "text": "Supervise loading, check property, handle keys"
+                "text": "Final checks, supervise loading, handle documentation"
               }
             ]
           })}
@@ -52,19 +52,43 @@ const MoveChecklist = () => {
       <Header />
       <main className="container mx-auto px-4 py-8 pt-44">
         <h1 className="text-4xl font-bold mb-6 text-[#071059]">Moving House Checklist</h1>
-        <p className="mb-8 text-lg text-gray-700">Follow our comprehensive checklist to ensure your move is as stress-free as possible. Each task is designed to help you stay organized and prepared throughout your moving journey.</p>
+        <p className="mb-8 text-lg text-gray-700">Stay organised throughout your move with our comprehensive UK moving checklist. We've included all essential tasks and important considerations specific to moving within the UK.</p>
 
         <section className="mb-12 bg-white p-6 rounded-lg shadow-md">
-          <h2 className="text-2xl font-semibold mb-6 text-[#071059]">One Month Before You Move</h2>
+          <h2 className="text-2xl font-semibold mb-6 text-[#071059]">Two Months Before Moving</h2>
           <div className="space-y-4">
             {[
-              "Contact Derbyshire Removals for a free inventory and quote",
-              "Arrange phone company account closure and reconnection",
-              "Schedule meter readings and utility disconnections",
-              "Confirm gas and electricity setup at new address",
-              "Begin packing plan and material assessment",
-              "Set up mail redirection service",
-              "Update home and contents insurance"
+              "Research and book a trusted removal company like Derbyshire Removals",
+              "Begin decluttering and decide what to keep, sell, donate or dispose",
+              "Start collecting boxes and packing materials",
+              "Create a moving budget including all potential costs",
+              "Research your new area (schools, GPs, amenities)",
+              "Begin gathering important documents (passport, driving licence, etc.)",
+              "Start taking photos of valuable items for insurance purposes"
+            ].map((item, index) => (
+              <div key={index} className="flex items-start space-x-3">
+                <Checkbox id={`twomonth-${index}`} />
+                <label htmlFor={`twomonth-${index}`} className="text-gray-700 leading-normal cursor-pointer">
+                  {item}
+                </label>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mb-12 bg-white p-6 rounded-lg shadow-md">
+          <h2 className="text-2xl font-semibold mb-6 text-[#071059]">One Month Before Moving</h2>
+          <div className="space-y-4">
+            {[
+              "Book Derbyshire Removals for your moving date",
+              "Notify your landlord if renting",
+              "Begin packing non-essential items",
+              "Arrange home insurance for your new property",
+              "Schedule utility readings and transfers (gas, electric, water)",
+              "Register to vote at your new address",
+              "Arrange for parking permits or suspended bay parking if needed",
+              "Book time off work for moving day",
+              "Start using up frozen food and cleaning supplies"
             ].map((item, index) => (
               <div key={index} className="flex items-start space-x-3">
                 <Checkbox id={`month-${index}`} />
@@ -77,39 +101,21 @@ const MoveChecklist = () => {
         </section>
 
         <section className="mb-12 bg-white p-6 rounded-lg shadow-md">
-          <h2 className="text-2xl font-semibold mb-6 text-[#071059]">One Week Before You Move</h2>
+          <h2 className="text-2xl font-semibold mb-6 text-[#071059]">Two Weeks Before Moving</h2>
           <div className="space-y-4">
             {[
-              "Confirm moving details with Derbyshire Removals",
-              "Start systematic packing of non-essential items",
-              "Settle outstanding local service bills",
-              "Send change of address notifications",
-              "Locate main water supply valve",
-              "Arrange pet care for moving day"
+              "Confirm moving date and details with Derbyshire Removals",
+              "Notify important contacts of your move (bank, DVLA, council tax)",
+              "Arrange Royal Mail redirection service",
+              "Begin packing room by room",
+              "Label boxes clearly with contents and destination room",
+              "Book professional cleaners if required",
+              "Arrange childcare/pet care for moving day if needed",
+              "Create an inventory of your packed items"
             ].map((item, index) => (
               <div key={index} className="flex items-start space-x-3">
-                <Checkbox id={`week-${index}`} />
-                <label htmlFor={`week-${index}`} className="text-gray-700 leading-normal cursor-pointer">
-                  {item}
-                </label>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="mb-12 bg-white p-6 rounded-lg shadow-md">
-          <h2 className="text-2xl font-semibold mb-6 text-[#071059]">One Day Before You Move</h2>
-          <div className="space-y-4">
-            {[
-              "Complete packing except for overnight essentials",
-              "Secure important documents and valuables",
-              "Prepare dust sheets for carpet protection",
-              "Pack essential items box (light bulbs, basic tools)",
-              "Ensure access to cash and payment methods"
-            ].map((item, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <Checkbox id={`day-${index}`} />
-                <label htmlFor={`day-${index}`} className="text-gray-700 leading-normal cursor-pointer">
+                <Checkbox id={`twoweek-${index}`} />
+                <label htmlFor={`twoweek-${index}`} className="text-gray-700 leading-normal cursor-pointer">
                   {item}
                 </label>
               </div>
@@ -121,11 +127,14 @@ const MoveChecklist = () => {
           <h2 className="text-2xl font-semibold mb-6 text-[#071059]">Moving Day</h2>
           <div className="space-y-4">
             {[
-              "Supervise loading and communicate preferences",
-              "Double-check all rooms and storage spaces",
-              "Secure the property before departure",
-              "Provide contact details to removal team",
-              "Handle key exchanges"
+              "Take final meter readings and photographs",
+              "Keep important documents and valuables with you",
+              "Pack a box of essentials (kettle, cups, toilet paper, etc.)",
+              "Check all windows are secure and utilities are switched off",
+              "Lock all doors and windows",
+              "Hand over all sets of keys",
+              "Take photos of empty rooms for proof of condition",
+              "Ensure removal team has contact details and new address"
             ].map((item, index) => (
               <div key={index} className="flex items-start space-x-3">
                 <Checkbox id={`moving-${index}`} />
@@ -138,15 +147,15 @@ const MoveChecklist = () => {
         </section>
 
         <section className="bg-white p-6 rounded-lg shadow-md">
-          <h2 className="text-2xl font-semibold mb-6 text-[#071059]">Important Contact Numbers</h2>
+          <h2 className="text-2xl font-semibold mb-6 text-[#071059]">Important UK Contacts</h2>
           <div className="grid md:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <p><strong>Gas:</strong> <a href="tel:08459605040" className="text-blue-600 hover:underline">08459 60 50 40</a></p>
-              <p><strong>Telephone:</strong> <a href="tel:150" className="text-blue-600 hover:underline">150</a></p>
-              <p><strong>Water:</strong> <a href="tel:08457500500" className="text-blue-600 hover:underline">0845 750 0500</a></p>
+              <p><strong>Royal Mail Redirection:</strong> <a href="tel:03457740740" className="text-blue-600 hover:underline">03457 740 740</a></p>
+              <p><strong>DVLA:</strong> <a href="tel:03007906801" className="text-blue-600 hover:underline">0300 790 6801</a></p>
+              <p><strong>Council Tax:</strong> Contact your local council</p>
             </div>
             <div className="space-y-2">
-              <p><strong>Royal Mail:</strong> <a href="tel:08457740740" className="text-blue-600 hover:underline">0845 774 0740</a></p>
+              <p><strong>Electoral Register:</strong> <a href="https://www.gov.uk/register-to-vote" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">www.gov.uk/register-to-vote</a></p>
               <p><strong>Derbyshire Removals:</strong> <a href="tel:01332314312" className="text-blue-600 hover:underline">01332 314312</a></p>
             </div>
           </div>
