@@ -29,6 +29,26 @@ const FAQ = () => {
     {
       question: "What payment methods do you accept?",
       answer: "We accept various payment methods including credit cards, debit cards, bank transfers, and cash."
+    },
+    {
+      question: "Do you provide storage solutions?",
+      answer: "Yes, we offer secure storage solutions for both short-term and long-term needs. Our storage facilities are clean, dry, and monitored 24/7 to ensure the safety of your belongings."
+    },
+    {
+      question: "What areas do you cover?",
+      answer: "We primarily serve Derby, Chesterfield, and surrounding areas in the East Midlands. However, we can accommodate moves throughout the UK. Contact us for specific coverage information."
+    },
+    {
+      question: "Do you move pianos and other special items?",
+      answer: "Yes, we have experience in moving pianos, antiques, and other special items. Our team is trained in proper handling techniques for these delicate items, and we use specialized equipment when necessary."
+    },
+    {
+      question: "What should I do with items you cannot transport?",
+      answer: "Certain items like hazardous materials, perishables, and plants cannot be transported. We'll provide you with a list of prohibited items during the quote process and can advise on alternative arrangements."
+    },
+    {
+      question: "Can you provide boxes and packing materials?",
+      answer: "Yes, we supply a full range of packing materials including boxes, bubble wrap, tape, and protective covers. These can be purchased separately or included as part of our packing service."
     }
   ];
 
