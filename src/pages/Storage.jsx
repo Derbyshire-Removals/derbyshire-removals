@@ -75,7 +75,7 @@ const Storage = () => {
         
         <div className="mb-8">
           <img 
-            src="https://images.unsplash.com/photo-1600776922845-14d24b558c85"
+            src="/images/business/storage.jpg"
             alt="Modern, secure storage facility with climate-controlled units"
             className="w-full h-[400px] object-cover rounded-lg shadow-lg"
             loading="lazy"

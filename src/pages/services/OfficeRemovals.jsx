@@ -76,7 +76,7 @@ const OfficeRemovals = () => {
           
           <div className="mb-8">
             <img 
-              src="https://images.unsplash.com/photo-1497366216548-37526070297c"
+              src="/images/business/8.jpg"
               alt="Professional office relocation with organized packing and moving"
               className="w-full h-[400px] object-cover rounded-lg shadow-lg"
               loading="lazy"

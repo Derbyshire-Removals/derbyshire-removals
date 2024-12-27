@@ -54,7 +54,7 @@ const LastMinuteRemovals = () => {
         
         <div className="mb-8">
           <img 
-            src="https://images.unsplash.com/photo-1600776922357-0435b1b417dd"
+            src="/images/business/6.jpg"
             alt="Quick response moving team ready for emergency relocations"
             className="w-full h-[400px] object-cover rounded-lg shadow-lg"
             loading="lazy"

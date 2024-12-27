@@ -23,7 +23,7 @@ const FeaturedSection = () => (
         </div>
         <div>
           <img 
-            src="https://images.unsplash.com/photo-1473091534298-04dcbce3278c"
+            src="/images/business/13.jpg"
             alt="Professional movers carefully packing items into boxes"
             className="rounded-lg shadow-lg w-full h-auto"
             loading="lazy"
@@ -40,7 +40,7 @@ const TrustedPartners = () => (
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div>
           <img 
-            src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+            src="/images/business/8.jpg"
             alt="Modern office space being prepared for relocation"
             className="rounded-lg shadow-lg w-full h-auto"
             loading="lazy"
@@ -71,7 +71,7 @@ const StorageSolutions = () => (
         </div>
         <div>
           <img 
-            src="https://images.unsplash.com/photo-1721322800607-8c38375eef04"
+            src="/images/business/storage.jpg"
             alt="Clean and organized storage facility with modern security features"
             className="rounded-lg shadow-lg w-full h-auto"
             loading="lazy"

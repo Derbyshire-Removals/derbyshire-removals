@@ -14,7 +14,7 @@ const AntiqueAndFineArts = () => {
         <div className="max-w-4xl mx-auto">
           <div className="mb-8">
             <img 
-              src="https://images.unsplash.com/photo-1577083288073-40892c0860a4"
+              src="/images/business/4.jpg"
               alt="Carefully wrapped antique furniture being handled by specialists"
               className="w-full h-[400px] object-cover rounded-lg shadow-lg"
               loading="lazy"
