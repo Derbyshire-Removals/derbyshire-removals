@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import { Printer } from 'lucide-react'; // Import Printer icon
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Checkbox } from "@/components/ui/checkbox";
@@ -10,6 +11,10 @@ const MoveChecklist = () => {
     window.scrollTo(0, 0);
     console.log('Move Checklist page mounted');
   }, []);
+
+  const handlePrint = () => {
+    window.print();
+  };
 
   return (
     <div className="min-h-screen bg-gray-100">
@@ -51,7 +56,38 @@ const MoveChecklist = () => {
 
       <Header />
       <main className="container mx-auto px-4 py-8 pt-44">
-        <h1 className="text-4xl font-bold mb-6 text-[#071059]">Moving House Checklist</h1>
+        <div className="flex justify-between items-center mb-6">
+          <h1 className="text-4xl font-bold text-[#071059]">Moving House Checklist</h1>
+          <button 
+            onClick={handlePrint} 
+            className="flex items-center bg-[#071059] text-white px-4 py-2 rounded hover:bg-[#0a1875] transition-colors"
+            aria-label="Print Moving Checklist"
+          >
+            <Printer className="mr-2" size={20} /> Print Checklist
+          </button>
+        </div>
+
+        {/* Add a print-specific message */}
+        <style>
+          {`
+            @media print {
+              .no-print {
+                display: none;
+              }
+              body {
+                font-size: 12px;
+              }
+              .print-header {
+                display: block !important;
+                text-align: center;
+                margin-bottom: 20px;
+                font-size: 24px;
+                font-weight: bold;
+              }
+            }
+          `}
+        </style>
+
         <p className="mb-8 text-lg text-gray-700">Stay organised throughout your move with our comprehensive UK moving checklist. We've included all essential tasks and important considerations specific to moving within the UK.</p>
 
         <section className="mb-12 bg-white p-6 rounded-lg shadow-md">
