@@ -95,7 +95,6 @@ const MoveChecklist = () => {
           <div className="space-y-4">
             {[
               "Begin decluttering and decide what to keep, sell, donate or dispose",
-              "Start collecting boxes and packing materials",
               "Research your new area (schools, GPs, amenities)",
               "Start taking photos of valuable items for insurance purposes"
             ].map((item, index) => (
@@ -113,13 +112,11 @@ const MoveChecklist = () => {
           <h2 className="text-2xl font-semibold mb-6 text-[#071059]">One Month Before Moving</h2>
           <div className="space-y-4">
             {[
-              "Book Derbyshire Removals for your moving date",
+              "Contact Derbyshire Removals and arrange a free quote",
               "Notify your landlord if renting",
               "Begin packing non-essential items",
               "Arrange home insurance for your new property",
-              "Schedule utility readings and transfers (gas, electric, water)",
-              "Register to vote at your new address",
-              "Arrange for parking permits or suspended bay parking if needed",
+              "Schedule utility transfers (gas, electric, water)",
               "Book time off work for moving day",
               "Start using up frozen food and cleaning supplies"
             ].map((item, index) => (
@@ -139,13 +136,10 @@ const MoveChecklist = () => {
             {[
               "Confirm moving date and details with Derbyshire Removals",
               "Notify important contacts of your move (bank, DVLA, council tax)",
-              "Arrange Royal Mail redirection service - visit their website to set up",
               "Set up mail redirection at royalmail.com/redirection",
-              "Begin packing room by room",
-              "Label boxes clearly with contents and destination room",
+              "Begin packing room by room and label boxes clearly with contents and destination room",
               "Book professional cleaners if required",
-              "Arrange childcare/pet care for moving day if needed",
-              "Create an inventory of your packed items"
+              "Arrange childcare/pet care for moving day if needed"
             ].map((item, index) => (
               <div key={index} className="flex items-start space-x-3">
                 <Checkbox id={`twoweek-${index}`} />
@@ -167,8 +161,7 @@ const MoveChecklist = () => {
               "Check all windows are secure and utilities are switched off",
               "Lock all doors and windows",
               "Hand over all sets of keys",
-              "Take photos of empty rooms for proof of condition",
-              "Ensure removal team has contact details and new address"
+              "Take photos of empty rooms for proof of condition"
             ].map((item, index) => (
               <div key={index} className="flex items-start space-x-3">
                 <Checkbox id={`moving-${index}`} />
