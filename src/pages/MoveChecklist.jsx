@@ -136,7 +136,7 @@ const MoveChecklist = () => {
             {[
               "Confirm moving date and details with Derbyshire Removals",
               "Notify important contacts of your move (bank, DVLA, council tax)",
-              "Set up mail redirection at royalmail.com/redirection",
+              <>Set up <a href="https://www.royalmail.com/personal/receiving-mail/redirection" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Royal Mail redirection</a></>,
               "Begin packing room by room and label boxes clearly with contents and destination room",
               "Book professional cleaners if required",
               "Arrange childcare/pet care for moving day if needed"
