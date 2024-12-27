@@ -137,10 +137,17 @@ const Storage = () => {
             </ul>
           </section>
 
-          <div className="mt-8 text-center">
-            <p className="text-lg font-semibold mb-4">
+          <div className="mt-8 bg-white p-6 rounded-lg shadow">
+            <h2 className="text-2xl font-bold mb-4 text-[#071059]">Ready to Store Your Items?</h2>
+            <p className="mb-6">
               Contact us today to discuss your storage requirements and find the perfect solution for your needs.
             </p>
+            <Link 
+              to="/contact" 
+              className="inline-block bg-[#071059] text-white px-6 py-2 rounded-lg hover:bg-blue-800 transition-colors"
+            >
+              Contact Us
+            </Link>
           </div>
         </div>
       </main>

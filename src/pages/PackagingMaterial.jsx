@@ -133,10 +133,12 @@ const PackagingMaterial = () => {
               We offer professional packing services to ensure your items are properly protected. 
               Our experienced team can handle everything from delicate items to bulky furniture.
             </p>
-            <p className="text-gray-600">
-              Contact us at <span className="font-semibold">01332 314312</span> to discuss your packing material needs 
-              or to learn more about our professional packing services.
-            </p>
+            <Link 
+              to="/contact" 
+              className="inline-block bg-[#071059] text-white px-6 py-2 rounded-lg hover:bg-blue-800 transition-colors"
+            >
+              Contact Us
+            </Link>
           </div>
         </div>
       </main>
