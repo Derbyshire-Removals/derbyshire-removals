@@ -11,7 +11,7 @@ import Footer from '../components/Footer';
 import HomeReviews from '../components/HomeReviews';
 
 const ProfessionalMovingServices = () => (
-  <section className="py-16">
+  <section className="py-16 bg-white">
     <div className="container mx-auto px-4">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div>
