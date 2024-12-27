@@ -42,7 +42,7 @@ const Mansfield = () => {
                 "addressCountry": "GB"
               },
               "url": "https://derbyshireremovals.com/#/locations/mansfield",
-              "telephone": "+441623912345",
+              "telephone": "+443335677001",
               "areaServed": "Mansfield"
             }
           `}

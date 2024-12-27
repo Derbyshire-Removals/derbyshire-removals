@@ -42,7 +42,7 @@ const Buxton = () => {
                 "addressCountry": "GB"
               },
               "url": "https://derbyshireremovals.com/#/locations/buxton",
-              "telephone": "+441298912345",
+              "telephone": "+443335677001",
               "areaServed": "Buxton"
             }
           `}

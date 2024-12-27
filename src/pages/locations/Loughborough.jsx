@@ -42,7 +42,7 @@ const Loughborough = () => {
                 "addressCountry": "GB"
               },
               "url": "https://derbyshireremovals.com/#/locations/loughborough",
-              "telephone": "+441509912345",
+              "telephone": "+443335677001",
               "areaServed": "Loughborough"
             }
           `}
