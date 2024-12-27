@@ -17,7 +17,7 @@ const PrivacyPolicy = () => {
       </Helmet>
 
       <Header />
-      <main className="container mx-auto px-4 py-8 max-w-4xl">
+      <main className="container mx-auto px-4 pt-32 pb-8 max-w-4xl"> {/* Added pt-32 for top padding */}
         <h1 className="text-3xl font-bold mb-6">Privacy Policy</h1>
         
         <section className="space-y-6">
