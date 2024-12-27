@@ -40,7 +40,7 @@ const Services = () => {
       icon: <Home size={24} />, 
       title: "Storage Solutions", 
       description: "Secure storage options for your belongings",
-      to: "/services/storage-solutions"
+      to: "/storage"
     },
     { 
       icon: <ClipboardList size={24} />, 
