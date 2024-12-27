@@ -94,12 +94,9 @@ const MoveChecklist = () => {
           <h2 className="text-2xl font-semibold mb-6 text-[#071059]">Two Months Before Moving</h2>
           <div className="space-y-4">
             {[
-              "Research and book a trusted removal company like Derbyshire Removals",
               "Begin decluttering and decide what to keep, sell, donate or dispose",
               "Start collecting boxes and packing materials",
-              "Create a moving budget including all potential costs",
               "Research your new area (schools, GPs, amenities)",
-              "Begin gathering important documents (passport, driving licence, etc.)",
               "Start taking photos of valuable items for insurance purposes"
             ].map((item, index) => (
               <div key={index} className="flex items-start space-x-3">
