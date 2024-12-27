@@ -9,7 +9,6 @@ const TermsAndConditions = lazy(() => import("./pages/TermsAndConditions.jsx"));
 const AboutUs = lazy(() => import("./pages/AboutUs.jsx"));
 const HomeRemovals = lazy(() => import("./pages/services/HomeRemovals.jsx"));
 const PackingServices = lazy(() => import("./pages/services/PackingServices.jsx"));
-const MovePlanning = lazy(() => import("./pages/services/MovePlanning.jsx"));
 const OfficeRemovals = lazy(() => import("./pages/services/OfficeRemovals.jsx"));
 const LastMinuteRemovals = lazy(() => import("./pages/services/LastMinuteRemovals.jsx"));
 const AntiqueAndFineArts = lazy(() => import("./pages/services/AntiqueAndFineArts.jsx"));
@@ -94,11 +93,6 @@ export const navItems = [
     title: "Packing Services",
     to: "/services/packing-services",
     page: <PackingServices />,
-  },
-  {
-    title: "Move Planning",
-    to: "/services/move-planning",
-    page: <MovePlanning />,
   },
   {
     title: "Office Removals",
