@@ -106,7 +106,8 @@ const MoveChecklist = () => {
             {[
               "Confirm moving date and details with Derbyshire Removals",
               "Notify important contacts of your move (bank, DVLA, council tax)",
-              "Arrange Royal Mail redirection service",
+              "Arrange Royal Mail redirection service - visit their website to set up",
+              "Set up mail redirection at royalmail.com/redirection",
               "Begin packing room by room",
               "Label boxes clearly with contents and destination room",
               "Book professional cleaners if required",
@@ -150,7 +151,7 @@ const MoveChecklist = () => {
           <h2 className="text-2xl font-semibold mb-6 text-[#071059]">Important UK Contacts</h2>
           <div className="grid md:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <p><strong>Royal Mail Redirection:</strong> <a href="tel:03457740740" className="text-blue-600 hover:underline">03457 740 740</a></p>
+              <p><strong>Royal Mail Redirection:</strong> <a href="https://www.royalmail.com/personal/receiving-mail/redirection" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">www.royalmail.com/redirection</a></p>
               <p><strong>DVLA:</strong> <a href="tel:03007906801" className="text-blue-600 hover:underline">0300 790 6801</a></p>
               <p><strong>Council Tax:</strong> Contact your local council</p>
             </div>
