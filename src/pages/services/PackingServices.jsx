@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { Package, Shield, Clock, CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const PackingServices = () => {
   useEffect(() => {
@@ -135,9 +136,12 @@ const PackingServices = () => {
               Contact us today to discuss your packing needs and receive a comprehensive quote 
               tailored to your requirements.
             </p>
-            <p className="font-semibold">
-              Call us: 01332 314312 | Email: info@derbyshireremovals.com
-            </p>
+            <Link 
+              to="/contact" 
+              className="inline-block bg-white text-[#071059] px-6 py-2 rounded-lg hover:bg-gray-100 transition-colors"
+            >
+              Contact Us
+            </Link>
           </div>
         </div>
       </main>
