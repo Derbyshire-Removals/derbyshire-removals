@@ -1,4 +1,4 @@
-import { defineConfig } from 'vike/config'
+import { defineConfig } from 'vike'
 
 export default defineConfig({
   // Enable static site generation
