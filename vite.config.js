@@ -38,6 +38,6 @@ export default defineConfig({
     },
     chunkSizeWarningLimit: 500,
     ssrManifest: true,
-    ssr: true
+    ssr: resolve(__dirname, 'src/entry-server.jsx')
   }
 });
