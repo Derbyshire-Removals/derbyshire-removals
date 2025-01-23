@@ -29,10 +29,9 @@ export default defineConfig({
         server: resolve(__dirname, 'src/entry-server.jsx')
       },
       output: {
-        // Remove manual chunks configuration for React since it's external
+        // Only keep TanStack Query in manual chunks
         manualChunks: {
-          'ui-vendor': ['@radix-ui/react-toast', '@radix-ui/react-tooltip'],
-          'query-vendor': ['@tanstack/react-query'],
+          'query-vendor': ['@tanstack/react-query']
         }
       },
       external: ['react', 'react-dom', 'react-router-dom']
