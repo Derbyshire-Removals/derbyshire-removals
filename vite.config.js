@@ -2,14 +2,19 @@ import { fileURLToPath, URL } from "url";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { resolve } from "path";
+import vike from 'vike/plugin';
 
-// https://vitejs.dev/config/
 export default defineConfig({
   server: {
     host: "::",
     port: "8080",
   },
-  plugins: [react()],
+  plugins: [
+    react(),
+    vike({
+      prerender: true
+    })
+  ],
   resolve: {
     alias: [
       {
