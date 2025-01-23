@@ -2,14 +2,17 @@ import { fileURLToPath, URL } from "url";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { resolve } from "path";
+import ssr from 'vite-plugin-ssr/plugin';
 
-// https://vitejs.dev/config/
 export default defineConfig({
   server: {
     host: "::",
     port: "8080",
   },
-  plugins: [react()],
+  plugins: [
+    react(),
+    ssr({ prerender: true })
+  ],
   resolve: {
     alias: [
       {
@@ -44,7 +47,7 @@ export default defineConfig({
     outDir: 'dist',
     emptyOutDir: true,
     target: 'esnext',
-    minify: 'esbuild', // Changed from 'terser' to 'esbuild'
+    minify: 'esbuild',
     cssMinify: true,
     sourcemap: false,
     assetsInlineLimit: 4096,
