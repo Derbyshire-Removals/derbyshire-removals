@@ -8,7 +8,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 async function prerender() {
   // Ensure dist directory exists
-  const distPath = path.resolve(__dirname, 'dist');
+  const distPath = path.resolve(__dirname, 'dist/client');
   if (!fs.existsSync(distPath)) {
     fs.mkdirSync(distPath, { recursive: true });
   }

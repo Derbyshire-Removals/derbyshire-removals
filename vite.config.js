@@ -9,18 +9,7 @@ export default defineConfig({
     host: "::",
     port: "8080",
   },
-  plugins: [
-    react({
-      babel: {
-        plugins: [
-          [
-            'babel-plugin-direct-import',
-            { modules: ['@mui/material', '@mui/icons-material'] },
-          ],
-        ],
-      },
-    })
-  ],
+  plugins: [react()],
   resolve: {
     alias: [
       {
@@ -35,6 +24,10 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        server: resolve(__dirname, 'src/entry-server.jsx')
+      },
       output: {
         manualChunks: {
           'react-vendor': ['react', 'react-dom', 'react-router-dom'],
