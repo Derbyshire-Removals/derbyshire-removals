@@ -63,7 +63,6 @@
     "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7",
     "vaul": "^0.9.1",
-    "vike": "^0.4.218",
     "zod": "^3.23.8"
   },
   "devDependencies": {
