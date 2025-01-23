@@ -3,6 +3,7 @@ import Index from '../../src/pages/Index';
 
 export { Page };
 export { onBeforeRender };
+export { passToClient };
 
 function Page(pageProps) {
   console.log('Rendering Index page component');
@@ -10,9 +11,9 @@ function Page(pageProps) {
 }
 
 // Pre-render every page at build time
-export const passToClient = ['pageProps'];
+const passToClient = ['pageProps'];
 
-export async function onBeforeRender() {
+async function onBeforeRender() {
   console.log('Pre-rendering index page');
   return {
     pageContext: {
