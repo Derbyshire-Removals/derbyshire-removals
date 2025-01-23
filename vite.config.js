@@ -13,16 +13,10 @@ export default defineConfig({
     ssr({ prerender: true })
   ],
   resolve: {
-    alias: [
-      {
-        find: '$src',
-        replacement: resolve(__dirname, 'src')
-      },
-      {
-        find: '$lib',
-        replacement: resolve(__dirname, 'lib')
-      }
-    ],
+    alias: {
+      '@': resolve(__dirname, './src'),
+      '$lib': resolve(__dirname, 'lib')
+    }
   },
   build: {
     chunkSizeWarningLimit: 500,
