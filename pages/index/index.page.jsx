@@ -1,18 +1,19 @@
 import React from 'react';
 import Index from '../../src/pages/Index';
 
-export { Page };
-export { onBeforeRender };
-export { passToClient };
+// Export everything at the top
+export { Page, onBeforeRender, passToClient };
 
+// Define constants
+const passToClient = ['pageProps'];
+
+// Component definition
 function Page(pageProps) {
   console.log('Rendering Index page component');
   return <Index {...pageProps} />;
 }
 
-// Pre-render every page at build time
-const passToClient = ['pageProps'];
-
+// Static generation function
 async function onBeforeRender() {
   console.log('Pre-rendering index page');
   return {

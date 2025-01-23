@@ -16,12 +16,22 @@ async function render(pageContext) {
     return;
   }
 
-  ReactDOM.hydrate(
-    <BrowserRouter>
-      <App {...pageProps} />
-    </BrowserRouter>,
-    root
-  );
+  if (root.hasChildNodes()) {
+    console.log('Hydrating existing content');
+    ReactDOM.hydrate(
+      <BrowserRouter>
+        <App {...pageProps} />
+      </BrowserRouter>,
+      root
+    );
+  } else {
+    console.log('Creating new root for client-side rendering');
+    ReactDOM.createRoot(root).render(
+      <BrowserRouter>
+        <App {...pageProps} />
+      </BrowserRouter>
+    );
+  }
   
-  console.log('Client-side hydration complete');
+  console.log('Client-side rendering/hydration complete');
 }

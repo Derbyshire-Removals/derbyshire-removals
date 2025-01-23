@@ -10,7 +10,13 @@ export default defineConfig({
   },
   plugins: [
     react(),
-    ssr({ prerender: true })
+    ssr({
+      prerender: {
+        noExtraDir: true,
+        parallel: true,
+        disableAutoRun: false
+      }
+    })
   ],
   resolve: {
     alias: {

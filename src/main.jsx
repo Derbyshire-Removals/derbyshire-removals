@@ -13,5 +13,5 @@ if (!document.getElementById('root').hasChildNodes()) {
     </BrowserRouter>
   );
 } else {
-  console.log('Skipping client-side render as content exists');
+  console.log('Skipping client-side render as content exists (handled by vite-plugin-ssr)');
 }
