@@ -9,7 +9,18 @@ export default defineConfig({
     host: "::",
     port: "8080",
   },
-  plugins: [react()],
+  plugins: [
+    react({
+      babel: {
+        plugins: [
+          [
+            'babel-plugin-direct-import',
+            { modules: ['@mui/material', '@mui/icons-material'] },
+          ],
+        ],
+      },
+    })
+  ],
   resolve: {
     alias: [
       {
@@ -32,6 +43,8 @@ export default defineConfig({
         }
       }
     },
-    chunkSizeWarningLimit: 500
+    chunkSizeWarningLimit: 500,
+    ssrManifest: true,
+    ssr: true
   }
 });
