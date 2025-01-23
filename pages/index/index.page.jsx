@@ -3,8 +3,9 @@ import Index from '../../src/pages/Index';
 
 export { Page };
 
-function Page() {
-  return <Index />;
+function Page(pageProps) {
+  console.log('Rendering Index page');
+  return <Index {...pageProps} />;
 }
 
 // Pre-render every page at build time

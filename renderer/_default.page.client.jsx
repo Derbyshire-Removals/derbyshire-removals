@@ -1,16 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { HashRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
+import App from '../src/App';
 import '../src/index.css';
 
 export { render };
 
 async function render(pageContext) {
-  const { Page, pageProps } = pageContext;
+  const { pageProps } = pageContext;
+  console.log('Hydrating app on client');
+  
   ReactDOM.hydrate(
-    <HashRouter>
-      <Page {...pageProps} />
-    </HashRouter>,
+    <BrowserRouter>
+      <App {...pageProps} />
+    </BrowserRouter>,
     document.getElementById('root')
   );
 }
