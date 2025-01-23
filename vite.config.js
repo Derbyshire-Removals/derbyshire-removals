@@ -29,12 +29,13 @@ export default defineConfig({
         server: resolve(__dirname, 'src/entry-server.jsx')
       },
       output: {
+        // Remove manual chunks configuration for React since it's external
         manualChunks: {
-          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
           'ui-vendor': ['@radix-ui/react-toast', '@radix-ui/react-tooltip'],
           'query-vendor': ['@tanstack/react-query'],
         }
-      }
+      },
+      external: ['react', 'react-dom', 'react-router-dom']
     },
     chunkSizeWarningLimit: 500,
     ssrManifest: true,
