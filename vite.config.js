@@ -28,12 +28,6 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         server: resolve(__dirname, 'src/entry-server.jsx')
       },
-      output: {
-        // Only keep TanStack Query in manual chunks
-        manualChunks: {
-          'query-vendor': ['@tanstack/react-query']
-        }
-      },
       external: ['react', 'react-dom', 'react-router-dom']
     },
     chunkSizeWarningLimit: 500,
