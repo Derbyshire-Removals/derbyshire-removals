@@ -25,15 +25,12 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'index.html'),
-        server: resolve(__dirname, 'src/entry-server.jsx')
+        main: resolve(__dirname, 'index.html')
       },
       external: ['react', 'react-dom', 'react-router-dom']
     },
     outDir: 'dist',
     emptyOutDir: true,
-    chunkSizeWarningLimit: 500,
-    ssrManifest: true,
-    ssr: resolve(__dirname, 'src/entry-server.jsx')
+    chunkSizeWarningLimit: 500
   }
 });
