@@ -8,12 +8,20 @@ export { render };
 
 async function render(pageContext) {
   const { pageProps } = pageContext;
-  console.log('Hydrating app on client');
+  console.log('Client-side hydration starting');
   
+  const root = document.getElementById('root');
+  if (!root) {
+    console.error('Root element not found');
+    return;
+  }
+
   ReactDOM.hydrate(
     <BrowserRouter>
       <App {...pageProps} />
     </BrowserRouter>,
-    document.getElementById('root')
+    root
   );
+  
+  console.log('Client-side hydration complete');
 }

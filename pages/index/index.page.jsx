@@ -2,9 +2,10 @@ import React from 'react';
 import Index from '../../src/pages/Index';
 
 export { Page };
+export { onBeforeRender };
 
 function Page(pageProps) {
-  console.log('Rendering Index page');
+  console.log('Rendering Index page component');
   return <Index {...pageProps} />;
 }
 
