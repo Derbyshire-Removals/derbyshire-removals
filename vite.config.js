@@ -1,4 +1,3 @@
-import { fileURLToPath, URL } from "url";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { resolve } from "path";
@@ -16,23 +15,16 @@ export default defineConfig({
   resolve: {
     alias: [
       {
-        find: "@",
-        replacement: fileURLToPath(new URL("./src", import.meta.url)),
+        find: '$src',
+        replacement: resolve(__dirname, 'src')
       },
       {
-        find: "lib",
-        replacement: resolve(__dirname, "lib"),
-      },
+        find: '$lib',
+        replacement: resolve(__dirname, 'lib')
+      }
     ],
   },
   build: {
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          'query-vendor': ['@tanstack/react-query'],
-        }
-      }
-    },
     chunkSizeWarningLimit: 500,
     outDir: 'dist',
     emptyOutDir: true,
@@ -40,6 +32,6 @@ export default defineConfig({
     minify: 'esbuild',
     cssMinify: true,
     sourcemap: false,
-    assetsInlineLimit: 4096,
+    assetsInlineLimit: 4096
   }
 });
