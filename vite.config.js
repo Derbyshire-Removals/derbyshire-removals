@@ -24,13 +24,14 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      input: {
-        main: resolve(__dirname, 'index.html')
-      },
-      external: ['react', 'react-dom', 'react-router-dom']
+      output: {
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+          'ui-vendor': ['@radix-ui/react-toast', '@radix-ui/react-tooltip'],
+          'query-vendor': ['@tanstack/react-query'],
+        }
+      }
     },
-    outDir: 'dist',
-    emptyOutDir: true,
     chunkSizeWarningLimit: 500
   }
 });
