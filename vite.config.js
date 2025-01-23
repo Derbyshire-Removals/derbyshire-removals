@@ -32,6 +32,13 @@ export default defineConfig({
         }
       }
     },
-    chunkSizeWarningLimit: 500
+    chunkSizeWarningLimit: 500,
+    ssrManifest: true,
+    outDir: 'dist',
+    emptyOutDir: true,
+    manifest: true
+  },
+  ssr: {
+    noExternal: ['react-helmet']
   }
 });
