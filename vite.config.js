@@ -29,7 +29,6 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          'ui-vendor': ['@radix-ui/react-toast', '@radix-ui/react-tooltip'],
           'query-vendor': ['@tanstack/react-query'],
         }
       }
