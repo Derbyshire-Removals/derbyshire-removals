@@ -30,6 +30,8 @@ export default defineConfig({
       },
       external: ['react', 'react-dom', 'react-router-dom']
     },
+    outDir: 'dist',
+    emptyOutDir: true,
     chunkSizeWarningLimit: 500,
     ssrManifest: true,
     ssr: resolve(__dirname, 'src/entry-server.jsx')
