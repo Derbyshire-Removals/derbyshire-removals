@@ -44,7 +44,7 @@ export default defineConfig({
     outDir: 'dist',
     emptyOutDir: true,
     target: 'esnext',
-    minify: 'terser',
+    minify: 'esbuild', // Changed from 'terser' to 'esbuild'
     cssMinify: true,
     sourcemap: false,
     assetsInlineLimit: 4096,
