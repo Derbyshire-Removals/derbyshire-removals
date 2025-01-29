@@ -128,7 +128,7 @@ const Contact = () => {
                 </div>
                 <div className="flex items-center">
                   <Phone className="mr-2" size={20} />
-                  <p>Mob: 07774422561</p>
+                  <p>Mob: 07425557000</p>
                 </div>
                 <div className="flex items-center">
                   <Mail className="mr-2" size={20} />
