@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Phone } from 'lucide-react';
 
@@ -14,7 +15,10 @@ const TopBar = () => {
             <Phone size={14} className="mr-1" />
             <span>Chesterfield: 01246 922192</span>
           </a>
-          <a href="tel:03335677001" className="flex items-center hover:text-gray-300">
+          <a 
+            href="tel:03335677001" 
+            className="flex items-center hover:text-gray-300 bg-[#E5DEFF]/20 px-2 py-0.5 rounded border border-[#E5DEFF]/30"
+          >
             <Phone size={14} className="mr-1" />
             <span>National: 0333 567 7001</span>
           </a>

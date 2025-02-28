@@ -123,7 +123,7 @@ const Contact = () => {
                   <Phone className="mr-2" size={20} />
                   <p>Chesterfield: 01246 922192</p>
                 </div>
-                <div className="flex items-center">
+                <div className="flex items-center bg-[#F2FCE2]/30 p-2 rounded border border-[#F2FCE2]/50">
                   <Phone className="mr-2" size={20} />
                   <p>National: 0333 567 7001</p>
                 </div>
