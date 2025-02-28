@@ -115,10 +115,6 @@ const Contact = () => {
             <h2 className="text-2xl font-semibold mb-4">Contact Information</h2>
             <div className="bg-white p-6 rounded-lg shadow-md">
               <div className="space-y-4">
-                <div className="flex items-center bg-[#E5DEFF] border-2 border-[#8B5CF6] p-2 rounded-md">
-                  <Phone className="mr-2" size={20} />
-                  <p className="font-semibold">National: 0333 567 7001</p>
-                </div>
                 <div className="flex items-center">
                   <Phone className="mr-2" size={20} />
                   <p>Derby: 01332 314312</p>
@@ -126,6 +122,10 @@ const Contact = () => {
                 <div className="flex items-center">
                   <Phone className="mr-2" size={20} />
                   <p>Chesterfield: 01246 922192</p>
+                </div>
+                <div className="flex items-center">
+                  <Phone className="mr-2" size={20} />
+                  <p>National: 0333 567 7001</p>
                 </div>
                 <div className="flex items-center">
                   <Phone className="mr-2" size={20} />
