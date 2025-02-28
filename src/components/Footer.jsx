@@ -1,6 +1,7 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MessageCircle } from 'lucide-react';
+import { MessageCircle, Facebook, Instagram } from 'lucide-react';
 import { navItems } from '../nav-items';
 
 const Footer = () => {
@@ -33,6 +34,14 @@ const Footer = () => {
             <p>National: 0333 567 7001</p>
             <p>Mob: 07425557000</p>
             <p>Email: info@derbyshireremovals.com</p>
+            <div className="mt-4 flex space-x-4">
+              <a href="https://www.facebook.com/profile.php?id=61572796415223" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <Facebook className="text-white hover:text-blue-400 transition-colors" />
+              </a>
+              <a href="https://www.instagram.com/derbyshireremovals/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <Instagram className="text-white hover:text-pink-400 transition-colors" />
+              </a>
+            </div>
           </div>
 
           {/* Main Links */}
@@ -92,15 +101,35 @@ const Footer = () => {
             
             <div className="mt-6">
               <h4 className="text-lg font-semibold mb-4">Connect With Us</h4>
-              <a 
-                href="https://wa.me/447425557000?text=Hi!%20I'm%20interested%20in%20your%20removal%20services.%20Can%20you%20help%20me%20with%20a%20move?%20Here%20are%20some%20details:%0A-%20Pickup%20location:%20%5BEnter%20here%5D%0A-%20Delivery%20location:%20%5BEnter%20here%5D%0A-%20Preferred%20date:%20%5BEnter%20here%5D%0A-%20Additional%20information:%20%5BEnter%20here%5D%0ALooking%20forward%20to%20your%20reply!" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="flex items-center text-white hover:text-green-400 transition-colors duration-300"
-              >
-                <MessageCircle className="mr-2" />
-                <span>WhatsApp Us</span>
-              </a>
+              <div className="space-y-2">
+                <a 
+                  href="https://wa.me/447425557000?text=Hi!%20I'm%20interested%20in%20your%20removal%20services.%20Can%20you%20help%20me%20with%20a%20move?%20Here%20are%20some%20details:%0A-%20Pickup%20location:%20%5BEnter%20here%5D%0A-%20Delivery%20location:%20%5BEnter%20here%5D%0A-%20Preferred%20date:%20%5BEnter%20here%5D%0A-%20Additional%20information:%20%5BEnter%20here%5D%0ALooking%20forward%20to%20your%20reply!" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="flex items-center text-white hover:text-green-400 transition-colors duration-300"
+                >
+                  <MessageCircle className="mr-2" />
+                  <span>WhatsApp Us</span>
+                </a>
+                <a 
+                  href="https://www.facebook.com/profile.php?id=61572796415223" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="flex items-center text-white hover:text-blue-400 transition-colors duration-300"
+                >
+                  <Facebook className="mr-2" />
+                  <span>Facebook</span>
+                </a>
+                <a 
+                  href="https://www.instagram.com/derbyshireremovals/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="flex items-center text-white hover:text-pink-400 transition-colors duration-300"
+                >
+                  <Instagram className="mr-2" />
+                  <span>Instagram</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>

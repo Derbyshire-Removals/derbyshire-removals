@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { useForm } from "react-hook-form";
@@ -7,7 +8,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Button } from "@/components/ui/button"
 import { Form } from "@/components/ui/form"
-import { Phone, Mail, MessageCircle, MapPin } from "lucide-react"
+import { Phone, Mail, MessageCircle, MapPin, Facebook, Instagram } from "lucide-react"
 import ContactFormFields from '../components/ContactFormFields';
 
 const schema = z.object({
@@ -142,6 +143,18 @@ const Contact = () => {
                   <MessageCircle className="mr-2" size={20} />
                   <a href="https://wa.me/447425557000?text=Hi!%20I'm%20interested%20in%20your%20removal%20services.%20Can%20you%20help%20me%20with%20a%20move?%20Here%20are%20some%20details:%0A-%20Pickup%20location:%20%5BEnter%20here%5D%0A-%20Delivery%20location:%20%5BEnter%20here%5D%0A-%20Preferred%20date:%20%5BEnter%20here%5D%0A-%20Additional%20information:%20%5BEnter%20here%5D%0ALooking%20forward%20to%20your%20reply!" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
                     WhatsApp Us
+                  </a>
+                </div>
+                <div className="flex items-center">
+                  <Facebook className="mr-2" size={20} />
+                  <a href="https://www.facebook.com/profile.php?id=61572796415223" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                    Facebook
+                  </a>
+                </div>
+                <div className="flex items-center">
+                  <Instagram className="mr-2" size={20} />
+                  <a href="https://www.instagram.com/derbyshireremovals/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                    Instagram
                   </a>
                 </div>
               </div>
