@@ -115,9 +115,9 @@ const Contact = () => {
             <h2 className="text-2xl font-semibold mb-4">Contact Information</h2>
             <div className="bg-white p-6 rounded-lg shadow-md">
               <div className="space-y-4">
-                <div className="flex items-center bg-[#F2FCE2]/30 p-2 rounded border border-[#F2FCE2]/50">
+                <div className="flex items-center">
                   <Phone className="mr-2" size={20} />
-                  <p>National: 0333 567 7001</p>
+                  <p><strong>National: 0333 567 7001</strong></p>
                 </div>
                 <div className="flex items-center">
                   <Phone className="mr-2" size={20} />
