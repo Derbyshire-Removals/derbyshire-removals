@@ -13,7 +13,7 @@ const schema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   email: z.string().email({ message: "Invalid email address." }),
   phone: z.string().min(10, { message: "Phone number must be at least 10 digits." }),
-  preferred_callback_date: z.date({ required_error: "Please select a date." }),
+  preferred_callback_time: z.string({ required_error: "Please select a preferred time." }),
   address: z.string().min(1, { message: "Address is required." }),
 });
 
@@ -30,7 +30,7 @@ const ContactForm = () => {
       name: "",
       email: "",
       phone: "",
-      preferred_callback_date: undefined,
+      preferred_callback_time: "anytime",
       address: ""
     },
   });

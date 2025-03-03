@@ -1,6 +1,8 @@
+
 import React from 'react';
 import { Input } from "@/components/ui/input"
 import { FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
 const ContactFormFields = ({ form }) => {
   return (
@@ -82,19 +84,24 @@ const ContactFormFields = ({ form }) => {
       />
       <FormField
         control={form.control}
-        name="preferred_callback_date"
+        name="preferred_callback_time"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Preferred Callback Date</FormLabel>
-            <FormControl>
-              <Input
-                type="date"
-                min={new Date().toISOString().split('T')[0]}
-                {...field}
-                value={field.value ? field.value.toISOString().split('T')[0] : ''}
-                onChange={(e) => field.onChange(new Date(e.target.value))}
-              />
-            </FormControl>
+            <FormLabel>Preferred Callback Time</FormLabel>
+            <Select onValueChange={field.onChange} defaultValue={field.value}>
+              <FormControl>
+                <SelectTrigger>
+                  <SelectValue placeholder="Select a preferred time" />
+                </SelectTrigger>
+              </FormControl>
+              <SelectContent>
+                <SelectItem value="anytime">Anytime</SelectItem>
+                <SelectItem value="morning">Morning (9am - 12pm)</SelectItem>
+                <SelectItem value="afternoon">Afternoon (12pm - 5pm)</SelectItem>
+                <SelectItem value="evening">Evening (5pm - 8pm)</SelectItem>
+                <SelectItem value="weekends">Weekends Only</SelectItem>
+              </SelectContent>
+            </Select>
             <FormMessage />
           </FormItem>
         )}
