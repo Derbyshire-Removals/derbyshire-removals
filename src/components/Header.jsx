@@ -1,10 +1,17 @@
-import React, { useState } from 'react';
+
+import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import TopBar from './TopBar';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [location.pathname]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -21,6 +28,7 @@ const Header = () => {
                 src="/images/logo.png" 
                 alt="Derbyshire Removals Company Logo - Professional Moving Services Since 1988" 
                 className="h-20 w-auto" 
+                loading="eager" // Optimize critical images
               />
             </Link>
             
