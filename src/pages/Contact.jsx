@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { useForm } from "react-hook-form";
@@ -18,7 +19,8 @@ const schema = z.object({
   email: z.string().email({ message: "Invalid email address." }),
   phone: z.string().min(10, { message: "Phone number must be at least 10 digits." }),
   preferred_callback_time: z.string({ required_error: "Please select a preferred time." }),
-  address: z.string().min(1, { message: "Address is required." }),
+  moving_from: z.string().min(1, { message: "Moving From address is required." }),
+  moving_to: z.string().optional(),
 });
 
 const ContactForm = () => {
@@ -35,7 +37,8 @@ const ContactForm = () => {
       email: "",
       phone: "",
       preferred_callback_time: "anytime",
-      address: ""
+      moving_from: "",
+      moving_to: ""
     },
   });
 

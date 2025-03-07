@@ -108,12 +108,25 @@ const ContactFormFields = ({ form }) => {
       />
       <FormField
         control={form.control}
-        name="address"
+        name="moving_from"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Address</FormLabel>
+            <FormLabel>Moving From</FormLabel>
             <FormControl>
-              <Input placeholder="Your Address" {...field} />
+              <Input placeholder="Current Address" {...field} />
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+      <FormField
+        control={form.control}
+        name="moving_to"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>Moving To (if known)</FormLabel>
+            <FormControl>
+              <Input placeholder="Destination Address" {...field} />
             </FormControl>
             <FormMessage />
           </FormItem>
