@@ -23,7 +23,6 @@ export default defineConfig(({ mode }) => ({
           console.log('Generating HTML files for SEO...');
           // Get all routes from the nav-items.jsx
           // This is a very simple implementation that copies index.html to each route
-          // In a real implementation, you'd want to pre-render each route with its content
           
           const mainHtml = fs.readFileSync('./dist/index.html', 'utf-8');
           
