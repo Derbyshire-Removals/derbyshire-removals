@@ -100,7 +100,7 @@ const Contact = () => {
         <title>Contact Us | Derbyshire Removals - Get Your Free Quote Today</title>
         <meta name="description" content="Contact Derbyshire Removals for professional moving services in Derby and surrounding areas. Get a free quote, schedule a home visit, or discuss your moving needs with our expert team." />
         <meta name="keywords" content="contact removals derby, moving quote derby, removal company contact, furniture removals contact, derby movers contact" />
-        <link rel="canonical" href="https://derbyshireremovals.com/#/contact" />
+        <link rel="canonical" href="https://derbyshireremovals.com/contact" />
       </Helmet>
 
       <Header />
