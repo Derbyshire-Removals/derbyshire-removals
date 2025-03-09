@@ -28,13 +28,13 @@ export default defineConfig(({ mode }) => ({
       }
     }),
     mode === 'development' && componentTagger(),
-    mode === 'production' && ssr({
+    ssr({
       // Configure static-site generation
-      prerender: {
+      prerender: mode === 'production' ? {
         routes: routesToPrerender,
         noExtraDir: true,
         parallel: true
-      }
+      } : false
     }),
     mode === 'production' && viteStaticCopy({
       targets: [

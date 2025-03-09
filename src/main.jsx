@@ -5,7 +5,8 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App.jsx";
 import "./index.css";
 
-// Check if the app is being hydrated (client-side rendering after SSR)
+// For development mode, we'll use the standard React rendering
+// In production, vite-plugin-ssr will take over
 const root = document.getElementById("root");
 
 // Determine if we're hydrating or creating a new root
