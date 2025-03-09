@@ -7,7 +7,7 @@ import App from '../App';
 
 // This function is called for every page to generate the HTML
 export function render(pageContext) {
-  const { Page, urlPathname, documentProps } = pageContext;
+  const { urlPathname, documentProps } = pageContext;
   const title = documentProps?.title || 'Derbyshire Removals';
   const description = documentProps?.description || 'Professional removal services in Derbyshire';
 

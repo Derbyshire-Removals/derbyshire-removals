@@ -85,7 +85,10 @@ export default defineConfig(({ mode }) => ({
     chunkSizeWarningLimit: 500,
     // Pre-rendering configuration
     ssr: {
-      noExternal: ['react-helmet']
+      noExternal: ['react-helmet', '@babel/plugin-transform-react-jsx']
     }
+  },
+  optimizeDeps: {
+    include: ['@babel/plugin-transform-react-jsx']
   }
 }));
