@@ -24,7 +24,7 @@ export default defineConfig(({ mode }) => ({
         babelrc: false,
         configFile: false,
         plugins: [
-          [require.resolve('@babel/plugin-transform-react-jsx'), { 
+          ['@babel/plugin-transform-react-jsx', { 
             runtime: 'automatic' 
           }]
         ]
