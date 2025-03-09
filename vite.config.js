@@ -19,11 +19,14 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     react({
-      // Enable server-side rendering for pre-rendering
-      jsxRuntime: 'automatic',
+      // Use babel with explicit JSX transform configuration
       babel: {
+        babelrc: false,
+        configFile: false,
         plugins: [
-          '@babel/plugin-transform-react-jsx'
+          [require.resolve('@babel/plugin-transform-react-jsx'), { 
+            runtime: 'automatic' 
+          }]
         ]
       }
     }),
