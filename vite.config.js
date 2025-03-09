@@ -5,7 +5,7 @@ import react from "@vitejs/plugin-react";
 import { resolve } from "path";
 import { componentTagger } from "lovable-tagger";
 import { staticCopy } from "vite-plugin-static-copy";
-import { createSSRPlugin } from 'vite-plugin-ssr';
+import ssr from 'vite-plugin-ssr/plugin';
 
 // Import routes directly (no React components)
 import { routesToPrerender } from './src/utils/routes';
@@ -33,7 +33,7 @@ export default defineConfig(({ mode }) => ({
       }
     }),
     mode === 'development' && componentTagger(),
-    mode === 'production' && createSSRPlugin({
+    mode === 'production' && ssr({
       // Configure static-site generation
       prerender: {
         routes: routesToPrerender,
