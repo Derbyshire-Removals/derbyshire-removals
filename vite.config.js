@@ -58,6 +58,14 @@ export default defineConfig(({ mode }) => ({
         replacement: fileURLToPath(new URL("./src", import.meta.url)),
       },
       {
+        find: "@/components",
+        replacement: fileURLToPath(new URL("./src/components", import.meta.url)),
+      },
+      {
+        find: "@/lib",
+        replacement: fileURLToPath(new URL("./src/lib", import.meta.url)),
+      },
+      {
         find: "lib",
         replacement: resolve(__dirname, "lib"),
       },
