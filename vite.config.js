@@ -4,7 +4,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { resolve } from "path";
 import { componentTagger } from "lovable-tagger";
-import { staticCopy } from "vite-plugin-static-copy";
+import { viteStaticCopy } from "vite-plugin-static-copy";
 import ssr from 'vite-plugin-ssr/plugin';
 
 // Import routes directly (no React components)
@@ -41,7 +41,7 @@ export default defineConfig(({ mode }) => ({
         parallel: true
       }
     }),
-    mode === 'production' && staticCopy({
+    mode === 'production' && viteStaticCopy({
       targets: [
         {
           src: 'public/*',
