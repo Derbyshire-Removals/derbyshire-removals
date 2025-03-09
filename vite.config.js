@@ -7,9 +7,8 @@ import { componentTagger } from "lovable-tagger";
 import { staticCopy } from "vite-plugin-static-copy";
 import { createSSRPlugin } from 'vite-plugin-ssr';
 
-// Extract all route paths from nav-items
-import { navItems } from './src/nav-items';
-const routesToPrerender = navItems.map(item => item.to);
+// Import routes directly (no React components)
+import { routesToPrerender } from './src/utils/routes';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
