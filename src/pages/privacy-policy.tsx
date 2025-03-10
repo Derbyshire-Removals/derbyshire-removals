@@ -19,7 +19,7 @@ const PrivacyPolicy = () => {
       </Head>
 
       <Header />
-      <main className="container mx-auto px-4 pt-44 pb-8 max-w-4xl"> {/* Updated pt-32 to pt-44 for better header clearance */}
+      <main className="container mx-auto px-4 pt-44 pb-8 max-w-4xl">
         <h1 className="text-3xl font-bold mb-6">Privacy Policy</h1>
         
         <section className="space-y-6">

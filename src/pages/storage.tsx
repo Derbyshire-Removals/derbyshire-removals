@@ -43,33 +43,36 @@ const Storage = () => {
         <title>Secure Storage Solutions in Derby | Derbyshire Removals</title>
         <meta name="description" content="Professional storage solutions in Derby. Climate-controlled, secure units available in various sizes. Short and long-term storage options with 24/7 security." />
         <meta name="keywords" content="storage solutions derby, secure storage derbyshire, climate controlled storage, furniture storage, business storage, household storage derby" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "serviceType": "Storage Service",
-            "provider": {
-              "@type": "MovingCompany",
-              "name": "Derbyshire Removals",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Derby",
-                "addressRegion": "Derbyshire",
-                "addressCountry": "UK"
-              }
-            },
-            "areaServed": {
-              "@type": "GeoCircle",
-              "geoMidpoint": {
-                "@type": "GeoCoordinates",
-                "latitude": "52.9225",
-                "longitude": "-1.4746"
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "serviceType": "Storage Service",
+              "provider": {
+                "@type": "MovingCompany",
+                "name": "Derbyshire Removals",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Derby",
+                  "addressRegion": "Derbyshire",
+                  "addressCountry": "UK"
+                }
               },
-              "geoRadius": "50000"
-            },
-            "description": "Professional storage solutions offering secure, climate-controlled units in various sizes for both short and long-term storage needs."
-          })}
-        </script>
+              "areaServed": {
+                "@type": "GeoCircle",
+                "geoMidpoint": {
+                  "@type": "GeoCoordinates",
+                  "latitude": "52.9225",
+                  "longitude": "-1.4746"
+                },
+                "geoRadius": "50000"
+              },
+              "description": "Professional storage solutions offering secure, climate-controlled units in various sizes for both short and long-term storage needs."
+            })
+          }}
+        />
       </Head>
       
       <Header />

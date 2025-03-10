@@ -77,25 +77,28 @@ const PackagingMaterial = () => {
         <title>Professional Packing Materials Derby | Derbyshire Removals</title>
         <meta name="description" content="High-quality packing materials available in Derby. Boxes, bubble wrap, tape, and more for secure packing. Competitive prices and eco-friendly options available." />
         <meta name="keywords" content="packing materials derby, moving boxes derbyshire, bubble wrap, packing tape, removal boxes, eco-friendly packaging" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Product",
-            "name": "Packing Materials",
-            "description": "Professional packing materials for home and office moves",
-            "offers": {
-              "@type": "AggregateOffer",
-              "priceCurrency": "GBP",
-              "offerCount": packagingMaterials.length,
-              "lowPrice": "1.50",
-              "highPrice": "16.25"
-            },
-            "brand": {
-              "@type": "Brand",
-              "name": "Derbyshire Removals"
-            }
-          })}
-        </script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Product",
+              "name": "Packing Materials",
+              "description": "Professional packing materials for home and office moves",
+              "offers": {
+                "@type": "AggregateOffer",
+                "priceCurrency": "GBP",
+                "offerCount": packagingMaterials.length,
+                "lowPrice": "1.50",
+                "highPrice": "16.25"
+              },
+              "brand": {
+                "@type": "Brand",
+                "name": "Derbyshire Removals"
+              }
+            })
+          }}
+        />
       </Head>
       
       <Header />
