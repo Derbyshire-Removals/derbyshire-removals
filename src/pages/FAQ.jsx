@@ -1,10 +1,8 @@
-
 import React, { useEffect } from 'react';
-import Head from 'next/head';
+import { Helmet } from 'react-helmet';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import CookieConsent from '../components/CookieConsent';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
 const FAQ = () => {
   useEffect(() => {
@@ -36,12 +34,12 @@ const FAQ = () => {
 
   return (
     <div className="min-h-screen bg-gray-100">
-      <Head>
+      <Helmet>
         <title>Frequently Asked Questions | Derbyshire Removals</title>
         <meta name="description" content="Find answers to common questions about our removal services, booking process, packing services, and insurance coverage. Professional moving services in Derby and surrounding areas." />
         <meta name="keywords" content="removal services FAQ, moving company questions, Derby removals FAQ, packing services questions, furniture removal FAQ" />
-        <link rel="canonical" href="https://derbyshireremovals.com/faq" />
-      </Head>
+        <link rel="canonical" href="https://derbyshireremovals.com/#/faq" />
+      </Helmet>
 
       <Header />
       <main className="container mx-auto px-4 py-8 pt-44">
@@ -49,14 +47,13 @@ const FAQ = () => {
         <Accordion type="single" collapsible className="w-full">
           {faqItems.map((item, index) => (
             <AccordionItem key={index} value={`item-${index}`}>
-              <AccordionTrigger className="text-left">{item.question}</AccordionTrigger>
-              <AccordionContent className="text-gray-700">{item.answer}</AccordionContent>
+              <AccordionTrigger>{item.question}</AccordionTrigger>
+              <AccordionContent>{item.answer}</AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>
       </main>
       <Footer />
-      <CookieConsent />
     </div>
   );
 };

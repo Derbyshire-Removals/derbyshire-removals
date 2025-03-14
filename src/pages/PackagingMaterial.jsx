@@ -1,12 +1,10 @@
-
 import React, { useEffect } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import { Helmet } from 'react-helmet';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Card, CardContent } from "@/components/ui/card";
 import { Package, Info } from 'lucide-react';
-import CookieConsent from '../components/CookieConsent';
+import { Link } from 'react-router-dom';
 
 const packagingMaterials = [
   { 
@@ -73,33 +71,30 @@ const PackagingMaterial = () => {
 
   return (
     <div className="min-h-screen bg-gray-100">
-      <Head>
+      <Helmet>
         <title>Professional Packing Materials Derby | Derbyshire Removals</title>
         <meta name="description" content="High-quality packing materials available in Derby. Boxes, bubble wrap, tape, and more for secure packing. Competitive prices and eco-friendly options available." />
         <meta name="keywords" content="packing materials derby, moving boxes derbyshire, bubble wrap, packing tape, removal boxes, eco-friendly packaging" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Product",
-              "name": "Packing Materials",
-              "description": "Professional packing materials for home and office moves",
-              "offers": {
-                "@type": "AggregateOffer",
-                "priceCurrency": "GBP",
-                "offerCount": packagingMaterials.length,
-                "lowPrice": "1.50",
-                "highPrice": "16.25"
-              },
-              "brand": {
-                "@type": "Brand",
-                "name": "Derbyshire Removals"
-              }
-            })
-          }}
-        />
-      </Head>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "Packing Materials",
+            "description": "Professional packing materials for home and office moves",
+            "offers": {
+              "@type": "AggregateOffer",
+              "priceCurrency": "GBP",
+              "offerCount": packagingMaterials.length,
+              "lowPrice": "1.50",
+              "highPrice": "16.25"
+            },
+            "brand": {
+              "@type": "Brand",
+              "name": "Derbyshire Removals"
+            }
+          })}
+        </script>
+      </Helmet>
       
       <Header />
       <main className="container mx-auto px-4 pt-44 pb-24">
@@ -140,7 +135,7 @@ const PackagingMaterial = () => {
               Our experienced team can handle everything from delicate items to bulky furniture.
             </p>
             <Link 
-              href="/contact" 
+              to="/contact" 
               className="inline-block bg-[#071059] text-white px-6 py-2 rounded-lg hover:bg-blue-800 transition-colors"
             >
               Contact Us
@@ -149,7 +144,6 @@ const PackagingMaterial = () => {
         </div>
       </main>
       <Footer />
-      <CookieConsent />
     </div>
   );
 };
