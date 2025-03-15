@@ -1,6 +1,5 @@
 
 import React from 'react';
-import Script from 'next/script';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ReviewStats from '../components/testimonials/ReviewStats';
@@ -152,21 +151,40 @@ const testimonials = [
 const Testimonials = () => {
   const totalReviews = testimonials.length;
 
-  return (
-    <div className="min-h-screen bg-gray-100">
-      <Script id="testimonials-schema" type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "LocalBusiness",
-          "name": "Derbyshire Removals",
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5",
-            "reviewCount": totalReviews,
-            "bestRating": "5",
-            "worstRating": "1"
-          },
-          "review": testimonials.slice(0, 10).map(t => ({
+  // Schema.org data for testimonials
+  const testimonialsSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "name": "Derbyshire Removals",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "reviewCount": totalReviews,
+          "bestRating": "5",
+          "worstRating": "1"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What do customers say about Derbyshire Removals?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Our customers consistently rate us 5 stars for our professional, friendly, and efficient removal services."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "ItemList",
+        "itemListElement": testimonials.slice(0, 10).map((t, index) => ({
+          "@type": "ListItem",
+          "position": index + 1,
+          "item": {
             "@type": "Review",
             "reviewRating": {
               "@type": "Rating",
@@ -177,26 +195,36 @@ const Testimonials = () => {
               "name": t.name
             },
             "reviewBody": t.review
-          }))
-        })}
-      </Script>
+          }
+        }))
+      }
+    ]
+  };
 
-      <Header />
-      
-      <main className="container mx-auto px-4 py-8 pt-44">
-        <div className="max-w-4xl mx-auto">
-          <ReviewStats totalReviews={totalReviews} />
+  return (
+    <section>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(testimonialsSchema) }}
+      />
+      <div className="min-h-screen bg-gray-100">
+        <Header />
+        
+        <main className="container mx-auto px-4 py-8 pt-44">
+          <div className="max-w-4xl mx-auto">
+            <ReviewStats totalReviews={totalReviews} />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-            {testimonials.map((testimonial, index) => (
-              <TestimonialCard key={index} testimonial={testimonial} />
-            ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+              {testimonials.map((testimonial, index) => (
+                <TestimonialCard key={index} testimonial={testimonial} />
+              ))}
+            </div>
           </div>
-        </div>
-      </main>
-      
-      <Footer />
-    </div>
+        </main>
+        
+        <Footer />
+      </div>
+    </section>
   );
 };
 
