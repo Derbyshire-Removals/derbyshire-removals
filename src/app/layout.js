@@ -31,6 +31,131 @@ export const metadata = {
     "geo.placename": "Derby",
     "robots": "index, follow",
   },
+  jsonLd: [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://derbyshireremovals.com/#organization",
+      "name": "Derbyshire Removals",
+      "url": "https://derbyshireremovals.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://derbyshireremovals.com/images/logo.png"
+      },
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61572796415223",
+        "https://www.instagram.com/derbyshireremovals/",
+        "https://apps.derbyshire.gov.uk/applications/trusted-trader/profile.asp?tid=56236"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://derbyshireremovals.com/#business",
+      "name": "Derbyshire Removals",
+      "url": "https://derbyshireremovals.com",
+      "telephone": ["+441332314312", "+441246922192", "+447425557000"],
+      "email": "info@derbyshireremovals.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "48 Farmhouse Road",
+        "addressLocality": "Derby",
+        "postalCode": "DE24 3QL",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "52.9225",
+        "longitude": "-1.4746"
+      },
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": "52.9225",
+          "longitude": "-1.4746"
+        },
+        "geoRadius": "100000"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      "priceRange": "££",
+      "description":
+        "Trusted removal services across East & West Midlands, including Derby, Matlock, Chesterfield, Ashbourne, Nottingham, Birmingham, Leicester, and surrounding areas. Family-run business since 1988 offering home removals, office relocations, packing & storage solutions.",
+      "foundingDate": "1988"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Removal Services",
+      "provider": {
+        "@id": "https://derbyshireremovals.com/#organization"
+      },
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": "52.9225",
+          "longitude": "-1.4746"
+        },
+        "geoRadius": "100000",
+        "description": "Derby, Matlock, Chesterfield, Nottingham, Birmingham, Leicester and surrounding areas"
+      },
+      "description": "Professional home and office removals with packing and storage solutions.",
+      "offers": {
+        "@type": "Offer",
+        "description": "Professional removal services for homes and businesses",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "AggregateRating",
+      "itemReviewed": {
+        "@id": "https://derbyshireremovals.com/#business"
+      },
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1",
+      "ratingCount": "86"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://derbyshireremovals.com/#website",
+      "url": "https://derbyshireremovals.com",
+      "name": "Derbyshire Removals",
+      "description": "Professional home and office removals across the Midlands",
+      "publisher": {
+        "@id": "https://derbyshireremovals.com/#organization"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://derbyshireremovals.com/#webpage",
+      "url": "https://derbyshireremovals.com",
+      "name": "Derbyshire Removals - Professional Moving Services",
+      "isPartOf": {
+        "@id": "https://derbyshireremovals.com/#website"
+      },
+      "about": {
+        "@id": "https://derbyshireremovals.com/#organization"
+      },
+      "description": "Professional home and office removals across the Midlands."
+    }
+  ]
 };
 
 export default function RootLayout({ children }) {
@@ -57,66 +182,6 @@ export default function RootLayout({ children }) {
                 console.log("Google Analytics disabled in development");
               }
             `,
-          }}
-        />
-
-        {/* Schema.org markup for Local Business */}
-        <Script
-          id="local-business-schema"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "LocalBusiness",
-              name: "Derbyshire Removals",
-              url: "https://derbyshireremovals.com",
-              telephone: ["+441332314312", "+441246922192", "+447425557557000"],
-              email: "info@derbyshireremovals.com",
-              address: {
-                "@type": "PostalAddress",
-                streetAddress: "48 Farmhouse Road",
-                addressLocality: "Derby",
-                postalCode: "DE24 3QL",
-                addressCountry: "GB",
-              },
-              geo: {
-                "@type": "GeoCoordinates",
-                latitude: "52.9225",
-                longitude: "-1.4746",
-              },
-              areaServed: {
-                "@type": "GeoCircle",
-                geoMidpoint: {
-                  "@type": "GeoCoordinates",
-                  latitude: "52.9225",
-                  longitude: "-1.4746",
-                },
-                geoRadius: "100000",
-              },
-              openingHoursSpecification: {
-                "@type": "OpeningHoursSpecification",
-                dayOfWeek: [
-                  "Monday",
-                  "Tuesday",
-                  "Wednesday",
-                  "Thursday",
-                  "Friday",
-                  "Saturday",
-                ],
-                opens: "08:00",
-                closes: "18:00",
-              },
-              priceRange: "££",
-              servesCuisine: "Moving Services",
-              sameAs: [
-                "https://www.facebook.com/derbyshireremovals",
-                "https://twitter.com/derbyremovals",
-                "https://apps.derbyshire.gov.uk/applications/trusted-trader/profile.asp?tid=56236",
-              ],
-              description:
-                "Trusted removal services across East & West Midlands, including Derby, Matlock, Chesterfield, Ashbourne, Nottingham, Birmingham, Leicester, and surrounding areas. Family-run business since 1988 offering home removals, office relocations, packing & storage solutions.",
-              foundingDate: "1988",
-            }),
           }}
         />
       </head>

@@ -1,7 +1,7 @@
 
 export const metadata = {
   title: "House Moving Checklist | Derbyshire Removals",
-  description: "Comprehensive moving house checklist to ensure a stress-free move. Get organised with our expert tips for before, during, and after your move.",
+  description: "Our house moving checklist helps ensure a stress-free move. Get organized with expert tips for before, during, and after your relocation.",
   keywords: "moving checklist, house move timeline, moving preparation, moving day tips, derbyshire removals checklist",
   alternates: {
     canonical: "https://derbyshireremovals.com/move-checklist",
