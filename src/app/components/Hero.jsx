@@ -90,7 +90,7 @@ const ContactForm = () => {
 const Hero = () => {
   return (
     <section 
-      className="relative bg-cover bg-center py-20 mt-[88px]" 
+      className="relative bg-cover bg-center py-20 mt-[145px]" 
       style={{ backgroundImage: "url('/images/van.jpg')" }}
       role="banner"
       aria-label="Professional removals in Derbyshire banner"
