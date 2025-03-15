@@ -21,10 +21,28 @@ const packagingMaterials = [
     info: "Ideal for linens, glassware, and larger household items"
   },
   {
+    description: "Bitz box",
+    dimensions: "",
+    price: "£2.10",
+    info: "Small box ideal for miscellaneous items and small fragile objects"
+  },
+  {
     description: "Wardrobe Cartons (Rental)",
     dimensions: "",
     price: "£7.50",
     info: "Specially designed for hanging clothes, keeps garments wrinkle-free"
+  },
+  {
+    description: "Wardrobe Cartons (Cardboard)",
+    dimensions: "20\"x18\"x48\"",
+    price: "£11.10",
+    info: "Cardboard wardrobe boxes for purchase, perfect for moving hanging clothes"
+  },
+  {
+    description: "Mattress cover",
+    dimensions: "",
+    price: "£3",
+    info: "Protective cover to keep mattresses clean and dry during moving"
   },
   {
     description: "Tape (brown)",
