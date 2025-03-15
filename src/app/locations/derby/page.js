@@ -32,8 +32,8 @@ const Derby = () => {
         },
         "geo": {
           "@type": "GeoCoordinates",
-          "latitude": "52.9225",
-          "longitude": "-1.4746"
+          "latitude": "52.8744186998816",
+          "longitude": "-1.487168677909595"
         },
         "url": "https://derbyshireremovals.com/locations/derby",
         "telephone": "+441332314312",
