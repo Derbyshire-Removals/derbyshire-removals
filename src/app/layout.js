@@ -5,7 +5,7 @@ import "./globals.css";
 export const metadata = {
   title: "Derbyshire Removals",
   description:
-    "Trusted removal services across East & West Midlands, including Derby, Matlock, Chesterfield, Ashbourne, Nottingham, Birmingham, Leicester, and surrounding areas. Family-run business since 1988 offering home removals, office relocations, packing & storage solutions. Free quotes available.",
+    "Professional home and office removals across the Midlands. Serving Derby, Matlock, Chesterfield, Nottingham, Birmingham, and Leicester since 1988.",
   keywords: "removals derby, house removals derbyshire, office removals derby, storage solutions derby, packing services derbyshire",
   metadataBase: new URL("https://derbyshireremovals.com"),
   alternates: {
@@ -16,14 +16,14 @@ export const metadata = {
     url: "https://derbyshireremovals.com/",
     title: "Derbyshire Removals",
     description:
-      "Trusted removal services across East & West Midlands, including Derby, Matlock, Chesterfield, Ashbourne, Nottingham, Birmingham, Leicester, and surrounding areas. Family-run business since 1988 offering home removals, office relocations, packing & storage solutions. Free quotes available.",
+      "Professional home and office removals across the Midlands. Serving Derby, Matlock, Chesterfield, Nottingham, Birmingham, and Leicester since 1988.",
     images: "/og-image.svg",
   },
   twitter: {
     card: "summary_large_image",
     title: "Derbyshire Removals - Trusted Moving Services",
     description:
-      "Trusted removal services across East & West Midlands. House removals, office relocations, packing & storage solutions. Family-run business since 1988.",
+      "Professional home and office removals across the Midlands. Serving Derby, Matlock, Chesterfield, Nottingham, Birmingham, and Leicester since 1988.",
     images: ["https://derbyshireremovals.com/og-image.svg"],
   },
   other: {
