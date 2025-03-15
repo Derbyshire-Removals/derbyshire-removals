@@ -35,7 +35,12 @@ const HomeReviews = () => {
                 itemType="https://schema.org/MovingCompany"
               >
                 <meta itemProp="name" content="Derbyshire Removals" />
-                <meta itemProp="address" content="48 Farmhouse Road, Derby, DE24 3DB" />
+                <div itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
+                  <meta itemProp="streetAddress" content="48 Farmhouse Road" />
+                  <meta itemProp="addressLocality" content="Derby" />
+                  <meta itemProp="postalCode" content="DE24 3DB" />
+                  <meta itemProp="addressCountry" content="GB" />
+                </div>
               </div>
               <div className="flex mb-3">
                 {[...Array(5)].map((_, starIndex) => (
