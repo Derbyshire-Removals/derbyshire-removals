@@ -24,7 +24,7 @@ const packagingMaterials = [
     description: "Bitz box",
     dimensions: "",
     price: "£2.10",
-    info: "Small box ideal for miscellaneous items and small fragile objects"
+    info: "Essential items box - remotes, chargers, keys, toiletries. Last box on the van and the first one out."
   },
   {
     description: "Wardrobe Cartons (Rental)",
