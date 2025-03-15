@@ -1,5 +1,5 @@
+
 import React from 'react';
-import Head from 'next/head';
 import { MapPin } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -27,13 +27,6 @@ const AreasWeCover = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Head>
-        <title>Areas We Cover | Derbyshire Removals - Professional Moving Services</title>
-        <meta name="description" content="Comprehensive removal services across East & West Midlands including Derby, Leicester, Nottingham, Birmingham, and surrounding areas. Local expertise with nationwide coverage." />
-        <meta name="keywords" content="removal services east midlands, west midlands removals, derby house moves, leicester removals, nottingham movers, birmingham relocation services" />
-        <link rel="canonical" href="https://derbyshireremovals.com/areas-we-cover" />
-      </Head>
-
       <Header />
       
       <main className="container mx-auto px-4 py-8 pt-44">

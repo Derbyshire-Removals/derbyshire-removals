@@ -1,12 +1,12 @@
+
 import React from 'react';
-import Head from 'next/head';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import GetInTouch from '../../components/GetInTouch';
 import { MapPin, CheckCircle } from 'lucide-react';
+import Script from 'next/script';
 
 const Derby = () => {
-
   const services = [
     "Home Removals",
     "Office Relocations",
@@ -18,38 +18,32 @@ const Derby = () => {
 
   return (
     <div className="min-h-screen bg-gray-100">
-      <Head>
-        <title>Professional Removal Services in Derby | Derbyshire Removals</title>
-        <meta name="description" content="Expert removal services in Derby. Local knowledge, competitive rates, and professional moving solutions for homes and businesses across Derby and surrounding areas." />
-        <meta name="keywords" content="removals derby, house moves derby, office relocations derby, moving company derby, storage solutions derby" />
-        <link rel="canonical" href="https://derbyshireremovals.com/#/locations/derby" />
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "LocalBusiness",
-              "name": "Derbyshire Removals - Derby",
-              "image": "https://derbyshireremovals.com/images/van.jpg",
-              "description": "Professional removal services in Derby",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "48 Farmhouse Road",
-                "addressLocality": "Derby",
-                "postalCode": "DE24 3DB",
-                "addressCountry": "GB"
-              },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": "52.9225",
-                "longitude": "-1.4746"
-              },
-              "url": "https://derbyshireremovals.com/#/locations/derby",
-              "telephone": "+441332314312",
-              "areaServed": "Derby"
-            }
-          `}
-        </script>
-      </Head>
+      <Script id="local-business-schema" type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Derbyshire Removals - Derby",
+            "image": "https://derbyshireremovals.com/images/van.jpg",
+            "description": "Professional removal services in Derby",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "48 Farmhouse Road",
+              "addressLocality": "Derby",
+              "postalCode": "DE24 3DB",
+              "addressCountry": "GB"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "52.9225",
+              "longitude": "-1.4746"
+            },
+            "url": "https://derbyshireremovals.com/locations/derby",
+            "telephone": "+441332314312",
+            "areaServed": "Derby"
+          }
+        `}
+      </Script>
 
       <Header />
       <main className="container mx-auto px-4 pt-44 pb-16">

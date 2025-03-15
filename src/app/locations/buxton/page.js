@@ -1,9 +1,10 @@
+
 import React from 'react';
-import Head from 'next/head';
 import { MapPin, CheckCircle } from 'lucide-react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import GetInTouch from '../../components/GetInTouch';
+import Script from 'next/script';
 
 const Buxton = () => {
   const services = [
@@ -17,32 +18,26 @@ const Buxton = () => {
 
   return (
     <div className="min-h-screen bg-gray-100">
-      <Head>
-        <title>Professional Removal Services in Buxton | Derbyshire Removals</title>
-        <meta name="description" content="Expert removal services in Buxton. Local knowledge, competitive rates, and professional moving solutions for homes and businesses across Buxton and surrounding areas." />
-        <meta name="keywords" content="removals buxton, house moves buxton, office relocations buxton, moving company buxton, storage solutions buxton" />
-        <link rel="canonical" href="https://derbyshireremovals.com/#/locations/buxton" />
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "LocalBusiness",
-              "name": "Derbyshire Removals - Buxton",
-              "image": "https://derbyshireremovals.com/images/van.jpg",
-              "description": "Professional removal services in Buxton",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Buxton",
-                "addressRegion": "Derbyshire",
-                "addressCountry": "GB"
-              },
-              "url": "https://derbyshireremovals.com/#/locations/buxton",
-              "telephone": "+443335677001",
-              "areaServed": "Buxton"
-            }
-          `}
-        </script>
-      </Head>
+      <Script id="local-business-schema" type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Derbyshire Removals - Buxton",
+            "image": "https://derbyshireremovals.com/images/van.jpg",
+            "description": "Professional removal services in Buxton",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Buxton",
+              "addressRegion": "Derbyshire",
+              "addressCountry": "GB"
+            },
+            "url": "https://derbyshireremovals.com/locations/buxton",
+            "telephone": "+443335677001",
+            "areaServed": "Buxton"
+          }
+        `}
+      </Script>
 
       <Header />
       <main className="container mx-auto px-4 pt-44 pb-16">

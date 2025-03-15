@@ -1,5 +1,5 @@
 import React from 'react';
-import Head from 'next/head';
+import Script from 'next/script';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import TermsSection from '../components/terms/TermsSection';
@@ -8,24 +8,18 @@ import OrderedList from '../components/terms/OrderedList';
 const TermsAndConditions = () => {
   return (
     <div className="min-h-screen bg-gray-100">
-      <Head>
-        <title>Terms and Conditions | Derbyshire Removals</title>
-        <meta name="description" content="Read our comprehensive terms and conditions for removal services, storage solutions, and business operations at Derbyshire Removals." />
-        <meta name="keywords" content="removal terms, storage conditions, business terms, Derbyshire Removals terms" />
-        <link rel="canonical" href="https://derbyshireremovals.com/#/terms-and-conditions" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            "name": "Terms and Conditions",
-            "description": "Comprehensive terms and conditions for removal services and storage solutions",
-            "publisher": {
-              "@type": "Organization",
-              "name": "Derbyshire Removals"
-            }
-          })}
-        </script>
-      </Head>
+      <Script id="webpage-schema" type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Terms and Conditions",
+          "description": "Comprehensive terms and conditions for removal services and storage solutions",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Derbyshire Removals"
+          }
+        })}
+      </Script>
 
       <Header />
       <div className="container mx-auto px-4 py-8 pt-44">

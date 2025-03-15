@@ -1,5 +1,5 @@
+
 import React from 'react';
-import Head from 'next/head';
 import { Building2, Users, Globe, Handshake } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -30,19 +30,6 @@ const AboutUs = () => {
 
   return (
     <div className="min-h-screen bg-gray-100">
-      <Head>
-        <title>About Derbyshire Removals | Professional Moving Services Since 1988</title>
-        <meta name="description" content="Learn about Derbyshire Removals, a family-run business providing trusted removal services since 1988. Discover our commitment to excellence, expert team, and comprehensive coverage across the Midlands." />
-        <meta name="keywords" content="about derbyshire removals, removal company history, trusted removals derby, family run removals business, professional movers derbyshire" />
-        <link rel="canonical" href="https://derbyshireremovals.com/about-us" />
-        
-        {/* Open Graph tags */}
-        <meta property="og:title" content="About Derbyshire Removals | Professional Moving Services Since 1988" />
-        <meta property="og:description" content="Learn about Derbyshire Removals, a family-run business providing trusted removal services since 1988. Discover our commitment to excellence, expert team, and comprehensive coverage across the Midlands." />
-        <meta property="og:url" content="https://derbyshireremovals.com/about-us" />
-        <meta property="og:type" content="website" />
-      </Head>
-
       <Header />
       
       <main className="container mx-auto px-4 pt-44 pb-24">

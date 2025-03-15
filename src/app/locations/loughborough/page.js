@@ -1,12 +1,12 @@
+
 import React from 'react';
-import Head from 'next/head';
 import { MapPin, CheckCircle } from 'lucide-react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import GetInTouch from '../../components/GetInTouch';
+import Script from 'next/script';
 
 const Loughborough = () => {
-
   const services = [
     "Home Removals",
     "Office Relocations",
@@ -18,32 +18,26 @@ const Loughborough = () => {
 
   return (
     <div className="min-h-screen bg-gray-100">
-      <Head>
-        <title>Professional Removal Services in Loughborough | Derbyshire Removals</title>
-        <meta name="description" content="Expert removal services in Loughborough. Local knowledge, competitive rates, and professional moving solutions for homes and businesses across Loughborough and surrounding areas." />
-        <meta name="keywords" content="removals loughborough, house moves loughborough, office relocations loughborough, moving company loughborough, storage solutions loughborough" />
-        <link rel="canonical" href="https://derbyshireremovals.com/#/locations/loughborough" />
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "LocalBusiness",
-              "name": "Derbyshire Removals - Loughborough",
-              "image": "https://derbyshireremovals.com/images/van.jpg",
-              "description": "Professional removal services in Loughborough",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Loughborough",
-                "addressRegion": "Leicestershire",
-                "addressCountry": "GB"
-              },
-              "url": "https://derbyshireremovals.com/#/locations/loughborough",
-              "telephone": "+443335677001",
-              "areaServed": "Loughborough"
-            }
-          `}
-        </script>
-      </Head>
+      <Script id="local-business-schema" type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Derbyshire Removals - Loughborough",
+            "image": "https://derbyshireremovals.com/images/van.jpg",
+            "description": "Professional removal services in Loughborough",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Loughborough",
+              "addressRegion": "Leicestershire",
+              "addressCountry": "GB"
+            },
+            "url": "https://derbyshireremovals.com/locations/loughborough",
+            "telephone": "+443335677001",
+            "areaServed": "Loughborough"
+          }
+        `}
+      </Script>
 
       <Header />
       <main className="container mx-auto px-4 pt-44 pb-16">

@@ -1,17 +1,13 @@
+
 import React from 'react';
 import { Shield, Clock, Building2, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
-import Head from 'next/head';
+import Script from 'next/script';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import GetInTouch from '../components/GetInTouch';
 
 const Storage = () => {
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  //   console.log('Storage page mounted - merged with Storage Solutions');
-  // }, []);
-
   const storageFeatures = [
     {
       icon: <Shield className="w-6 h-6 text-primary" />,
@@ -37,38 +33,33 @@ const Storage = () => {
 
   return (
     <div className="min-h-screen bg-gray-100">
-      <Head>
-        <title>Secure Storage Solutions in Derby | Derbyshire Removals</title>
-        <meta name="description" content="Professional storage solutions in Derby. Climate-controlled, secure units available in various sizes. Short and long-term storage options with 24/7 security." />
-        <meta name="keywords" content="storage solutions derby, secure storage derbyshire, climate controlled storage, furniture storage, business storage, household storage derby" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "serviceType": "Storage Service",
-            "provider": {
-              "@type": "MovingCompany",
-              "name": "Derbyshire Removals",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Derby",
-                "addressRegion": "Derbyshire",
-                "addressCountry": "UK"
-              }
+      <Script id="storage-service-schema" type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "serviceType": "Storage Service",
+          "provider": {
+            "@type": "MovingCompany",
+            "name": "Derbyshire Removals",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Derby",
+              "addressRegion": "Derbyshire",
+              "addressCountry": "UK"
+            }
+          },
+          "areaServed": {
+            "@type": "GeoCircle",
+            "geoMidpoint": {
+              "@type": "GeoCoordinates",
+              "latitude": "52.9225",
+              "longitude": "-1.4746"
             },
-            "areaServed": {
-              "@type": "GeoCircle",
-              "geoMidpoint": {
-                "@type": "GeoCoordinates",
-                "latitude": "52.9225",
-                "longitude": "-1.4746"
-              },
-              "geoRadius": "50000"
-            },
-            "description": "Professional storage solutions offering secure, climate-controlled units in various sizes for both short and long-term storage needs."
-          })}
-        </script>
-      </Head>
+            "geoRadius": "50000"
+          },
+          "description": "Professional storage solutions offering secure, climate-controlled units in various sizes for both short and long-term storage needs."
+        })}
+      </Script>
       
       <Header />
       <main className="container mx-auto px-4 pt-44 pb-24">

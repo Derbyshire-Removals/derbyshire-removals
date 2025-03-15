@@ -1,10 +1,11 @@
+
 import React from 'react';
-import Head from 'next/head';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Card, CardContent } from "../components/ui/card";
 import { Package, Info } from 'lucide-react';
 import Link from 'next/link';
+import Script from 'next/script';
 
 const packagingMaterials = [
   { 
@@ -66,30 +67,25 @@ const packagingMaterials = [
 const PackagingMaterial = () => {
   return (
     <div className="min-h-screen bg-gray-100">
-      <Head>
-        <title>Professional Packing Materials Derby | Derbyshire Removals</title>
-        <meta name="description" content="High-quality packing materials available in Derby. Boxes, bubble wrap, tape, and more for secure packing. Competitive prices and eco-friendly options available." />
-        <meta name="keywords" content="packing materials derby, moving boxes derbyshire, bubble wrap, packing tape, removal boxes, eco-friendly packaging" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Product",
-            "name": "Packing Materials",
-            "description": "Professional packing materials for home and office moves",
-            "offers": {
-              "@type": "AggregateOffer",
-              "priceCurrency": "GBP",
-              "offerCount": packagingMaterials.length,
-              "lowPrice": "1.50",
-              "highPrice": "16.25"
-            },
-            "brand": {
-              "@type": "Brand",
-              "name": "Derbyshire Removals"
-            }
-          })}
-        </script>
-      </Head>
+      <Script id="product-schema" type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "name": "Packing Materials",
+          "description": "Professional packing materials for home and office moves",
+          "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "GBP",
+            "offerCount": packagingMaterials.length,
+            "lowPrice": "1.50",
+            "highPrice": "16.25"
+          },
+          "brand": {
+            "@type": "Brand",
+            "name": "Derbyshire Removals"
+          }
+        })}
+      </Script>
       
       <Header />
       <main className="container mx-auto px-4 pt-44 pb-24">

@@ -1,18 +1,11 @@
+
 import React from 'react';
-import Head from 'next/head';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 const PrivacyPolicy = () => {
-
   return (
     <div className="min-h-screen bg-gray-100">
-      <Head>
-        <title>Privacy Policy | Derbyshire Removals</title>
-        <meta name="description" content="Learn about how Derbyshire Removals handles your data and uses cookies to improve your experience." />
-        <link rel="canonical" href="https://derbyshireremovals.com/#/privacy-policy" />
-      </Head>
-
       <Header />
       <main className="container mx-auto px-4 pt-44 pb-8 max-w-4xl"> {/* Updated pt-32 to pt-44 for better header clearance */}
         <h1 className="text-3xl font-bold mb-6">Privacy Policy</h1>

@@ -1,56 +1,51 @@
+
 "use client";
 
 import React from 'react';
 import Link from 'next/link';
-import Head from 'next/head';
 import { Printer } from 'lucide-react'; // Import Printer icon
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Checkbox } from "../components/ui/checkbox";
+import Script from 'next/script';
 
 const MoveChecklist = () => {
-
   const handlePrint = () => {
     window.print();
   };
 
   return (
     <div className="min-h-screen bg-gray-100">
-      <Head>
-        <title>House Moving Checklist | Derbyshire Removals</title>
-        <meta name="description" content="Comprehensive moving house checklist to ensure a stress-free move. Get organized with our detailed timeline and expert tips for before, during, and after your move." />
-        <meta name="keywords" content="moving checklist, house move timeline, moving preparation, moving day tips, derbyshire removals checklist" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "HowTo",
-            "name": "Moving House Checklist",
-            "description": "A comprehensive checklist for organizing your house move",
-            "step": [
-              {
-                "@type": "HowToStep",
-                "name": "Two Months Before",
-                "text": "Start planning, research removal companies, begin decluttering"
-              },
-              {
-                "@type": "HowToStep",
-                "name": "One Month Before",
-                "text": "Book removals, arrange utilities, start packing non-essentials"
-              },
-              {
-                "@type": "HowToStep",
-                "name": "Two Weeks Before",
-                "text": "Notify important contacts, arrange parking permits, continue packing"
-              },
-              {
-                "@type": "HowToStep",
-                "name": "Moving Day",
-                "text": "Final checks, supervise loading, handle documentation"
-              }
-            ]
-          })}
-        </script>
-      </Head>
+      <Script id="howto-schema" type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "HowTo",
+          "name": "Moving House Checklist",
+          "description": "A comprehensive checklist for organizing your house move",
+          "step": [
+            {
+              "@type": "HowToStep",
+              "name": "Two Months Before",
+              "text": "Start planning, research removal companies, begin decluttering"
+            },
+            {
+              "@type": "HowToStep",
+              "name": "One Month Before",
+              "text": "Book removals, arrange utilities, start packing non-essentials"
+            },
+            {
+              "@type": "HowToStep",
+              "name": "Two Weeks Before",
+              "text": "Notify important contacts, arrange parking permits, continue packing"
+            },
+            {
+              "@type": "HowToStep",
+              "name": "Moving Day",
+              "text": "Final checks, supervise loading, handle documentation"
+            }
+          ]
+        })}
+      </Script>
 
       <Header />
       <main className="container mx-auto px-4 py-8 pt-44">

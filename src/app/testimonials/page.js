@@ -1,5 +1,6 @@
+
 import React from 'react';
-import Head from 'next/head';
+import Script from 'next/script';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ReviewStats from '../components/testimonials/ReviewStats';
@@ -153,38 +154,32 @@ const Testimonials = () => {
 
   return (
     <div className="min-h-screen bg-gray-100">
-      <Head>
-        <title>Customer Reviews & Testimonials | Derbyshire Removals</title>
-        <meta name="description" content="Read genuine customer reviews and testimonials about Derbyshire Removals. Over 30 years of trusted moving services across Derby, Matlock, Chesterfield, and surrounding areas." />
-        <meta name="keywords" content="derbyshire removals reviews, customer testimonials derby, moving company reviews, removal company feedback, derby movers testimonials" />
-        <link rel="canonical" href="https://derbyshireremovals.com/#/testimonials" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "Derbyshire Removals",
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "5",
-              "reviewCount": totalReviews,
-              "bestRating": "5",
-              "worstRating": "1"
+      <Script id="testimonials-schema" type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Derbyshire Removals",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": totalReviews,
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "review": testimonials.slice(0, 10).map(t => ({
+            "@type": "Review",
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5"
             },
-            "review": testimonials.map(t => ({
-              "@type": "Review",
-              "reviewRating": {
-                "@type": "Rating",
-                "ratingValue": "5"
-              },
-              "author": {
-                "@type": "Person",
-                "name": t.name
-              },
-              "reviewBody": t.review
-            }))
-          })}
-        </script>
-      </Head>
+            "author": {
+              "@type": "Person",
+              "name": t.name
+            },
+            "reviewBody": t.review
+          }))
+        })}
+      </Script>
 
       <Header />
       
