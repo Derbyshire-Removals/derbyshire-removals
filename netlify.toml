@@ -3,7 +3,10 @@
   command = "npm run build"
   publish = "dist"
 
+# These redirects ensure Next.js routing works correctly
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+  force = false
+  conditions = {Role = ["visitor"]}
