@@ -55,12 +55,12 @@ export default function Home() {
   const serviceSchema = {
     "@type": "Service",
     "name": "Removal Services",
-    "image": "https://derbyshireremovals.com/images/van.jpg",
-    "priceRange": "££",
-    "telephone": "+443335677001",
     "provider": {
       "@type": "MovingCompany",
       "name": "Derbyshire Removals",
+      "image": "https://derbyshireremovals.com/images/van.jpg",
+      "priceRange": "££",
+      "telephone": "+443335677001",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "48 Farmhouse Road",
@@ -84,12 +84,12 @@ export default function Home() {
     "ratingCount": "124",
     "bestRating": "5",
     "worstRating": "1",
-    "image": "https://derbyshireremovals.com/images/van.jpg",
-    "priceRange": "££",
-    "telephone": "+443335677001",
     "itemReviewed": {
       "@type": "MovingCompany",
       "name": "Derbyshire Removals",
+      "image": "https://derbyshireremovals.com/images/van.jpg",
+      "priceRange": "££",
+      "telephone": "+443335677001",
       "url": "https://derbyshireremovals.com",
       "address": {
         "@type": "PostalAddress",
