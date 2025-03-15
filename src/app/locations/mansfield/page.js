@@ -4,6 +4,7 @@ import { MapPin, CheckCircle } from 'lucide-react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import GetInTouch from '../../components/GetInTouch';
+import Script from 'next/script';
 
 const Mansfield = () => {
   const services = [
@@ -15,51 +16,28 @@ const Mansfield = () => {
     "Single Item Delivery"
   ];
 
-  const localBusinessSchema = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Derbyshire Removals - Mansfield",
-    "image": "https://derbyshireremovals.com/images/van.jpg",
-    "description": "Professional removal services in Mansfield",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Mansfield",
-      "addressRegion": "Nottinghamshire",
-      "addressCountry": "GB"
-    },
-    "url": "https://derbyshireremovals.com/locations/mansfield",
-    "telephone": "+443335677001",
-    "areaServed": "Mansfield"
-  };
-
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: "Removal Services in Mansfield",
-    provider: {
-      "@type": "LocalBusiness",
-      name: "Derbyshire Removals"
-    },
-    serviceType: "Moving Services",
-    areaServed: {
-      "@type": "City",
-      name: "Mansfield"
-    },
-    description: "Expert removal services in Mansfield with local knowledge, competitive rates, and professional moving solutions for homes and businesses."
-  };
-
   return (
     <div className="min-h-screen bg-gray-100">
-      <Head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-        />
-      </Head>
+      <Script id="local-business-schema" type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Derbyshire Removals - Mansfield",
+            "image": "https://derbyshireremovals.com/images/van.jpg",
+            "description": "Professional removal services in Mansfield",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Mansfield",
+              "addressRegion": "Nottinghamshire",
+              "addressCountry": "GB"
+            },
+            "url": "https://derbyshireremovals.com/locations/mansfield",
+            "telephone": "+443335677001",
+            "areaServed": "Mansfield"
+          }
+        `}
+      </Script>
 
       <Header />
       <main className="container mx-auto px-4 pt-44 pb-16">

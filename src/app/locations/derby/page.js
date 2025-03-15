@@ -1,70 +1,49 @@
+
 import React from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import GetInTouch from '../../components/GetInTouch';
 import { MapPin, CheckCircle } from 'lucide-react';
+import Script from 'next/script';
 
 const Derby = () => {
   const services = [
     "Home Removals",
     "Office Relocations",
-    "Packing Services", 
+    "Packing Services",
     "Storage Solutions",
     "Student Moves",
     "Single Item Delivery"
   ];
 
-  const localBusinessSchema = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Derbyshire Removals - Derby",
-    "image": "https://derbyshireremovals.com/images/van.jpg",
-    "description": "Professional removal services in Derby",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "48 Farmhouse Road",
-      "addressLocality": "Derby",
-      "postalCode": "DE24 3DB",
-      "addressCountry": "GB"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "52.9225",
-      "longitude": "-1.4746"
-    },
-    "url": "https://derbyshireremovals.com/locations/derby",
-    "telephone": "+441332314312",
-    "areaServed": "Derby"
-  };
-
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: "Removal Services in Derby",
-    provider: {
-      "@type": "LocalBusiness",
-      name: "Derbyshire Removals"
-    },
-    serviceType: "Moving Services",
-    areaServed: {
-      "@type": "City",
-      name: "Derby"
-    },
-    description: "Expert removal services in Derby with local knowledge, competitive rates, and professional moving solutions for homes and businesses."
-  };
-
   return (
     <div className="min-h-screen bg-gray-100">
-      <Head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-        />
-      </Head>
+      <Script id="local-business-schema" type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Derbyshire Removals - Derby",
+            "image": "https://derbyshireremovals.com/images/van.jpg",
+            "description": "Professional removal services in Derby",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "48 Farmhouse Road",
+              "addressLocality": "Derby",
+              "postalCode": "DE24 3DB",
+              "addressCountry": "GB"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "52.9225",
+              "longitude": "-1.4746"
+            },
+            "url": "https://derbyshireremovals.com/locations/derby",
+            "telephone": "+441332314312",
+            "areaServed": "Derby"
+          }
+        `}
+      </Script>
 
       <Header />
       <main className="container mx-auto px-4 pt-44 pb-16">

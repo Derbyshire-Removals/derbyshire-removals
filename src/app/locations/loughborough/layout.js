@@ -12,6 +12,21 @@ export const metadata = {
     url: "https://derbyshireremovals.com/locations/loughborough",
     type: "website",
   },
+  jsonLd: {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Removal Services in Loughborough",
+    provider: {
+      "@type": "LocalBusiness",
+      name: "Derbyshire Removals"
+    },
+    serviceType: "Moving Services",
+    areaServed: {
+      "@type": "City",
+      name: "Loughborough"
+    },
+    description: "Expert removal services in Loughborough with local knowledge, competitive rates, and professional moving solutions for homes and businesses."
+  }
 };
 
 export default function LoughboroughLayout({ children }) {

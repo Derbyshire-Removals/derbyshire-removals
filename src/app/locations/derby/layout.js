@@ -12,6 +12,21 @@ export const metadata = {
     url: "https://derbyshireremovals.com/locations/derby",
     type: "website",
   },
+  jsonLd: {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Removal Services in Derby",
+    provider: {
+      "@type": "LocalBusiness",
+      name: "Derbyshire Removals"
+    },
+    serviceType: "Moving Services",
+    areaServed: {
+      "@type": "City",
+      name: "Derby"
+    },
+    description: "Expert removal services in Derby with local knowledge, competitive rates, and professional moving solutions for homes and businesses."
+  }
 };
 
 export default function DerbyLayout({ children }) {

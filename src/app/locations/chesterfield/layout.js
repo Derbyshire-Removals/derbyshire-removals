@@ -12,6 +12,21 @@ export const metadata = {
     url: "https://derbyshireremovals.com/locations/chesterfield",
     type: "website",
   },
+  jsonLd: {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Removal Services in Chesterfield",
+    provider: {
+      "@type": "LocalBusiness",
+      name: "Derbyshire Removals"
+    },
+    serviceType: "Moving Services",
+    areaServed: {
+      "@type": "City",
+      name: "Chesterfield"
+    },
+    description: "Expert removal services in Chesterfield with local knowledge, competitive rates, and professional moving solutions for homes and businesses."
+  }
 };
 
 export default function ChesterfieldLayout({ children }) {

@@ -30,162 +30,132 @@ export const metadata = {
     "geo.placename": "Derby",
     "robots": "index, follow",
   },
+  jsonLd: [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "Derbyshire Removals",
+      url: "https://derbyshireremovals.com",
+      logo: "https://derbyshireremovals.com/images/logo.png",
+      description: "Trusted removal services across East & West Midlands, including Derby, Matlock, Chesterfield, Ashbourne, Nottingham, Birmingham, Leicester, and surrounding areas. Family-run business since 1988 offering home removals, office relocations, packing & storage solutions.",
+      foundingDate: "1988",
+      sameAs: [
+        "https://www.facebook.com/derbyshireremovals",
+        "https://twitter.com/derbyremovals",
+        "https://apps.derbyshire.gov.uk/applications/trusted-trader/profile.asp?tid=56236",
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      name: "Derbyshire Removals",
+      url: "https://derbyshireremovals.com",
+      telephone: ["+441332314312", "+441246922192", "+447425557557000"],
+      email: "info@derbyshireremovals.com",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "48 Farmhouse Road",
+        addressLocality: "Derby",
+        postalCode: "DE24 3QL",
+        addressCountry: "GB",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: "52.9225",
+        longitude: "-1.4746",
+      },
+      areaServed: {
+        "@type": "GeoCircle",
+        geoMidpoint: {
+          "@type": "GeoCoordinates",
+          latitude: "52.9225",
+          longitude: "-1.4746",
+        },
+        geoRadius: "100000",
+      },
+      openingHoursSpecification: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ],
+        opens: "08:00",
+        closes: "18:00",
+      },
+      priceRange: "££",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      serviceType: "Moving Services",
+      provider: {
+        "@type": "LocalBusiness",
+        name: "Derbyshire Removals"
+      },
+      areaServed: {
+        "@type": "GeoCircle",
+        geoMidpoint: {
+          "@type": "GeoCoordinates",
+          latitude: "52.9225",
+          longitude: "-1.4746",
+        },
+        geoRadius: "100000",
+      },
+      description: "Professional removal services for homes and businesses, including packing, storage, and specialized antique handling.",
+      offers: {
+        "@type": "Offer",
+        price: "1.00",
+        priceCurrency: "GBP",
+        priceValidUntil: "2025-12-31",
+        availability: "https://schema.org/InStock",
+        url: "https://derbyshireremovals.com/contact"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "AggregateRating",
+      itemReviewed: {
+        "@type": "LocalBusiness",
+        name: "Derbyshire Removals",
+        image: "https://derbyshireremovals.com/images/logo.png"
+      },
+      ratingValue: "5",
+      bestRating: "5",
+      ratingCount: "120",
+      reviewCount: "120"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: "Derbyshire Removals",
+      url: "https://derbyshireremovals.com",
+      potentialAction: {
+        "@type": "SearchAction",
+        target: "https://derbyshireremovals.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: "Derbyshire Removals - Professional Removal Services",
+      description: "Professional home and office removals across the Midlands. Serving Derby, Matlock, Chesterfield, Nottingham, Birmingham, and Leicester since 1988.",
+      url: "https://derbyshireremovals.com",
+      mainEntity: {
+        "@type": "LocalBusiness",
+        name: "Derbyshire Removals"
+      }
+    }
+  ]
 };
 
 export default function RootLayout({ children }) {
-  const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "Derbyshire Removals",
-    url: "https://derbyshireremovals.com",
-    logo: "https://derbyshireremovals.com/images/logo.png",
-    description: "Trusted removal services across East & West Midlands, including Derby, Matlock, Chesterfield, Ashbourne, Nottingham, Birmingham, Leicester, and surrounding areas. Family-run business since 1988 offering home removals, office relocations, packing & storage solutions.",
-    foundingDate: "1988",
-    sameAs: [
-      "https://www.facebook.com/derbyshireremovals",
-      "https://twitter.com/derbyremovals",
-      "https://apps.derbyshire.gov.uk/applications/trusted-trader/profile.asp?tid=56236",
-    ],
-  };
-
-  const localBusinessSchema = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: "Derbyshire Removals",
-    url: "https://derbyshireremovals.com",
-    telephone: ["+441332314312", "+441246922192", "+447425557557000"],
-    email: "info@derbyshireremovals.com",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "48 Farmhouse Road",
-      addressLocality: "Derby",
-      postalCode: "DE24 3QL",
-      addressCountry: "GB",
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: "52.9225",
-      longitude: "-1.4746",
-    },
-    areaServed: {
-      "@type": "GeoCircle",
-      geoMidpoint: {
-        "@type": "GeoCoordinates",
-        latitude: "52.9225",
-        longitude: "-1.4746",
-      },
-      geoRadius: "100000",
-    },
-    openingHoursSpecification: {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-      ],
-      opens: "08:00",
-      closes: "18:00",
-    },
-    priceRange: "££",
-  };
-
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    serviceType: "Moving Services",
-    provider: {
-      "@type": "LocalBusiness",
-      name: "Derbyshire Removals"
-    },
-    areaServed: {
-      "@type": "GeoCircle",
-      geoMidpoint: {
-        "@type": "GeoCoordinates",
-        latitude: "52.9225",
-        longitude: "-1.4746",
-      },
-      geoRadius: "100000",
-    },
-    description: "Professional removal services for homes and businesses, including packing, storage, and specialized antique handling.",
-    offers: {
-      "@type": "Offer",
-      price: "1.00",
-      priceCurrency: "GBP",
-      priceValidUntil: "2025-12-31",
-      availability: "https://schema.org/InStock",
-      url: "https://derbyshireremovals.com/contact"
-    }
-  };
-
-  const aggregateRatingSchema = {
-    "@context": "https://schema.org",
-    "@type": "AggregateRating",
-    itemReviewed: {
-      "@type": "LocalBusiness",
-      name: "Derbyshire Removals",
-      image: "https://derbyshireremovals.com/images/logo.png"
-    },
-    ratingValue: "5",
-    bestRating: "5",
-    ratingCount: "120",
-    reviewCount: "120"
-  };
-
-  const websiteSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "Derbyshire Removals",
-    url: "https://derbyshireremovals.com",
-    potentialAction: {
-      "@type": "SearchAction",
-      target: "https://derbyshireremovals.com/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  };
-
-  const webPageSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    name: "Derbyshire Removals - Professional Removal Services",
-    description: "Professional home and office removals across the Midlands. Serving Derby, Matlock, Chesterfield, Nottingham, Birmingham, and Leicester since 1988.",
-    url: "https://derbyshireremovals.com",
-    mainEntity: {
-      "@type": "LocalBusiness",
-      name: "Derbyshire Removals"
-    }
-  };
-
   return (
     <html lang="en">
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(aggregateRatingSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
-        />
-      </head>
       <body>
         {children}
       </body>

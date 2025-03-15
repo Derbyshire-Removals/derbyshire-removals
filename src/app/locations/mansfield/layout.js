@@ -12,6 +12,21 @@ export const metadata = {
     url: "https://derbyshireremovals.com/locations/mansfield",
     type: "website",
   },
+  jsonLd: {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Removal Services in Mansfield",
+    provider: {
+      "@type": "LocalBusiness",
+      name: "Derbyshire Removals"
+    },
+    serviceType: "Moving Services",
+    areaServed: {
+      "@type": "City",
+      name: "Mansfield"
+    },
+    description: "Expert removal services in Mansfield with local knowledge, competitive rates, and professional moving solutions for homes and businesses."
+  }
 };
 
 export default function MansfieldLayout({ children }) {

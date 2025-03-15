@@ -5,34 +5,8 @@ import Footer from '../../components/Footer';
 import Link from 'next/link';
 
 const AntiqueAndFineArts = () => {
-  const antiqueServiceSchema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: "Antique and Fine Arts Removal",
-    provider: {
-      "@type": "LocalBusiness",
-      name: "Derbyshire Removals"
-    },
-    serviceType: "Specialized Moving",
-    areaServed: "Derbyshire and East Midlands",
-    description: "Specialized removal services for antiques and fine art, including expert handling, custom crating, and climate-controlled transportation for valuable items.",
-    offers: {
-      "@type": "Offer",
-      price: "1.00",
-      priceCurrency: "GBP",
-      availability: "https://schema.org/InStock"
-    }
-  };
-
   return (
     <div className="min-h-screen bg-gray-100">
-      <Head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(antiqueServiceSchema) }}
-        />
-      </Head>
-
       <Header />
       <main className="container mx-auto px-4 pt-44 pb-16">
         <div className="">

@@ -1,5 +1,6 @@
+
 import React from 'react';
-import Head from '../components/Head';
+import Script from 'next/script';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ReviewStats from '../components/testimonials/ReviewStats';
@@ -150,61 +151,35 @@ const testimonials = [
 
 const Testimonials = () => {
   const totalReviews = testimonials.length;
-  
-  // Create the FAQPage schema
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "What do customers say about Derbyshire Removals?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Our customers consistently rate us 5 stars for our professional, friendly, and efficient removal services."
-        }
-      }
-    ]
-  };
-  
-  // Create the testimonials schema
-  const testimonialsSchema = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Derbyshire Removals",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "reviewCount": totalReviews,
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    "review": testimonials.slice(0, 10).map(t => ({
-      "@type": "Review",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5"
-      },
-      "author": {
-        "@type": "Person",
-        "name": t.name
-      },
-      "reviewBody": t.review
-    }))
-  };
 
   return (
     <div className="min-h-screen bg-gray-100">
-      <Head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(testimonialsSchema) }}
-        />
-      </Head>
+      <Script id="testimonials-schema" type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Derbyshire Removals",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": totalReviews,
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "review": testimonials.slice(0, 10).map(t => ({
+            "@type": "Review",
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5"
+            },
+            "author": {
+              "@type": "Person",
+              "name": t.name
+            },
+            "reviewBody": t.review
+          }))
+        })}
+      </Script>
 
       <Header />
       
