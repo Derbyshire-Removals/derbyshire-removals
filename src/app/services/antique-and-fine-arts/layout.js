@@ -12,6 +12,24 @@ export const metadata = {
     url: "https://derbyshireremovals.com/services/antique-and-fine-arts",
     type: "website",
   },
+  jsonLd: {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Antique and Fine Arts Removal",
+    provider: {
+      "@type": "LocalBusiness",
+      name: "Derbyshire Removals"
+    },
+    serviceType: "Specialized Moving",
+    areaServed: "Derbyshire and East Midlands",
+    description: "Specialized removal services for antiques and fine art, including expert handling, custom crating, and climate-controlled transportation for valuable items.",
+    offers: {
+      "@type": "Offer",
+      price: "1.00",
+      priceCurrency: "GBP",
+      availability: "https://schema.org/InStock"
+    }
+  }
 };
 
 export default function AntiqueAndFineArtsLayout({ children }) {
