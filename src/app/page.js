@@ -16,16 +16,18 @@ export default function Home() {
     "name": "Derbyshire Removals",
     "url": "https://derbyshireremovals.com",
     "logo": "https://derbyshireremovals.com/images/logo.png",
+    "image": "https://derbyshireremovals.com/images/van.png",
     "telephone": "+447425557000",
     "email": "info@derbyshireremovals.com",
     "description": "Professional removal services in Derbyshire since 1988, offering home and office removals, packing, and storage solutions.",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "48 Farmhouse Road",
       "addressLocality": "Derby",
       "addressRegion": "Derbyshire",
-      "postalCode": "DE1",
-      "addressCountry": "United Kingdom"
-    }
+      "postalCode": "DE24 3DB",
+      "addressCountry": "GB"
+    },
   };
 
   const localBusinessSchema = {
@@ -39,8 +41,8 @@ export default function Home() {
       "@type": "PostalAddress",
       "addressLocality": "Derby",
       "addressRegion": "Derbyshire",
-      "postalCode": "DE1",
-      "addressCountry": "United Kingdom"
+      "postalCode": "DE24 3DB",
+      "addressCountry": "GB"
     },
     "geo": {
       "@type": "GeoCoordinates",
@@ -56,6 +58,14 @@ export default function Home() {
       "@type": "MovingCompany",
       "name": "Derbyshire Removals"
     },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "48 Farmhouse Road",
+      "addressLocality": "Derby",
+      "addressRegion": "Derbyshire",
+      "postalCode": "DE24 3DB",
+      "addressCountry": "GB"
+    },
     "areaServed": {
       "@type": "State",
       "name": "Derbyshire"
@@ -69,7 +79,12 @@ export default function Home() {
     "ratingValue": "5",
     "ratingCount": "124",
     "bestRating": "5",
-    "worstRating": "1"
+    "worstRating": "1",
+    "itemReviewed": {
+      "@type": "MovingCompany",
+      "name": "Derbyshire Removals",
+      "url": "https://derbyshireremovals.com"
+    }
   };
 
   const websiteSchema = {
