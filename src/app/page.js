@@ -9,18 +9,10 @@ import AreasCovered from './components/AreasCovered';
 import HowWeWork from './components/HowWeWork';
 import Footer from './components/Footer';
 import HomeReviews from './components/HomeReviews';
-import { 
-  Organization, 
-  WebSite, 
-  LocalBusiness, 
-  Service, 
-  AggregateRating,
-  Graph
-} from 'schema-dts';
 
 export default function Home() {
   // Define schema.org JSON-LD data
-  const organizationSchema: Organization = {
+  const organizationSchema = {
     "@type": "Organization",
     "name": "Derbyshire Removals",
     "url": "https://derbyshireremovals.com",
@@ -37,7 +29,7 @@ export default function Home() {
     }
   };
 
-  const localBusinessSchema: LocalBusiness = {
+  const localBusinessSchema = {
     "@type": "LocalBusiness",
     "name": "Derbyshire Removals",
     "image": "https://derbyshireremovals.com/images/van.jpg",
@@ -58,7 +50,7 @@ export default function Home() {
     }
   };
 
-  const serviceSchema: Service = {
+  const serviceSchema = {
     "@type": "Service",
     "name": "Removal Services",
     "provider": {
@@ -73,7 +65,7 @@ export default function Home() {
     "serviceType": "Removal Services"
   };
 
-  const ratingSchema: AggregateRating = {
+  const ratingSchema = {
     "@type": "AggregateRating",
     "ratingValue": "5",
     "ratingCount": "124",
@@ -81,7 +73,7 @@ export default function Home() {
     "worstRating": "1"
   };
 
-  const websiteSchema: WebSite = {
+  const websiteSchema = {
     "@type": "WebSite",
     "name": "Derbyshire Removals",
     "url": "https://derbyshireremovals.com",
@@ -89,7 +81,7 @@ export default function Home() {
   };
 
   // Combine all schemas using @graph
-  const jsonLd: Graph = {
+  const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
       organizationSchema,
