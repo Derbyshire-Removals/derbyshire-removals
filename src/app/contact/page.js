@@ -2,7 +2,6 @@
 "use client"
 
 import React from 'react';
-import Head from 'next/head';
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -92,16 +91,8 @@ const ContactForm = () => {
 };
 
 const Contact = () => {
-
   return (
     <div className="min-h-screen bg-gray-100">
-      <Head>
-        <title>Contact Us | Derbyshire Removals - Get Your Free Quote Today</title>
-        <meta name="description" content="Contact Derbyshire Removals for professional moving services in Derby and surrounding areas. Get a free quote, schedule a home visit, or discuss your moving needs with our expert team." />
-        <meta name="keywords" content="contact removals derby, moving quote derby, removal company contact, furniture removals contact, derby movers contact" />
-        <link rel="canonical" href="https://derbyshireremovals.com/contact" />
-      </Head>
-
       <Header />
       <main className="container mx-auto px-4 py-8 pt-44">
         <h1 className="text-3xl font-bold mb-6">Contact Us</h1>

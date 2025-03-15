@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from 'react';
@@ -90,7 +91,7 @@ const Hero = () => {
   return (
     <section 
       className="relative bg-cover bg-center py-20 mt-[88px]" 
-      style={{ backgroundImage: "url('images/van.jpg')" }}
+      style={{ backgroundImage: "url('/images/van.jpg')" }}
       role="banner"
       aria-label="Professional removals in Derbyshire banner"
     >
@@ -102,7 +103,7 @@ const Hero = () => {
           <div className="flex justify-center items-center mt-8">
             <a href="https://apps.derbyshire.gov.uk/applications/trusted-trader/profile.asp?tid=56236">
               <img
-                src="images/derbyshire-trusted-trader-logo.gif" 
+                src="/images/derbyshire-trusted-trader-logo.gif" 
                 alt="Derbyshire County Council Trusted Trader Certification Badge" 
                 className="h-24 w-auto"
               />

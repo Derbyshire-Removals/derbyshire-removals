@@ -1,11 +1,19 @@
+
 import React from 'react';
-import Head from 'next/head';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "..//components/ui/accordion"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../components/ui/accordion";
+
+export const metadata = {
+  title: "Frequently Asked Questions | Derbyshire Removals",
+  description: "Find answers to common questions about our removal services, booking process, packing services, and insurance coverage. Professional moving services in Derby and surrounding areas.",
+  keywords: "removal services FAQ, moving company questions, Derby removals FAQ, packing services questions, furniture removal FAQ",
+  alternates: {
+    canonical: "https://derbyshireremovals.com/faq",
+  },
+};
 
 const FAQ = () => {
-
   const faqItems = [
     {
       question: "How far in advance should I book my move?",
@@ -31,13 +39,6 @@ const FAQ = () => {
 
   return (
     <div className="min-h-screen bg-gray-100">
-      <Head>
-        <title>Frequently Asked Questions | Derbyshire Removals</title>
-        <meta name="description" content="Find answers to common questions about our removal services, booking process, packing services, and insurance coverage. Professional moving services in Derby and surrounding areas." />
-        <meta name="keywords" content="removal services FAQ, moving company questions, Derby removals FAQ, packing services questions, furniture removal FAQ" />
-        <link rel="canonical" href="https://derbyshireremovals.com/#/faq" />
-      </Head>
-
       <Header />
       <main className="container mx-auto px-4 py-8 pt-44">
         <h1 className="text-3xl font-bold mb-6">Frequently Asked Questions</h1>
