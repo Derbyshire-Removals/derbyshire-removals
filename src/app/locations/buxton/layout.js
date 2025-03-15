@@ -12,21 +12,6 @@ export const metadata = {
     url: "https://derbyshireremovals.com/locations/buxton",
     type: "website",
   },
-  jsonLd: {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: "Removal Services in Buxton",
-    provider: {
-      "@type": "LocalBusiness",
-      name: "Derbyshire Removals"
-    },
-    serviceType: "Moving Services",
-    areaServed: {
-      "@type": "City",
-      name: "Buxton"
-    },
-    description: "Expert removal services in Buxton with local knowledge, competitive rates, and professional moving solutions for homes and businesses."
-  }
 };
 
 export default function BuxtonLayout({ children }) {

@@ -4,7 +4,6 @@ import { MapPin, CheckCircle } from 'lucide-react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import GetInTouch from '../../components/GetInTouch';
-import Script from 'next/script';
 
 const Buxton = () => {
   const services = [
@@ -16,28 +15,51 @@ const Buxton = () => {
     "Single Item Delivery"
   ];
 
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Derbyshire Removals - Buxton",
+    "image": "https://derbyshireremovals.com/images/van.jpg",
+    "description": "Professional removal services in Buxton",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Buxton",
+      "addressRegion": "Derbyshire",
+      "addressCountry": "GB"
+    },
+    "url": "https://derbyshireremovals.com/locations/buxton",
+    "telephone": "+443335677001",
+    "areaServed": "Buxton"
+  };
+
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Removal Services in Buxton",
+    provider: {
+      "@type": "LocalBusiness",
+      name: "Derbyshire Removals"
+    },
+    serviceType: "Moving Services",
+    areaServed: {
+      "@type": "City",
+      name: "Buxton"
+    },
+    description: "Expert removal services in Buxton with local knowledge, competitive rates, and professional moving solutions for homes and businesses."
+  };
+
   return (
     <div className="min-h-screen bg-gray-100">
-      <Script id="local-business-schema" type="application/ld+json">
-        {`
-          {
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "Derbyshire Removals - Buxton",
-            "image": "https://derbyshireremovals.com/images/van.jpg",
-            "description": "Professional removal services in Buxton",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Buxton",
-              "addressRegion": "Derbyshire",
-              "addressCountry": "GB"
-            },
-            "url": "https://derbyshireremovals.com/locations/buxton",
-            "telephone": "+443335677001",
-            "areaServed": "Buxton"
-          }
-        `}
-      </Script>
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+        />
+      </Head>
 
       <Header />
       <main className="container mx-auto px-4 pt-44 pb-16">

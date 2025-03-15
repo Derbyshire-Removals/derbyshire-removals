@@ -6,20 +6,6 @@ export const metadata = {
   alternates: {
     canonical: "https://derbyshireremovals.com/testimonials",
   },
-  jsonLd: {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "What do customers say about Derbyshire Removals?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Our customers consistently rate us 5 stars for our professional, friendly, and efficient removal services."
-        }
-      }
-    ]
-  }
 };
 
 export default function TestimonialsLayout({ children }) {
