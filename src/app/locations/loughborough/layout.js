@@ -6,6 +6,12 @@ export const metadata = {
   alternates: {
     canonical: "https://derbyshireremovals.com/locations/loughborough",
   },
+  openGraph: {
+    title: "Professional Removal Services in Loughborough | Derbyshire Removals",
+    description: "Expert local movers with comprehensive knowledge of Loughborough. Residential and commercial moving services with competitive rates.",
+    url: "https://derbyshireremovals.com/locations/loughborough",
+    type: "website",
+  },
 };
 
 export default function LoughboroughLayout({ children }) {
