@@ -10,6 +10,27 @@ import HowWeWork from './components/HowWeWork';
 import Footer from './components/Footer';
 import HomeReviews from './components/HomeReviews';
 
+export default function Home() {
+  return (
+    <div className="min-h-screen">
+      <Header />
+      <main>
+        <Hero />
+        <HomeReviews />
+        <ProfessionalMovingServices />
+        <Services />
+        <TrustedPartners />
+        <WhyUs />
+        <StorageSolutions />
+        <HowWeWork />
+        <AreasCovered />
+        <GetInTouch />
+      </main>
+      <Footer />
+    </div>
+  );
+}
+
 const ProfessionalMovingServices = () => (
   <section className="py-16 bg-white">
     <div className="container mx-auto px-4">
@@ -81,24 +102,3 @@ const StorageSolutions = () => (
     </div>
   </section>
 );
-
-export default function Home() {
-  return (
-    <div className="min-h-screen">
-      <Header />
-      <main>
-        <Hero />
-        <HomeReviews />
-        <ProfessionalMovingServices />
-        <Services />
-        <TrustedPartners />
-        <WhyUs />
-        <StorageSolutions />
-        <HowWeWork />
-        <AreasCovered />
-        <GetInTouch />
-      </main>
-      <Footer />
-    </div>
-  );
-}
