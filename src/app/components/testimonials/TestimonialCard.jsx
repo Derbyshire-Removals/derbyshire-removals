@@ -14,6 +14,9 @@ const TestimonialCard = ({ testimonial }) => {
         itemType="https://schema.org/MovingCompany"
       >
         <meta itemProp="name" content="Derbyshire Removals" />
+        <meta itemProp="image" content="https://derbyshireremovals.com/images/van.jpg" />
+        <meta itemProp="priceRange" content="££" />
+        <meta itemProp="telephone" content="+443335677001" />
         <div itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
           <meta itemProp="streetAddress" content="48 Farmhouse Road" />
           <meta itemProp="addressLocality" content="Derby" />

@@ -17,7 +17,7 @@ export default function Home() {
     "url": "https://derbyshireremovals.com",
     "logo": "https://derbyshireremovals.com/images/logo.png",
     "image": "https://derbyshireremovals.com/images/van.png",
-    "telephone": "+447425557000",
+    "telephone": "+443335677001",
     "email": "info@derbyshireremovals.com",
     "description": "Professional removal services in Derbyshire since 1988, offering home and office removals, packing, and storage solutions.",
     "address": {
@@ -35,7 +35,7 @@ export default function Home() {
     "name": "Derbyshire Removals",
     "image": "https://derbyshireremovals.com/images/van.jpg",
     "priceRange": "££",
-    "telephone": "+447425557000",
+    "telephone": "+443335677001",
     "email": "info@derbyshireremovals.com",
     "address": {
       "@type": "PostalAddress",
@@ -55,6 +55,9 @@ export default function Home() {
   const serviceSchema = {
     "@type": "Service",
     "name": "Removal Services",
+    "image": "https://derbyshireremovals.com/images/van.jpg",
+    "priceRange": "££",
+    "telephone": "+443335677001",
     "provider": {
       "@type": "MovingCompany",
       "name": "Derbyshire Removals",
@@ -81,6 +84,9 @@ export default function Home() {
     "ratingCount": "124",
     "bestRating": "5",
     "worstRating": "1",
+    "image": "https://derbyshireremovals.com/images/van.jpg",
+    "priceRange": "££",
+    "telephone": "+443335677001",
     "itemReviewed": {
       "@type": "MovingCompany",
       "name": "Derbyshire Removals",
