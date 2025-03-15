@@ -1,7 +1,7 @@
 
 export const metadata = {
   title: "Antique and Fine Arts Removal Services | Derbyshire Removals",
-  description: "Specialized removals for antiques and fine art across Derbyshire. Expert handling, custom crating, and secure transportation for valuables.",
+  description: "Specialized removal services for antiques and fine art across Derbyshire. Expert handling, custom crating, and climate-controlled transportation for valuable items.",
   keywords: "antique removals derby, fine art transportation, valuable item moving, specialist removal services, artwork shipping derbyshire, delicate item relocation",
   alternates: {
     canonical: "https://derbyshireremovals.com/services/antique-and-fine-arts",

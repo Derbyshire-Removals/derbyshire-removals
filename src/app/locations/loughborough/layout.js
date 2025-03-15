@@ -1,7 +1,7 @@
 
 export const metadata = {
   title: "Professional Removal Services in Loughborough | Derbyshire Removals",
-  description: "Expert removal services in Loughborough. Local knowledge, competitive rates, and professional moving solutions for homes and businesses.",
+  description: "Expert removal services in Loughborough. Local knowledge, competitive rates, and professional moving solutions for homes and businesses across Loughborough.",
   keywords: "removals loughborough, house moves loughborough, office relocations loughborough, moving company loughborough, storage solutions loughborough",
   alternates: {
     canonical: "https://derbyshireremovals.com/locations/loughborough",

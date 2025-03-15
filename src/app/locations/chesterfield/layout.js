@@ -1,7 +1,7 @@
 
 export const metadata = {
   title: "Professional Removal Services in Chesterfield | Derbyshire Removals",
-  description: "Expert removal services in Chesterfield. Local knowledge, competitive rates, and professional moving solutions for homes and businesses.",
+  description: "Expert removal services in Chesterfield. Local knowledge, competitive rates, and professional moving solutions for homes and businesses across Chesterfield.",
   keywords: "removals chesterfield, house moves chesterfield, office relocations chesterfield, moving company chesterfield, storage solutions chesterfield",
   alternates: {
     canonical: "https://derbyshireremovals.com/locations/chesterfield",
