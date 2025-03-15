@@ -39,6 +39,7 @@ export default function Home() {
     "email": "info@derbyshireremovals.com",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "48 Farmhouse Road",
       "addressLocality": "Derby",
       "addressRegion": "Derbyshire",
       "postalCode": "DE24 3DB",
@@ -56,15 +57,15 @@ export default function Home() {
     "name": "Removal Services",
     "provider": {
       "@type": "MovingCompany",
-      "name": "Derbyshire Removals"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "48 Farmhouse Road",
-      "addressLocality": "Derby",
-      "addressRegion": "Derbyshire",
-      "postalCode": "DE24 3DB",
-      "addressCountry": "GB"
+      "name": "Derbyshire Removals",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "48 Farmhouse Road",
+        "addressLocality": "Derby",
+        "addressRegion": "Derbyshire",
+        "postalCode": "DE24 3DB",
+        "addressCountry": "GB"
+      },
     },
     "areaServed": {
       "@type": "State",
@@ -84,7 +85,15 @@ export default function Home() {
       "@type": "MovingCompany",
       "name": "Derbyshire Removals",
       "url": "https://derbyshireremovals.com"
-    }
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "48 Farmhouse Road",
+      "addressLocality": "Derby",
+      "addressRegion": "Derbyshire",
+      "postalCode": "DE24 3DB",
+      "addressCountry": "GB"
+    },
   };
 
   const websiteSchema = {
