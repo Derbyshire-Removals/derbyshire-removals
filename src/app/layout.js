@@ -16,14 +16,14 @@ export const metadata = {
     title: "Derbyshire Removals",
     description:
       "Professional home and office removals across the Midlands. Serving Derby, Matlock, Chesterfield, Nottingham, Birmingham, and Leicester since 1988.",
-    images: "/og-image.svg",
+    images: "/og-image.png",
   },
   twitter: {
     card: "summary_large_image",
     title: "Derbyshire Removals - Trusted Moving Services",
     description:
       "Professional home and office removals across the Midlands. Serving Derby, Matlock, Chesterfield, Nottingham, Birmingham, and Leicester since 1988.",
-    images: ["https://derbyshireremovals.com/og-image.svg"],
+    images: ["https://derbyshireremovals.com/og-image.png"],
   },
   other: {
     "geo.region": "GB-DBY",
