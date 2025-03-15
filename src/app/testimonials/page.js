@@ -210,7 +210,7 @@ const Testimonials = () => {
       <div className="min-h-screen bg-gray-100">
         <Header />
         
-        <main className="container mx-auto px-4 py-8 pt-44">
+        <main className="container mx-auto px-4 py-8 pt-52">
           <div className="max-w-4xl mx-auto">
             <ReviewStats totalReviews={totalReviews} />
 

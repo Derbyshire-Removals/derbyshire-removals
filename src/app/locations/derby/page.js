@@ -50,7 +50,7 @@ const Derby = () => {
       />
       <div className="min-h-screen bg-gray-100">
         <Header />
-        <main className="container mx-auto px-4 pt-44 pb-16">
+        <main className="container mx-auto px-4 pt-52 pb-16">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center mb-6">
               <MapPin className="h-6 w-6 text-[#071059] mr-2" />

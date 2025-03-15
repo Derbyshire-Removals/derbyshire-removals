@@ -74,7 +74,7 @@ const PackingServices = () => {
       />
       <div className="min-h-screen bg-gray-100">
         <Header />
-        <main className="container mx-auto px-4 pt-44 pb-24">
+        <main className="container mx-auto px-4 pt-52 pb-24">
           <div>
             <h1 className="text-4xl font-bold mb-6 text-[#071059]">Professional Packing Services</h1>
             

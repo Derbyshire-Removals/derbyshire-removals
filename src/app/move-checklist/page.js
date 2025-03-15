@@ -70,7 +70,7 @@ const MoveChecklist = () => {
       />
       <div className="min-h-screen">
         <Header />
-        <main className="container mx-auto px-4 py-8 pt-44">
+        <main className="container mx-auto px-4 py-8 pt-52">
           <div className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md">
             <h1 className="text-3xl font-bold mb-6 text-[#071059]">Moving House Checklist</h1>
             

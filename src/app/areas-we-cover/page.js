@@ -29,7 +29,7 @@ const AreasWeCover = () => {
     <div className="min-h-screen bg-gray-50">
       <Header />
       
-      <main className="container mx-auto px-4 py-8 pt-44">
+      <main className="container mx-auto px-4 py-8 pt-52">
         <section className="mb-12">
           <h1 className="text-4xl font-bold text-primary mb-6">Areas We Cover</h1>
           <p className="text-lg text-gray-700 mb-8">

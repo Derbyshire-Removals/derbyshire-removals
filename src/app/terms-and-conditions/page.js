@@ -22,7 +22,7 @@ const TermsAndConditions = () => {
       </Script>
 
       <Header />
-      <div className="container mx-auto px-4 py-8 pt-44">
+      <div className="container mx-auto px-4 py-8 pt-52">
         <h1 className="text-3xl font-bold mb-6">CONDITIONS OF BUSINESS</h1>
         <p className="mb-6">We handle, remove and care for your property only under these Conditions of Business. In these conditions: we, our and us refer to Derbyshire Removals: you means the customer or the customer's agents.</p>
         

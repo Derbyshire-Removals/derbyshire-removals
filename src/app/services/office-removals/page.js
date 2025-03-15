@@ -68,7 +68,7 @@ const OfficeRemovals = () => {
       />
       <div className="min-h-screen bg-gray-100">
         <Header />
-        <main className="container mx-auto px-4 pt-44 pb-24">
+        <main className="container mx-auto px-4 pt-52 pb-24">
           <div className="">
             <h1 className="text-4xl font-bold text-gray-900 mb-6">Professional Office Removals Services</h1>
             

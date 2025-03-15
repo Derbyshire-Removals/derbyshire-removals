@@ -67,7 +67,7 @@ const Storage = () => {
       />
       <div className="min-h-screen bg-gray-100">
         <Header />
-        <main className="container mx-auto px-4 pt-44 pb-24">
+        <main className="container mx-auto px-4 pt-52 pb-24">
           <h1 className="text-4xl font-bold mb-8 text-[#071059]">Professional Storage Solutions</h1>
           
           <div className="mb-8">
