@@ -1,9 +1,10 @@
+
 import React from 'react';
-import Head from 'next/head';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { Building2, Clock, CheckCircle, Package, Truck, Shield } from 'lucide-react';
 import Link from 'next/link';
+import Script from 'next/script';
 
 const OfficeRemovals = () => {
 
@@ -42,29 +43,25 @@ const OfficeRemovals = () => {
 
   return (
     <div className="min-h-screen bg-gray-100">
-      <Head>
-        <title>Professional Office Removals Services | Derbyshire Removals</title>
-        <meta name="description" content="Expert office relocation services in Derbyshire. Minimize business disruption with our professional office removals team. Specialized in IT equipment handling and complete workspace moves." />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Office Removals Services",
-            "provider": {
-              "@type": "LocalBusiness",
-              "name": "Derbyshire Removals",
-              "address": {
-                "@type": "PostalAddress",
-                "addressRegion": "Derbyshire",
-                "addressCountry": "UK"
-              }
-            },
-            "description": "Professional office relocation services with minimal business disruption",
-            "areaServed": "Derbyshire and surrounding areas",
-            "serviceType": "Office Removals"
-          })}
-        </script>
-      </Head>
+      <Script id="office-removals-schema" type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Office Removals Services",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "Derbyshire Removals",
+            "address": {
+              "@type": "PostalAddress",
+              "addressRegion": "Derbyshire",
+              "addressCountry": "UK"
+            }
+          },
+          "description": "Professional office relocation services with minimal business disruption",
+          "areaServed": "Derbyshire and surrounding areas",
+          "serviceType": "Office Removals"
+        })}
+      </Script>
 
       <Header />
       <main className="container mx-auto px-4 pt-44 pb-24">

@@ -1,34 +1,12 @@
+
 import React from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import Head from 'next/head';
 import Link from 'next/link';
 
 const HomeRemovals = () => {
   return (
     <div className="min-h-screen bg-gray-100">
-      <Head>
-        <title>Professional Home Removals Services | Derbyshire Removals</title>
-        <meta name="description" content="Expert home removal services in Derby, Matlock, and across the Midlands. Professional movers, competitive rates, and stress-free moving experience guaranteed." />
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "Service",
-              "serviceType": "Home Removals",
-              "provider": {
-                "@type": "MovingCompany",
-                "name": "Derbyshire Removals"
-              },
-              "areaServed": {
-                "@type": "State",
-                "name": ["Derbyshire", "East Midlands", "West Midlands"]
-              },
-              "description": "Professional home removal services across the Midlands, offering comprehensive moving solutions for houses and apartments."
-            }
-          `}
-        </script>
-      </Head>
       <Header />
       <main className="container mx-auto px-4 pt-44 pb-24">
         <h1 className="text-4xl font-bold mb-8 text-[#071059]">Professional Home Removals Services</h1>

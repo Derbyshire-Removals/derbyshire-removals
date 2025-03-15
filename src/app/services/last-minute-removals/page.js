@@ -1,48 +1,44 @@
+
 import React from 'react';
-import Head from 'next/head';
 import { Clock, CheckCircle, PhoneCall } from 'lucide-react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { Button } from "../../components/ui/button";
 import Link from 'next/link';
+import Script from 'next/script';
 
 const LastMinuteRemovals = () => {
 
   return (
     <div className="min-h-screen bg-gray-100">
-      <Head>
-        <title>Emergency & Last Minute Removals Services | Derbyshire Removals</title>
-        <meta name="description" content="Need urgent removal services in Derby and surrounding areas? Our last-minute removal service provides quick, reliable solutions for unexpected moves. Available 24/7." />
-        <meta name="keywords" content="emergency removals derby, urgent house move, last minute moving service, quick removal company derby, same day removals derbyshire" />
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "Service",
-              "name": "Last Minute Removals",
-              "provider": {
-                "@type": "MovingCompany",
-                "name": "Derbyshire Removals",
-                "address": {
-                  "@type": "PostalAddress",
-                  "streetAddress": "48 Farmhouse Road",
-                  "addressLocality": "Derby",
-                  "postalCode": "DE24 3DB",
-                  "addressCountry": "GB"
-                }
-              },
-              "description": "Emergency and last-minute removal services for unexpected moves, available 24/7 across Derby and surrounding areas.",
-              "areaServed": ["Derby", "Derbyshire", "East Midlands"],
-              "serviceType": "Emergency Removals",
-              "availableChannel": {
-                "@type": "ServiceChannel",
-                "serviceUrl": "https://derbyshireremovals.com/services/last-minute-removals",
-                "servicePhone": "+441332314312"
+      <Script id="last-minute-removals-schema" type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Last Minute Removals",
+            "provider": {
+              "@type": "MovingCompany",
+              "name": "Derbyshire Removals",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "48 Farmhouse Road",
+                "addressLocality": "Derby",
+                "postalCode": "DE24 3DB",
+                "addressCountry": "GB"
               }
+            },
+            "description": "Emergency and last-minute removal services for unexpected moves, available 24/7 across Derby and surrounding areas.",
+            "areaServed": ["Derby", "Derbyshire", "East Midlands"],
+            "serviceType": "Emergency Removals",
+            "availableChannel": {
+              "@type": "ServiceChannel",
+              "serviceUrl": "https://derbyshireremovals.com/services/last-minute-removals",
+              "servicePhone": "+441332314312"
             }
-          `}
-        </script>
-      </Head>
+          }
+        `}
+      </Script>
 
       <Header />
       

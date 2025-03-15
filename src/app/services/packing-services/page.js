@@ -1,9 +1,10 @@
+
 import React from 'react';
-import Head from 'next/head';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { Package, Shield, Clock, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
+import Script from 'next/script';
 
 const PackingServices = () => {
 
@@ -32,46 +33,41 @@ const PackingServices = () => {
 
   return (
     <div className="min-h-screen bg-gray-100">
-      <Head>
-        <title>Professional Packing Services Derby | Derbyshire Removals</title>
-        <meta name="description" content="Expert packing services in Derby and surrounding areas. Professional materials, secure handling, and full insurance coverage for your valuable items. Get a free quote today!" />
-        <meta name="keywords" content="packing services derby, professional packers derbyshire, moving boxes derby, packing materials derbyshire, secure packing service, furniture wrapping derby" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "serviceType": "Packing Service",
-            "provider": {
-              "@type": "MovingCompany",
-              "name": "Derbyshire Removals",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "48 Farmhouse Road",
-                "addressLocality": "Derby",
-                "postalCode": "DE24 3DB",
-                "addressCountry": "GB"
-              }
-            },
-            "areaServed": {
-              "@type": "GeoCircle",
-              "geoMidpoint": {
-                "@type": "GeoCoordinates",
-                "latitude": "52.9225",
-                "longitude": "-1.4746"
-              },
-              "geoRadius": "50000"
-            },
-            "description": "Professional packing services including high-quality materials, secure handling, and full insurance coverage for all your valuable items.",
-            "offers": {
-              "@type": "Offer",
-              "priceSpecification": {
-                "@type": "PriceSpecification",
-                "priceCurrency": "GBP"
-              }
+      <Script id="packing-service-schema" type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "serviceType": "Packing Service",
+          "provider": {
+            "@type": "MovingCompany",
+            "name": "Derbyshire Removals",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "48 Farmhouse Road",
+              "addressLocality": "Derby",
+              "postalCode": "DE24 3DB",
+              "addressCountry": "GB"
             }
-          })}
-        </script>
-      </Head>
+          },
+          "areaServed": {
+            "@type": "GeoCircle",
+            "geoMidpoint": {
+              "@type": "GeoCoordinates",
+              "latitude": "52.9225",
+              "longitude": "-1.4746"
+            },
+            "geoRadius": "50000"
+          },
+          "description": "Professional packing services including high-quality materials, secure handling, and full insurance coverage for all your valuable items.",
+          "offers": {
+            "@type": "Offer",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "priceCurrency": "GBP"
+            }
+          }
+        })}
+      </Script>
       
       <Header />
       <main className="container mx-auto px-4 pt-44 pb-24">
