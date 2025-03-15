@@ -1,4 +1,3 @@
-
 "use client"
 
 import React from 'react';
@@ -11,6 +10,9 @@ import { Button } from "../components/ui/button"
 import { Form } from "../components/ui/form"
 import { Phone, Mail, MessageCircle, MapPin, Facebook, Instagram } from "lucide-react"
 import ContactFormFields from '../components/ContactFormFields';
+
+// Metadata for this page needs to be in a separate file since this is a client component
+// See ContactMetadata.js in the same folder
 
 const schema = z.object({
   access_key: z.string().optional(),
