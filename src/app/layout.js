@@ -47,7 +47,7 @@ export const metadata = {
     },
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
+      "@type": "MovingCompany",
       name: "Derbyshire Removals",
       url: "https://derbyshireremovals.com",
       telephone: ["+441332314312", "+441246922192", "+447425557557000"],
@@ -93,7 +93,7 @@ export const metadata = {
       "@type": "Service",
       serviceType: "Moving Services",
       provider: {
-        "@type": "LocalBusiness",
+        "@type": "MovingCompany",
         name: "Derbyshire Removals"
       },
       areaServed: {
@@ -119,7 +119,7 @@ export const metadata = {
       "@context": "https://schema.org",
       "@type": "AggregateRating",
       itemReviewed: {
-        "@type": "LocalBusiness",
+        "@type": "MovingCompany",
         name: "Derbyshire Removals",
         image: "https://derbyshireremovals.com/images/logo.png"
       },
@@ -146,7 +146,7 @@ export const metadata = {
       description: "Professional home and office removals across the Midlands. Serving Derby, Matlock, Chesterfield, Nottingham, Birmingham, and Leicester since 1988.",
       url: "https://derbyshireremovals.com",
       mainEntity: {
-        "@type": "LocalBusiness",
+        "@type": "MovingCompany",
         name: "Derbyshire Removals"
       }
     }

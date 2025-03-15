@@ -45,7 +45,7 @@ const OfficeRemovals = () => {
         "@type": "Service",
         "name": "Office Removals Services",
         "provider": {
-          "@type": "LocalBusiness",
+          "@type": "MovingCompany",
           "name": "Derbyshire Removals",
           "address": {
             "@type": "PostalAddress",

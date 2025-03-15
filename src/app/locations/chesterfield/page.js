@@ -19,7 +19,7 @@ const Chesterfield = () => {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "LocalBusiness",
+        "@type": "MovingCompany",
         "name": "Derbyshire Removals - Chesterfield",
         "image": "https://derbyshireremovals.com/images/van.jpg",
         "description": "Professional removal services in Chesterfield",

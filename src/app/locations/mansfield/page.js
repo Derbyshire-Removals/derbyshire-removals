@@ -18,7 +18,7 @@ const Mansfield = () => {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "LocalBusiness",
+        "@type": "MovingCompany",
         "name": "Derbyshire Removals - Mansfield",
         "image": "https://derbyshireremovals.com/images/van.jpg",
         "description": "Professional removal services in Mansfield",

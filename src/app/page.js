@@ -29,7 +29,7 @@ export default function Home() {
   };
 
   const localBusinessSchema = {
-    "@type": "LocalBusiness",
+    "@type": "MovingCompany",
     "name": "Derbyshire Removals",
     "image": "https://derbyshireremovals.com/images/van.jpg",
     "priceRange": "££",
@@ -53,7 +53,7 @@ export default function Home() {
     "@type": "Service",
     "name": "Removal Services",
     "provider": {
-      "@type": "LocalBusiness",
+      "@type": "MovingCompany",
       "name": "Derbyshire Removals"
     },
     "areaServed": {

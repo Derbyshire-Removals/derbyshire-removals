@@ -19,7 +19,7 @@ const Derby = () => {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "LocalBusiness",
+        "@type": "MovingCompany",
         "name": "Derbyshire Removals - Derby",
         "image": "https://derbyshireremovals.com/images/van.jpg",
         "description": "Professional removal services in Derby",

@@ -156,7 +156,7 @@ const Testimonials = () => {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "LocalBusiness",
+        "@type": "MovingCompany",
         "name": "Derbyshire Removals",
         "aggregateRating": {
           "@type": "AggregateRating",

@@ -17,7 +17,7 @@ export const metadata = {
     "@type": "Service",
     name: "Office Removal Services",
     provider: {
-      "@type": "LocalBusiness",
+      "@type": "MovingCompany",
       name: "Derbyshire Removals"
     },
     serviceType: "Office Relocation",
