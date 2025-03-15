@@ -9,25 +9,120 @@ import AreasCovered from './components/AreasCovered';
 import HowWeWork from './components/HowWeWork';
 import Footer from './components/Footer';
 import HomeReviews from './components/HomeReviews';
+import { 
+  Organization, 
+  WebSite, 
+  LocalBusiness, 
+  Service, 
+  AggregateRating,
+  Graph
+} from 'schema-dts';
 
 export default function Home() {
+  // Define schema.org JSON-LD data
+  const organizationSchema: Organization = {
+    "@type": "Organization",
+    "name": "Derbyshire Removals",
+    "url": "https://derbyshireremovals.com",
+    "logo": "https://derbyshireremovals.com/images/logo.png",
+    "telephone": "+447425557000",
+    "email": "info@derbyshireremovals.com",
+    "description": "Professional removal services in Derbyshire since 1988, offering home and office removals, packing, and storage solutions.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Derby",
+      "addressRegion": "Derbyshire",
+      "postalCode": "DE1",
+      "addressCountry": "United Kingdom"
+    }
+  };
+
+  const localBusinessSchema: LocalBusiness = {
+    "@type": "LocalBusiness",
+    "name": "Derbyshire Removals",
+    "image": "https://derbyshireremovals.com/images/van.jpg",
+    "priceRange": "££",
+    "telephone": "+447425557000",
+    "email": "info@derbyshireremovals.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Derby",
+      "addressRegion": "Derbyshire",
+      "postalCode": "DE1",
+      "addressCountry": "United Kingdom"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "52.9225",
+      "longitude": "-1.4746"
+    }
+  };
+
+  const serviceSchema: Service = {
+    "@type": "Service",
+    "name": "Removal Services",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Derbyshire Removals"
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "Derbyshire"
+    },
+    "description": "Professional removal services for homes and businesses across Derbyshire.",
+    "serviceType": "Removal Services"
+  };
+
+  const ratingSchema: AggregateRating = {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "ratingCount": "124",
+    "bestRating": "5",
+    "worstRating": "1"
+  };
+
+  const websiteSchema: WebSite = {
+    "@type": "WebSite",
+    "name": "Derbyshire Removals",
+    "url": "https://derbyshireremovals.com",
+    "description": "Professional removal services in Derbyshire since 1988."
+  };
+
+  // Combine all schemas using @graph
+  const jsonLd: Graph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      organizationSchema,
+      localBusinessSchema,
+      serviceSchema,
+      ratingSchema,
+      websiteSchema
+    ]
+  };
+
   return (
-    <div className="min-h-screen">
-      <Header />
-      <main>
-        <Hero />
-        <HomeReviews />
-        <ProfessionalMovingServices />
-        <Services />
-        <TrustedPartners />
-        <WhyUs />
-        <StorageSolutions />
-        <HowWeWork />
-        <AreasCovered />
-        <GetInTouch />
-      </main>
-      <Footer />
-    </div>
+    <section>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <div className="min-h-screen">
+        <Header />
+        <main>
+          <Hero />
+          <HomeReviews />
+          <ProfessionalMovingServices />
+          <Services />
+          <TrustedPartners />
+          <WhyUs />
+          <StorageSolutions />
+          <HowWeWork />
+          <AreasCovered />
+          <GetInTouch />
+        </main>
+        <Footer />
+      </div>
+    </section>
   );
 }
 
