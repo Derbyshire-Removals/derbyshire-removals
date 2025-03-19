@@ -160,11 +160,12 @@ const Testimonials = () => {
         "name": "Derbyshire Removals",
         "image": "https://derbyshireremovals.com/images/van.jpg",
         "priceRange": "££",
-        "telephone": "+443335677001",
+        "telephone": ["+441332314312", "+441246922192", "+443335677001", "+447425557000"],
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "48 Farmhouse Road",
           "addressLocality": "Derby",
+          "addressRegion": "Derbyshire",
           "postalCode": "DE24 3DB",
           "addressCountry": "GB"
         },
@@ -208,7 +209,17 @@ const Testimonials = () => {
             "itemReviewed": {
               "@type": "MovingCompany",
               "name": "Derbyshire Removals",
-              "image": "https://derbyshireremovals.com/images/van.jpg"
+              "image": "https://derbyshireremovals.com/images/van.jpg",
+              "priceRange": "££",
+              "telephone": ["+441332314312", "+441246922192", "+443335677001", "+447425557000"],
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "48 Farmhouse Road",
+                "addressLocality": "Derby",
+                "addressRegion": "Derbyshire",
+                "postalCode": "DE24 3DB",
+                "addressCountry": "GB"
+              }
             }
           }
         }))
