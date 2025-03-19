@@ -151,13 +151,23 @@ const testimonials = [
 const Testimonials = () => {
   const totalReviews = testimonials.length;
 
-  // Schema.org data for testimonials
+  // Schema.org data for testimonials - fixed to include itemReviewed property consistently
   const testimonialsSchema = {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "MovingCompany",
         "name": "Derbyshire Removals",
+        "image": "https://derbyshireremovals.com/images/van.jpg",
+        "priceRange": "££",
+        "telephone": "+443335677001",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "48 Farmhouse Road",
+          "addressLocality": "Derby",
+          "postalCode": "DE24 3DB",
+          "addressCountry": "GB"
+        },
         "aggregateRating": {
           "@type": "AggregateRating",
           "ratingValue": "5",
@@ -194,7 +204,12 @@ const Testimonials = () => {
               "@type": "Person",
               "name": t.name
             },
-            "reviewBody": t.review
+            "reviewBody": t.review,
+            "itemReviewed": {
+              "@type": "MovingCompany",
+              "name": "Derbyshire Removals",
+              "image": "https://derbyshireremovals.com/images/van.jpg"
+            }
           }
         }))
       }
