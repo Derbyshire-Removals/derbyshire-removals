@@ -41,7 +41,7 @@ const Header = () => {
               
               <button 
                 onClick={toggleMenu} 
-                className="ml-4 md:hidden"
+                className="mobile-menu md:hidden"
                 aria-label={isMenuOpen ? "Close menu" : "Open menu"}
               >
                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
