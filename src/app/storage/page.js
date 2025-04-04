@@ -83,7 +83,7 @@ const Storage = () => {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-[#071059] mb-4">Secure Storage for Every Need</h2>
               <p className="text-gray-700 mb-4">
-                Whether you're moving home, renovating, or need extra space for your business, our storage solutions 
+                Whether you're moving house, renovating, or need extra space for your business, our storage solutions 
                 provide the perfect answer. With state-of-the-art security and flexible access options, you can trust 
                 us to keep your belongings safe and accessible.
               </p>

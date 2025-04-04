@@ -20,7 +20,7 @@ export default function Home() {
     "telephone": ["+441332314312", "+441246922192", "+443335677001", "+447425557000"],
     "email": "info@derbyshireremovals.com",
     "foundingDate": "1988",
-    "description": "Professional removal services in Derbyshire since 1988, offering home and office removals, packing, and storage solutions.",
+    "description": "Professional removal services in Derbyshire since 1988, offering house and office removals, packing, and storage solutions.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "48 Farmhouse Road",
@@ -93,7 +93,7 @@ export default function Home() {
       "@type": "State",
       "name": "Derbyshire"
     },
-    "description": "Professional removal services for homes and businesses across Derbyshire.",
+    "description": "Professional removal services for houses and businesses across Derbyshire.",
     "serviceType": "Removal Services"
   };
 

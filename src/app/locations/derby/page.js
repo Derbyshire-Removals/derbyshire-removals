@@ -6,7 +6,7 @@ import { MapPin, CheckCircle } from 'lucide-react';
 
 const Derby = () => {
   const services = [
-    "Home Removals",
+    "House Removals",
     "Office Relocations",
     "Packing Services",
     "Storage Solutions",

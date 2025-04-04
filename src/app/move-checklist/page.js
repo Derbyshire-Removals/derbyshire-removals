@@ -75,7 +75,7 @@ const MoveChecklist = () => {
             <h1 className="text-3xl font-bold mb-6 text-[#071059]">Moving House Checklist</h1>
             
             <p className="mb-6 text-gray-700">
-              Moving to a new home can be both exciting and stressful. To help make your move as smooth as possible, 
+              Moving to a new house can be both exciting and stressful. To help make your move as smooth as possible, 
               we've created this comprehensive checklist of tasks to complete before, during, and after your move.
             </p>
             
@@ -101,7 +101,7 @@ const MoveChecklist = () => {
                     <li>Electoral register</li>
                     <li>DVLA (for driving license)</li>
                     <li>Car insurance provider</li>
-                    <li>Home insurance provider</li>
+                    <li>House insurance provider</li>
                     <li>Bank and credit card companies</li>
                     <li>Employer</li>
                     <li>Schools</li>
@@ -126,8 +126,8 @@ const MoveChecklist = () => {
               <h2 className="text-2xl font-semibold mb-4 text-[#071059]">Two Weeks Before Moving</h2>
               <ul className="list-disc pl-6 space-y-2 text-gray-700">
                 <li>Continue packing, labeling boxes clearly with contents and destination room</li>
-                <li>Create a floor plan of your new home to help movers place furniture correctly</li>
-                <li>Arrange for professional cleaning of your new home if needed</li>
+                <li>Create a floor plan of your new house to help movers place furniture correctly</li>
+                <li>Arrange for professional cleaning of your new house if needed</li>
                 <li>Use up food from the freezer and refrigerator</li>
                 <li>Confirm details with your removal company</li>
                 <li>Arrange for pet and plant transportation</li>
@@ -143,7 +143,7 @@ const MoveChecklist = () => {
                 <li>Confirm key collection arrangements for your new property</li>
                 <li>Take meter readings at both properties</li>
                 <li>Arrange for children and pets to be looked after on moving day if possible</li>
-                <li>Clean your current home</li>
+                <li>Clean your current house</li>
                 <li>Prepare a moving day kit with important items:
                   <ul className="list-circle pl-6 mt-2 space-y-1">
                     <li>Important documents and IDs</li>
@@ -165,7 +165,7 @@ const MoveChecklist = () => {
                 <li>Check all rooms, cupboards, loft, garden, and shed to ensure nothing is left behind</li>
                 <li>Lock all windows and doors</li>
                 <li>Hand over keys as arranged</li>
-                <li>At your new home, check that all utilities are working</li>
+                <li>At your new house, check that all utilities are working</li>
                 <li>Direct movers where to place furniture and boxes</li>
                 <li>Unpack essentials and make up beds for the first night</li>
               </ul>

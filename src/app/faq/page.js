@@ -21,7 +21,7 @@ const FAQ = () => {
     },
     {
       question: "Do you provide packing services?",
-      answer: "Yes, we offer full or partial packing services tailored to your needs. Our professional team can pack your entire home, or just specific items or rooms. We use high-quality packing materials to ensure the safety of your belongings during the move."
+      answer: "Yes, we offer full or partial packing services tailored to your needs. Our professional team can pack your entire house, or just specific items or rooms. We use high-quality packing materials to ensure the safety of your belongings during the move."
     },
     {
       question: "Are my belongings insured during the move?",

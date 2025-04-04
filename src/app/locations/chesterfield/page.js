@@ -6,7 +6,7 @@ import GetInTouch from '../../components/GetInTouch';
 
 const Chesterfield = () => {
   const services = [
-    "Home Removals",
+    "House Removals",
     "Office Relocations",
     "Packing Services",
     "Storage Solutions",

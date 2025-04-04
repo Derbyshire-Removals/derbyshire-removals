@@ -90,7 +90,7 @@ const PackagingMaterial = () => {
           "@context": "https://schema.org",
           "@type": "Product",
           "name": "Packing Materials",
-          "description": "Professional packing materials for home and office moves",
+          "description": "Professional packing materials for house and office moves",
           "offers": {
             "@type": "AggregateOffer",
             "priceCurrency": "GBP",
