@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
@@ -9,7 +10,7 @@ const HomeRemovals = () => {
     "@graph": [
       {
         "@type": "Service",
-        "name": "Home Removals Services",
+        "name": "House Removals Services",
         "provider": {
           "@type": "MovingCompany",
           "name": "Derbyshire Removals",
@@ -19,9 +20,9 @@ const HomeRemovals = () => {
             "addressCountry": "UK"
           }
         },
-        "description": "Professional home removal services with experienced and fully trained teams",
+        "description": "Professional house removal services with experienced and fully trained teams",
         "areaServed": "Derby, Matlock, Chesterfield, Ashbourne, and throughout the East and West Midlands",
-        "serviceType": "Home Removals"
+        "serviceType": "House Removals"
       }
     ]
   };
@@ -35,12 +36,12 @@ const HomeRemovals = () => {
       <div className="min-h-screen bg-gray-100">
         <Header />
         <main className="container mx-auto px-4 pt-52 pb-24">
-          <h1 className="text-4xl font-bold mb-8 text-[#071059]">Professional Home Removals Services</h1>
+          <h1 className="text-4xl font-bold mb-8 text-[#071059]">Professional House Removals Services</h1>
           
           <div className="mb-8">
             <img 
               src="/images/business/9.jpg"
-              alt="Professional movers carefully handling furniture during a home move"
+              alt="Professional movers carefully handling furniture during a house move"
               className="w-full h-[400px] object-cover rounded-lg shadow-lg mb-6"
               loading="lazy"
             />
@@ -48,15 +49,15 @@ const HomeRemovals = () => {
 
           <div className="bg-white rounded-lg shadow-md p-8 space-y-6">
             <section>
-              <h2 className="text-2xl font-semibold text-[#071059] mb-4">Comprehensive Home Moving Solutions</h2>
+              <h2 className="text-2xl font-semibold text-[#071059] mb-4">Comprehensive House Moving Solutions</h2>
               <p className="text-gray-700 mb-4">
-                With over 30 years of experience, our professional home removal service ensures a smooth and stress-free moving experience. 
+                With over 30 years of experience, our professional house removal service ensures a smooth and stress-free moving experience. 
                 Whether you're moving locally within Derby or across the Midlands, our expert team handles your belongings with the utmost care.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-[#071059] mb-4">Why Choose Our Home Removal Service?</h2>
+              <h2 className="text-2xl font-semibold text-[#071059] mb-4">Why Choose Our House Removal Service?</h2>
               <ul className="list-disc pl-6 space-y-2 text-gray-700">
                 <li>Experienced and fully trained removal teams</li>
                 <li>Modern, well-maintained removal vehicles</li>
@@ -68,7 +69,7 @@ const HomeRemovals = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-[#071059] mb-4">Our Home Moving Process</h2>
+              <h2 className="text-2xl font-semibold text-[#071059] mb-4">Our House Moving Process</h2>
               <div className="space-y-4">
                 <div>
                   <h3 className="text-xl font-medium mb-2">Initial Consultation</h3>
@@ -88,7 +89,7 @@ const HomeRemovals = () => {
             <section className="bg-blue-50 p-6 rounded-lg">
               <h2 className="text-2xl font-semibold text-[#071059] mb-4">Areas We Cover</h2>
               <p className="text-gray-700">
-                We provide comprehensive home removal services across Derby, Matlock, Chesterfield, Ashbourne, 
+                We provide comprehensive house removal services across Derby, Matlock, Chesterfield, Ashbourne, 
                 and throughout the East and West Midlands. Whether you're moving locally or within the region, 
                 we ensure a professional and reliable service.
               </p>
@@ -97,7 +98,7 @@ const HomeRemovals = () => {
             <div className="bg-[#071059] text-white p-8 rounded-lg">
               <h2 className="text-2xl font-bold mb-4">Get Your Free Quote Today</h2>
               <p className="mb-6">
-                Contact us today to discuss your home removal needs and receive a comprehensive quote 
+                Contact us today to discuss your house removal needs and receive a comprehensive quote 
                 tailored to your requirements.
               </p>
               <Link 
