@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Link from 'next/link';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card"
@@ -29,7 +28,7 @@ const Services = () => {
       icon: <Truck size={24} />, 
       title: "House Removals", 
       description: "Full service house moving solutions",
-      to: "/services/home-removals"
+      to: "/services/house-removals"
     },
     { 
       icon: <Package size={24} />, 

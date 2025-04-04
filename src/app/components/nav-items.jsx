@@ -85,8 +85,8 @@ export const navItems = [
     // page: <TermsAndConditions />,
   },
   {
-    title: "Home Removals",
-    to: "/services/home-removals",
+    title: "House Removals",
+    to: "/services/house-removals",
     // page: <HomeRemovals />,
   },
   {
