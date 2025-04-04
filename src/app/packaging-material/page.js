@@ -85,26 +85,6 @@ const packagingMaterials = [
 const PackagingMaterial = () => {
   return (
     <div className="min-h-screen bg-gray-100">
-      <Script id="product-schema" type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Product",
-          "name": "Packing Materials",
-          "description": "Professional packing materials for house and office moves",
-          "offers": {
-            "@type": "AggregateOffer",
-            "priceCurrency": "GBP",
-            "offerCount": packagingMaterials.length,
-            "lowPrice": "1.50",
-            "highPrice": "16.25"
-          },
-          "brand": {
-            "@type": "Brand",
-            "name": "Derbyshire Removals"
-          }
-        })}
-      </Script>
-      
       <Header />
       <main className="container mx-auto px-4 pt-52 pb-24">
         <div className="max-w-4xl mx-auto">
