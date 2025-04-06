@@ -3,4 +3,6 @@
 # This ensures that all routes are handled by the single-page application
 
 /services/home-removals   /services/house-removals   301
+/locations/mansfield      /locations/alfreton        301  
+/locations/loughborough   /locations/matlock         301
 /*    /index.html   200

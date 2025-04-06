@@ -10,7 +10,7 @@ const AreasWeCover = () => {
     {
       name: "East Midlands",
       areas: [
-        { shire: "Derbyshire", towns: ["Derby", "Chesterfield", "Swadlincote", "Ilkeston", "Long Eaton", "Buxton", "Glossop", "Belper", "Ripley", "Ashbourne", "Dronfield", "Matlock", "Staveley", "Heanor", "Clay Cross", "Bolsover", "Shirebrook", "Bakewell", "Wirksworth", "New Mills"] },
+        { shire: "Derbyshire", towns: ["Derby", "Chesterfield", "Alfreton", "Matlock", "Buxton", "Swadlincote", "Ilkeston", "Long Eaton", "Glossop", "Belper", "Ripley", "Ashbourne", "Dronfield", "Staveley", "Heanor", "Clay Cross", "Bolsover", "Shirebrook", "Bakewell", "Wirksworth", "New Mills"] },
         { shire: "Leicestershire", towns: ["Leicester", "Loughborough", "Hinckley", "Melton Mowbray", "Coalville", "Wigston", "Market Harborough", "Oadby", "Ashby-de-la-Zouch", "Earl Shilton", "Shepshed", "Blaby", "Syston", "Broughton Astley", "Lutterworth", "Enderby", "Mountsorrel", "Barrow upon Soar", "Sileby", "Kibworth Harcourt"] },
         { shire: "Nottinghamshire", towns: ["Nottingham", "Mansfield", "Newark-on-Trent", "Worksop", "Sutton-in-Ashfield", "Kirkby-in-Ashfield", "Arnold", "Carlton", "Retford", "Beeston", "West Bridgford", "Hucknall", "Eastwood", "Stapleford", "Kimberley", "Ollerton", "Bingham", "Ruddington", "Cotgrave", "Southwell"] }
       ]
