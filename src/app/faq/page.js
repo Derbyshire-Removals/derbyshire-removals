@@ -34,11 +34,11 @@ const FAQ = () => {
     },
     {
       question: "What payment methods do you accept?",
-      answer: "We offer convenient payment options to make your move as stress-free as possible. We accept bank transfers and cash payments. For removals, payment is typically arranged in advance, and for storage services, we work on a simple 4-week advance payment schedule. If you have any specific requirements regarding payment timing or methods, please just ask - we're happy to discuss options that work best for you."
+      answer: "We offer convenient payment options to make your move as stress-free as possible. We accept bank transfers and cash payments. If you have any specific requirements regarding payment timing or methods, please just ask - we're happy to discuss options that work best for you."
     },
     {
       question: "Do you offer storage solutions?",
-      answer: "Yes! We provide secure, convenient storage options whether you need short-term storage between moves or longer-term solutions. Our facilities are clean, dry, and monitored for security, giving you peace of mind that your possessions are safe with us. Our storage solutions are flexible with a minimum period of just one week, and we include comprehensive insurance coverage for stored items. Many customers find our storage options incredibly helpful during transitional periods or when downsizing."
+      answer: "Yes! We provide secure, convenient storage options whether you need short-term storage between moves or longer-term solutions. Our facilities are clean, dry, and monitored for security, giving you peace of mind that your possessions are safe with us. Our storage solutions are flexible with a minimum period of just one week, and we include comprehensive insurance coverage for stored items. Many customers find storage options incredibly helpful during transitional periods or when downsizing."
     },
     {
       question: "What if my moving plans change?",
@@ -46,7 +46,7 @@ const FAQ = () => {
     },
     {
       question: "Can you move furniture that requires assembly/disassembly?",
-      answer: "Absolutely! Our skilled team can disassemble and reassemble your furniture to ensure safe and efficient transport. We're experienced with all types of furniture, including beds, wardrobes, tables, and self-assembly items. We take photographs and make notes during disassembly to ensure everything goes back together perfectly at your new home. If you have particularly complex pieces, just let us know in advance so we can allocate sufficient time in our schedule."
+      answer: "Absolutely! Our skilled team can disassemble and reassemble your furniture to ensure safe and efficient transport. We're experienced with all types of furniture, including beds, wardrobes, tables, and self-assembly items. If you have particularly complex pieces, just let us know in advance so we can allocate sufficient time in our schedule."
     },
     {
       question: "Do you move appliances like freezers and washing machines?",
@@ -58,11 +58,11 @@ const FAQ = () => {
     },
     {
       question: "How is the removal cost calculated?",
-      answer: "We provide fair, transparent pricing based on several factors including the volume of items being moved, distance between locations, access at both properties, and any special requirements such as packing services or handling of particularly valuable items. We're happy to provide a free, no-obligation quote after understanding your specific needs. Many customers find our pricing competitive, especially considering the comprehensive service and peace of mind we provide!"
+      answer: "We provide fair, transparent pricing based on several factors including the volume of items being moved, distance between locations, access at both properties, and any special requirements such as packing services or handling of particularly valuable items. We're happy to provide a free, no-obligation quote after understanding your specific needs."
     },
     {
       question: "Do you provide packaging materials?",
-      answer: "Yes! We offer a complete range of high-quality packaging materials including boxes of various sizes, bubble wrap, packing paper, tape, and specialized containers for items like clothing and dishes. Using professional-grade materials ensures better protection for your belongings. If you prefer to do your own packing, we can supply just the materials you need. We can also remove and recycle packaging materials after your move to make your settling-in process easier."
+      answer: "Yes! We offer a complete range of high-quality packaging materials including boxes of various sizes, bubble wrap, packing paper, tape, and specialized containers for items like clothing and dishes. Using professional-grade materials ensures better protection for your belongings. If you prefer to do your own packing, we can supply just the materials you need."
     }
   ];
 
