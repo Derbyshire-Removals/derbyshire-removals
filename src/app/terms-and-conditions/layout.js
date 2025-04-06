@@ -6,6 +6,12 @@ export const metadata = {
   alternates: {
     canonical: "https://derbyshireremovals.com/terms-and-conditions",
   },
+  openGraph: {
+    title: "Terms and Conditions | Derbyshire Removals",
+    description: "Our comprehensive terms and conditions for removal services, storage solutions, and business operations.",
+    url: "https://derbyshireremovals.com/terms-and-conditions",
+    type: "website",
+  },
 };
 
 export default function TermsAndConditionsLayout({ children }) {

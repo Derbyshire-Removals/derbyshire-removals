@@ -6,6 +6,12 @@ export const metadata = {
   alternates: {
     canonical: "https://derbyshireremovals.com/move-checklist",
   },
+  openGraph: {
+    title: "Complete House Moving Checklist | Derbyshire Removals Guide",
+    description: "Comprehensive moving house checklist with expert tips to ensure a stress-free move from start to finish.",
+    url: "https://derbyshireremovals.com/move-checklist",
+    type: "website",
+  },
   jsonLd: {
     "@context": "https://schema.org",
     "@type": "HowTo",

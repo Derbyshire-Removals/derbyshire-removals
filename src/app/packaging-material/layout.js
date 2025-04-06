@@ -6,6 +6,13 @@ export const metadata = {
   alternates: {
     canonical: "https://derbyshireremovals.com/packaging-material",
   },
+  openGraph: {
+    title: "Professional Packing Materials Derby | Derbyshire Removals",
+    description: "High-quality packing materials including boxes, bubble wrap, tape and eco-friendly options at competitive prices.",
+    url: "https://derbyshireremovals.com/packaging-material",
+    type: "website",
+    images: ["/images/business/packaging.jpg"],
+  },
 };
 
 export default function PackagingMaterialLayout({ children }) {

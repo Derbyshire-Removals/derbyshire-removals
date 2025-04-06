@@ -6,6 +6,12 @@ export const metadata = {
   alternates: {
     canonical: "https://derbyshireremovals.com/privacy-policy",
   },
+  openGraph: {
+    title: "Privacy Policy | Derbyshire Removals",
+    description: "Learn how we use cookies and analytics to improve your browsing experience at Derbyshire Removals.",
+    url: "https://derbyshireremovals.com/privacy-policy",
+    type: "website",
+  },
 };
 
 export default function PrivacyPolicyLayout({ children }) {
