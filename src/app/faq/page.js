@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../components/ui/accordion";
 
 export const metadata = {
-  title: "Frequently Asked Questions | Derbyshire Removals",
+  title: "Frequently Asked Questions on Moving | Derbyshire Removals",
   description: "Find answers to common questions about our removal services, booking process, packing services, and insurance coverage. Professional moving services in Derby and surrounding areas.",
   keywords: "removal services FAQ, moving company questions, Derby removals FAQ, packing services questions, furniture removal FAQ",
   alternates: {
