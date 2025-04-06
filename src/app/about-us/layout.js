@@ -11,6 +11,7 @@ export const metadata = {
     description: "Professional house and office removals across the Midlands. Serving Derby, Matlock, Chesterfield, Nottingham, Birmingham, and Leicester since 1988.",
     url: "https://derbyshireremovals.com/about-us",
     type: "website",
+    images: ["/images/business/12.jpg"],
   },
 };
 

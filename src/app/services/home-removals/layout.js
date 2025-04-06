@@ -11,6 +11,7 @@ export const metadata = {
     description: "Expert house removal services across the Midlands with comprehensive moving solutions for houses and apartments.",
     url: "https://derbyshireremovals.com/services/home-removals",
     type: "website",
+    images: ["/images/business/1.jpg"],
   },
 };
 

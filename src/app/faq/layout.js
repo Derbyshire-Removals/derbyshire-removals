@@ -11,6 +11,7 @@ export const metadata = {
     description: "Find answers to common questions about our removal services, booking process, and insurance coverage for moves across the Midlands.",
     url: "https://derbyshireremovals.com/faq",
     type: "website",
+    images: ["/images/business/4.jpg"],
   },
 };
 

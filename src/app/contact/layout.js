@@ -6,6 +6,12 @@ export const metadata = {
   alternates: {
     canonical: "https://derbyshireremovals.com/contact",
   },
+  openGraph: {
+    title: "Contact Us | Derbyshire Removals - Get Your Free Quote Today",
+    description: "Contact our expert team for professional moving services in Derbyshire and across the Midlands. Request your free quote today!",
+    url: "https://derbyshireremovals.com/contact",
+    type: "website",
+  },
 };
 
 export default function ContactLayout({ children }) {

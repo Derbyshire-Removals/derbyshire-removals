@@ -6,6 +6,12 @@ export const metadata = {
   alternates: {
     canonical: "https://derbyshireremovals.com/areas-we-cover",
   },
+  openGraph: {
+    title: "Areas We Cover: Midlands & Nationwide | Derbyshire Removals",
+    description: "Professional removals serving Derby, Matlock, Chesterfield, Nottingham, Birmingham, Leicester and beyond since 1988.",
+    url: "https://derbyshireremovals.com/areas-we-cover",
+    type: "website",
+  },
 };
 
 export default function AreasWeCoverLayout({ children }) {
