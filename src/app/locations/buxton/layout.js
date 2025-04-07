@@ -11,21 +11,6 @@ export const metadata = {
     description: "Trusted removal services in Buxton. Local expertise and competitive rates for house and business moves. Professional and reliable solutions.",
     url: "https://derbyshireremovals.com/locations/buxton",
     type: "website",
-  },
-  jsonLd: {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: "Removal Services in Buxton",
-    provider: {
-      "@type": "MovingCompany",
-      name: "Derbyshire Removals"
-    },
-    serviceType: "Moving Services",
-    areaServed: {
-      "@type": "City",
-      name: "Buxton"
-    },
-    description: "Trusted removal services in Buxton. Local expertise and competitive rates for house and business moves. Professional and reliable solutions."
   }
 };
 

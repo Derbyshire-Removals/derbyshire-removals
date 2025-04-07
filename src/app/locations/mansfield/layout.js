@@ -12,21 +12,6 @@ export const metadata = {
     url: "https://derbyshireremovals.com/locations/mansfield",
     type: "website",
     images: ["/images/business/5.jpg"],
-  },
-  jsonLd: {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: "Removal Services in Mansfield",
-    provider: {
-      "@type": "MovingCompany",
-      name: "Derbyshire Removals"
-    },
-    serviceType: "Moving Services",
-    areaServed: {
-      "@type": "City",
-      name: "Mansfield"
-    },
-    description: "Professional house and business removal services in Mansfield. Local expertise, competitive rates, and reliable moving solutions you can trust."
   }
 };
 
