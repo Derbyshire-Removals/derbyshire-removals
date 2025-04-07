@@ -60,7 +60,8 @@ const schemaData = {
     },
     "sameAs": [
       "https://www.facebook.com/profile.php?id=61572796415223",
-      "https://www.instagram.com/derbyshireremovals/"
+      "https://www.instagram.com/derbyshireremovals/",
+      "https://apps.derbyshire.gov.uk/applications/trusted-trader/profile.asp?tid=56236"
     ]
   }
 };
