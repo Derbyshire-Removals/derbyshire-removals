@@ -3,11 +3,37 @@ import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
+// Schema.org JSON-LD for Privacy Policy page
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "url": "https://derbyshireremovals.com/privacy-policy",
+  "name": "Privacy Policy",
+  "description": "Learn how Derbyshire Removals uses cookies to enhance user experience, including details on analytics and essential cookies, as well as how to manage them.",
+  "inLanguage": "en",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Derbyshire Removals",
+    "url": "https://derbyshireremovals.com/",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "telephone": "0333 567 7001",
+      "email": "info@derbyshireremovals.com"
+    }
+  }
+};
+
 const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen bg-gray-100">
+      <div dangerouslySetInnerHTML={{ __html: `
+        <script type="application/ld+json">
+          ${JSON.stringify(schemaData)}
+        </script>
+      `}} />
       <Header />
-      <main className="container mx-auto px-4 pt-52 pb-8 max-w-4xl"> {/* Updated pt-32 to pt-52 for better header clearance */}
+      <main className="container mx-auto px-4 pt-52 pb-8 max-w-4xl">
         <h1 className="text-3xl font-bold mb-6">Privacy Policy</h1>
         
         <section className="space-y-6">
