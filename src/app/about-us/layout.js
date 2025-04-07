@@ -38,7 +38,8 @@ export const metadata = {
         ],
         "memberOf": {
           "@type": "Organization",
-          "name": "Derbyshire's Trusted Trader scheme"
+          "name": "Derbyshire's Trusted Trader scheme",
+          "url": "https://apps.derbyshire.gov.uk/applications/trusted-trader/profile.asp?tid=56236"
         }
       }
     ]

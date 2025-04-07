@@ -54,7 +54,8 @@ const AboutUs = () => {
         ],
         "memberOf": {
           "@type": "Organization",
-          "name": "Derbyshire's Trusted Trader scheme"
+          "name": "Derbyshire's Trusted Trader scheme",
+          "url": "https://apps.derbyshire.gov.uk/applications/trusted-trader/profile.asp?tid=56236"
         },
         "telephone": ["+441332314312", "+441246922192", "+443335677001", "+447425557000"],
         "email": "info@derbyshireremovals.com",
