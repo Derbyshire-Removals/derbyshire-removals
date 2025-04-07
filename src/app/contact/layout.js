@@ -12,57 +12,6 @@ export const metadata = {
     url: "https://derbyshireremovals.com/contact",
     type: "website",
   },
-  jsonLd: {
-    "@context": "https://schema.org",
-    "@type": "ContactPage",
-    "url": "https://derbyshireremovals.com/contact",
-    "name": "Contact - Derbyshire Removals",
-    "mainEntity": {
-      "@type": "Organization",
-      "name": "Derbyshire Removals",
-      "legalName": "Nexus Deliveries Ltd trading as Derbyshire Removals",
-      "url": "https://derbyshireremovals.com",
-      "email": "info@derbyshireremovals.com",
-      "telephone": "0333 567 7001",
-      "contactPoint": [
-        {
-          "@type": "ContactPoint",
-          "telephone": "0333 567 7001",
-          "contactType": "customer service",
-          "areaServed": "GB"
-        },
-        {
-          "@type": "ContactPoint",
-          "telephone": "01332 314312",
-          "contactType": "Derby",
-          "areaServed": "GB"
-        },
-        {
-          "@type": "ContactPoint",
-          "telephone": "01246 922192",
-          "contactType": "Chesterfield",
-          "areaServed": "GB"
-        },
-        {
-          "@type": "ContactPoint",
-          "telephone": "07425557000",
-          "contactType": "mobile",
-          "areaServed": "GB"
-        }
-      ],
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "48 Farmhouse Road",
-        "addressLocality": "Derby",
-        "postalCode": "DE24 3DB",
-        "addressCountry": "GB"
-      },
-      "sameAs": [
-        "https://www.facebook.com/profile.php?id=61572796415223",
-        "https://www.instagram.com/derbyshireremovals/"
-      ]
-    }
-  }
 };
 
 export default function ContactLayout({ children }) {
