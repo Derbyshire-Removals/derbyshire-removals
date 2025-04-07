@@ -3,6 +3,7 @@ import React from 'react';
 import { Building2, Users, Globe, Handshake } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Script from 'next/script';
 
 const AboutUs = () => {
   const companyFeatures = [
@@ -28,8 +29,59 @@ const AboutUs = () => {
     }
   ];
 
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "AboutPage",
+        "url": "https://derbyshireremovals.com/about-us",
+        "name": "About Derbyshire Removals",
+        "mainEntity": {
+          "@id": "https://derbyshireremovals.com/#organization"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://derbyshireremovals.com/#organization",
+        "name": "Derbyshire Removals",
+        "url": "https://derbyshireremovals.com/",
+        "foundingDate": "1988",
+        "description": "Since 1988, Derbyshire Removals has been the trusted name in professional moving services across the Midlands. As a family-run business, they provide reliable, efficient and caring removal services to both residential and commercial clients.",
+        "areaServed": [
+          "East Midlands",
+          "West Midlands",
+          "Nationwide"
+        ],
+        "memberOf": {
+          "@type": "Organization",
+          "name": "Derbyshire's Trusted Trader scheme"
+        },
+        "telephone": ["+441332314312", "+441246922192", "+443335677001", "+447425557000"],
+        "email": "info@derbyshireremovals.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "48 Farmhouse Road",
+          "addressLocality": "Derby",
+          "addressRegion": "Derbyshire",
+          "postalCode": "DE24 3DB",
+          "addressCountry": "GB"
+        },
+        "sameAs": [
+          "https://www.facebook.com/profile.php?id=61572796415223",
+          "https://www.instagram.com/derbyshireremovals/",
+          "https://apps.derbyshire.gov.uk/applications/trusted-trader/profile.asp?tid=56236"
+        ]
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-gray-100">
+      <Script 
+        id="about-us-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
       <Header />
       
       <main className="container mx-auto px-4 pt-52 pb-24">
