@@ -1,3 +1,4 @@
+
 "use client"
 
 import React from 'react';
@@ -11,8 +12,58 @@ import { Form } from "../components/ui/form"
 import { Phone, Mail, MessageCircle, MapPin, Facebook, Instagram } from "lucide-react"
 import ContactFormFields from '../components/ContactFormFields';
 
-// Metadata for this page needs to be in a separate file since this is a client component
-// See ContactMetadata.js in the same folder
+// Schema.org JSON-LD for Contact Page
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "url": "https://derbyshireremovals.com/contact",
+  "name": "Contact - Derbyshire Removals",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "Derbyshire Removals",
+    "legalName": "Nexus Deliveries Ltd trading as Derbyshire Removals",
+    "url": "https://derbyshireremovals.com",
+    "email": "info@derbyshireremovals.com",
+    "telephone": "0333 567 7001",
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "0333 567 7001",
+        "contactType": "customer service",
+        "areaServed": "GB"
+      },
+      {
+        "@type": "ContactPoint",
+        "telephone": "01332 314312",
+        "contactType": "Derby",
+        "areaServed": "GB"
+      },
+      {
+        "@type": "ContactPoint",
+        "telephone": "01246 922192",
+        "contactType": "Chesterfield",
+        "areaServed": "GB"
+      },
+      {
+        "@type": "ContactPoint",
+        "telephone": "07425557000",
+        "contactType": "mobile",
+        "areaServed": "GB"
+      }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "48 Farmhouse Road",
+      "addressLocality": "Derby",
+      "postalCode": "DE24 3DB",
+      "addressCountry": "GB"
+    },
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=61572796415223",
+      "https://www.instagram.com/derbyshireremovals/"
+    ]
+  }
+};
 
 const schema = z.object({
   access_key: z.string().optional(),
@@ -95,6 +146,11 @@ const ContactForm = () => {
 const Contact = () => {
   return (
     <div className="min-h-screen bg-gray-100">
+      <div dangerouslySetInnerHTML={{ __html: `
+        <script type="application/ld+json">
+          ${JSON.stringify(schemaData)}
+        </script>
+      `}} />
       <Header />
       <main className="container mx-auto px-4 py-8 pt-52">
         <h1 className="text-3xl font-bold mb-6">Contact Us</h1>
