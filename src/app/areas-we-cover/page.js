@@ -4,6 +4,7 @@ import { MapPin } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import GetInTouch from '../components/GetInTouch';
+import Script from 'next/script';
 
 const AreasWeCover = () => {
   const regions = [
@@ -25,8 +26,53 @@ const AreasWeCover = () => {
     }
   ];
 
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Derbyshire Removals Moving Services",
+    "description": "With over 35 years of experience, Derbyshire Removals provides comprehensive moving services across the East and West Midlands, with additional coverage extending nationwide. Our local expertise and knowledge ensure a smooth and efficient moving experience.",
+    "url": "https://derbyshireremovals.com/areas-we-cover",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Derbyshire Removals",
+      "@id": "https://derbyshireremovals.com/#organization"
+    },
+    "areaServed": [
+      "Derby", "Chesterfield", "Alfreton", "Matlock", "Buxton", "Swadlincote", 
+      "Ilkeston", "Long Eaton", "Glossop", "Belper", "Ripley", "Ashbourne", 
+      "Dronfield", "Staveley", "Heanor", "Clay Cross", "Bolsover", "Shirebrook", 
+      "Bakewell", "Wirksworth", "New Mills", "Leicester", "Loughborough", 
+      "Hinckley", "Melton Mowbray", "Coalville", "Wigston", "Market Harborough", 
+      "Oadby", "Ashby-de-la-Zouch", "Earl Shilton", "Shepshed", "Blaby", 
+      "Syston", "Broughton Astley", "Lutterworth", "Enderby", "Mountsorrel", 
+      "Barrow upon Soar", "Sileby", "Kibworth Harcourt", "Nottingham", 
+      "Mansfield", "Newark-on-Trent", "Worksop", "Sutton-in-Ashfield", 
+      "Kirkby-in-Ashfield", "Arnold", "Carlton", "Retford", "Beeston", 
+      "West Bridgford", "Hucknall", "Eastwood", "Stapleford", "Kimberley", 
+      "Ollerton", "Bingham", "Ruddington", "Cotgrave", "Southwell", 
+      "Stoke-on-Trent", "Stafford", "Burton upon Trent", "Lichfield", 
+      "Newcastle-under-Lyme", "Cannock", "Tamworth", "Leek", "Burntwood", 
+      "Uttoxeter", "Rugeley", "Kidsgrove", "Stone", "Hednesford", "Biddulph", 
+      "Cheadle", "Penkridge", "Wombourne", "Codsall", "Eccleshall", "Birmingham", 
+      "Coventry", "Wolverhampton", "Solihull", "Walsall", "Dudley", 
+      "West Bromwich", "Sutton Coldfield", "Stourbridge", "Halesowen", 
+      "Aldridge", "Tipton", "Wednesbury", "Brierley Hill", "Brownhills", 
+      "Rowley Regis", "Smethwick", "Bilston", "Willenhall", "Bloxwich", "Warwick", 
+      "Nuneaton", "Rugby", "Leamington Spa", "Bedworth", "Stratford-upon-Avon", 
+      "Atherstone", "Kenilworth", "Polesworth", "Alcester", "Coleshill", 
+      "Southam", "Bulkington", "Shipston-on-Stour", "Henley-in-Arden", "Studley", 
+      "Bidford-on-Avon", "Wellesbourne", "Kingsbury", "Whitnash", "Nationwide",
+      "East Midlands", "West Midlands" 
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
+      <Script 
+        id="areas-we-cover-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
       <Header />
       
       <main className="container mx-auto px-4 py-8 pt-52">

@@ -15,17 +15,18 @@ export const metadata = {
   jsonLd: {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "Removal Services in Matlock",
-    provider: {
+    "name": "Removal Services in Matlock",
+    "provider": {
       "@type": "MovingCompany",
-      name: "Derbyshire Removals"
+      "name": "Derbyshire Removals",
+      "@id": "https://derbyshireremovals.com/#organization"
     },
-    serviceType: "Moving Services",
-    areaServed: {
+    "serviceType": "Moving Services",
+    "areaServed": {
       "@type": "City",
-      name: "Matlock"
+      "name": "Matlock"
     },
-    description: "Expert removal services in Matlock with local knowledge, competitive rates, and professional moving solutions for houses and businesses."
+    "description": "Expert removal services in Matlock with local knowledge, competitive rates, and professional moving solutions for houses and businesses."
   }
 };
 
