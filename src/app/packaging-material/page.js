@@ -7,6 +7,45 @@ import { Package, Info } from 'lucide-react';
 import Link from 'next/link';
 import Script from 'next/script';
 
+// Schema.org JSON-LD for Packaging Materials page
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "url": "https://derbyshireremovals.com/packaging-material",
+  "name": "Professional Packing Materials | Derbyshire Removals",
+  "description": "High-quality packing materials available including boxes, bubble wrap, tape and more for secure packing during your move.",
+  "inLanguage": "en",
+  "mainEntity": {
+    "@type": "Service",
+    "name": "Moving Packaging Materials",
+    "serviceType": "Packing Materials Supply",
+    "provider": {
+      "@type": "MovingCompany",
+      "name": "Derbyshire Removals",
+      "url": "https://derbyshireremovals.com",
+      "telephone": "0333 567 7001",
+      "email": "info@derbyshireremovals.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "48 Farmhouse Road",
+        "addressLocality": "Derby",
+        "postalCode": "DE24 3DB",
+        "addressCountry": "GB"
+      }
+    },
+    "description": "Professional packing materials to ensure your belongings are protected during the move, including boxes, bubble wrap, tape, and specialized containers.",
+    "areaServed": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": "52.8744186998816",
+        "longitude": "-1.487168677909595"
+      },
+      "geoRadius": "50000"
+    }
+  }
+};
+
 const packagingMaterials = [
   { 
     description: "Medium box",
@@ -85,6 +124,11 @@ const packagingMaterials = [
 const PackagingMaterial = () => {
   return (
     <div className="min-h-screen bg-gray-100">
+      <div dangerouslySetInnerHTML={{ __html: `
+        <script type="application/ld+json">
+          ${JSON.stringify(schemaData)}
+        </script>
+      `}} />
       <Header />
       <main className="container mx-auto px-4 pt-52 pb-24">
         <div className="max-w-4xl mx-auto">
