@@ -21,6 +21,18 @@ export default function Home() {
     "email": "info@derbyshireremovals.com",
     "foundingDate": "1988",
     "description": "Professional removal services in Derbyshire since 1988, offering house and office removals, packing, and storage solutions.",
+    "areaServed": [
+          "Derby",
+          "Matlock",
+          "Alfreton",
+          "Chesterfield",
+          "Buxton",
+          "Mansfield",
+          "Loughborough",
+          "East Midlands",
+          "West Midlands",
+          "Nationwide"
+    ],
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "48 Farmhouse Road",
@@ -28,6 +40,11 @@ export default function Home() {
       "addressRegion": "Derbyshire",
       "postalCode": "DE24 3DB",
       "addressCountry": "GB"
+    },
+    "memberOf": {
+      "@type": "Organization",
+      "name": "Derbyshire's Trusted Trader scheme",
+      "url": "https://apps.derbyshire.gov.uk/applications/trusted-trader/profile.asp?tid=56236"
     },
     sameAs: [
       "https://www.facebook.com/profile.php?id=61572796415223",
