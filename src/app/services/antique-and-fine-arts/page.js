@@ -2,63 +2,22 @@ import React from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Link from 'next/link';
+import { generateSchemaScript, getServiceSchema } from '../../lib/schema';
 
 const AntiqueAndFineArts = () => {
-  // Schema.org data for antique and fine arts service
-  const antiqueAndFineArtsSchema = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Service",
-        "name": "Antique and Fine Arts Removal",
-        "provider": {
-          "@type": "MovingCompany",
-          "name": "Derbyshire Removals",
-          "address": {
-            "@type": "PostalAddress",
-            "addressRegion": "Derbyshire",
-            "addressCountry": "UK"
-          }
-        },
-        "description": "Specialized handling service for valuable antiques and fine art pieces, ensuring they are moved with the utmost care and attention.",
-        "areaServed": "Derbyshire and surrounding areas",
-        "serviceType": "Specialized Moving Service",
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Antique Moving Services",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Custom crating and packaging"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Climate-controlled transportation"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Insurance coverage for valuable items"
-              }
-            }
-          ]
-        }
-      }
-    ]
-  };
+  const antiqueAndFineArtsSchema = generateSchemaScript([
+    getServiceSchema(
+      "Antique and Fine Arts Removal",
+      "Specialized Moving Service",
+      "Specialized handling service for valuable antiques and fine art pieces, ensuring they are moved with the utmost care and attention."
+    )
+  ]);
 
   return (
     <section>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(antiqueAndFineArtsSchema) }}
+        dangerouslySetInnerHTML={{ __html: antiqueAndFineArtsSchema }}
       />
       <div className="min-h-screen bg-gray-100">
         <Header />

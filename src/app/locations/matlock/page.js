@@ -1,46 +1,29 @@
-
 import React from 'react';
 import { MapPin, CheckCircle } from 'lucide-react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import GetInTouch from '../../components/GetInTouch';
+import { generateSchemaScript, getLocationMovingCompanySchema } from '../../lib/schema';
 
 const Matlock = () => {
   const services = [
     "House Removals",
-    "Office Relocations",
+    "Office Relocations", 
     "Packing Services",
     "Storage Solutions",
     "Student Moves",
     "Single Item Delivery"
   ];
 
-  const matlockSchema = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "MovingCompany",
-        "name": "Derbyshire Removals - Matlock",
-        "image": "https://derbyshireremovals.com/images/van.jpg",
-        "description": "Professional removal services in Matlock",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Matlock",
-          "addressRegion": "Derbyshire",
-          "addressCountry": "GB"
-        },
-        "url": "https://derbyshireremovals.com/locations/matlock",
-        "telephone": "+443335677001",
-        "areaServed": "Matlock"
-      }
-    ]
-  };
+  const matlockSchema = generateSchemaScript([
+    getLocationMovingCompanySchema("Matlock", "+443335677001")
+  ]);
 
   return (
     <section>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(matlockSchema) }}
+        dangerouslySetInnerHTML={{ __html: matlockSchema }}
       />
       <div className="min-h-screen bg-gray-100">
         <Header />

@@ -3,6 +3,7 @@ import { MapPin, CheckCircle } from 'lucide-react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import GetInTouch from '../../components/GetInTouch';
+import { generateSchemaScript, getLocationMovingCompanySchema } from '../../lib/schema';
 
 const Mansfield = () => {
   const services = [
@@ -14,32 +15,17 @@ const Mansfield = () => {
     "Single Item Delivery"
   ];
 
-  const mansfieldSchema = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "MovingCompany",
-        "name": "Derbyshire Removals - Mansfield",
-        "image": "https://derbyshireremovals.com/images/van.jpg",
-        "description": "Professional removal services in Mansfield",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Mansfield",
-          "addressRegion": "Nottinghamshire",
-          "addressCountry": "GB"
-        },
-        "url": "https://derbyshireremovals.com/locations/mansfield",
-        "telephone": "+443335677001",
-        "areaServed": "Mansfield"
-      }
-    ]
-  };
+  const mansfieldSchema = generateSchemaScript([
+    getLocationMovingCompanySchema("Mansfield", "+443335677001", {
+      region: "Nottinghamshire"
+    })
+  ]);
 
   return (
     <section>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(mansfieldSchema) }}
+        dangerouslySetInnerHTML={{ __html: mansfieldSchema }}
       />
       <div className="min-h-screen bg-gray-100">
         <Header />

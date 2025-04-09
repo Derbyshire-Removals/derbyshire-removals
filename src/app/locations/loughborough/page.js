@@ -3,6 +3,7 @@ import { MapPin, CheckCircle } from 'lucide-react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import GetInTouch from '../../components/GetInTouch';
+import { generateSchemaScript, getLocationMovingCompanySchema } from '../../lib/schema';
 
 const Loughborough = () => {
   const services = [
@@ -14,32 +15,17 @@ const Loughborough = () => {
     "Single Item Delivery"
   ];
 
-  const loughboroughSchema = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "MovingCompany",
-        "name": "Derbyshire Removals - Loughborough",
-        "image": "https://derbyshireremovals.com/images/van.jpg",
-        "description": "Professional removal services in Loughborough",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Loughborough",
-          "addressRegion": "Leicestershire",
-          "addressCountry": "GB"
-        },
-        "url": "https://derbyshireremovals.com/locations/loughborough",
-        "telephone": "+443335677001",
-        "areaServed": "Loughborough"
-      }
-    ]
-  };
+  const loughboroughSchema = generateSchemaScript([
+    getLocationMovingCompanySchema("Loughborough", "+443335677001", {
+      region: "Leicestershire"
+    })
+  ]);
 
   return (
     <section>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(loughboroughSchema) }}
+        dangerouslySetInnerHTML={{ __html: loughboroughSchema }}
       />
       <div className="min-h-screen bg-gray-100">
         <Header />

@@ -3,11 +3,12 @@ import { MapPin, CheckCircle } from 'lucide-react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import GetInTouch from '../../components/GetInTouch';
+import { generateSchemaScript, getLocationMovingCompanySchema } from '../../lib/schema';
 
 const Chesterfield = () => {
   const services = [
     "House Removals",
-    "Office Relocations",
+    "Office Relocations", 
     "Packing Services",
     "Storage Solutions",
     "Student Moves",
@@ -15,32 +16,15 @@ const Chesterfield = () => {
   ];
 
   // Schema.org data for Chesterfield location page
-  const chesterfieldSchema = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "MovingCompany",
-        "name": "Derbyshire Removals - Chesterfield",
-        "image": "https://derbyshireremovals.com/images/van.jpg",
-        "description": "Professional removal services in Chesterfield",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Chesterfield",
-          "addressRegion": "Derbyshire",
-          "addressCountry": "GB"
-        },
-        "url": "https://derbyshireremovals.com/locations/chesterfield",
-        "telephone": "+441246922192",
-        "areaServed": "Chesterfield"
-      }
-    ]
-  };
+  const chesterfieldSchema = generateSchemaScript([
+    getLocationMovingCompanySchema("Chesterfield", "+441246922192")
+  ]);
 
   return (
     <section>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(chesterfieldSchema) }}
+        dangerouslySetInnerHTML={{ __html: chesterfieldSchema }}
       />
       <div className="min-h-screen bg-gray-100">
         <Header />

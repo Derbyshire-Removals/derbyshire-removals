@@ -1,125 +1,131 @@
 
 import React from 'react';
-import { MapPin } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import GetInTouch from '../components/GetInTouch';
-import Script from 'next/script';
+import { MapPin } from 'lucide-react';
+import Link from 'next/link';
+import { generateSchemaScript, getOrganizationSchema } from '../lib/schema';
 
 const AreasWeCover = () => {
-  const regions = [
+  const locations = [
     {
-      name: "East Midlands",
-      areas: [
-        { shire: "Derbyshire", towns: ["Derby", "Chesterfield", "Alfreton", "Matlock", "Buxton", "Swadlincote", "Ilkeston", "Long Eaton", "Glossop", "Belper", "Ripley", "Ashbourne", "Dronfield", "Staveley", "Heanor", "Clay Cross", "Bolsover", "Shirebrook", "Bakewell", "Wirksworth", "New Mills"] },
-        { shire: "Leicestershire", towns: ["Leicester", "Loughborough", "Hinckley", "Melton Mowbray", "Coalville", "Wigston", "Market Harborough", "Oadby", "Ashby-de-la-Zouch", "Earl Shilton", "Shepshed", "Blaby", "Syston", "Broughton Astley", "Lutterworth", "Enderby", "Mountsorrel", "Barrow upon Soar", "Sileby", "Kibworth Harcourt"] },
-        { shire: "Nottinghamshire", towns: ["Nottingham", "Mansfield", "Newark-on-Trent", "Worksop", "Sutton-in-Ashfield", "Kirkby-in-Ashfield", "Arnold", "Carlton", "Retford", "Beeston", "West Bridgford", "Hucknall", "Eastwood", "Stapleford", "Kimberley", "Ollerton", "Bingham", "Ruddington", "Cotgrave", "Southwell"] }
-      ]
+      name: "Derby",
+      description: "Our headquarters, providing extensive removal services across the city and surrounding areas.",
+      link: "/locations/derby"
     },
     {
-      name: "West Midlands",
-      areas: [
-        { shire: "Staffordshire", towns: ["Stoke-on-Trent", "Stafford", "Burton upon Trent", "Lichfield", "Newcastle-under-Lyme", "Cannock", "Tamworth", "Leek", "Burntwood", "Uttoxeter", "Rugeley", "Kidsgrove", "Stone", "Hednesford", "Biddulph", "Cheadle", "Penkridge", "Wombourne", "Codsall", "Eccleshall"] },
-        { shire: "West Midlands", towns: ["Birmingham", "Coventry", "Wolverhampton", "Solihull", "Walsall", "Dudley", "West Bromwich", "Sutton Coldfield", "Stourbridge", "Halesowen", "Aldridge", "Tipton", "Wednesbury", "Brierley Hill", "Brownhills", "Rowley Regis", "Smethwick", "Bilston", "Willenhall", "Bloxwich"] },
-        { shire: "Warwickshire", towns: ["Warwick", "Nuneaton", "Rugby", "Leamington Spa", "Bedworth", "Stratford-upon-Avon", "Atherstone", "Kenilworth", "Polesworth", "Alcester", "Coleshill", "Southam", "Bulkington", "Shipston-on-Stour", "Henley-in-Arden", "Studley", "Bidford-on-Avon", "Wellesbourne", "Kingsbury", "Whitnash"] }
-      ]
+      name: "Matlock",
+      description: "Specialized removal services in Matlock, accommodating the unique terrain and properties.",
+      link: "/locations/matlock"
+    },
+    {
+      name: "Chesterfield",
+      description: "Full-service house and office removals throughout Chesterfield and neighboring towns.",
+      link: "/locations/chesterfield"
+    },
+    {
+      name: "Buxton",
+      description: "Professional removal solutions tailored to Buxton's residential and commercial needs.",
+      link: "/locations/buxton"
+    },
+    {
+      name: "Alfreton",
+      description: "Local expertise for seamless relocations in Alfreton and the surrounding area.",
+      link: "/locations/alfreton"
+    },
+    {
+      name: "Mansfield",
+      description: "Comprehensive moving services covering all aspects of Mansfield relocations.",
+      link: "/locations/mansfield"
+    },
+    {
+      name: "Loughborough",
+      description: "Reliable and efficient removal services for Loughborough residents and businesses.",
+      link: "/locations/loughborough"
     }
   ];
 
-  const schemaData = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Derbyshire Removals Moving Services",
-    "description": "With over 35 years of experience, Derbyshire Removals provides comprehensive moving services across the East and West Midlands, with additional coverage extending nationwide. Our local expertise and knowledge ensure a smooth and efficient moving experience.",
-    "url": "https://derbyshireremovals.com/areas-we-cover",
-    "provider": {
-      "@type": "LocalBusiness",
-      "name": "Derbyshire Removals",
-      "@id": "https://derbyshireremovals.com/#organization"
-    },
-    "areaServed": [
-      "Derby", "Chesterfield", "Alfreton", "Matlock", "Buxton", "Swadlincote", 
-      "Ilkeston", "Long Eaton", "Glossop", "Belper", "Ripley", "Ashbourne", 
-      "Dronfield", "Staveley", "Heanor", "Clay Cross", "Bolsover", "Shirebrook", 
-      "Bakewell", "Wirksworth", "New Mills", "Leicester", "Loughborough", 
-      "Hinckley", "Melton Mowbray", "Coalville", "Wigston", "Market Harborough", 
-      "Oadby", "Ashby-de-la-Zouch", "Earl Shilton", "Shepshed", "Blaby", 
-      "Syston", "Broughton Astley", "Lutterworth", "Enderby", "Mountsorrel", 
-      "Barrow upon Soar", "Sileby", "Kibworth Harcourt", "Nottingham", 
-      "Mansfield", "Newark-on-Trent", "Worksop", "Sutton-in-Ashfield", 
-      "Kirkby-in-Ashfield", "Arnold", "Carlton", "Retford", "Beeston", 
-      "West Bridgford", "Hucknall", "Eastwood", "Stapleford", "Kimberley", 
-      "Ollerton", "Bingham", "Ruddington", "Cotgrave", "Southwell", 
-      "Stoke-on-Trent", "Stafford", "Burton upon Trent", "Lichfield", 
-      "Newcastle-under-Lyme", "Cannock", "Tamworth", "Leek", "Burntwood", 
-      "Uttoxeter", "Rugeley", "Kidsgrove", "Stone", "Hednesford", "Biddulph", 
-      "Cheadle", "Penkridge", "Wombourne", "Codsall", "Eccleshall", "Birmingham", 
-      "Coventry", "Wolverhampton", "Solihull", "Walsall", "Dudley", 
-      "West Bromwich", "Sutton Coldfield", "Stourbridge", "Halesowen", 
-      "Aldridge", "Tipton", "Wednesbury", "Brierley Hill", "Brownhills", 
-      "Rowley Regis", "Smethwick", "Bilston", "Willenhall", "Bloxwich", "Warwick", 
-      "Nuneaton", "Rugby", "Leamington Spa", "Bedworth", "Stratford-upon-Avon", 
-      "Atherstone", "Kenilworth", "Polesworth", "Alcester", "Coleshill", 
-      "Southam", "Bulkington", "Shipston-on-Stour", "Henley-in-Arden", "Studley", 
-      "Bidford-on-Avon", "Wellesbourne", "Kingsbury", "Whitnash", "Nationwide",
-      "East Midlands", "West Midlands" 
-    ]
-  };
+  const areasSchema = generateSchemaScript([
+    getOrganizationSchema(),
+    {
+      "@type": "WebPage",
+      "name": "Areas We Cover | Derbyshire Removals",
+      "description": "Explore the areas we service including Derby, Matlock, Chesterfield, Buxton and throughout the East and West Midlands.",
+      "url": "https://derbyshireremovals.com/areas-we-cover"
+    }
+  ]);
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Script 
-        id="areas-we-cover-schema"
+    <section>
+      <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        dangerouslySetInnerHTML={{ __html: areasSchema }}
       />
-      <Header />
-      
-      <main className="container mx-auto px-4 py-8 pt-52">
-        <section className="mb-12">
-          <h1 className="text-4xl font-bold text-primary mb-6">Areas We Cover</h1>
-          <p className="text-lg text-gray-700 mb-8">
-            With over 35 years of experience, Derbyshire Removals provides comprehensive moving services across the East and West Midlands, 
-            with additional coverage extending nationwide. Our local expertise and knowledge ensure a smooth and efficient moving experience.
+      <div className="min-h-screen bg-gray-100">
+        <Header />
+        
+        <main className="container mx-auto px-4 pt-52 pb-16">
+          <h1 className="text-4xl font-bold mb-8 text-[#071059]">Areas We Cover</h1>
+          
+          <p className="text-lg mb-8">
+            Derbyshire Removals provides professional moving services across the East and West Midlands. 
+            With local expertise in key locations, we ensure a smooth and efficient moving experience
+            wherever you're relocating to or from.
           </p>
-        </section>
-
-        {regions.map((region, index) => (
-          <section key={index} className="mb-12">
-            <h2 className="text-3xl font-semibold text-primary mb-6 flex items-center">
-              <MapPin className="mr-2" />
-              {region.name}
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {region.areas.map((area, areaIndex) => (
-                <div key={areaIndex} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                  <h3 className="text-xl font-semibold mb-4 text-primary">{area.shire}</h3>
-                  <ul className="grid grid-cols-2 gap-2">
-                    {area.towns.map((town, townIndex) => (
-                      <li key={townIndex} className="text-gray-600">{town}</li>
-                    ))}
-                  </ul>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {locations.map((location, index) => (
+              <Link href={location.link} key={index}>
+                <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                  <div className="flex items-center mb-3">
+                    <MapPin className="h-5 w-5 text-[#071059] mr-2" />
+                    <h2 className="text-xl font-semibold">{location.name}</h2>
+                  </div>
+                  <p className="text-gray-600 mb-4">{location.description}</p>
+                  <div className="text-[#071059] font-medium">Learn more →</div>
+                </div>
+              </Link>
+            ))}
+          </div>
+          
+          <div className="bg-white rounded-lg shadow-md p-8">
+            <h2 className="text-2xl font-semibold mb-6">Additional Coverage Areas</h2>
+            
+            <p className="mb-6">
+              Beyond our primary service locations, we also offer removal services to many other areas including:
+            </p>
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {[
+                "Nottingham", "Leicester", "Sheffield", "Birmingham", 
+                "Stoke-on-Trent", "Stafford", "Wolverhampton", "Coventry",
+                "Walsall", "Telford", "Ashbourne", "Belper",
+                "Ripley", "Long Eaton", "Ilkeston", "Swadlincote"
+              ].map((area, index) => (
+                <div key={index} className="flex items-center space-x-2">
+                  <MapPin className="h-4 w-4 text-[#071059]" />
+                  <span>{area}</span>
                 </div>
               ))}
             </div>
-          </section>
-        ))}
-
-        <section className="bg-white p-8 rounded-lg shadow-md mt-12">
-          <h2 className="text-2xl font-semibold text-primary mb-4">Beyond Our Core Areas</h2>
-          <p className="text-gray-700 mb-4">
-            While we specialize in the East and West Midlands, our services extend nationwide. Whether you're moving within our core areas
-            or planning a long-distance move, we have the expertise and resources to help you relocate smoothly and efficiently.
-          </p>
-          <p className="text-gray-700">
-            Contact us today to discuss your specific requirements and learn how we can assist with your move, regardless of location.
-          </p>
-        </section>
-      </main>
-
-      <GetInTouch />
-      <Footer />
-    </div>
+            
+            <div className="mt-8 text-center">
+              <p className="mb-4">
+                Don't see your location listed? We likely still cover it!
+              </p>
+              <Link 
+                href="/contact" 
+                className="inline-block bg-[#071059] text-white px-6 py-2 rounded-lg hover:bg-blue-800 transition-colors"
+              >
+                Contact Us to Confirm
+              </Link>
+            </div>
+          </div>
+        </main>
+        
+        <Footer />
+      </div>
+    </section>
   );
 };
 

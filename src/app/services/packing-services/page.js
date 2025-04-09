@@ -1,49 +1,9 @@
-
 import React from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { Package, Shield, Clock, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
-
-// Schema.org JSON-LD for Packing Services page
-const packingServicesSchema = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Service",
-      "serviceType": "Packing Service",
-      "name": "Professional Packing Services",
-      "provider": {
-        "@type": "MovingCompany",
-        "name": "Derbyshire Removals",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "48 Farmhouse Road",
-          "addressLocality": "Derby",
-          "postalCode": "DE24 3DB",
-          "addressCountry": "GB"
-        }
-      },
-      "areaServed": {
-        "@type": "GeoCircle",
-        "geoMidpoint": {
-          "@type": "GeoCoordinates",
-          "latitude": "52.8744186998816",
-          "longitude": "-1.487168677909595"
-        },
-        "geoRadius": "50000"
-      },
-      "description": "Professional packing services including high-quality materials, secure handling, and full insurance coverage for all your valuable items.",
-      "offers": {
-        "@type": "Offer",
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "priceCurrency": "GBP"
-        }
-      }
-    }
-  ]
-};
+import { generateSchemaScript, getServiceSchema } from '../../lib/schema';
 
 const PackingServices = () => {
   const packingFeatures = [
@@ -69,13 +29,20 @@ const PackingServices = () => {
     }
   ];
 
+  const packingServicesSchema = generateSchemaScript([
+    getServiceSchema(
+      "Professional Packing Services",
+      "Packing Service",
+      "Professional packing services including high-quality materials, secure handling, and full insurance coverage for all your valuable items."
+    )
+  ]);
+
   return (
     <section>
-      <div dangerouslySetInnerHTML={{ __html: `
-        <script type="application/ld+json">
-          ${JSON.stringify(packingServicesSchema)}
-        </script>
-      `}} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: packingServicesSchema }}
+      />
       <div className="min-h-screen bg-gray-100">
         <Header />
         <main className="container mx-auto px-4 pt-52 pb-24">

@@ -1,154 +1,131 @@
+
 import React from 'react';
-import { Shield, Clock, Building2, CheckCircle } from 'lucide-react';
-import Link from 'next/link';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import GetInTouch from '../components/GetInTouch';
+import { Shield, Clock, Lock, Building } from 'lucide-react';
+import Link from 'next/link';
+import { generateSchemaScript, getServiceSchema, getOrganizationSchema } from '../lib/schema';
 
 const Storage = () => {
   const storageFeatures = [
     {
-      icon: <Shield className="w-6 h-6 text-primary" />,
+      icon: <Shield className="h-6 w-6 text-[#071059]" />,
       title: "Secure Facilities",
-      description: "24/7 monitored storage units with advanced security systems"
+      description: "24/7 monitored facilities with advanced security systems"
     },
     {
-      icon: <Clock className="w-6 h-6 text-primary" />,
-      title: "Flexible Access",
-      description: "Convenient access hours to suit your schedule"
+      icon: <Clock className="h-6 w-6 text-[#071059]" />,
+      title: "Flexible Options",
+      description: "Short and long-term storage solutions to suit your needs"
     },
     {
-      icon: <Building2 className="w-6 h-6 text-primary" />,
+      icon: <Lock className="h-6 w-6 text-[#071059]" />,
+      title: "Climate Controlled",
+      description: "Protection from temperature and humidity fluctuations"
+    },
+    {
+      icon: <Building className="h-6 w-6 text-[#071059]" />,
       title: "Various Unit Sizes",
-      description: "From small lockers to large units for entire households"
-    },
-    {
-      icon: <CheckCircle className="w-6 h-6 text-primary" />,
-      title: "Climate Control",
-      description: "Temperature-controlled units to protect sensitive items"
+      description: "From small personal items to large furniture collections"
     }
   ];
 
-  const storageSchema = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Service",
-        "serviceType": "Storage Service",
-        "provider": {
-          "@type": "MovingCompany",
-          "name": "Derbyshire Removals",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Derby",
-            "addressRegion": "Derbyshire",
-            "addressCountry": "UK"
-          }
-        },
-        "areaServed": {
-          "@type": "GeoCircle",
-          "geoMidpoint": {
-            "@type": "GeoCoordinates",
-            "latitude": "52.8744186998816",
-            "longitude": "-1.487168677909595"
-          },
-          "geoRadius": "50000"
-        },
-        "description": "Professional storage solutions offering secure, climate-controlled units in various sizes for both short and long-term storage needs."
-      }
-    ]
-  };
+  const storageSchema = generateSchemaScript([
+    getOrganizationSchema(),
+    getServiceSchema(
+      "Secure Storage Solutions",
+      "Storage Service",
+      "Professional storage solutions with 24/7 security, climate control, and flexible terms for both short and long-term needs."
+    )
+  ]);
 
   return (
     <section>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(storageSchema) }}
+        dangerouslySetInnerHTML={{ __html: storageSchema }}
       />
       <div className="min-h-screen bg-gray-100">
         <Header />
-        <main className="container mx-auto px-4 pt-52 pb-24">
-          <h1 className="text-4xl font-bold mb-8 text-[#071059]">Professional Storage Solutions</h1>
+        
+        <main className="container mx-auto px-4 pt-52 pb-16">
+          <h1 className="text-4xl font-bold mb-8 text-[#071059]">Secure Storage Solutions</h1>
           
           <div className="mb-8">
             <img 
               src="/images/business/storage.jpg"
-              alt="Modern, secure storage facility with climate-controlled units"
+              alt="Secure storage facility with organized units and modern security features"
               className="w-full h-[400px] object-cover rounded-lg shadow-lg"
               loading="lazy"
             />
           </div>
-
-          <div className="bg-white rounded-lg shadow-md p-8 space-y-6">
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-[#071059] mb-4">Secure Storage for Every Need</h2>
-              <p className="text-gray-700 mb-4">
-                Whether you're moving house, renovating, or need extra space for your business, our storage solutions 
-                provide the perfect answer. With state-of-the-art security and flexible access options, you can trust 
-                us to keep your belongings safe and accessible.
-              </p>
-            </section>
-
-            <section className="grid md:grid-cols-2 gap-6 mb-8">
-              {storageFeatures.map((feature, index) => (
-                <div key={index} className="flex items-start space-x-4 p-4 bg-gray-50 rounded-lg">
+          
+          <p className="text-lg mb-8">
+            Whether you need temporary storage during a move or long-term solutions for excess items, 
+            our secure storage facilities offer the perfect solution. With flexible options and competitive rates, 
+            we ensure your belongings are safe and accessible when you need them.
+          </p>
+          
+          <div className="grid md:grid-cols-2 gap-6 mb-12">
+            {storageFeatures.map((feature, index) => (
+              <div key={index} className="bg-white p-6 rounded-lg shadow-md">
+                <div className="flex items-center mb-4">
                   {feature.icon}
-                  <div>
-                    <h3 className="font-semibold text-lg mb-2">{feature.title}</h3>
-                    <p className="text-gray-600">{feature.description}</p>
-                  </div>
+                  <h3 className="text-xl font-semibold ml-3">{feature.title}</h3>
                 </div>
-              ))}
-            </section>
-
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-[#071059] mb-4">Storage Options</h2>
-              <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                <li>Short-term storage during house moves</li>
-                <li>Long-term storage for decluttering</li>
-                <li>Business document and inventory storage</li>
-                <li>Student storage during holidays</li>
-                <li>Seasonal item storage (garden furniture, sports equipment)</li>
-              </ul>
-            </section>
-
-            <section className="bg-blue-50 p-6 rounded-lg">
-              <h2 className="text-2xl font-semibold text-[#071059] mb-4">Why Choose Our Storage Service?</h2>
-              <ul className="space-y-3">
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="w-5 h-5 text-green-600" />
-                  <span>Competitive rates with flexible terms</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="w-5 h-5 text-green-600" />
-                  <span>Professional advice on storage solutions</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="w-5 h-5 text-green-600" />
-                  <span>Clean and well-maintained facilities</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="w-5 h-5 text-green-600" />
-                  <span>Easy access and loading areas</span>
-                </li>
-              </ul>
-            </section>
-
-            <div className="mt-8 bg-white p-6 rounded-lg shadow">
-              <h2 className="text-2xl font-bold mb-4 text-[#071059]">Ready to Store Your Items?</h2>
-              <p className="mb-6">
-                Contact us today to discuss your storage requirements and find the perfect solution for your needs.
-              </p>
-              <Link 
-                href="/contact" 
-                className="inline-block bg-[#071059] text-white px-6 py-2 rounded-lg hover:bg-blue-800 transition-colors"
-              >
-                Contact Us
-              </Link>
-            </div>
+                <p className="text-gray-600">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+          
+          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
+            <h2 className="text-2xl font-semibold mb-4">Our Storage Options</h2>
+            <ul className="space-y-4">
+              <li className="flex items-start">
+                <div className="bg-[#071059] rounded-full p-1 mr-3 mt-1">
+                  <Shield className="h-4 w-4 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-lg">Short-Term Storage</h3>
+                  <p className="text-gray-600">Ideal for temporary needs during home moves or renovations</p>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <div className="bg-[#071059] rounded-full p-1 mr-3 mt-1">
+                  <Shield className="h-4 w-4 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-lg">Long-Term Storage</h3>
+                  <p className="text-gray-600">Perfect for seasonal items, business inventory, or downsizing</p>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <div className="bg-[#071059] rounded-full p-1 mr-3 mt-1">
+                  <Shield className="h-4 w-4 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-lg">Specialized Storage</h3>
+                  <p className="text-gray-600">Climate-controlled units for sensitive items like antiques, artwork, and electronics</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          
+          <div className="bg-[#071059] text-white p-8 rounded-lg">
+            <h2 className="text-2xl font-bold mb-4">Need Storage Solutions?</h2>
+            <p className="mb-6">
+              Contact us today to discuss your storage requirements and find the perfect solution 
+              tailored to your needs.
+            </p>
+            <Link 
+              href="/contact" 
+              className="inline-block bg-white text-[#071059] px-6 py-2 rounded-lg hover:bg-gray-100 transition-colors"
+            >
+              Contact Us
+            </Link>
           </div>
         </main>
-        <GetInTouch />
+        
         <Footer />
       </div>
     </section>

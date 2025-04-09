@@ -4,43 +4,23 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { Button } from "../../components/ui/button";
 import Link from 'next/link';
+import { generateSchemaScript, getServiceSchema } from '../../lib/schema';
 
 const LastMinuteRemovals = () => {
-  // Schema.org data for last minute removals service
-  const lastMinuteRemovalsSchema = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Service",
-        "name": "Last Minute Removals",
-        "provider": {
-          "@type": "MovingCompany",
-          "name": "Derbyshire Removals",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "48 Farmhouse Road",
-            "addressLocality": "Derby",
-            "postalCode": "DE24 3DB",
-            "addressCountry": "GB"
-          }
-        },
-        "description": "Emergency and last-minute removal services for unexpected moves, available 24/7 across Derby and surrounding areas.",
-        "areaServed": ["Derby", "Derbyshire", "East Midlands"],
-        "serviceType": "Emergency Removals",
-        "availableChannel": {
-          "@type": "ServiceChannel",
-          "serviceUrl": "https://derbyshireremovals.com/services/last-minute-removals",
-          "servicePhone": "+441332314312"
-        }
-      }
-    ]
-  };
+  const lastMinuteRemovalsSchema = generateSchemaScript([
+    getServiceSchema(
+      "Last Minute Removals",
+      "Emergency Removals",
+      "Emergency and last-minute removal services for unexpected moves, available 24/7 across Derby and surrounding areas.",
+      ["Derby", "Derbyshire", "East Midlands"]
+    )
+  ]);
 
   return (
     <section>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(lastMinuteRemovalsSchema) }}
+        dangerouslySetInnerHTML={{ __html: lastMinuteRemovalsSchema }}
       />
       <div className="min-h-screen bg-gray-100">
         <Header />
