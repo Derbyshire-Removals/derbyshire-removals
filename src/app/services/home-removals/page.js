@@ -1,37 +1,24 @@
-
 import React from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Link from 'next/link';
+import { generateSchemaScript, getServiceSchema } from '../../lib/schema';
 
 const HomeRemovals = () => {
-  const homeRemovalsSchema = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Service",
-        "name": "House Removals Services",
-        "provider": {
-          "@type": "MovingCompany",
-          "name": "Derbyshire Removals",
-          "address": {
-            "@type": "PostalAddress",
-            "addressRegion": "Derbyshire",
-            "addressCountry": "UK"
-          }
-        },
-        "description": "Professional house removal services with experienced and fully trained teams",
-        "areaServed": "Derby, Matlock, Chesterfield, Ashbourne, and throughout the East and West Midlands",
-        "serviceType": "House Removals"
-      }
-    ]
-  };
+  const homeRemovalsSchema = generateSchemaScript([
+    getServiceSchema(
+      "House Removals Services", 
+      "House Removals", 
+      "Professional house removal services with experienced and fully trained teams", 
+      "Derby, Matlock, Chesterfield, Ashbourne, and throughout the East and West Midlands"
+    )
+  ]);
 
   return (
     <section>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeRemovalsSchema) }}
+        dangerouslySetInnerHTML={{ __html: homeRemovalsSchema }}
       />
       <div className="min-h-screen bg-gray-100">
         <Header />
