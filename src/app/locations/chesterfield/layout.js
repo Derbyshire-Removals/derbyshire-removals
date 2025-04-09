@@ -11,6 +11,7 @@ export const metadata = {
     description: "Expert local movers with comprehensive knowledge of Chesterfield. Residential and commercial moving services with competitive rates.",
     url: "https://derbyshireremovals.com/locations/chesterfield",
     type: "website",
+    images: ["/images/business/3.jpg"],
   }
 };
 

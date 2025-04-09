@@ -11,6 +11,7 @@ export const metadata = {
     description: "Contact our expert team for professional moving services in Derbyshire and across the Midlands. Request your free quote today!",
     url: "https://derbyshireremovals.com/contact",
     type: "website",
+    images: ["/images/business/12.jpg"],
   },
 };
 

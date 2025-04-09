@@ -11,6 +11,7 @@ export const metadata = {
     description: "Learn how we use cookies and analytics to improve your browsing experience at Derbyshire Removals.",
     url: "https://derbyshireremovals.com/privacy-policy",
     type: "website",
+    images: ["/images/business/1.jpg"],
   },
 };
 

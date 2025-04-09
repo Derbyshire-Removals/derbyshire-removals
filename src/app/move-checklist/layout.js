@@ -13,6 +13,7 @@ export const metadata = {
     description: "Comprehensive moving house checklist with expert tips to ensure a stress-free move from start to finish.",
     url: "https://derbyshireremovals.com/move-checklist",
     type: "website",
+    images: ["/images/business/13.jpg"],
   }
 };
 

@@ -11,6 +11,7 @@ export const metadata = {
     description: "Expert local movers with comprehensive knowledge of Loughborough. Residential and commercial moving services with competitive rates.",
     url: "https://derbyshireremovals.com/locations/loughborough",
     type: "website",
+    images: ["/images/business/8.jpg"],
   }
 };
 

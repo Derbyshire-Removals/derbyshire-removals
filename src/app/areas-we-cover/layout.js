@@ -11,6 +11,7 @@ export const metadata = {
     description: "Professional removals serving Derby, Matlock, Chesterfield, Nottingham, Birmingham, Leicester and beyond since 1988.",
     url: "https://derbyshireremovals.com/areas-we-cover",
     type: "website",
+    images: ["/images/business/van.jpg"],
   }
 };
 

@@ -11,6 +11,7 @@ export const metadata = {
     description: "Professional packing services including high-quality materials, secure handling, and full insurance coverage for all your valuable items.",
     url: "https://derbyshireremovals.com/services/packing-services",
     type: "website",
+    images: ["/images/business/packaging.jpg"],
   },
 };
 

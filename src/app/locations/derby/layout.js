@@ -13,6 +13,7 @@ export const metadata = {
     description: "Professional removal services in Derby with local expertise. Reliable moving solutions for houses and businesses at competitive rates.",
     url: "https://derbyshireremovals.com/locations/derby",
     type: "website",
+    images: ["/images/business/6.jpg"],
   }
 };
 

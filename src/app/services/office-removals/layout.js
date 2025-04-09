@@ -11,6 +11,7 @@ export const metadata = {
     description: "Professional office relocation services with minimal business disruption",
     url: "https://derbyshireremovals.com/services/office-removals",
     type: "website",
+    images: ["/images/business/3.jpg"],
   }
 };
 

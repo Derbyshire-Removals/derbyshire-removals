@@ -11,6 +11,7 @@ export const metadata = {
     description: "Our comprehensive terms and conditions for removal services, storage solutions, and business operations.",
     url: "https://derbyshireremovals.com/terms-and-conditions",
     type: "website",
+    images: ["/images/business/2.jpg"],
   },
 };
 

@@ -11,6 +11,7 @@ export const metadata = {
     description: "Specialist antique and fine art removal services in Derbyshire. Expert handling and climate-controlled transportation for your valuable items.",
     url: "https://derbyshireremovals.com/services/antique-and-fine-arts",
     type: "website",
+    images: ["/images/business/4.jpg"],
   }
 };
 

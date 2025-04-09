@@ -11,6 +11,7 @@ export const metadata = {
     description: "Read what our clients say about our trusted moving services across Derby, Matlock, Chesterfield, and surrounding areas.",
     url: "https://derbyshireremovals.com/testimonials",
     type: "website",
+    images: ["/images/business/4.jpg"],
   },
 };
 

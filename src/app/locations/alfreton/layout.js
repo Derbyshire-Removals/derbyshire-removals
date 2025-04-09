@@ -11,6 +11,7 @@ export const metadata = {
     description: "Expert local movers with comprehensive knowledge of Alfreton. Residential and commercial moving services with competitive rates.",
     url: "https://derbyshireremovals.com/locations/alfreton",
     type: "website",
+    images: ["/images/business/5.jpg"],
   }
 };
 
