@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -45,8 +44,8 @@ const FAQ = () => {
       answer: "Yes, we recommend emptying all furniture before moving day. Drawers and cabinets should be empty to reduce weight, prevent damage to the furniture, and avoid items shifting during transport."
     },
     {
-      question: "Can you move pets or plants?",
-      answer: "We recommend transporting plants and pets yourself where possible. Plants can be damaged during transport, and pets may become stressed. If this isn't possible, please discuss your specific requirements with us beforehand."
+      question: "Can you move pets?",
+      answer: "We recommend transporting pets yourself where possible as pets may become stressed during the moving process. If this isn't possible, please discuss your specific requirements with us beforehand."
     },
     {
       question: "What forms of payment do you accept?",
