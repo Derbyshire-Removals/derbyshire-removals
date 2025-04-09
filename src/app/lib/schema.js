@@ -52,6 +52,7 @@ export const getLocationMovingCompanySchema = (location, phone, addressData = {}
   "name": `Derbyshire Removals - ${location}`,
   "image": "https://derbyshireremovals.com/images/van.jpg",
   "description": `Professional removal services in ${location}`,
+  "priceRange": "££",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": location,
@@ -75,11 +76,17 @@ export const getServiceSchema = (serviceName, serviceType, description, areas = 
   "provider": {
     "@type": "MovingCompany",
     "name": "Derbyshire Removals",
+    "image": "https://derbyshireremovals.com/images/van.jpg",
+    "priceRange": "££",
+    "telephone": ["+441332314312", "+441246922192", "+443335677001", "+447425557000"],
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "48 Farmhouse Road",
+      "addressLocality": "Derby",
       "addressRegion": "Derbyshire",
-      "addressCountry": "UK"
-    }
+      "postalCode": "DE24 3DB",
+      "addressCountry": "GB"
+    },
   },
   "description": description,
   "areaServed": areas,
