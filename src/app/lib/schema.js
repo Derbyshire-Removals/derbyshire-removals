@@ -123,6 +123,8 @@ export const getContactPageSchema = () => {
       "name": organization.name,
       "legalName": "Nexus Deliveries Ltd trading as Derbyshire Removals",
       "url": organization.url,
+      "image": organization.image,
+      "logo": organization.logo,
       "email": organization.email,
       "telephone": organization.telephone[0],
       "contactPoint": [
