@@ -1,4 +1,3 @@
-
 "use client"
 
 import React from 'react';
@@ -11,60 +10,7 @@ import { Button } from "../components/ui/button"
 import { Form } from "../components/ui/form"
 import { Phone, Mail, MessageCircle, MapPin, Facebook, Instagram } from "lucide-react"
 import ContactFormFields from '../components/ContactFormFields';
-
-// Schema.org JSON-LD for Contact Page
-const schemaData = {
-  "@context": "https://schema.org",
-  "@type": "ContactPage",
-  "url": "https://derbyshireremovals.com/contact",
-  "name": "Contact - Derbyshire Removals",
-  "mainEntity": {
-    "@type": "Organization",
-    "name": "Derbyshire Removals",
-    "legalName": "Nexus Deliveries Ltd trading as Derbyshire Removals",
-    "url": "https://derbyshireremovals.com",
-    "email": "info@derbyshireremovals.com",
-    "telephone": "0333 567 7001",
-    "contactPoint": [
-      {
-        "@type": "ContactPoint",
-        "telephone": "0333 567 7001",
-        "contactType": "customer service",
-        "areaServed": "GB"
-      },
-      {
-        "@type": "ContactPoint",
-        "telephone": "01332 314312",
-        "contactType": "Derby",
-        "areaServed": "GB"
-      },
-      {
-        "@type": "ContactPoint",
-        "telephone": "01246 922192",
-        "contactType": "Chesterfield",
-        "areaServed": "GB"
-      },
-      {
-        "@type": "ContactPoint",
-        "telephone": "07425557000",
-        "contactType": "mobile",
-        "areaServed": "GB"
-      }
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "48 Farmhouse Road",
-      "addressLocality": "Derby",
-      "postalCode": "DE24 3DB",
-      "addressCountry": "GB"
-    },
-    "sameAs": [
-      "https://www.facebook.com/profile.php?id=61572796415223",
-      "https://www.instagram.com/derbyshireremovals/",
-      "https://apps.derbyshire.gov.uk/applications/trusted-trader/profile.asp?tid=56236"
-    ]
-  }
-};
+import { getContactPageSchema } from '../lib/schema';
 
 const schema = z.object({
   access_key: z.string().optional(),
@@ -145,11 +91,13 @@ const ContactForm = () => {
 };
 
 const Contact = () => {
+  const contactPageSchema = getContactPageSchema();
+  
   return (
     <div className="min-h-screen bg-gray-100">
       <div dangerouslySetInnerHTML={{ __html: `
         <script type="application/ld+json">
-          ${JSON.stringify(schemaData)}
+          ${JSON.stringify(contactPageSchema)}
         </script>
       `}} />
       <Header />

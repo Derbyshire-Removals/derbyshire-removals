@@ -109,6 +109,54 @@ export const getServiceSchema = (serviceName, serviceType, description, areas = 
   "serviceType": serviceType
 });
 
+// For contact page schema
+export const getContactPageSchema = () => {
+  const organization = getOrganizationSchema();
+  
+  return {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "url": "https://derbyshireremovals.com/contact",
+    "name": "Contact - Derbyshire Removals",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": organization.name,
+      "legalName": "Nexus Deliveries Ltd trading as Derbyshire Removals",
+      "url": organization.url,
+      "email": organization.email,
+      "telephone": organization.telephone[0],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+443335677001",
+          "contactType": "customer service",
+          "areaServed": "GB"
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+441332314312",
+          "contactType": "Derby",
+          "areaServed": "GB"
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+441246922192",
+          "contactType": "Chesterfield",
+          "areaServed": "GB"
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+447425557000",
+          "contactType": "mobile",
+          "areaServed": "GB"
+        }
+      ],
+      "address": organization.address,
+      "sameAs": organization.sameAs
+    }
+  };
+};
+
 // Helper function to generate complete schema with context and graph
 export const generateSchemaScript = (schemaObjects) => {
   const schema = {
@@ -118,4 +166,3 @@ export const generateSchemaScript = (schemaObjects) => {
   
   return JSON.stringify(schema);
 };
-
