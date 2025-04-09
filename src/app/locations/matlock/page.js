@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { MapPin, CheckCircle } from 'lucide-react';
 import Header from '../../components/Header';
@@ -16,7 +17,11 @@ const Matlock = () => {
   ];
 
   const matlockSchema = generateSchemaScript([
-    getLocationMovingCompanySchema("Matlock", "+443335677001")
+    getLocationMovingCompanySchema("Matlock", "+443335677001", {
+      latitude: 53.1391, 
+      longitude: -1.5554,
+      region: "Derbyshire"
+    })
   ]);
 
   return (

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { MapPin, CheckCircle } from 'lucide-react';
 import Header from '../../components/Header';
@@ -17,7 +18,11 @@ const Chesterfield = () => {
 
   // Schema.org data for Chesterfield location page
   const chesterfieldSchema = generateSchemaScript([
-    getLocationMovingCompanySchema("Chesterfield", "+441246922192")
+    getLocationMovingCompanySchema("Chesterfield", "+441246922192", {
+      latitude: 53.2359, 
+      longitude: -1.4241,
+      region: "Derbyshire"
+    })
   ]);
 
   return (

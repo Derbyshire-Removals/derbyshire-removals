@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { MapPin, CheckCircle } from 'lucide-react';
 import Header from '../../components/Header';
@@ -17,6 +18,8 @@ const Loughborough = () => {
 
   const loughboroughSchema = generateSchemaScript([
     getLocationMovingCompanySchema("Loughborough", "+443335677001", {
+      latitude: 52.7730, 
+      longitude: -1.2056,
       region: "Leicestershire"
     })
   ]);

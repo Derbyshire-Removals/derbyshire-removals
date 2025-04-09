@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { MapPin, CheckCircle } from 'lucide-react';
 import Header from '../../components/Header';
@@ -16,7 +17,11 @@ const Alfreton = () => {
   ];
 
   const alfretoneSchema = generateSchemaScript([
-    getLocationMovingCompanySchema("Alfreton", "+443335677001")
+    getLocationMovingCompanySchema("Alfreton", "+443335677001", {
+      latitude: 53.0969, 
+      longitude: -1.3875,
+      region: "Derbyshire"
+    })
   ]);
 
   return (

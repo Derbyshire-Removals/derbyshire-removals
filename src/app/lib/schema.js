@@ -47,27 +47,43 @@ export const getOrganizationSchema = () => ({
 });
 
 // For location pages
-export const getLocationMovingCompanySchema = (location, phone, addressData = {}) => ({
-  "@type": "MovingCompany",
-  "name": `Derbyshire Removals - ${location}`,
-  "image": "https://derbyshireremovals.com/images/van.jpg",
-  "description": `Professional removal services in ${location}`,
-  "priceRange": "££",
-  "address": {
+export const getLocationMovingCompanySchema = (location, phone, options = {}) => {
+  // Use the main business address but indicate service area
+  const mainAddress = {
     "@type": "PostalAddress",
-    "addressLocality": location,
-    "addressRegion": addressData.region || "Derbyshire",
-    "addressCountry": "GB",
-    ...(addressData.streetAddress && { "streetAddress": addressData.streetAddress }),
-    ...(addressData.postalCode && { "postalCode": addressData.postalCode })
-  },
-  ...(addressData.geo && { 
-    "geo": addressData.geo
-  }),
-  "url": `https://derbyshireremovals.com/locations/${location.toLowerCase().replace(/\s+/g, '-')}`,
-  "telephone": phone || "+443335677001",
-  "areaServed": location
-});
+    "streetAddress": "48 Farmhouse Road",
+    "addressLocality": "Derby",
+    "addressRegion": "Derbyshire",
+    "postalCode": "DE24 3DB",
+    "addressCountry": "GB"
+  };
+  
+  // Build the schema with appropriate location-specific data
+  return {
+    "@type": "MovingCompany",
+    "name": `Derbyshire Removals - ${location}`,
+    "image": "https://derbyshireremovals.com/images/van.jpg",
+    "description": `Professional removal services in ${location}`,
+    "priceRange": "££",
+    "address": mainAddress,
+    "url": `https://derbyshireremovals.com/locations/${location.toLowerCase().replace(/\s+/g, '-')}`,
+    "telephone": phone || "+443335677001",
+    "serviceArea": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": options.latitude || 52.9225, // Default to Derby
+        "longitude": options.longitude || -1.4746
+      },
+      "geoRadius": "40 mi" // Service radius from location
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": location,
+      ...(options.region && { "containedIn": options.region })
+    }
+  };
+};
 
 // For service pages
 export const getServiceSchema = (serviceName, serviceType, description, areas = "Derbyshire and surrounding areas") => ({
@@ -102,3 +118,4 @@ export const generateSchemaScript = (schemaObjects) => {
   
   return JSON.stringify(schema);
 };
+

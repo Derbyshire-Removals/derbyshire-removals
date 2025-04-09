@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { MapPin, CheckCircle } from 'lucide-react';
 import Header from '../../components/Header';
@@ -16,7 +17,11 @@ const Buxton = () => {
   ];
 
   const buxtonSchema = generateSchemaScript([
-    getLocationMovingCompanySchema("Buxton", "+443335677001")
+    getLocationMovingCompanySchema("Buxton", "+443335677001", {
+      latitude: 53.2594, 
+      longitude: -1.9145,
+      region: "Derbyshire"
+    })
   ]);
 
   return (
