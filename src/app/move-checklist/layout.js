@@ -1,4 +1,6 @@
 
+import { generateSchemaScript, getOrganizationSchema } from '../lib/schema';
+
 export const metadata = {
   title: "Complete House Moving Checklist | Derbyshire Removals Guide",
   description: "Comprehensive moving house checklist to ensure a stress-free move. Get organised with our expert tips for before, during, and after your move.",

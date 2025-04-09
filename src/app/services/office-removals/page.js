@@ -3,6 +3,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { Building2, Clock, CheckCircle, Package, Truck, Shield } from 'lucide-react';
 import Link from 'next/link';
+import { generateSchemaScript, getServiceSchema } from '../../lib/schema';
 
 const OfficeRemovals = () => {
   const features = [
@@ -38,33 +39,20 @@ const OfficeRemovals = () => {
     }
   ];
 
-  const officeRemovalsSchema = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Service",
-        "name": "Office Removals Services",
-        "provider": {
-          "@type": "MovingCompany",
-          "name": "Derbyshire Removals",
-          "address": {
-            "@type": "PostalAddress",
-            "addressRegion": "Derbyshire",
-            "addressCountry": "UK"
-          }
-        },
-        "description": "Professional office relocation services with minimal business disruption",
-        "areaServed": "Derbyshire and surrounding areas",
-        "serviceType": "Office Removals"
-      }
-    ]
-  };
+  const officeRemovalsSchema = generateSchemaScript([
+    getServiceSchema(
+      "Office Removals Services",
+      "Office Removals",
+      "Professional office relocation services with minimal business disruption",
+      "Derbyshire and surrounding areas"
+    )
+  ]);
 
   return (
     <section>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(officeRemovalsSchema) }}
+        dangerouslySetInnerHTML={{ __html: officeRemovalsSchema }}
       />
       <div className="min-h-screen bg-gray-100">
         <Header />

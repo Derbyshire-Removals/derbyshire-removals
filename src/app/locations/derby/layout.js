@@ -1,4 +1,6 @@
 
+import { generateSchemaScript, getLocationMovingCompanySchema } from '../../lib/schema';
+
 export const metadata = {
   title: "Professional Removal Services in Derby | Derbyshire Removals",
   description: "Professional removal services in Derby with local expertise. Reliable moving solutions for houses and businesses at competitive rates.",

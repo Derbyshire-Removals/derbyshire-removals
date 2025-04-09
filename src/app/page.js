@@ -8,50 +8,11 @@ import AreasCovered from './components/AreasCovered';
 import HowWeWork from './components/HowWeWork';
 import Footer from './components/Footer';
 import HomeReviews from './components/HomeReviews';
+import { generateSchemaScript, getOrganizationSchema } from './lib/schema';
 
 export default function Home() {
   // Define schema.org JSON-LD data
-  const organizationSchema = {
-    "@type": "Organization",
-    "name": "Derbyshire Removals",
-    "url": "https://derbyshireremovals.com",
-    "logo": "https://derbyshireremovals.com/images/logo.png",
-    "image": "https://derbyshireremovals.com/images/van.png",
-    "telephone": ["+441332314312", "+441246922192", "+443335677001", "+447425557000"],
-    "email": "info@derbyshireremovals.com",
-    "foundingDate": "1988",
-    "description": "Professional removal services in Derbyshire since 1988, offering house and office removals, packing, and storage solutions.",
-    "areaServed": [
-          "Derby",
-          "Matlock",
-          "Alfreton",
-          "Chesterfield",
-          "Buxton",
-          "Mansfield",
-          "Loughborough",
-          "East Midlands",
-          "West Midlands",
-          "Nationwide"
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "48 Farmhouse Road",
-      "addressLocality": "Derby",
-      "addressRegion": "Derbyshire",
-      "postalCode": "DE24 3DB",
-      "addressCountry": "GB"
-    },
-    "memberOf": {
-      "@type": "Organization",
-      "name": "Derbyshire's Trusted Trader scheme",
-      "url": "https://apps.derbyshire.gov.uk/applications/trusted-trader/profile.asp?tid=56236"
-    },
-    sameAs: [
-      "https://www.facebook.com/profile.php?id=61572796415223",
-      "https://www.instagram.com/derbyshireremovals/",
-      "https://apps.derbyshire.gov.uk/applications/trusted-trader/profile.asp?tid=56236",
-    ],
-  };
+  const organizationSchema = getOrganizationSchema();
 
   const localBusinessSchema = {
     "@type": "MovingCompany",
@@ -145,23 +106,20 @@ export default function Home() {
     "description": "Professional removal services in Derbyshire since 1988."
   };
 
-  // Combine all schemas using @graph
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@graph": [
-      organizationSchema,
-      localBusinessSchema,
-      serviceSchema,
-      ratingSchema,
-      websiteSchema
-    ]
-  };
+  // Generate the complete schema using our helper function
+  const jsonLdString = generateSchemaScript([
+    organizationSchema,
+    localBusinessSchema,
+    serviceSchema,
+    ratingSchema,
+    websiteSchema
+  ]);
 
   return (
     <section>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: jsonLdString }}
       />
       <div className="min-h-screen">
         <Header />

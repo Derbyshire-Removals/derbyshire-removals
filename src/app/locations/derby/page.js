@@ -3,50 +3,36 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import GetInTouch from '../../components/GetInTouch';
 import { MapPin, CheckCircle } from 'lucide-react';
+import { generateSchemaScript, getLocationMovingCompanySchema } from '../../lib/schema';
 
 const Derby = () => {
   const services = [
     "House Removals",
     "Office Relocations",
-    "Packing Services",
+    "Packing Services", 
     "Storage Solutions",
     "Student Moves",
     "Single Item Delivery"
   ];
 
-  // Schema.org data for Derby location page
-  const derbySchema = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "MovingCompany",
-        "name": "Derbyshire Removals - Derby",
-        "image": "https://derbyshireremovals.com/images/van.jpg",
-        "description": "Professional removal services in Derby",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "48 Farmhouse Road",
-          "addressLocality": "Derby",
-          "postalCode": "DE24 3DB",
-          "addressCountry": "GB"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": "52.8744186998816",
-          "longitude": "-1.487168677909595"
-        },
-        "url": "https://derbyshireremovals.com/locations/derby",
-        "telephone": "+441332314312",
-        "areaServed": "Derby"
+  // Derby has more detailed address and geo data
+  const derbySchema = generateSchemaScript([
+    getLocationMovingCompanySchema("Derby", "+441332314312", {
+      streetAddress: "48 Farmhouse Road",
+      postalCode: "DE24 3DB",
+      geo: {
+        "@type": "GeoCoordinates",
+        "latitude": "52.8744186998816",
+        "longitude": "-1.487168677909595"
       }
-    ]
-  };
+    })
+  ]);
 
   return (
     <section>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(derbySchema) }}
+        dangerouslySetInnerHTML={{ __html: derbySchema }}
       />
       <div className="min-h-screen bg-gray-100">
         <Header />

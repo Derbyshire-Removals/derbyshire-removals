@@ -1,4 +1,6 @@
 
+import { generateSchemaScript, getLocationMovingCompanySchema } from '../../lib/schema';
+
 export const metadata = {
   title: "Expert Removal Services in Buxton | Derbyshire Removals",
   description: "Trusted removal services in Buxton. Local expertise and competitive rates for house and business moves. Professional and reliable solutions.",

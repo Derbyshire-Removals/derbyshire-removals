@@ -3,6 +3,7 @@ import { MapPin, CheckCircle } from 'lucide-react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import GetInTouch from '../../components/GetInTouch';
+import { generateSchemaScript, getLocationMovingCompanySchema } from '../../lib/schema';
 
 const Buxton = () => {
   const services = [
@@ -14,32 +15,15 @@ const Buxton = () => {
     "Single Item Delivery"
   ];
 
-  const buxtonSchema = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "MovingCompany",
-        "name": "Derbyshire Removals - Buxton",
-        "image": "https://derbyshireremovals.com/images/van.jpg",
-        "description": "Professional removal services in Buxton",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Buxton",
-          "addressRegion": "Derbyshire",
-          "addressCountry": "GB"
-        },
-        "url": "https://derbyshireremovals.com/locations/buxton",
-        "telephone": "+443335677001",
-        "areaServed": "Buxton"
-      }
-    ]
-  };
+  const buxtonSchema = generateSchemaScript([
+    getLocationMovingCompanySchema("Buxton", "+443335677001")
+  ]);
 
   return (
     <section>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(buxtonSchema) }}
+        dangerouslySetInnerHTML={{ __html: buxtonSchema }}
       />
       <div className="min-h-screen bg-gray-100">
         <Header />
