@@ -90,12 +90,23 @@ const ContactForm = () => {
 const Hero = () => {
   return (
     <section 
-      className="relative bg-cover bg-center py-20 mt-[145px]" 
-      style={{ backgroundImage: "url('/images/van.jpg')" }}
+      className="relative py-20 mt-[145px]" 
+      style={{
+        backgroundImage: "none", /* Reset default background */
+        background: "linear-gradient(to right, #071059 0%, #1723ca 100%)"
+      }}
       role="banner"
       aria-label="Professional removals in Derbyshire banner"
     >
-      <div className="absolute inset-0 bg-black opacity-50"></div>
+      {/* Desktop background image - hidden on mobile */}
+      <div 
+        className="absolute inset-0 hidden md:block bg-center bg-cover"
+        style={{ backgroundImage: "url('/images/van.jpg')" }}
+      ></div>
+      
+      {/* Dark overlay only for desktop */}
+      <div className="absolute inset-0 hidden md:block bg-black opacity-50"></div>
+      
       <div className="container mx-auto px-4 flex flex-wrap items-center justify-center relative z-10">
         <div className="w-full lg:w-1/2 mb-10 lg:mb-0 text-white text-center">
           <h1 className="text-4xl font-bold mb-4">Professional removals in Derbyshire</h1>
