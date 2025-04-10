@@ -93,7 +93,7 @@ const Hero = () => {
       className="relative py-20 mt-[145px]" 
       style={{
         backgroundImage: "none", /* Reset default background */
-        background: "linear-gradient(to right, #071059 0%, #1723ca 100%)"
+        background: "linear-gradient(to right, #071059 0%, #0a0d29 100%)"
       }}
       role="banner"
       aria-label="Professional removals in Derbyshire banner"
