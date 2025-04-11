@@ -114,9 +114,10 @@ const Hero = () => {
           <div className="flex justify-center items-center mt-8">
             <a href="https://apps.derbyshire.gov.uk/applications/trusted-trader/profile.asp?tid=56236">
               <img
-                src="/images/derbyshire-trusted-trader-logo.gif" 
+                src="/images/derbyshire-trusted-trader-logo.png" 
                 alt="Derbyshire County Council Trusted Trader Certification Badge" 
                 className="h-24 w-auto"
+                loading="lazy"
               />
             </a>
           </div>

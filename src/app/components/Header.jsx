@@ -23,7 +23,8 @@ const Header = () => {
               <img 
                 src="/images/logo.png" 
                 alt="Derbyshire Removals Company Logo - Professional Moving Services Since 1988" 
-                className="h-20 w-auto" 
+                className="h-20 w-auto"
+                loading="lazy"
               />
             </Link>
             
