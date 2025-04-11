@@ -1,7 +1,7 @@
 
 "use client";
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -88,27 +88,6 @@ const ContactForm = () => {
 };
 
 const Hero = () => {
-  // Use useState and useEffect to defer background image loading
-  const [isDesktop, setIsDesktop] = useState(false);
-  
-  useEffect(() => {
-    // Check if we're on the client side
-    if (typeof window !== 'undefined') {
-      // Set initial value
-      setIsDesktop(window.innerWidth >= 768);
-      
-      // Add resize listener
-      const handleResize = () => {
-        setIsDesktop(window.innerWidth >= 768);
-      };
-      
-      window.addEventListener('resize', handleResize);
-      
-      // Cleanup
-      return () => window.removeEventListener('resize', handleResize);
-    }
-  }, []);
-  
   return (
     <section 
       className="relative py-20 mt-[145px]" 
@@ -119,18 +98,14 @@ const Hero = () => {
       role="banner"
       aria-label="Professional removals in Derbyshire banner"
     >
-      {/* Desktop background image - hidden on mobile and loaded conditionally */}
-      {isDesktop && (
-        <div 
-          className="absolute inset-0 hidden md:block bg-center bg-cover"
-          style={{ backgroundImage: "url('/images/van.jpg')" }}
-        ></div>
-      )}
+      {/* Desktop background image - hidden on mobile */}
+      <div 
+        className="absolute inset-0 hidden md:block bg-center bg-cover"
+        style={{ backgroundImage: "url('/images/van.jpg')" }}
+      ></div>
       
       {/* Dark overlay only for desktop */}
-      {isDesktop && (
-        <div className="absolute inset-0 hidden md:block bg-black opacity-50"></div>
-      )}
+      <div className="absolute inset-0 hidden md:block bg-black opacity-50"></div>
       
       <div className="container mx-auto px-4 flex flex-wrap items-center justify-center relative z-10">
         <div className="w-full lg:w-1/2 mb-10 lg:mb-0 text-white text-center">
@@ -142,7 +117,6 @@ const Hero = () => {
                 src="/images/derbyshire-trusted-trader-logo.gif" 
                 alt="Derbyshire County Council Trusted Trader Certification Badge" 
                 className="h-24 w-auto"
-                loading="lazy"
               />
             </a>
           </div>

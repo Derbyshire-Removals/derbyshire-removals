@@ -1,6 +1,5 @@
 
 import "./globals.css";
-import Script from "next/script";
 
 export const metadata = {
   title: "Derbyshire Removals: Trusted House & Office Moving Experts",
@@ -37,18 +36,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* Preconnect to Google domains to speed up analytics loading */}
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://www.google-analytics.com" />
+        {/* Google tag script has been moved to the bottom of the body tag */}
       </head>
       <body>
         {children}
         
-        {/* Google tag (gtag.js) - using inline script for static export compatibility */}
-        {/* This script is conditionally loaded only in production environment */}
-        <Script
-          id="google-analytics"
-          strategy="afterInteractive"
+        {/* Google tag (gtag.js) - moved to the bottom of the body for better performance */}
+        <script
           dangerouslySetInnerHTML={{
             __html: `
               if (window.location.hostname === 'derbyshireremovals.com') {
@@ -60,10 +54,7 @@ export default function RootLayout({ children }) {
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
-                gtag('config', 'G-TGVG5CNLD4', {
-                  'page_path': window.location.pathname,
-                  'send_page_view': true
-                });
+                gtag('config', 'G-TGVG5CNLD4');
               } else {
                 console.log('Google Analytics disabled in development');
               }
