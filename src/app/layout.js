@@ -36,7 +36,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* Google tag (gtag.js) - only in production */}
+        {/* Google tag script has been moved to the bottom of the body tag */}
+      </head>
+      <body>
+        {children}
+        
+        {/* Google tag (gtag.js) - moved to the bottom of the body for better performance */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -56,9 +61,6 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
-      </head>
-      <body>
-        {children}
       </body>
     </html>
   );
