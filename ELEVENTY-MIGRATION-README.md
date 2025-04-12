@@ -25,11 +25,17 @@ We've made significant progress in migrating your Next.js/React website to Eleve
      - House Removals
      - Office Removals
      - Last Minute Removals
+     - Packing Services
+     - Antique and Fine Arts
    - Location pages:
      - Derby
+     - Chesterfield
+     - Matlock
    - Utility pages:
      - FAQ
      - Testimonials
+     - Terms and Conditions
+     - Privacy Policy
 
 4. **Migration Tools**:
    - Created a migration script to automate the process
@@ -51,13 +57,9 @@ To see the current state of the Eleventy site:
 
 To complete the migration, the following tasks remain:
 
-1. **Migrate remaining pages**:
-   - Additional service pages:
-     - Packing Services
-     - Antique and Fine Arts
-   - Additional location pages:
-     - Chesterfield, Matlock, etc.
-   - Legal pages (Terms and Conditions, Privacy Policy)
+1. **Set up deployment**:
+   - Configure GitHub Pages deployment
+   - Test the deployment process
 
 2. **Copy and optimize assets**:
    - Transfer images and other media

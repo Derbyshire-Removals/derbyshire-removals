@@ -20,18 +20,13 @@ We've set up the foundation for migrating your Next.js/React website to Eleventy
 
 ## What Needs to Be Done
 
-### 1. Complete Page Migration
+### 1. Deployment Setup
 
-Migrate the remaining pages from the Next.js site:
+Set up the deployment process for GitHub Pages:
 
-- Additional Services pages:
-  - Packing Services
-  - Antique and Fine Arts
-- Additional Location pages:
-  - Chesterfield
-  - Matlock
-  - Other key locations
-- Legal pages (Terms and Conditions, Privacy Policy)
+- Configure the deploy script in package.json
+- Set up GitHub repository settings for GitHub Pages
+- Test the deployment process
 
 ### 2. Copy and Optimize Assets
 

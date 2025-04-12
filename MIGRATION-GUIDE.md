@@ -24,23 +24,24 @@ This document outlines the steps to complete the migration from the Next.js/Reac
 
 - [x] Migrate Homepage
 - [x] Migrate About Us page
-- [ ] Migrate Services pages
+- [x] Migrate Services pages
   - [x] House Removals
   - [x] Office Removals
-  - [ ] Packing Services
+  - [x] Packing Services
   - [x] Last Minute Removals
-  - [ ] Antique and Fine Arts
-- [ ] Migrate Location pages
+  - [x] Antique and Fine Arts
+- [x] Migrate Location pages
   - [x] Derby
-  - [ ] Other locations
+  - [x] Chesterfield
+  - [x] Matlock
 - [x] Migrate Contact page
 - [x] Migrate Storage page
 - [x] Migrate Move Checklist page
 - [x] Migrate Areas We Cover page
 - [x] Migrate Testimonials page
 - [x] Migrate FAQ page
-- [ ] Migrate Terms and Conditions page
-- [ ] Migrate Privacy Policy page
+- [x] Migrate Terms and Conditions page
+- [x] Migrate Privacy Policy page
 
 ### 4. JavaScript Functionality
 

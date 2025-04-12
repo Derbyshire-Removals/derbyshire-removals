@@ -28,11 +28,17 @@ We've made significant progress in migrating the Derbyshire Removals website fro
   - ✅ House Removals
   - ✅ Office Removals
   - ✅ Last Minute Removals
+  - ✅ Packing Services
+  - ✅ Antique and Fine Arts
 - ✅ Location pages:
   - ✅ Derby
+  - ✅ Chesterfield
+  - ✅ Matlock
 - ✅ Utility pages:
   - ✅ FAQ
   - ✅ Testimonials
+  - ✅ Terms and Conditions
+  - ✅ Privacy Policy
 
 ### Migration Tools
 - ✅ Created migration script to automate the process
@@ -42,17 +48,10 @@ We've made significant progress in migrating the Derbyshire Removals website fro
 
 ## Remaining Tasks
 
-### Page Migration
-- Additional service pages:
-  - Packing Services
-  - Antique and Fine Arts
-- Additional location pages:
-  - Chesterfield
-  - Matlock
-  - Other key locations
-- Legal pages:
-  - Terms and Conditions
-  - Privacy Policy
+### Deployment
+- Set up GitHub Pages deployment
+- Configure the deploy script in package.json
+- Test the deployment process
 
 ### Assets
 - Copy and optimize images from the Next.js public directory

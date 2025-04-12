@@ -16,7 +16,7 @@ ogImage: "/images/business/5.jpg"
             <h1 class="text-3xl font-bold text-[#071059]">Customer Testimonials</h1>
             <p class="text-gray-600 mt-2">See what our customers say about our services</p>
           </div>
-          
+
           <div class="flex items-center">
             <div class="flex text-yellow-400 mr-2">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -72,7 +72,7 @@ ogImage: "/images/business/5.jpg"
             <p class="text-sm text-gray-500">2 weeks ago</p>
           </div>
         </div>
-        
+
         <!-- Testimonial 2 -->
         <div class="bg-white rounded-lg shadow-md p-6">
           <div class="flex text-yellow-400 mb-2">
@@ -101,7 +101,7 @@ ogImage: "/images/business/5.jpg"
             <p class="text-sm text-gray-500">1 month ago</p>
           </div>
         </div>
-        
+
         <!-- Testimonial 3 -->
         <div class="bg-white rounded-lg shadow-md p-6">
           <div class="flex text-yellow-400 mb-2">
@@ -130,7 +130,7 @@ ogImage: "/images/business/5.jpg"
             <p class="text-sm text-gray-500">2 months ago</p>
           </div>
         </div>
-        
+
         <!-- Testimonial 4 -->
         <div class="bg-white rounded-lg shadow-md p-6">
           <div class="flex text-yellow-400 mb-2">
@@ -159,7 +159,7 @@ ogImage: "/images/business/5.jpg"
             <p class="text-sm text-gray-500">3 months ago</p>
           </div>
         </div>
-        
+
         <!-- Testimonial 5 -->
         <div class="bg-white rounded-lg shadow-md p-6">
           <div class="flex text-yellow-400 mb-2">
@@ -188,7 +188,7 @@ ogImage: "/images/business/5.jpg"
             <p class="text-sm text-gray-500">3 months ago</p>
           </div>
         </div>
-        
+
         <!-- Testimonial 6 -->
         <div class="bg-white rounded-lg shadow-md p-6">
           <div class="flex text-yellow-400 mb-2">
@@ -218,17 +218,17 @@ ogImage: "/images/business/5.jpg"
           </div>
         </div>
       </div>
-      
+
       <!-- Leave a Review CTA -->
       <div class="mt-12 bg-[#071059] text-white p-8 rounded-lg text-center">
         <h2 class="text-2xl font-bold mb-4">Had a Great Experience?</h2>
         <p class="mb-6">
           We'd love to hear about your experience with Derbyshire Removals. Your feedback helps us improve our services.
         </p>
-        <a 
-          href="https://g.page/r/CYnXQJbdvdZsEAI/review" 
-          target="_blank" 
-          rel="noopener noreferrer" 
+        <a
+          href="https://g.page/r/CYnXQJbdvdZsEAI/review"
+          target="_blank"
+          rel="noopener noreferrer"
           class="inline-block bg-white text-[#071059] px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-medium"
         >
           Leave a Google Review
@@ -240,65 +240,62 @@ ogImage: "/images/business/5.jpg"
 
 <!-- Schema.org JSON-LD -->
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Derbyshire Removals",
-  "url": "https://derbyshireremovals.com",
-  "logo": "https://derbyshireremovals.com/images/logo.png",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5",
-    "ratingCount": "124",
-    "bestRating": "5",
-    "worstRating": "1"
-  },
-  "review": [
+{{ schema.generateSchemaScript(
+  schema.getReviewPageSchema(
     {
-      "@type": "Review",
-      "author": {
-        "@type": "Person",
-        "name": "Sarah Johnson"
-      },
-      "datePublished": "2023-11-15",
-      "reviewBody": "Excellent service from start to finish. The team was professional, careful with our belongings, and made our move completely stress-free. Highly recommend!",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5",
-        "worstRating": "1"
-      }
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "ratingCount": "124",
+      "bestRating": "5",
+      "worstRating": "1"
     },
-    {
-      "@type": "Review",
-      "author": {
-        "@type": "Person",
-        "name": "Mark Thompson"
+    [
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Sarah Johnson"
+        },
+        "datePublished": "2023-11-15",
+        "reviewBody": "Excellent service from start to finish. The team was professional, careful with our belongings, and made our move completely stress-free. Highly recommend!",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5",
+          "worstRating": "1"
+        }
       },
-      "datePublished": "2023-10-20",
-      "reviewBody": "We used Derbyshire Removals for our office relocation and couldn't be happier. They were efficient, organized, and minimized our downtime. Great value for money!",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5",
-        "worstRating": "1"
-      }
-    },
-    {
-      "@type": "Review",
-      "author": {
-        "@type": "Person",
-        "name": "Emma Wilson"
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Mark Thompson"
+        },
+        "datePublished": "2023-10-20",
+        "reviewBody": "We used Derbyshire Removals for our office relocation and couldn't be happier. They were efficient, organized, and minimized our downtime. Great value for money!",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5",
+          "worstRating": "1"
+        }
       },
-      "datePublished": "2023-09-15",
-      "reviewBody": "Had to arrange a last-minute move and these guys were amazing! They responded quickly, were very accommodating, and handled everything with care. Will definitely use again.",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5",
-        "worstRating": "1"
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Emma Wilson"
+        },
+        "datePublished": "2023-09-15",
+        "reviewBody": "Had to arrange a last-minute move and these guys were amazing! They responded quickly, were very accommodating, and handled everything with care. Will definitely use again.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5",
+          "worstRating": "1"
+        }
       }
-    }
-  ]
-}
+    ]
+  )
+) | safe }}
 </script>
