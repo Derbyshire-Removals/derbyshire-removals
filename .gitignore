@@ -16,7 +16,14 @@
 # next.js
 /.next/
 /out/
+
+# eleventy
 /dist/
+/_site/
+/.cache/
+/eleventy-site/node_modules/
+/eleventy-site/dist/
+/eleventy-site/_site/
 
 # production
 /build

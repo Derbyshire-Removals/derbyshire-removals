@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }} | Derbyshire Removals</title>
+  <meta name="description" content="{{ description }}">
+  <meta name="keywords" content="{{ keywords }}">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://derbyshireremovals.com{{ page.url }}">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:image" content="{{ ogImage | default('/images/og-image.png') }}">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://derbyshireremovals.com{{ page.url }}">
+  <meta property="twitter:title" content="{{ title }}">
+  <meta property="twitter:description" content="{{ description }}">
+  <meta property="twitter:image" content="{{ ogImage | default('/images/og-image.png') }}">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://derbyshireremovals.com{{ page.url }}">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/styles/tailwind.css">
+
+  <!-- Additional head content -->
+  {% block head %}{% endblock %}
+</head>
+<body>
+  <!-- Header -->
+  {% include "partials/header.njk" %}
+
+  <!-- Main content -->
+  <main>
+    {% block content %}{{ content | safe }}{% endblock %}
+  </main>
+
+  <!-- Footer -->
+  {% include "partials/footer.njk" %}
+
+  <!-- Scripts -->
+  <script src="/js/main.js" defer></script>
+
+  <!-- Inline mobile menu script (direct implementation) -->
+  <script>
+    // Direct mobile menu implementation
+    window.addEventListener('load', function() {
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.onclick = function(e) {
+          e.preventDefault();
+          mobileMenu.classList.toggle('hidden');
+
+          const menuIcon = mobileMenuButton.querySelector('.menu-icon');
+          const closeIcon = mobileMenuButton.querySelector('.close-icon');
+
+          if (menuIcon && closeIcon) {
+            menuIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+          }
+        };
+      }
+    });
+  </script>
+
+  <!-- Google Analytics (only on production) -->
+  {% if eleventy.env.mode == "production" %}
+  <script>
+    if (window.location.hostname === 'derbyshireremovals.com') {
+      const gtagScript = document.createElement('script');
+      gtagScript.async = true;
+      gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-TGVG5CNLD4';
+      document.head.appendChild(gtagScript);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-TGVG5CNLD4');
+    } else {
+      console.log('Google Analytics disabled in development');
+    }
+  </script>
+  {% endif %}
+
+  <!-- Additional scripts -->
+  {% block scripts %}{% endblock %}
+</body>
+</html>

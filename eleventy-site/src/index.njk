@@ -1,0 +1,220 @@
+---
+layout: base.njk
+title: "Derbyshire Removals: Trusted House & Office Moving Experts"
+description: "Professional house and office removals across the Midlands. Serving Derby, Matlock, Chesterfield, Nottingham, Birmingham, and Leicester since 1988."
+keywords: "removals derby, house removals derbyshire, office removals derby, storage solutions derby, packing services derbyshire"
+ogImage: "/images/og-image.png"
+---
+
+<!-- Hero Section -->
+{% include "components/hero.njk" %}
+
+<!-- Reviews Section -->
+{% include "components/home-reviews.njk" %}
+
+<!-- Professional Moving Services Section -->
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h2 class="text-3xl font-bold mb-4">Professional Moving Services</h2>
+        <p class="text-gray-600 mb-6">
+          Our experienced team ensures your belongings are handled with the utmost care,
+          making your move stress-free and efficient.
+        </p>
+      </div>
+      <div>
+        <img
+          src="/images/business/13.jpg"
+          alt="Professional movers carefully packing items into boxes"
+          class="rounded-lg shadow-lg w-full h-auto"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+{% include "components/services.njk" %}
+
+<!-- Trusted Partners Section -->
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div>
+        <img
+          src="/images/business/8.jpg"
+          alt="Modern office space being prepared for relocation"
+          class="rounded-lg shadow-lg w-full h-auto"
+          loading="lazy"
+        />
+      </div>
+      <div>
+        <h2 class="text-3xl font-bold mb-4">Trusted by Businesses</h2>
+        <p class="text-gray-600 mb-6">
+          From small offices to large corporations, we provide reliable commercial moving
+          services that minimize downtime and protect your valuable assets.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Us Section -->
+{% include "components/why-us.njk" %}
+
+<!-- Storage Solutions Section -->
+<section class="py-16">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h2 class="text-3xl font-bold mb-4">Secure Storage Solutions</h2>
+        <p class="text-gray-600 mb-6">
+          Need temporary storage? Our secure facilities provide the perfect solution
+          for both short-term and long-term storage needs.
+        </p>
+      </div>
+      <div>
+        <img
+          src="/images/business/storage.jpg"
+          alt="Clean and organized storage facility with modern security features"
+          class="rounded-lg shadow-lg w-full h-auto"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How We Work Section -->
+{% include "components/how-we-work.njk" %}
+
+<!-- Areas Covered Section -->
+{% include "components/areas-covered.njk" %}
+
+<!-- Get In Touch Section -->
+{% include "components/get-in-touch.njk" %}
+
+<!-- Schema.org JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://derbyshireremovals.com/#organization",
+      "name": "Derbyshire Removals",
+      "url": "https://derbyshireremovals.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://derbyshireremovals.com/images/logo.png",
+        "width": 180,
+        "height": 60
+      },
+      "telephone": ["+441332314312", "+441246922192", "+443335677001", "+447425557000"],
+      "email": "info@derbyshireremovals.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "48 Farmhouse Road",
+        "addressLocality": "Derby",
+        "addressRegion": "Derbyshire",
+        "postalCode": "DE24 3DB",
+        "addressCountry": "GB"
+      },
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61572796415223",
+        "https://www.instagram.com/derbyshireremovals/"
+      ]
+    },
+    {
+      "@type": "MovingCompany",
+      "name": "Derbyshire Removals",
+      "image": "https://derbyshireremovals.com/images/van.jpg",
+      "priceRange": "££",
+      "telephone": ["+441332314312", "+441246922192", "+443335677001", "+447425557000"],
+      "email": "info@derbyshireremovals.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "48 Farmhouse Road",
+        "addressLocality": "Derby",
+        "addressRegion": "Derbyshire",
+        "postalCode": "DE24 3DB",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "52.8744186998816",
+        "longitude": "-1.487168677909595"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "08:00",
+        "closes": "18:00"
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "Removal Services",
+      "provider": {
+        "@type": "MovingCompany",
+        "name": "Derbyshire Removals",
+        "image": "https://derbyshireremovals.com/images/van.jpg",
+        "priceRange": "££",
+        "telephone": ["+441332314312", "+441246922192", "+443335677001", "+447425557000"],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "48 Farmhouse Road",
+          "addressLocality": "Derby",
+          "addressRegion": "Derbyshire",
+          "postalCode": "DE24 3DB",
+          "addressCountry": "GB"
+        }
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Derbyshire"
+      },
+      "description": "Professional removal services for houses and businesses across Derbyshire.",
+      "serviceType": "Removal Services"
+    },
+    {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "ratingCount": "124",
+      "bestRating": "5",
+      "worstRating": "1",
+      "itemReviewed": {
+        "@type": "MovingCompany",
+        "name": "Derbyshire Removals",
+        "image": "https://derbyshireremovals.com/images/van.jpg",
+        "priceRange": "££",
+        "telephone": ["+441332314312", "+441246922192", "+443335677001", "+447425557000"],
+        "url": "https://derbyshireremovals.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "48 Farmhouse Road",
+          "addressLocality": "Derby",
+          "addressRegion": "Derbyshire",
+          "postalCode": "DE24 3DB",
+          "addressCountry": "GB"
+        }
+      }
+    },
+    {
+      "@type": "WebSite",
+      "name": "Derbyshire Removals",
+      "url": "https://derbyshireremovals.com",
+      "description": "Professional removal services in Derbyshire since 1988."
+    }
+  ]
+}
+</script>
