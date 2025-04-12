@@ -164,33 +164,12 @@ ogImage: "/images/business/1.jpg"
 
 <!-- Schema.org JSON-LD -->
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "House Removals Services",
-  "serviceType": "House Removals",
-  "description": "Professional house removal services with experienced and fully trained teams",
-  "provider": {
-    "@type": "MovingCompany",
-    "name": "Derbyshire Removals",
-    "image": "https://derbyshireremovals.com/images/van.jpg",
-    "priceRange": "££",
-    "telephone": ["+441332314312", "+441246922192", "+443335677001", "+447425557000"],
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "48 Farmhouse Road",
-      "addressLocality": "Derby",
-      "addressRegion": "Derbyshire",
-      "postalCode": "DE24 3DB",
-      "addressCountry": "GB"
-    }
-  },
-  "areaServed": "Derby, Matlock, Chesterfield, Ashbourne, and throughout the East and West Midlands",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "GBP",
-    "availability": "https://schema.org/InStock"
-  }
-}
+{{ schema.generateSchemaScript(
+  schema.getServicePageSchema(
+    "House Removals Services",
+    "House Removals",
+    "Professional house removal services with experienced and fully trained teams",
+    "Derby, Matlock, Chesterfield, Ashbourne, and throughout the East and West Midlands"
+  )
+) | safe }}
 </script>

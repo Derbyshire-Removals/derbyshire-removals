@@ -85,44 +85,5 @@ ogImage: "/images/business/12.jpg"
 
 <!-- Schema.org JSON-LD -->
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "AboutPage",
-      "url": "https://derbyshireremovals.com/about-us/",
-      "name": "About Derbyshire Removals",
-      "mainEntity": {
-        "@id": "https://derbyshireremovals.com/#organization"
-      }
-    },
-    {
-      "@type": "Organization",
-      "@id": "https://derbyshireremovals.com/#organization",
-      "name": "Derbyshire Removals",
-      "url": "https://derbyshireremovals.com",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://derbyshireremovals.com/images/logo.png",
-        "width": 180,
-        "height": 60
-      },
-      "telephone": ["+441332314312", "+441246922192", "+443335677001", "+447425557000"],
-      "email": "info@derbyshireremovals.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "48 Farmhouse Road",
-        "addressLocality": "Derby",
-        "addressRegion": "Derbyshire",
-        "postalCode": "DE24 3DB",
-        "addressCountry": "GB"
-      },
-      "sameAs": [
-        "https://www.facebook.com/profile.php?id=61572796415223",
-        "https://www.instagram.com/derbyshireremovals/",
-        "https://apps.derbyshire.gov.uk/applications/trusted-trader/profile.asp?tid=56236"
-      ]
-    }
-  ]
-}
+{{ schema.generateSchemaScript(schema.getAboutPageSchema()) | safe }}
 </script>

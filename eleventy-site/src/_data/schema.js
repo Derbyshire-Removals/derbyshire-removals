@@ -294,6 +294,201 @@ function getBreadcrumbSchema(breadcrumbItems) {
   };
 }
 
+// For move checklist page schema
+function getMoveChecklistSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Moving House Checklist",
+    "description": "A comprehensive guide to help you prepare for your house move, from two months before to moving day.",
+    "totalTime": "P8W",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "8 Weeks Before Moving",
+        "itemListElement": [
+          {
+            "@type": "HowToDirection",
+            "text": "Create a moving folder or digital document to keep track of quotes, receipts, and important documents"
+          },
+          {
+            "@type": "HowToDirection",
+            "text": "Research and request quotes from removal companies"
+          },
+          {
+            "@type": "HowToDirection",
+            "text": "Create an inventory of your belongings"
+          },
+          {
+            "@type": "HowToDirection",
+            "text": "Begin decluttering and decide what to keep, sell, donate, or discard"
+          }
+        ]
+      },
+      {
+        "@type": "HowToStep",
+        "name": "4-6 Weeks Before Moving",
+        "itemListElement": [
+          {
+            "@type": "HowToDirection",
+            "text": "Book your chosen removal company and confirm the moving date"
+          },
+          {
+            "@type": "HowToDirection",
+            "text": "Order packing supplies (boxes, tape, bubble wrap, markers)"
+          },
+          {
+            "@type": "HowToDirection",
+            "text": "Begin packing items you don't use regularly"
+          }
+        ]
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Moving Day",
+        "itemListElement": [
+          {
+            "@type": "HowToDirection",
+            "text": "Keep important documents and valuables with you"
+          },
+          {
+            "@type": "HowToDirection",
+            "text": "Take final meter readings at your old property"
+          },
+          {
+            "@type": "HowToDirection",
+            "text": "Check all rooms, cupboards, and storage spaces to ensure nothing is left behind"
+          }
+        ]
+      }
+    ]
+  };
+}
+
+// For storage page schema
+function getStoragePageSchema() {
+  return [
+    {
+      "@type": "Service",
+      "name": "Secure Storage Solutions",
+      "serviceType": "Storage Service",
+      "description": "Professional storage solutions with 24/7 security, climate control, and flexible terms for both short and long-term needs.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Derbyshire Removals",
+        "url": "https://derbyshireremovals.com"
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Derbyshire"
+      }
+    },
+    organization
+  ];
+}
+
+// For areas we cover page schema
+function getAreasPageSchema() {
+  return [
+    {
+      "@type": "WebPage",
+      "name": "Areas We Cover | Derbyshire Removals",
+      "description": "Explore the areas we service including Derby, Matlock, Chesterfield, Buxton and throughout the East and West Midlands.",
+      "url": "https://derbyshireremovals.com/areas-we-cover"
+    },
+    organization
+  ];
+}
+
+// For about page schema
+function getAboutPageSchema() {
+  return [
+    {
+      "@type": "AboutPage",
+      "url": "https://derbyshireremovals.com/about-us/",
+      "name": "About Derbyshire Removals",
+      "mainEntity": {
+        "@id": "https://derbyshireremovals.com/#organization"
+      }
+    },
+    organization
+  ];
+}
+
+// For home page schema
+function getHomePageSchema() {
+  return [
+    organization,
+    {
+      "@type": "MovingCompany",
+      "name": "Derbyshire Removals",
+      "image": "https://derbyshireremovals.com/images/van.jpg",
+      "priceRange": "££",
+      "telephone": ["+441332314312", "+441246922192", "+443335677001", "+447425557000"],
+      "email": "info@derbyshireremovals.com",
+      "address": organization.address,
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "52.8744186998816",
+        "longitude": "-1.487168677909595"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "08:00",
+        "closes": "18:00"
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "Removal Services",
+      "provider": {
+        "@type": "MovingCompany",
+        "name": "Derbyshire Removals",
+        "image": "https://derbyshireremovals.com/images/van.jpg",
+        "priceRange": "££",
+        "telephone": ["+441332314312", "+441246922192", "+443335677001", "+447425557000"],
+        "address": organization.address
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Derbyshire"
+      },
+      "description": "Professional removal services for houses and businesses across Derbyshire.",
+      "serviceType": "Removal Services"
+    },
+    {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "ratingCount": "124",
+      "bestRating": "5",
+      "worstRating": "1",
+      "itemReviewed": {
+        "@type": "MovingCompany",
+        "name": "Derbyshire Removals",
+        "image": "https://derbyshireremovals.com/images/van.jpg",
+        "priceRange": "££",
+        "telephone": ["+441332314312", "+441246922192", "+443335677001", "+447425557000"],
+        "url": "https://derbyshireremovals.com",
+        "address": organization.address
+      }
+    },
+    {
+      "@type": "WebSite",
+      "name": "Derbyshire Removals",
+      "url": "https://derbyshireremovals.com",
+      "description": "Professional removal services in Derbyshire since 1988."
+    }
+  ];
+}
+
 module.exports = {
   organization,
   getOrganizationSchema,
@@ -309,5 +504,10 @@ module.exports = {
   getFAQPageSchema,
   getReviewPageSchema,
   getArticlePageSchema,
-  getBreadcrumbSchema
+  getBreadcrumbSchema,
+  getHomePageSchema,
+  getAboutPageSchema,
+  getAreasPageSchema,
+  getStoragePageSchema,
+  getMoveChecklistSchema
 };

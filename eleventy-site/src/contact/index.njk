@@ -190,58 +190,5 @@ ogImage: "/images/business/12.jpg"
 
 <!-- Schema.org JSON-LD -->
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ContactPage",
-  "url": "https://derbyshireremovals.com/contact",
-  "name": "Contact - Derbyshire Removals",
-  "mainEntity": {
-    "@type": "Organization",
-    "name": "Derbyshire Removals",
-    "legalName": "Nexus Deliveries Ltd trading as Derbyshire Removals",
-    "url": "https://derbyshireremovals.com",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://derbyshireremovals.com/images/logo.png",
-      "width": 180,
-      "height": 60
-    },
-    "email": "info@derbyshireremovals.com",
-    "telephone": "+443335677001",
-    "contactPoint": [
-      {
-        "@type": "ContactPoint",
-        "telephone": "+443335677001",
-        "contactType": "customer service",
-        "areaServed": "GB"
-      },
-      {
-        "@type": "ContactPoint",
-        "telephone": "+441332314312",
-        "contactType": "Derby",
-        "areaServed": "GB"
-      },
-      {
-        "@type": "ContactPoint",
-        "telephone": "+441246922192",
-        "contactType": "Chesterfield",
-        "areaServed": "GB"
-      },
-      {
-        "@type": "ContactPoint",
-        "telephone": "+447425557000",
-        "contactType": "Mobile",
-        "areaServed": "GB"
-      }
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "48 Farmhouse Road",
-      "addressLocality": "Derby",
-      "addressRegion": "Derbyshire",
-      "postalCode": "DE24 3DB",
-      "addressCountry": "GB"
-    }
-  }
-}
+{{ schema.getContactPageSchema() | safe }}
 </script>

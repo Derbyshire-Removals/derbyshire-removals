@@ -141,49 +141,5 @@ ogImage: "/images/business/storage.jpg"
 
 <!-- Schema.org JSON-LD -->
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "name": "Derbyshire Removals",
-      "url": "https://derbyshireremovals.com",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://derbyshireremovals.com/images/logo.png",
-        "width": 180,
-        "height": 60
-      },
-      "telephone": ["+441332314312", "+441246922192", "+443335677001", "+447425557000"],
-      "email": "info@derbyshireremovals.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "48 Farmhouse Road",
-        "addressLocality": "Derby",
-        "addressRegion": "Derbyshire",
-        "postalCode": "DE24 3DB",
-        "addressCountry": "GB"
-      },
-      "sameAs": [
-        "https://www.facebook.com/profile.php?id=61572796415223",
-        "https://www.instagram.com/derbyshireremovals/"
-      ]
-    },
-    {
-      "@type": "Service",
-      "name": "Secure Storage Solutions",
-      "serviceType": "Storage Service",
-      "description": "Professional storage solutions with 24/7 security, climate control, and flexible terms for both short and long-term needs.",
-      "provider": {
-        "@type": "Organization",
-        "name": "Derbyshire Removals",
-        "url": "https://derbyshireremovals.com"
-      },
-      "areaServed": {
-        "@type": "State",
-        "name": "Derbyshire"
-      }
-    }
-  ]
-}
+{{ schema.generateSchemaScript(schema.getStoragePageSchema()) | safe }}
 </script>
