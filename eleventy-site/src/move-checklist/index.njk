@@ -312,5 +312,5 @@ ogImage: "/images/business/2.jpg"
 
 <!-- Schema.org JSON-LD -->
 <script type="application/ld+json">
-{{ schema.getMoveChecklistSchema() | safe }}
+{{ schema.generateSchemaScript(schema.getMoveChecklistSchema()) | safe }}
 </script>
