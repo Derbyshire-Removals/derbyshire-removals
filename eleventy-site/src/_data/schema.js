@@ -20,16 +20,17 @@ const organization = {
   "foundingDate": "1988",
   "description": "Professional removal services in Derbyshire since 1988, offering house and office removals, packing, and storage solutions.",
   "areaServed": [
-    "Derby",
-    "Matlock",
-    "Alfreton",
-    "Chesterfield",
-    "Buxton",
-    "Mansfield",
-    "Loughborough",
-    "East Midlands",
-    "West Midlands",
-    "Nationwide"
+    { "@type": "City", "name": "Derby" },
+    { "@type": "City", "name": "Matlock" },
+    { "@type": "City", "name": "Bakewell" },
+    { "@type": "City", "name": "Chesterfield" },
+    { "@type": "City", "name": "Alfreton" },
+    { "@type": "City", "name": "Buxton" },
+    { "@type": "City", "name": "Mansfield" },
+    { "@type": "City", "name": "Loughborough" },
+    { "@type": "State", "name": "East Midlands" },
+    { "@type": "State", "name": "West Midlands" },
+    { "@type": "Country", "name": "UK" },
   ],
   "address": {
     "@type": "PostalAddress",
@@ -96,33 +97,31 @@ function getLocationMovingCompanySchema(location, phone, options = {}) {
 }
 
 // For service pages
-function getServiceSchema(serviceName, serviceType, description, areas = "Derbyshire and surrounding areas") {
+function getServiceSchema(serviceName, serviceType, description, url) {
   return {
     "@type": "Service",
     "name": serviceName,
+    "@id": `https://derbyshireremovals.com/services/${url}`,
+    "url": `https://derbyshireremovals.com/services/${url}`,
+    "category": "Moving & Relocation",
+    "image": "https://derbyshireremovals.com/images/van.jpg",
     "provider": {
-      "@type": "MovingCompany",
-      "name": "Derbyshire Removals",
-      "image": "https://derbyshireremovals.com/images/van.jpg",
-      "priceRange": "££",
-      "telephone": ["+441332314312", "+441246922192", "+443335677001", "+447425557000"],
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "48 Farmhouse Road",
-        "addressLocality": "Derby",
-        "addressRegion": "Derbyshire",
-        "postalCode": "DE24 3DB",
-        "addressCountry": "GB"
-      },
-      "sameAs": [
-        "https://www.facebook.com/profile.php?id=61572796415223",
-        "https://www.instagram.com/derbyshireremovals/",
-        "https://apps.derbyshire.gov.uk/applications/trusted-trader/profile.asp?tid=56236"
-      ]
+      "@type": "Organization",
+      "@id": "https://derbyshireremovals.com/#organization"
     },
     "description": description,
-    "areaServed": areas,
-    "serviceType": serviceType
+    "areaServed": organization.areaServed,
+    "serviceType": serviceType,
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "GBP",
+      "price": "From 99.00",
+      "eligibleRegion": {
+        "@type": "Place",
+        "name": "UK"
+      },
+      "availability": "https://schema.org/InStock"
+    }
   };
 }
 
@@ -213,9 +212,9 @@ function getLocationPageSchema(location, phone, options = {}) {
 }
 
 // For service pages - complete schema with organization included
-function getServicePageSchema(serviceName, serviceType, description, areas, offerCatalog = null) {
+function getServicePageSchema(serviceName, serviceType, description, url, offerCatalog = null) {
   const schemas = [
-    getServiceSchema(serviceName, serviceType, description, areas),
+    getServiceSchema(serviceName, serviceType, description, url),
     organization
   ];
 
