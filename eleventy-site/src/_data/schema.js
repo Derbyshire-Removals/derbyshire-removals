@@ -129,7 +129,6 @@ function getServiceSchema(serviceName, serviceType, description, areas = "Derbys
 // For contact page schema
 function getContactPageSchema() {
   return {
-    "@context": "https://schema.org",
     "@type": "ContactPage",
     "url": "https://derbyshireremovals.com/contact",
     "name": "Contact - Derbyshire Removals",

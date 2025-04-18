@@ -190,5 +190,5 @@ ogImage: "/images/business/12.jpg"
 
 <!-- Schema.org JSON-LD -->
 <script type="application/ld+json">
-{{ schema.getContactPageSchema() | safe }}
+{{ schema.generateSchemaScript(schema.getContactPageSchema()) | safe }}
 </script>

@@ -91,12 +91,12 @@ This project is private and proprietary to Derbyshire Removals.
 [x] Home
 [x] /move-checklist
 [x] /storage
-[ ] /packaging-material
-[ ] /areas-we-cover
+[ ] /packaging-material (Doesnt work at all)
+[ ] /areas-we-cover (shouldn't be in the main nav?)
 [ ] /about-us
 [ ] /testimonials
 [ ] /faq
-[ ] /contact
+[x] /contact
 [ ] /terms-and-conditions
 [ ] /services/house-removals
 [ ] /services/packing-services
