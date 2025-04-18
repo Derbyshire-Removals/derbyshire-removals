@@ -91,10 +91,8 @@ This project is private and proprietary to Derbyshire Removals.
 [x] Home
 [x] /move-checklist
 [x] /storage
-[ ] /packaging-material (Doesnt work at all)
-[ ] /areas-we-cover (shouldn't be in the main nav?)
+[x] /privacy-policy
 [x] /about-us (page is completely different)
-[ ] /testimonials
 [x] /faq (missing from menu)
 [x] /contact
 [x] /terms-and-conditions
@@ -104,13 +102,17 @@ This project is private and proprietary to Derbyshire Removals.
 [x] /services/last-minute-removals
 [x] /services/antique-and-fine-arts
 [x] /locations/derby
-[ ] /locations/alfreton  (doesn't exist)
+[x] /locations/matlock
 [x] /locations/chesterfield
-[ ] /locations/buxton (doesn't exist)
-[ ] /locations/matlock
+[ ] /locations/alfreton
+[ ] /locations/buxton
 [ ] /locations/mansfield
 [ ] /locations/loughborough
-[x] /privacy-policy
+
+[ ] /packaging-material (Doesnt work at all)
+[ ] /areas-we-cover (shouldn't be in the main nav?)
+[ ] /testimonials
+
 
 # TODO Webpage design
 [ ] Home
