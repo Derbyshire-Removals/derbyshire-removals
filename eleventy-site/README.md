@@ -104,10 +104,10 @@ This project is private and proprietary to Derbyshire Removals.
 [x] /locations/derby
 [x] /locations/matlock
 [x] /locations/chesterfield
-[ ] /locations/alfreton
-[ ] /locations/buxton
-[ ] /locations/mansfield
-[ ] /locations/loughborough
+[x] /locations/alfreton
+[x] /locations/buxton
+[x] /locations/mansfield
+[x] /locations/loughborough
 
 [ ] /packaging-material (Doesnt work at all)
 [ ] /areas-we-cover (shouldn't be in the main nav?)
