@@ -90,7 +90,7 @@ This project is private and proprietary to Derbyshire Removals.
 # TODO Schema.org
 [x] Home
 [x] /move-checklist
-[ ] /storage
+[x] /storage
 [ ] /packaging-material
 [ ] /areas-we-cover
 [ ] /about-us

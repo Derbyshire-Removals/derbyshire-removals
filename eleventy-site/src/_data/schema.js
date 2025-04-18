@@ -341,6 +341,7 @@ function getMoveChecklistSchema() {
 // For storage page schema
 function getStoragePageSchema() {
   return [
+    organization,
     {
       "@type": "Service",
       "name": "Secure Storage Solutions",
@@ -348,15 +349,13 @@ function getStoragePageSchema() {
       "description": "Professional storage solutions with 24/7 security, climate control, and flexible terms for both short and long-term needs.",
       "provider": {
         "@type": "Organization",
-        "name": "Derbyshire Removals",
-        "url": "https://derbyshireremovals.com"
+        "@id": "https://derbyshireremovals.com/#organization"
       },
       "areaServed": {
         "@type": "State",
         "name": "Derbyshire"
       }
-    },
-    organization
+    }
   ];
 }
 
@@ -394,7 +393,9 @@ function getHomePageSchema() {
     organization,
     {
       "@type": "MovingCompany",
+      "@id": "https://derbyshireremovals.com/#movingcompany",
       "name": "Derbyshire Removals",
+      "url": "https://derbyshireremovals.com",
       "image": "https://derbyshireremovals.com/images/van.jpg",
       "priceRange": "££",
       "telephone": ["+441332314312", "+441246922192", "+443335677001", "+447425557000"],
@@ -416,7 +417,20 @@ function getHomePageSchema() {
           "Saturday"
         ],
         "opens": "08:00",
-        "closes": "18:00"
+        "closes": "18:00",
+        "areaServed": [
+          "Derby",
+          "Matlock",
+          "Bakewell",
+          "Alfreton",
+          "Chesterfield",
+          "Buxton",
+          "Mansfield",
+          "Loughborough",
+          "East Midlands",
+          "West Midlands",
+          "Nationwide"
+        ]
       }
     },
     {
@@ -435,7 +449,10 @@ function getHomePageSchema() {
         "name": "Derbyshire"
       },
       "description": "Professional removal services for houses and businesses across Derbyshire.",
-      "serviceType": "Removal Services"
+      "serviceType": "Removal Services",
+      "provider": {
+        "@id": "https://derbyshireremovals.com/#movingcompany"
+      }
     },
     {
       "@type": "AggregateRating",
