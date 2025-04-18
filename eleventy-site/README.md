@@ -95,7 +95,7 @@ This project is private and proprietary to Derbyshire Removals.
 [ ] /areas-we-cover (shouldn't be in the main nav?)
 [ ] /about-us
 [ ] /testimonials
-[ ] /faq
+[x] /faq (missing from menu)
 [x] /contact
 [ ] /terms-and-conditions
 [ ] /services/house-removals
