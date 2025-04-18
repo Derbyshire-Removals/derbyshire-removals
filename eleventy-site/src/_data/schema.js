@@ -72,7 +72,7 @@ function getLocationMovingCompanySchema(location, phone, options = {}) {
   // Build the schema with appropriate location-specific data
   return {
     "@type": "MovingCompany",
-    "name": `Derbyshire Removals - ${location}`,
+    "name": location === "Derby" ? `Derbyshire Removals - ${location}` : `Derbyshire Removals - ${location} Service Area`,
     "image": "https://derbyshireremovals.com/images/van.jpg",
     "description": `Professional removal services in ${location}`,
     "priceRange": "££",
@@ -86,13 +86,16 @@ function getLocationMovingCompanySchema(location, phone, options = {}) {
         "latitude": options.latitude || 52.9225, // Default to Derby
         "longitude": options.longitude || -1.4746
       },
-      "geoRadius": "40 mi" // Service radius from location
+      "geoRadius": 16093.4// Service radius from location
     },
     "areaServed": {
       "@type": "City",
-      "name": location,
-      ...(options.region && { "containedIn": options.region })
-    }
+      "name": location
+    },
+    "branchOf": {
+        "@type": "Organization",
+        "@id": "https://derbyshireremovals.com/#organization"
+      }
   };
 }
 
