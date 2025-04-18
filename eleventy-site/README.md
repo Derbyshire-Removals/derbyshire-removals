@@ -104,9 +104,9 @@ This project is private and proprietary to Derbyshire Removals.
 [x] /services/last-minute-removals
 [x] /services/antique-and-fine-arts
 [x] /locations/derby
-[ ] /locations/alfreton
+[ ] /locations/alfreton  (doesn't exist)
 [x] /locations/chesterfield
-[ ] /locations/buxton
+[ ] /locations/buxton (doesn't exist)
 [ ] /locations/matlock
 [ ] /locations/mansfield
 [ ] /locations/loughborough
