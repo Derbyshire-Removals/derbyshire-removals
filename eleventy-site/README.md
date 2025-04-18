@@ -85,3 +85,54 @@ The site can be deployed to any static hosting service like Netlify, Vercel, Git
 ## License
 
 This project is private and proprietary to Derbyshire Removals.
+
+
+# TODO Schema.org
+[x] Home
+[ ] /move-checklist
+[ ] /storage
+[ ] /packaging-material
+[ ] /areas-we-cover
+[ ] /about-us
+[ ] /testimonials
+[ ] /faq
+[ ] /contact
+[ ] /terms-and-conditions
+[ ] /services/house-removals
+[ ] /services/packing-services
+[ ] /services/office-removals
+[ ] /services/last-minute-removals
+[ ] /services/antique-and-fine-arts
+[ ] /locations/derby
+[ ] /locations/alfreton
+[ ] /locations/chesterfield
+[ ] /locations/buxton
+[ ] /locations/matlock
+[ ] /locations/mansfield
+[ ] /locations/loughborough
+[ ] /privacy-policy
+
+# TODO Webpage design
+[ ] Home
+[ ] /move-checklist
+[ ] /storage
+[ ] /packaging-material
+[ ] /areas-we-cover
+[ ] /about-us
+[ ] /testimonials
+[ ] /faq
+[ ] /contact
+[ ] /terms-and-conditions
+[ ] /services/house-removals
+[ ] /services/packing-services
+[ ] /services/office-removals
+[ ] /services/last-minute-removals
+[ ] /services/antique-and-fine-arts
+[ ] /locations/derby
+[ ] /locations/alfreton
+[ ] /locations/chesterfield
+[ ] /locations/buxton
+[ ] /locations/matlock
+[ ] /locations/mansfield
+[ ] /locations/loughborough
+[ ] /privacy-policy

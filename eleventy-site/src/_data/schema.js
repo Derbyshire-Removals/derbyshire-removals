@@ -12,8 +12,8 @@ const organization = {
   "logo": {
     "@type": "ImageObject",
     "url": "https://derbyshireremovals.com/images/logo.png",
-    "width": 180,
-    "height": 60
+    "width": 512,
+    "height": 180
   },
   "telephone": ["+441332314312", "+441246922192", "+443335677001", "+447425557000"],
   "email": "info@derbyshireremovals.com",
