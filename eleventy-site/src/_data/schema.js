@@ -296,73 +296,46 @@ function getBreadcrumbSchema(breadcrumbItems) {
 
 // For move checklist page schema
 function getMoveChecklistSchema() {
-  return {
-    "@context": "https://schema.org",
+  const howToSchema = {
     "@type": "HowTo",
-    "name": "Moving House Checklist",
-    "description": "A comprehensive guide to help you prepare for your house move, from two months before to moving day.",
-    "totalTime": "P8W",
+    "name": "Complete House Moving Checklist",
+    "description": "A comprehensive guide for a stress-free home move with steps to take before, during, and after moving day.",
     "step": [
       {
         "@type": "HowToStep",
         "name": "8 Weeks Before Moving",
-        "itemListElement": [
-          {
-            "@type": "HowToDirection",
-            "text": "Create a moving folder or digital document to keep track of quotes, receipts, and important documents"
-          },
-          {
-            "@type": "HowToDirection",
-            "text": "Research and request quotes from removal companies"
-          },
-          {
-            "@type": "HowToDirection",
-            "text": "Create an inventory of your belongings"
-          },
-          {
-            "@type": "HowToDirection",
-            "text": "Begin decluttering and decide what to keep, sell, donate, or discard"
-          }
-        ]
+        "text": "Start planning your move, research removal companies, and create an inventory"
       },
       {
         "@type": "HowToStep",
         "name": "4-6 Weeks Before Moving",
-        "itemListElement": [
-          {
-            "@type": "HowToDirection",
-            "text": "Book your chosen removal company and confirm the moving date"
-          },
-          {
-            "@type": "HowToDirection",
-            "text": "Order packing supplies (boxes, tape, bubble wrap, markers)"
-          },
-          {
-            "@type": "HowToDirection",
-            "text": "Begin packing items you don't use regularly"
-          }
-        ]
+        "text": "Book your removal company, start decluttering, and notify relevant parties of your change of address"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "2-3 Weeks Before Moving",
+        "text": "Start packing non-essential items and arrange for utility disconnections/connections"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "1 Week Before Moving",
+        "text": "Finalize packing, prepare essential boxes, and confirm details with your removal company"
       },
       {
         "@type": "HowToStep",
         "name": "Moving Day",
-        "itemListElement": [
-          {
-            "@type": "HowToDirection",
-            "text": "Keep important documents and valuables with you"
-          },
-          {
-            "@type": "HowToDirection",
-            "text": "Take final meter readings at your old property"
-          },
-          {
-            "@type": "HowToDirection",
-            "text": "Check all rooms, cupboards, and storage spaces to ensure nothing is left behind"
-          }
-        ]
+        "text": "Supervise the loading process, conduct final checks, and ensure safe transport of your belongings"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "After Moving",
+        "text": "Unpack systematically, check for damages, and settle into your new home"
       }
     ]
   };
+
+  // Return both the HowTo schema and the organization schema in a graph array
+  return [organization, howToSchema];
 }
 
 // For storage page schema
