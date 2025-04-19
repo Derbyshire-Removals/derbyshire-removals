@@ -127,16 +127,13 @@ This project is private and proprietary to Derbyshire Removals.
 [x] /locations/loughborough
 
 [x] /services/house-removals
-[ ] /services/packing-services
-[ ] /services/office-removals
+[x] /services/packing-services
+[x] /services/office-removals
 [ ] /services/last-minute-removals
 [ ] /services/antique-and-fine-arts
 
-[ ] Home
 [ ] /move-checklist
 [ ] /storage
-
-  [ ] shouldn't be in the main nav
 [ ] /about-us
 [ ] /testimonials
 [ ] /faq
@@ -144,6 +141,8 @@ This project is private and proprietary to Derbyshire Removals.
 [ ] /terms-and-conditions
 
 [ ] /privacy-policy
+
+[ ] Home
 
 # TODO Optimise Nav Bar, Meta tags and OG image tags etc.
 [ ] Footer
@@ -178,3 +177,4 @@ This project is private and proprietary to Derbyshire Removals.
 [ ] Meta tags optimisation
 [ ] Swap 0333 number with mobile number
 [ ] Add locations menu at the top with all the other areas
+[ ] Remove american english, Specialized, Orgnized
