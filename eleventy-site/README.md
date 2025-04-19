@@ -147,8 +147,8 @@ This project is private and proprietary to Derbyshire Removals.
 
 # TODO Optimise Nav Bar, Meta tags and OG image tags etc.
 [x] Footer
-[ ] Check contact form works
-[ ] Check Google analytics installation
+[x] Check contact form works
+[x] Check Google analytics installation
 [ ] Check Meta tags etc.
 
 ## SEO Changes - Phase 2

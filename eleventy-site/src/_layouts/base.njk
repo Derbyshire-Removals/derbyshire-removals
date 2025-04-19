@@ -73,7 +73,6 @@
   </script>
 
   <!-- Google Analytics (only on production) -->
-  {% if eleventy.env.mode == "production" %}
   <script>
     if (window.location.hostname === 'derbyshireremovals.com') {
       const gtagScript = document.createElement('script');
@@ -89,7 +88,6 @@
       console.log('Google Analytics disabled in development');
     }
   </script>
-  {% endif %}
 
   <!-- Additional scripts -->
   {% block scripts %}{% endblock %}
