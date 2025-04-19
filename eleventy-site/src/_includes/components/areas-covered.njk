@@ -1,26 +1,30 @@
-<section class="py-16 bg-gray-100">
+<section id="areas" class="py-16 bg-white">
   <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center mb-4">Areas We Cover</h2>
-    <p class="text-center text-gray-600 mb-10">We provide professional removal services throughout Derbyshire and beyond</p>
-
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 text-center">
-      {% for area in locations.allAreas %}
-        {% if loop.index <= 10 %}
-          <a href="{{ area.link }}" class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-            <h3 class="font-semibold text-primary">{{ area.name }}</h3>
-          </a>
-        {% endif %}
-      {% endfor %}
+    <h2 class="text-3xl font-bold text-center mb-10">Areas We Cover</h2>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h3 class="text-2xl font-semibold mb-4">East Midlands</h3>
+        <ul class="grid grid-cols-2 gap-2">
+          <li class="text-lg">Derbyshire</li>
+          <li class="text-lg">Leicestershire</li>
+          <li class="text-lg">Lincolnshire</li>
+          <li class="text-lg">Northamptonshire</li>
+          <li class="text-lg">Nottinghamshire</li>
+          <li class="text-lg">Rutland</li>
+        </ul>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h3 class="text-2xl font-semibold mb-4">West Midlands</h3>
+        <ul class="grid grid-cols-2 gap-2">
+          <li class="text-lg">Herefordshire</li>
+          <li class="text-lg">Shropshire</li>
+          <li class="text-lg">Staffordshire</li>
+          <li class="text-lg">Warwickshire</li>
+          <li class="text-lg">West Midlands</li>
+          <li class="text-lg">Worcestershire</li>
+        </ul>
+      </div>
     </div>
-
-    <div class="mt-10 text-center">
-      <a href="/areas-we-cover/" class="inline-flex items-center bg-primary text-white py-2 px-4 rounded-md hover:bg-opacity-90 transition-colors">
-        View All Areas
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2">
-          <line x1="5" y1="12" x2="19" y2="12"></line>
-          <polyline points="12 5 19 12 12 19"></polyline>
-        </svg>
-      </a>
-    </div>
+    <p class="text-center mt-10 text-lg">While we specialize in the East and West Midlands, our services extend nationwide. Our extensive network allows us to provide professional removal services across the entire UK. Whether you're moving within the Midlands or to any other part of the country, we've got you covered. For a detailed list of towns we serve, please visit our <a class="text-blue-600 hover:underline" href="/areas-we-cover">areas we cover</a> page. Contact us for more information about our coverage in your specific area. </p>
   </div>
 </section>

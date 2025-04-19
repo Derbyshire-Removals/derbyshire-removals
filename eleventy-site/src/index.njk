@@ -93,9 +93,6 @@ ogImage: "/images/og-image.png"
 <!-- Areas Covered Section -->
 {% include "components/areas-covered.njk" %}
 
-<!-- Get In Touch Section -->
-{% include "components/get-in-touch.njk" %}
-
 <!-- Schema.org JSON-LD -->
 <script type="application/ld+json">
 {{ schema.generateSchemaScript(schema.getHomePageSchema()) | safe }}

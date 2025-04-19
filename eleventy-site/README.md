@@ -140,9 +140,10 @@ This project is private and proprietary to Derbyshire Removals.
 [x] /privacy-policy
 
 [x] /terms-and-conditions
-[ ] /move-checklist
+[x] /move-checklist
 
 [ ] Home
+  [ ] Check Reviews
 
 # TODO Optimise Nav Bar, Meta tags and OG image tags etc.
 [ ] Footer
@@ -178,5 +179,5 @@ This project is private and proprietary to Derbyshire Removals.
 [ ] Meta tags optimisation
 [ ] Swap 0333 number with mobile number
 [ ] Add locations menu at the top with all the other areas
-[ ] Remove american english, Specialised, Orgnized
+[x] Remove american english, Specialised, Orgnized
 [ ] Improve validation on Contact form
