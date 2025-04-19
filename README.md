@@ -178,6 +178,7 @@ This project is private and proprietary to Derbyshire Removals.
 ## After launch
 [ ] Test contact us form
 [ ] Google Analytics
+[ ] Broken link checker
 
 ## SEO Changes - Phase 2
 [ ] Meta tags optimisation
