@@ -126,11 +126,13 @@ This project is private and proprietary to Derbyshire Removals.
 [ ] /faq
 [ ] /contact
 [ ] /terms-and-conditions
+
 [ ] /services/house-removals
 [ ] /services/packing-services
 [ ] /services/office-removals
 [ ] /services/last-minute-removals
 [ ] /services/antique-and-fine-arts
+
 [ ] /locations/derby
 [ ] /locations/alfreton
 [ ] /locations/chesterfield
@@ -138,6 +140,7 @@ This project is private and proprietary to Derbyshire Removals.
 [ ] /locations/matlock
 [ ] /locations/mansfield
 [ ] /locations/loughborough
+
 [ ] /privacy-policy
 
 # TODO Optimise Nav Bar, Meta tags and OG image tags etc.
@@ -164,3 +167,9 @@ This project is private and proprietary to Derbyshire Removals.
 [ ] /locations/mansfield
 [ ] /locations/loughborough
 [ ] /privacy-policy
+
+## SEO Changes - Phase 2
+[ ] Bakewell and Top 3 areas
+[ ] Meta tags optimisation
+[ ] Swap 0333 number with mobile number
+[ ] Add locations menu at the top with all the other areas
