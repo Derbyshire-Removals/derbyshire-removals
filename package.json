@@ -1,7 +1,7 @@
 {
   "name": "derbyshire-removals-11ty",
   "version": "1.0.0",
-  "description": "Derbyshire Removals website built with Eleventy",
+  "description": "Derbyshire Removals website",
   "main": "index.js",
   "scripts": {
     "start": "npm-run-all --parallel dev:*",
