@@ -256,6 +256,64 @@ function getReviewPageSchema(aggregateRating, reviews = []) {
   ];
 }
 
+// Specific function for testimonials page with testimonials data
+function getTestimonialsPageSchema(testimonials) {
+  // Create the aggregate rating
+  const aggregateRating = {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": testimonials.length,
+    "bestRating": "5",
+    "worstRating": "1"
+  };
+
+  // Create the reviews array (limit to 10 for performance)
+  const reviews = testimonials.slice(0, 10).map(testimonial => ({
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5"
+    },
+    "author": {
+      "@type": "Person",
+      "name": testimonial.name
+    },
+    "reviewBody": testimonial.review,
+    "datePublished": "2024-01-01"
+  }));
+
+  // Create the FAQ page schema
+  const faqPage = {
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What do customers say about Derbyshire Removals?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our customers consistently rate us 5 stars for our professional, friendly, and efficient removal services."
+        }
+      }
+    ]
+  };
+
+  return [
+    {
+      "@type": "MovingCompany",
+      "name": organization.name,
+      "image": organization.image,
+      "address": organization.address,
+      "telephone": organization.telephone,
+      "url": organization.url,
+      "priceRange": "££",
+      "aggregateRating": aggregateRating,
+      "review": reviews
+    },
+    faqPage,
+    organization
+  ];
+}
+
 // For blog/article pages
 function getArticlePageSchema(title, description, url, datePublished, dateModified, image, authorName) {
   return [
@@ -494,6 +552,7 @@ module.exports = {
   getServicePageSchema,
   getFAQPageSchema,
   getReviewPageSchema,
+  getTestimonialsPageSchema,
   getArticlePageSchema,
   getBreadcrumbSchema,
   getHomePageSchema,
