@@ -129,18 +129,18 @@ This project is private and proprietary to Derbyshire Removals.
 [x] /services/house-removals
 [x] /services/packing-services
 [x] /services/office-removals
-[ ] /services/last-minute-removals
-[ ] /services/antique-and-fine-arts
+[x] /services/last-minute-removals
+[x] /services/antique-and-fine-arts
+[x] /storage
 
-[ ] /move-checklist
-[ ] /storage
-[ ] /about-us
+[x] /about-us
 [ ] /testimonials
 [ ] /faq
 [ ] /contact
-[ ] /terms-and-conditions
-
 [ ] /privacy-policy
+
+[ ] /terms-and-conditions
+[ ] /move-checklist
 
 [ ] Home
 
