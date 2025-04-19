@@ -203,7 +203,7 @@ const StorageSolutions = () => (
         <div>
           <img 
             src="/images/business/storage.jpg"
-            alt="Clean and organized storage facility with modern security features"
+            alt="Clean and organised storage facility with modern security features"
             className="rounded-lg shadow-lg w-full h-auto"
             loading="lazy"
           />

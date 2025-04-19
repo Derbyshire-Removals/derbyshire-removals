@@ -88,7 +88,7 @@ const MoveChecklist = () => {
       tasks: [
         "Confirm removal company details",
         "Arrange utility disconnections/connections",
-        "Organize pet and plant transportation",
+        "Organise pet and plant transportation",
         "Pack most of your items",
         "Begin cleaning your current property"
       ]
@@ -115,7 +115,7 @@ const MoveChecklist = () => {
 
   const afterMovingTasks = [
     "Check for any damages to your belongings",
-    "Prioritize unpacking essential rooms first",
+    "Prioritise unpacking essential rooms first",
     "Test smoke alarms and locate stopcock",
     "Introduce yourself to neighbors",
     "Update your address on remaining accounts"
@@ -135,7 +135,7 @@ const MoveChecklist = () => {
             
             <p className="text-lg mb-8">
               Moving house can be overwhelming, but with proper planning, you can ensure a smooth transition to your new home. 
-              Follow our comprehensive checklist to stay organized throughout your move.
+              Follow our comprehensive checklist to stay organised throughout your move.
             </p>
             
             <section className="bg-white rounded-lg shadow-md p-8 mb-8">

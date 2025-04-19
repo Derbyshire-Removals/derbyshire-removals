@@ -54,7 +54,7 @@ const Storage = () => {
           <div className="mb-8">
             <img 
               src="/images/business/storage.jpg"
-              alt="Secure storage facility with organized units and modern security features"
+              alt="Secure storage facility with organised units and modern security features"
               className="w-full h-[400px] object-cover rounded-lg shadow-lg"
               loading="lazy"
             />
@@ -104,7 +104,7 @@ const Storage = () => {
                   <Shield className="h-4 w-4 text-white" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-lg">Specialized Storage</h3>
+                  <h3 className="font-semibold text-lg">Specialised Storage</h3>
                   <p className="text-gray-600">Climate-controlled units for sensitive items like antiques, artwork, and electronics</p>
                 </div>
               </li>

@@ -57,7 +57,7 @@ const Services = () => {
     { 
       icon: <Frame size={24} />, 
       title: "Antique and Fine Arts", 
-      description: "Specialized handling for valuable and delicate items",
+      description: "Specialised handling for valuable and delicate items",
       to: "/services/antique-and-fine-arts"
     },
   ];

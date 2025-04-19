@@ -178,5 +178,5 @@ This project is private and proprietary to Derbyshire Removals.
 [ ] Meta tags optimisation
 [ ] Swap 0333 number with mobile number
 [ ] Add locations menu at the top with all the other areas
-[ ] Remove american english, Specialized, Orgnized
+[ ] Remove american english, Specialised, Orgnized
 [ ] Improve validation on Contact form

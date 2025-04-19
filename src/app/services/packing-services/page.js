@@ -20,7 +20,7 @@ const PackingServices = () => {
     {
       icon: <Clock className="w-6 h-6 text-[#071059]" />,
       title: "Time-Efficient",
-      description: "Swift and organized packing process"
+      description: "Swift and organised packing process"
     },
     {
       icon: <CheckCircle className="w-6 h-6 text-[#071059]" />,

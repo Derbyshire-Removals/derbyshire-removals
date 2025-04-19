@@ -33,7 +33,7 @@ const FAQ = () => {
     },
     {
       question: "How do you handle delicate or valuable items?",
-      answer: "We take extra precautions with delicate items, using specialized packing materials and techniques. For particularly valuable or antique items, we offer our specialized antique and fine art removal service."
+      answer: "We take extra precautions with delicate items, using specialised packing materials and techniques. For particularly valuable or antique items, we offer our specialised antique and fine art removal service."
     },
     {
       question: "What happens if bad weather is forecast on my moving day?",

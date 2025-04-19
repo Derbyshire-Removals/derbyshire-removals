@@ -92,7 +92,7 @@ const PackagingMaterial = () => {
     getServiceSchema(
       "Moving Packaging Materials",
       "Packing Materials Supply",
-      "Professional packing materials to ensure your belongings are protected during the move, including boxes, bubble wrap, tape, and specialized containers."
+      "Professional packing materials to ensure your belongings are protected during the move, including boxes, bubble wrap, tape, and specialised containers."
     )
   ]);
 

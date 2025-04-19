@@ -8,8 +8,8 @@ const AntiqueAndFineArts = () => {
   const antiqueAndFineArtsSchema = generateSchemaScript([
     getServiceSchema(
       "Antique and Fine Arts Removal",
-      "Specialized Moving Service",
-      "Specialized handling service for valuable antiques and fine art pieces, ensuring they are moved with the utmost care and attention."
+      "Specialised Moving Service",
+      "Specialised handling service for valuable antiques and fine art pieces, ensuring they are moved with the utmost care and attention."
     )
   ]);
 
@@ -36,10 +36,10 @@ const AntiqueAndFineArts = () => {
               <h1 className="text-3xl font-bold mb-6">Antique and Fine Arts Removal</h1>
               <p className="text-gray-700 mb-6">
                 Your precious antiques and fine art pieces deserve special care during transportation. 
-                Our specialized handling service ensures your valuable items are moved with the utmost care and attention.
+                Our specialised handling service ensures your valuable items are moved with the utmost care and attention.
               </p>
 
-              <h2 className="text-2xl font-semibold mb-4">Specialized Services Include:</h2>
+              <h2 className="text-2xl font-semibold mb-4">Specialised Services Include:</h2>
               <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-6">
                 <li>Custom crating and packaging</li>
                 <li>Climate-controlled transportation</li>

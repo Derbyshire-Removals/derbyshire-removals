@@ -13,7 +13,7 @@ module.exports = {
     },
     {
       name: "Matlock",
-      description: "Specialized removal services in Matlock, accommodating the unique terrain and properties.",
+      description: "Specialised removal services in Matlock, accommodating the unique terrain and properties.",
       link: "/locations/matlock/"
     },
     {

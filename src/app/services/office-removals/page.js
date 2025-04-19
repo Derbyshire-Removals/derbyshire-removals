@@ -63,7 +63,7 @@ const OfficeRemovals = () => {
             <div className="mb-8">
               <img 
                 src="/images/business/8.jpg"
-                alt="Professional office relocation with organized packing and moving"
+                alt="Professional office relocation with organised packing and moving"
                 className="w-full h-[400px] object-cover rounded-lg shadow-lg"
                 loading="lazy"
               />
@@ -71,7 +71,7 @@ const OfficeRemovals = () => {
 
             <p className="text-lg text-gray-700 mb-8">
               Relocating your office requires careful planning and execution to minimize business disruption. 
-              Our specialized office removal service ensures a smooth transition to your new premises, 
+              Our specialised office removal service ensures a smooth transition to your new premises, 
               handling everything from IT equipment to furniture with the utmost care.
             </p>
 
@@ -98,7 +98,7 @@ const OfficeRemovals = () => {
                 </li>
                 <li className="flex items-start">
                   <span className="font-bold mr-2">3.</span>
-                  <span>Specialized packing of IT equipment, documents, and furniture</span>
+                  <span>Specialised packing of IT equipment, documents, and furniture</span>
                 </li>
                 <li className="flex items-start">
                   <span className="font-bold mr-2">4.</span>
