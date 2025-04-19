@@ -134,8 +134,8 @@ This project is private and proprietary to Derbyshire Removals.
 [x] /storage
 
 [x] /about-us
-[ ] /testimonials
-[ ] /faq
+[x] /testimonials
+[x] /faq
 [ ] /contact
 [ ] /privacy-policy
 
@@ -146,7 +146,7 @@ This project is private and proprietary to Derbyshire Removals.
 
 # TODO Optimise Nav Bar, Meta tags and OG image tags etc.
 [ ] Footer
-
+[ ] Check contact form works
 
 [ ] Home
 [ ] /move-checklist
@@ -172,9 +172,11 @@ This project is private and proprietary to Derbyshire Removals.
 [ ] /locations/loughborough
 [ ] /privacy-policy
 
+
 ## SEO Changes - Phase 2
 [ ] Bakewell and Top 3 areas
 [ ] Meta tags optimisation
 [ ] Swap 0333 number with mobile number
 [ ] Add locations menu at the top with all the other areas
 [ ] Remove american english, Specialized, Orgnized
+[ ] Improve validation on Contact form
