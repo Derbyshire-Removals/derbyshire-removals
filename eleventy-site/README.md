@@ -163,17 +163,17 @@ This project is private and proprietary to Derbyshire Removals.
 [x] /services/packing-services
 [x] /services/office-removals
 [x] /services/last-minute-removals
-[ ] /services/antique-and-fine-arts
-[ ] /locations/derby
-[ ] /locations/matlock
-[ ] /locations/chesterfield
-[ ] /locations/alfreton
-[ ] /locations/buxton
-[ ] /locations/mansfield
-[ ] /locations/loughborough
-[ ] /packaging-material
-[ ] /areas-we-cover
-[ ] /testimonials
+[x] /services/antique-and-fine-arts
+[x] /locations/derby
+[x] /locations/matlock
+[x] /locations/chesterfield
+[x] /locations/alfreton
+[x] /locations/buxton
+[x] /locations/mansfield
+[x] /locations/loughborough
+[x] /packaging-material
+[x] /areas-we-cover
+[x] /testimonials
 
 ## SEO Changes - Phase 2
 [ ] Bakewell and Top 3 areas
