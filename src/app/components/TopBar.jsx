@@ -4,7 +4,7 @@ import { Phone } from 'lucide-react';
 
 const TopBar = () => {
   return (
-    <div className="bg-[#071059] text-white py-1">
+    <div className="bg-primary text-white py-1">
       <div className="container mx-auto px-4 flex justify-end items-center text-sm">
         <div className="flex items-center space-x-4">
           <a href="tel:01332314312" className="flex items-center hover:text-gray-300">

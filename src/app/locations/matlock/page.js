@@ -71,7 +71,7 @@ const Matlock = () => {
               </div>
             </section>
 
-            <section className="bg-[#071059] text-white rounded-lg shadow-md p-8">
+            <section className="bg-primary text-white rounded-lg shadow-md p-8">
               <h2 className="text-2xl font-semibold mb-4">Why Choose Us for Your Matlock Move?</h2>
               <ul className="space-y-4">
                 <li className="flex items-start space-x-3">

@@ -58,7 +58,7 @@ const AntiqueAndFineArts = () => {
                 </p>
               </div>
 
-              <div className="bg-[#071059] text-white p-8 rounded-lg mt-8">
+              <div className="bg-primary text-white p-8 rounded-lg mt-8">
                 <h2 className="text-2xl font-bold mb-4">Get Your Free Quote Today</h2>
                 <p className="mb-6">
                   Contact us today to discuss your antique and fine art moving needs and receive a comprehensive quote 

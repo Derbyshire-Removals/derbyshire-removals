@@ -90,7 +90,7 @@ const LastMinuteRemovals = () => {
             </ul>
           </section>
 
-          <section className="bg-[#071059] text-white rounded-lg shadow-md p-8 text-center">
+          <section className="bg-primary text-white rounded-lg shadow-md p-8 text-center">
             <h2 className="text-2xl font-semibold mb-4">Need Urgent Removal Services?</h2>
             <p className="mb-6">Contact us now for immediate assistance with your emergency move</p>
             <Link href="/contact">

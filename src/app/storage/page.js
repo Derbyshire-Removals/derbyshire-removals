@@ -82,7 +82,7 @@ const Storage = () => {
             <h2 className="text-2xl font-semibold mb-4">Our Storage Options</h2>
             <ul className="space-y-4">
               <li className="flex items-start">
-                <div className="bg-[#071059] rounded-full p-1 mr-3 mt-1">
+                <div className="bg-primary rounded-full p-1 mr-3 mt-1">
                   <Shield className="h-4 w-4 text-white" />
                 </div>
                 <div>
@@ -91,7 +91,7 @@ const Storage = () => {
                 </div>
               </li>
               <li className="flex items-start">
-                <div className="bg-[#071059] rounded-full p-1 mr-3 mt-1">
+                <div className="bg-primary rounded-full p-1 mr-3 mt-1">
                   <Shield className="h-4 w-4 text-white" />
                 </div>
                 <div>
@@ -100,7 +100,7 @@ const Storage = () => {
                 </div>
               </li>
               <li className="flex items-start">
-                <div className="bg-[#071059] rounded-full p-1 mr-3 mt-1">
+                <div className="bg-primary rounded-full p-1 mr-3 mt-1">
                   <Shield className="h-4 w-4 text-white" />
                 </div>
                 <div>
@@ -111,7 +111,7 @@ const Storage = () => {
             </ul>
           </div>
           
-          <div className="bg-[#071059] text-white p-8 rounded-lg">
+          <div className="bg-primary text-white p-8 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">Need Storage Solutions?</h2>
             <p className="mb-6">
               Contact us today to discuss your storage requirements and find the perfect solution 

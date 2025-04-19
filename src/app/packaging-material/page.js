@@ -142,7 +142,7 @@ const PackagingMaterial = () => {
             </p>
             <Link 
               href="/contact" 
-              className="inline-block bg-[#071059] text-white px-6 py-2 rounded-lg hover:bg-blue-800 transition-colors"
+              className="inline-block bg-primary text-white px-6 py-2 rounded-lg hover:bg-blue-800 transition-colors"
             >
               Contact Us
             </Link>

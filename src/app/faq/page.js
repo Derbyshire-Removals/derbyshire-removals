@@ -103,7 +103,7 @@ const FAQ = () => {
             </Accordion>
           </div>
           
-          <div className="mt-8 bg-[#071059] text-white p-8 rounded-lg text-center">
+          <div className="mt-8 bg-primary text-white p-8 rounded-lg text-center">
             <h2 className="text-2xl font-bold mb-4">Still Have Questions?</h2>
             <p className="mb-6">
               Our friendly team is ready to help with any questions you might have about our services.

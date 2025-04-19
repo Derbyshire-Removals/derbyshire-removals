@@ -159,7 +159,7 @@ const MoveChecklist = () => {
               ))}
             </section>
             
-            <section className="bg-[#071059] text-white rounded-lg shadow-md p-8 mb-8">
+            <section className="bg-primary text-white rounded-lg shadow-md p-8 mb-8">
               <h2 className="text-2xl font-semibold mb-6">Moving Day</h2>
               <ul className="space-y-3">
                 {movingDayTasks.map((task, index) => (

@@ -115,17 +115,16 @@ This project is private and proprietary to Derbyshire Removals.
 
 
 # TODO Webpage design
-[ ] Home
-[ ] /move-checklist
-[ ] /storage
 [x] /packaging-material
 [x] /areas-we-cover
-  [ ] shouldn't be in the main nav
-[ ] /about-us
-[ ] /testimonials
-[ ] /faq
-[ ] /contact
-[ ] /terms-and-conditions
+
+[x] /locations/derby
+[x] /locations/alfreton
+[x] /locations/chesterfield
+[x] /locations/buxton
+[x] /locations/matlock
+[x] /locations/mansfield
+[x] /locations/loughborough
 
 [ ] /services/house-removals
 [ ] /services/packing-services
@@ -133,13 +132,16 @@ This project is private and proprietary to Derbyshire Removals.
 [ ] /services/last-minute-removals
 [ ] /services/antique-and-fine-arts
 
-[ ] /locations/derby
-[ ] /locations/alfreton
-[ ] /locations/chesterfield
-[ ] /locations/buxton
-[ ] /locations/matlock
-[ ] /locations/mansfield
-[ ] /locations/loughborough
+[ ] Home
+[ ] /move-checklist
+[ ] /storage
+
+  [ ] shouldn't be in the main nav
+[ ] /about-us
+[ ] /testimonials
+[ ] /faq
+[ ] /contact
+[ ] /terms-and-conditions
 
 [ ] /privacy-policy
 
