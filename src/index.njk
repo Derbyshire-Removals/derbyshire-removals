@@ -1,0 +1,109 @@
+---
+layout: base.njk
+title: "Derbyshire Removals: Trusted House & Office Moving Experts"
+description: "Professional house and office removals across the Midlands. Serving Derby, Matlock, Chesterfield, Nottingham, Birmingham, and Leicester since 1988."
+keywords: "removals derby, house removals derbyshire, office removals derby, storage solutions derby, packing services derbyshire"
+ogImage: "/og-image.png"
+---
+
+<!-- Hero Section -->
+{% include "components/hero.njk" %}
+
+<!-- Reviews Section -->
+{% include "components/home-reviews.njk" %}
+
+<!-- Professional Moving Services Section -->
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h2 class="text-3xl font-bold mb-4">Professional Moving Services</h2>
+        <p class="text-gray-600 mb-6">
+          Our experienced team ensures your belongings are handled with the utmost care,
+          making your move stress-free and efficient.
+        </p>
+      </div>
+      <div>
+        <img
+          src="/images/business/13.jpg"
+          alt="Professional movers carefully packing items into boxes"
+          class="rounded-lg shadow-lg w-full h-auto"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+{% include "components/services.njk" %}
+
+<!-- Trusted Partners Section -->
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div>
+        <img
+          src="/images/business/8.jpg"
+          alt="Modern office space being prepared for relocation"
+          class="rounded-lg shadow-lg w-full h-auto"
+          loading="lazy"
+        />
+      </div>
+      <div>
+        <h2 class="text-3xl font-bold mb-4">Trusted by Businesses</h2>
+        <p class="text-gray-600 mb-6">
+          From small offices to large corporations, we provide reliable commercial moving
+          services that minimize downtime and protect your valuable assets.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Us Section -->
+{% include "components/why-us.njk" %}
+
+<!-- Storage Solutions Section -->
+<section class="py-16">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h2 class="text-3xl font-bold mb-4">Secure Storage Solutions</h2>
+        <p class="text-gray-600 mb-6">
+          Need temporary storage? Our secure facilities provide the perfect solution
+          for both short-term and long-term storage needs.
+        </p>
+      </div>
+      <div>
+        <img
+          src="/images/business/storage.jpg"
+          alt="Clean and organised storage facility with modern security features"
+          class="rounded-lg shadow-lg w-full h-auto"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How We Work Section -->
+{% include "components/how-we-work.njk" %}
+
+<!-- Areas Covered Section -->
+{% include "components/areas-covered.njk" %}
+
+<section id="contact" class="py-16 bg-[#071059] text-white">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-6">Ready to Move?</h2>
+    <p class="text-xl mb-8">Contact us today for a free, no-obligation quote</p>
+    <a href="/contact">
+      <button class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-secondary text-secondary-foreground hover:bg-secondary/80 h-11 rounded-md px-8">Get in Touch</button>
+    </a>
+  </div>
+</section>
+
+<!-- Schema.org JSON-LD -->
+<script type="application/ld+json">
+{{ schema.generateSchemaScript(schema.getHomePageSchema()) | safe }}
+</script>

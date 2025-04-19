@@ -1,36 +1,189 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Derbyshire Removals - Eleventy Website
+
+This is the Eleventy (11ty) version of the Derbyshire Removals website, migrated from Next.js/React to improve performance and reduce JavaScript payload.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js (v14 or newer)
+- npm or yarn
+
+### Installation
+
+1. Clone this repository
+2. Install dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Development
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+To run the development server:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm start
+```
 
-## Learn More
+This will start the Eleventy development server and Tailwind CSS watcher. The site will be available at [http://localhost:8080](http://localhost:8080).
 
-To learn more about Next.js, take a look at the following resources:
+### Building for Production
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To build the site for production:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run build
+```
 
-## Deploy on Vercel
+This will generate the static site in the `dist` directory.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Project Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `src/`: Source files
+  - `_data/`: Global data files
+  - `_includes/`: Reusable components and partials
+    - `components/`: Page components (hero, services, etc.)
+    - `partials/`: Smaller reusable parts (header, footer)
+  - `_layouts/`: Page layouts
+  - `styles/`: CSS files (Tailwind)
+  - `js/`: JavaScript files
+  - Various content directories for pages
+
+## Key Features
+
+- **Static Site Generation**: All pages are pre-rendered at build time
+- **Minimal JavaScript**: Only essential interactivity is handled with vanilla JS
+- **Tailwind CSS**: For styling
+- **Optimized Images**: Images are properly sized and include loading attributes
+- **SEO Optimized**: Includes metadata, OpenGraph tags, and schema.org structured data
+
+## Migrating from Next.js
+
+This project was migrated from a Next.js/React application. The key changes include:
+
+1. Replacing React components with Nunjucks templates
+2. Converting client-side React state to vanilla JavaScript
+3. Implementing forms without React Hook Form
+4. Maintaining the same visual design and content structure
+5. Preserving SEO elements and structured data
+
+## Performance Benefits
+
+The Eleventy version offers several performance improvements:
+
+- Significantly reduced JavaScript payload
+- Faster initial page load
+- Improved Core Web Vitals scores
+- Better user experience on slower connections
+- Reduced bandwidth usage
+
+## Deployment
+
+The site can be deployed to any static hosting service like Netlify, Vercel, GitHub Pages, etc.
+
+## License
+
+This project is private and proprietary to Derbyshire Removals.
+
+
+# TODO Schema.org
+[x] Home
+[x] /move-checklist
+[x] /storage
+[x] /privacy-policy
+[x] /about-us (page is completely different)
+[x] /faq (missing from menu)
+[x] /contact
+[x] /terms-and-conditions
+[x] /services/house-removals
+[x] /services/packing-services
+[x] /services/office-removals
+[x] /services/last-minute-removals
+[x] /services/antique-and-fine-arts
+[x] /locations/derby
+[x] /locations/matlock
+[x] /locations/chesterfield
+[x] /locations/alfreton
+[x] /locations/buxton
+[x] /locations/mansfield
+[x] /locations/loughborough
+
+[x] /packaging-material
+[x] /areas-we-cover
+[x] /testimonials
+
+
+# TODO Webpage design
+[x] /packaging-material
+[x] /areas-we-cover
+
+[x] /locations/derby
+[x] /locations/alfreton
+[x] /locations/chesterfield
+[x] /locations/buxton
+[x] /locations/matlock
+[x] /locations/mansfield
+[x] /locations/loughborough
+
+[x] /services/house-removals
+[x] /services/packing-services
+[x] /services/office-removals
+[x] /services/last-minute-removals
+[x] /services/antique-and-fine-arts
+[x] /storage
+
+[x] /about-us
+[x] /testimonials
+[x] /faq
+[x] /contact
+[x] /privacy-policy
+
+[x] /terms-and-conditions
+[x] /move-checklist
+
+[x] Home
+  [x] Check Reviews
+
+# TODO Optimise Nav Bar, Meta tags and OG image tags etc.
+[x] Footer
+[x] Check contact form works
+[x] Check Google analytics installation
+
+### Check Meta tag for pages
+[x] Home
+[x] /move-checklist
+[x] /storage
+[x] /privacy-policy
+[x] /about-us (page is completely different)
+[x] /faq (missing from menu)
+[x] /contact
+[x] /terms-and-conditions
+[x] /services/house-removals
+[x] /services/packing-services
+[x] /services/office-removals
+[x] /services/last-minute-removals
+[x] /services/antique-and-fine-arts
+[x] /locations/derby
+[x] /locations/matlock
+[x] /locations/chesterfield
+[x] /locations/alfreton
+[x] /locations/buxton
+[x] /locations/mansfield
+[x] /locations/loughborough
+[x] /packaging-material
+[x] /areas-we-cover
+[x] /testimonials
+
+## After launch
+[ ] Test contact us form
+[ ] Google Analytics
+[ ] Broken link checker
+
+## SEO Changes - Phase 2
+[ ] Meta tags optimisation
+[ ] Swap 0333 number with mobile number
+[ ] Bakewell and Top 3 areas
+[ ] Add locations menu at the top with all the other areas
+[x] Remove american english, Specialised, Orgnized
+[ ] Improve validation on Contact form

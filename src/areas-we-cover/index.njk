@@ -1,0 +1,74 @@
+---
+layout: base.njk
+title: "Areas Covered: Derby, Bakewell, Matlock, East & West Midlands"
+description: "Professional removals serving Derby, Bakewell, Matlock, Chesterfield, Nottingham, Birmingham, Leicester and beyond since 1988."
+keywords: "removals Derby, removals Bakewell, removals Matlock, removals Chesterfield, removals east midlands, removals west midlands"
+ogImage: "/images/business/van.jpg"
+---
+
+<div class="min-h-screen bg-gray-100">
+  <main class="container mx-auto px-4 pt-52 pb-16">
+    <h1 class="text-4xl font-bold mb-8 text-[#071059]">Areas We Cover</h1>
+
+    <p class="text-lg mb-8">
+      Derbyshire Removals provides professional moving services across the East and West Midlands.
+      With local expertise in key locations, we ensure a smooth and efficient moving experience
+      wherever you're relocating to or from.
+    </p>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+      {% for location in locations.primaryLocations %}
+        <a href="{{ location.link }}">
+          <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <div class="flex items-center mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-[#071059] mr-2">
+                <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <h2 class="text-xl font-semibold">{{ location.name }}</h2>
+            </div>
+            <p class="text-gray-600 mb-4">{{ location.description }}</p>
+            <div class="text-[#071059] font-medium">Learn more →</div>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+
+    <div class="bg-white rounded-lg shadow-md p-8">
+      <h2 class="text-2xl font-semibold mb-6">Additional Coverage Areas</h2>
+
+      <p class="mb-6">
+        Beyond our primary service locations, we also offer removal services to many other areas including:
+      </p>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        {% for area in locations.additionalAreas %}
+          <div class="flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-[#071059]">
+              <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>{{ area }}</span>
+          </div>
+        {% endfor %}
+      </div>
+
+      <div class="mt-8 text-center">
+        <p class="mb-4">
+          Don't see your location listed? We likely still cover it!
+        </p>
+        <a
+          href="/contact/"
+          class="inline-block bg-primary text-white px-6 py-2 rounded-lg hover:bg-blue-800 transition-colors"
+        >
+          Contact Us to Confirm
+        </a>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- Schema.org JSON-LD -->
+<script type="application/ld+json">
+{{ schema.generateSchemaScript(schema.getAreasPageSchema()) | safe }}
+</script>
