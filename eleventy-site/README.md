@@ -126,7 +126,7 @@ This project is private and proprietary to Derbyshire Removals.
 [x] /locations/mansfield
 [x] /locations/loughborough
 
-[ ] /services/house-removals
+[x] /services/house-removals
 [ ] /services/packing-services
 [ ] /services/office-removals
 [ ] /services/last-minute-removals
@@ -146,6 +146,9 @@ This project is private and proprietary to Derbyshire Removals.
 [ ] /privacy-policy
 
 # TODO Optimise Nav Bar, Meta tags and OG image tags etc.
+[ ] Footer
+
+
 [ ] Home
 [ ] /move-checklist
 [ ] /storage
