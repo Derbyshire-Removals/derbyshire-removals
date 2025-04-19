@@ -136,10 +136,10 @@ This project is private and proprietary to Derbyshire Removals.
 [x] /about-us
 [x] /testimonials
 [x] /faq
-[ ] /contact
-[ ] /privacy-policy
+[x] /contact
+[x] /privacy-policy
 
-[ ] /terms-and-conditions
+[x] /terms-and-conditions
 [ ] /move-checklist
 
 [ ] Home
