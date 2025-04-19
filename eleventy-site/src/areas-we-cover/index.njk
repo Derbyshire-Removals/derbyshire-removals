@@ -16,169 +16,54 @@ ogImage: "/images/business/van.jpg"
       wherever you're relocating to or from.
     </p>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-      <div>
-        <img
-          src="/images/business/van.jpg"
-          alt="Derbyshire Removals van ready for service across the Midlands"
-          class="rounded-lg shadow-lg w-full h-auto"
-          loading="lazy"
-        />
-      </div>
-
-      <div class="bg-white p-6 rounded-lg shadow-md">
-        <h2 class="text-2xl font-semibold mb-4">Our Primary Service Areas</h2>
-
-        <div class="grid grid-cols-2 gap-4">
-          <div>
-            <h3 class="text-xl font-semibold mb-2 text-[#071059]">Derbyshire</h3>
-            <ul class="space-y-2">
-              <li class="flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#071059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                  <circle cx="12" cy="10" r="3"></circle>
-                </svg>
-                <a href="/locations/derby/" class="hover:text-[#071059]">Derby</a>
-              </li>
-              <li class="flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#071059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                  <circle cx="12" cy="10" r="3"></circle>
-                </svg>
-                <a href="/locations/chesterfield/" class="hover:text-[#071059]">Chesterfield</a>
-              </li>
-              <li class="flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#071059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                  <circle cx="12" cy="10" r="3"></circle>
-                </svg>
-                <a href="/locations/matlock/" class="hover:text-[#071059]">Matlock</a>
-              </li>
-              <li class="flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#071059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                  <circle cx="12" cy="10" r="3"></circle>
-                </svg>
-                <a href="/locations/buxton/" class="hover:text-[#071059]">Buxton</a>
-              </li>
-              <li class="flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#071059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                  <circle cx="12" cy="10" r="3"></circle>
-                </svg>
-                <a href="/locations/alfreton/" class="hover:text-[#071059]">Alfreton</a>
-              </li>
-            </ul>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+      {% for location in locations.primaryLocations %}
+        <a href="{{ location.link }}">
+          <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <div class="flex items-center mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-[#071059] mr-2">
+                <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <h2 class="text-xl font-semibold">{{ location.name }}</h2>
+            </div>
+            <p class="text-gray-600 mb-4">{{ location.description }}</p>
+            <div class="text-[#071059] font-medium">Learn more →</div>
           </div>
-
-          <div>
-            <h3 class="text-xl font-semibold mb-2 text-[#071059]">East Midlands</h3>
-            <ul class="space-y-2">
-              <li class="flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#071059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                  <circle cx="12" cy="10" r="3"></circle>
-                </svg>
-                <a href="/locations/nottingham/" class="hover:text-[#071059]">Nottingham</a>
-              </li>
-              <li class="flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#071059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                  <circle cx="12" cy="10" r="3"></circle>
-                </svg>
-                <a href="/locations/leicester/" class="hover:text-[#071059]">Leicester</a>
-              </li>
-              <li class="flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#071059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                  <circle cx="12" cy="10" r="3"></circle>
-                </svg>
-                <a href="/locations/lincoln/" class="hover:text-[#071059]">Lincoln</a>
-              </li>
-              <li class="flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#071059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                  <circle cx="12" cy="10" r="3"></circle>
-                </svg>
-                <a href="/locations/northampton/" class="hover:text-[#071059]">Northampton</a>
-              </li>
-              <li class="flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#071059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                  <circle cx="12" cy="10" r="3"></circle>
-                </svg>
-                <a href="/locations/loughborough/" class="hover:text-[#071059]">Loughborough</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+        </a>
+      {% endfor %}
     </div>
 
-    <div class="bg-white p-8 rounded-lg shadow-md mb-12">
-      <h2 class="text-2xl font-semibold mb-6">All Areas We Cover</h2>
+    <div class="bg-white rounded-lg shadow-md p-8">
+      <h2 class="text-2xl font-semibold mb-6">Additional Coverage Areas</h2>
 
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-        <a href="/locations/derby/" class="bg-gray-100 p-3 rounded-lg text-center hover:bg-[#071059] hover:text-white transition-colors">
-          Derby
-        </a>
-        <a href="/locations/chesterfield/" class="bg-gray-100 p-3 rounded-lg text-center hover:bg-[#071059] hover:text-white transition-colors">
-          Chesterfield
-        </a>
-        <a href="/locations/matlock/" class="bg-gray-100 p-3 rounded-lg text-center hover:bg-[#071059] hover:text-white transition-colors">
-          Matlock
-        </a>
-        <a href="/locations/buxton/" class="bg-gray-100 p-3 rounded-lg text-center hover:bg-[#071059] hover:text-white transition-colors">
-          Buxton
-        </a>
-        <a href="/locations/alfreton/" class="bg-gray-100 p-3 rounded-lg text-center hover:bg-[#071059] hover:text-white transition-colors">
-          Alfreton
-        </a>
-        <a href="/locations/ashbourne/" class="bg-gray-100 p-3 rounded-lg text-center hover:bg-[#071059] hover:text-white transition-colors">
-          Ashbourne
-        </a>
-        <a href="/locations/bakewell/" class="bg-gray-100 p-3 rounded-lg text-center hover:bg-[#071059] hover:text-white transition-colors">
-          Bakewell
-        </a>
-        <a href="/locations/belper/" class="bg-gray-100 p-3 rounded-lg text-center hover:bg-[#071059] hover:text-white transition-colors">
-          Belper
-        </a>
-        <a href="/locations/ilkeston/" class="bg-gray-100 p-3 rounded-lg text-center hover:bg-[#071059] hover:text-white transition-colors">
-          Ilkeston
-        </a>
-        <a href="/locations/swadlincote/" class="bg-gray-100 p-3 rounded-lg text-center hover:bg-[#071059] hover:text-white transition-colors">
-          Swadlincote
-        </a>
-        <a href="/locations/nottingham/" class="bg-gray-100 p-3 rounded-lg text-center hover:bg-[#071059] hover:text-white transition-colors">
-          Nottingham
-        </a>
-        <a href="/locations/leicester/" class="bg-gray-100 p-3 rounded-lg text-center hover:bg-[#071059] hover:text-white transition-colors">
-          Leicester
-        </a>
-        <a href="/locations/birmingham/" class="bg-gray-100 p-3 rounded-lg text-center hover:bg-[#071059] hover:text-white transition-colors">
-          Birmingham
-        </a>
-        <a href="/locations/sheffield/" class="bg-gray-100 p-3 rounded-lg text-center hover:bg-[#071059] hover:text-white transition-colors">
-          Sheffield
-        </a>
-        <a href="/locations/lincoln/" class="bg-gray-100 p-3 rounded-lg text-center hover:bg-[#071059] hover:text-white transition-colors">
-          Lincoln
-        </a>
-      </div>
-    </div>
-
-    <div class="bg-[#071059] text-white p-8 rounded-lg shadow-lg">
-      <h2 class="text-2xl font-bold mb-4">Moving Outside Our Listed Areas?</h2>
       <p class="mb-6">
-        We also provide nationwide moving services. Contact us to discuss your specific requirements,
-        no matter where you're moving to or from.
+        Beyond our primary service locations, we also offer removal services to many other areas including:
       </p>
-      <a
-        href="/contact/"
-        class="inline-block bg-white text-[#071059] px-6 py-2 rounded-lg hover:bg-gray-100 transition-colors"
-      >
-        Contact Us
-      </a>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        {% for area in locations.additionalAreas %}
+          <div class="flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-[#071059]">
+              <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>{{ area }}</span>
+          </div>
+        {% endfor %}
+      </div>
+
+      <div class="mt-8 text-center">
+        <p class="mb-4">
+          Don't see your location listed? We likely still cover it!
+        </p>
+        <a
+          href="/contact/"
+          class="inline-block bg-[#071059] text-white px-6 py-2 rounded-lg hover:bg-blue-800 transition-colors"
+        >
+          Contact Us to Confirm
+        </a>
+      </div>
     </div>
   </main>
 </div>

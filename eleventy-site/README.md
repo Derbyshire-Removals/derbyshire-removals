@@ -109,7 +109,7 @@ This project is private and proprietary to Derbyshire Removals.
 [x] /locations/mansfield
 [x] /locations/loughborough
 
-[ ] /packaging-material (Doesnt work at all)
+[x] /packaging-material (Doesnt work at all)
 [ ] /areas-we-cover (shouldn't be in the main nav?)
 [ ] /testimonials
 
@@ -118,7 +118,32 @@ This project is private and proprietary to Derbyshire Removals.
 [ ] Home
 [ ] /move-checklist
 [ ] /storage
-[ ] /packaging-material
+[x] /packaging-material
+[ ] /areas-we-cover
+[ ] /about-us
+[ ] /testimonials
+[ ] /faq
+[ ] /contact
+[ ] /terms-and-conditions
+[ ] /services/house-removals
+[ ] /services/packing-services
+[ ] /services/office-removals
+[ ] /services/last-minute-removals
+[ ] /services/antique-and-fine-arts
+[ ] /locations/derby
+[ ] /locations/alfreton
+[ ] /locations/chesterfield
+[ ] /locations/buxton
+[ ] /locations/matlock
+[ ] /locations/mansfield
+[ ] /locations/loughborough
+[ ] /privacy-policy
+
+# TODO Optimise Meta tags and OG image tags etc.
+[ ] Home
+[ ] /move-checklist
+[ ] /storage
+[x] /packaging-material
 [ ] /areas-we-cover
 [ ] /about-us
 [ ] /testimonials
