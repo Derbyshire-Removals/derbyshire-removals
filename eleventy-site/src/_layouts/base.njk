@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title }} | Derbyshire Removals</title>
+  <title>{{ title }}</title>
   <meta name="description" content="{{ description }}">
   <meta name="keywords" content="{{ keywords }}">
 
@@ -12,14 +12,13 @@
   <meta property="og:url" content="https://derbyshireremovals.com{{ page.url }}">
   <meta property="og:title" content="{{ title }}">
   <meta property="og:description" content="{{ description }}">
-  <meta property="og:image" content="{{ ogImage | default('/images/og-image.png') }}">
+  <meta property="og:image" content="https://derbyshireremovals.com{{ ogImage | default('/og-image.png') }}">
 
   <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://derbyshireremovals.com{{ page.url }}">
-  <meta property="twitter:title" content="{{ title }}">
-  <meta property="twitter:description" content="{{ description }}">
-  <meta property="twitter:image" content="{{ ogImage | default('/images/og-image.png') }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{{ description }}">
+  <meta name="twitter:image" content="https://derbyshireremovals.com{{ ogImage | default('/og-image.png') }}">
 
   <!-- Canonical URL -->
   <link rel="canonical" href="https://derbyshireremovals.com{{ page.url }}">
