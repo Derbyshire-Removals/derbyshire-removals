@@ -154,15 +154,15 @@ This project is private and proprietary to Derbyshire Removals.
 [x] Home
 [x] /move-checklist
 [x] /storage
-[ ] /privacy-policy
-[ ] /about-us (page is completely different)
-[ ] /faq (missing from menu)
-[ ] /contact
-[ ] /terms-and-conditions
-[ ] /services/house-removals
-[ ] /services/packing-services
-[ ] /services/office-removals
-[ ] /services/last-minute-removals
+[x] /privacy-policy
+[x] /about-us (page is completely different)
+[x] /faq (missing from menu)
+[x] /contact
+[x] /terms-and-conditions
+[x] /services/house-removals
+[x] /services/packing-services
+[x] /services/office-removals
+[x] /services/last-minute-removals
 [ ] /services/antique-and-fine-arts
 [ ] /locations/derby
 [ ] /locations/matlock
