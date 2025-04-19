@@ -297,20 +297,16 @@ function getTestimonialsPageSchema(testimonials) {
     ]
   };
 
+  // Create a modified organization schema with reviews
+  const organizationWithReviews = {
+    ...organization,
+    "aggregateRating": aggregateRating,
+    "review": reviews
+  };
+
   return [
-    {
-      "@type": "MovingCompany",
-      "name": organization.name,
-      "image": organization.image,
-      "address": organization.address,
-      "telephone": organization.telephone,
-      "url": organization.url,
-      "priceRange": "££",
-      "aggregateRating": aggregateRating,
-      "review": reviews
-    },
     faqPage,
-    organization
+    organizationWithReviews
   ];
 }
 

@@ -111,7 +111,7 @@ This project is private and proprietary to Derbyshire Removals.
 
 [x] /packaging-material
 [x] /areas-we-cover
-[ ] /testimonials
+[x] /testimonials
 
 
 # TODO Webpage design
@@ -140,7 +140,7 @@ This project is private and proprietary to Derbyshire Removals.
 [ ] /locations/loughborough
 [ ] /privacy-policy
 
-# TODO Optimise Meta tags and OG image tags etc.
+# TODO Optimise Nav Bar, Meta tags and OG image tags etc.
 [ ] Home
 [ ] /move-checklist
 [ ] /storage
