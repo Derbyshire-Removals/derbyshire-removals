@@ -4,14 +4,6 @@
   publish = "dist"
   environment = { NODE_VERSION = "18" }
 
-# Add this section to prevent trailing slash redirects
-[[plugins]]
-package = "netlify-plugin-no-more-404"
-
-[plugins.inputs]
-  # Disable trailing slashes
-  trailingSlash = false
-
 [[redirects]]
   from = "/services/home-removals"
   to = "/services/house-removals"
