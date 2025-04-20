@@ -182,6 +182,7 @@ This project is private and proprietary to Derbyshire Removals.
 [x] Sitemap update
 
 ## SEO Changes - Phase 2
+[ ] Add better validation for contact form
 [ ] Meta tags optimisation
 [ ] Swap 0333 number with mobile number
 [ ] Bakewell and Top 3 areas

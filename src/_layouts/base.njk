@@ -30,6 +30,8 @@
   <!-- CSS -->
   <link rel="stylesheet" href="/styles/tailwind.css">
 
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="9c64cef6-1510-453c-9019-c9b431b31ea7"></script>
+
   <!-- Additional head content -->
   {% block head %}{% endblock %}
 </head>
@@ -47,42 +49,6 @@
 
   <!-- Scripts -->
   <script src="/js/main.js" defer></script>
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TGVG5CNLD4"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    if (window.location.hostname === 'derbyshireremovals.com') {
-      gtag('config', 'G-TGVG5CNLD4');
-    }
-  </script>
-
-  <!-- Inline mobile menu script (direct implementation) -->
-  <script>
-    // Direct mobile menu implementation
-    window.addEventListener('load', function() {
-      const mobileMenuButton = document.getElementById('mobile-menu-button');
-      const mobileMenu = document.getElementById('mobile-menu');
-
-      if (mobileMenuButton && mobileMenu) {
-        mobileMenuButton.onclick = function(e) {
-          e.preventDefault();
-          mobileMenu.classList.toggle('hidden');
-
-          const menuIcon = mobileMenuButton.querySelector('.menu-icon');
-          const closeIcon = mobileMenuButton.querySelector('.close-icon');
-
-          if (menuIcon && closeIcon) {
-            menuIcon.classList.toggle('hidden');
-            closeIcon.classList.toggle('hidden');
-          }
-        };
-      }
-    });
-  </script>
 
   <!-- Additional scripts -->
   {% block scripts %}{% endblock %}
