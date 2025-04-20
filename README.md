@@ -86,106 +86,20 @@ The site can be deployed to any static hosting service like Netlify, Vercel, Git
 
 This project is private and proprietary to Derbyshire Removals.
 
-
-# TODO Schema.org
-[x] Home
-[x] /move-checklist
-[x] /storage
-[x] /privacy-policy
-[x] /about-us (page is completely different)
-[x] /faq (missing from menu)
-[x] /contact
-[x] /terms-and-conditions
-[x] /services/house-removals
-[x] /services/packing-services
-[x] /services/office-removals
-[x] /services/last-minute-removals
-[x] /services/antique-and-fine-arts
-[x] /locations/derby
-[x] /locations/matlock
-[x] /locations/chesterfield
-[x] /locations/alfreton
-[x] /locations/buxton
-[x] /locations/mansfield
-[x] /locations/loughborough
-
-[x] /packaging-material
-[x] /areas-we-cover
-[x] /testimonials
-
-
-# TODO Webpage design
-[x] /packaging-material
-[x] /areas-we-cover
-
-[x] /locations/derby
-[x] /locations/alfreton
-[x] /locations/chesterfield
-[x] /locations/buxton
-[x] /locations/matlock
-[x] /locations/mansfield
-[x] /locations/loughborough
-
-[x] /services/house-removals
-[x] /services/packing-services
-[x] /services/office-removals
-[x] /services/last-minute-removals
-[x] /services/antique-and-fine-arts
-[x] /storage
-
-[x] /about-us
-[x] /testimonials
-[x] /faq
-[x] /contact
-[x] /privacy-policy
-
-[x] /terms-and-conditions
-[x] /move-checklist
-
-[x] Home
-  [x] Check Reviews
-
-# TODO Optimise Nav Bar, Meta tags and OG image tags etc.
-[x] Footer
-[x] Check contact form works
-[x] Check Google analytics installation
-
-### Check Meta tag for pages
-[x] Home
-[x] /move-checklist
-[x] /storage
-[x] /privacy-policy
-[x] /about-us (page is completely different)
-[x] /faq (missing from menu)
-[x] /contact
-[x] /terms-and-conditions
-[x] /services/house-removals
-[x] /services/packing-services
-[x] /services/office-removals
-[x] /services/last-minute-removals
-[x] /services/antique-and-fine-arts
-[x] /locations/derby
-[x] /locations/matlock
-[x] /locations/chesterfield
-[x] /locations/alfreton
-[x] /locations/buxton
-[x] /locations/mansfield
-[x] /locations/loughborough
-[x] /packaging-material
-[x] /areas-we-cover
-[x] /testimonials
-
-## After launch
-[x] Test contact us form
-[x] Google Analytics
-[ ] Broken link checker
-[x] Sitemap update
-
-## SEO Changes - Phase 2
-[ ] Add better validation for contact form
+## Phase 4
+[ ] Swap 0333 number with mobile number or just two numbers
 [ ] Meta tags optimisation
-[ ] Swap 0333 number with mobile number
-[ ] Bakewell and Top 3 areas
+  [ ] Bakewell and Top 3 areas
 [ ] Add locations menu at the top with all the other areas
-[x] Remove american english, Specialised, Orgnized
-[ ] Improve validation on Contact form
+
+## SEO Changes - Phase 4.1
+[ ] Add better validation for contact form
+  [ ] Test on mobile phone
+
+## Phase 5
+[ ] Do Keyword research and assess competitors
+[ ] Go through Tom's plan and create a new plan
+
+
+## Phase 6
+[ ] Go through each page's health
