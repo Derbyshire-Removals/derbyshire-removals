@@ -91,6 +91,7 @@ This project is private and proprietary to Derbyshire Removals.
 [ ] Meta tags optimisation
   [ ] Bakewell and Top 3 areas
 [ ] Add locations menu at the top with all the other areas
+[ ] Submit sitemap to google
 
 ## SEO Changes - Phase 4.1
 [ ] Add better validation for contact form
