@@ -27,6 +27,11 @@ module.exports = {
       link: "/locations/buxton/"
     },
     {
+      name: "Bakewell",
+      description: "Expert removal services in Bakewell, with knowledge of the Peak District's unique challenges.",
+      link: "/locations/bakewell/"
+    },
+    {
       name: "Alfreton",
       description: "Local expertise for seamless relocations in Alfreton and the surrounding area.",
       link: "/locations/alfreton/"
@@ -42,15 +47,15 @@ module.exports = {
       link: "/locations/loughborough/"
     }
   ],
-  
+
   // Additional coverage areas
   additionalAreas: [
-    "Nottingham", "Leicester", "Sheffield", "Birmingham", 
+    "Nottingham", "Leicester", "Sheffield", "Birmingham",
     "Stoke-on-Trent", "Stafford", "Wolverhampton", "Coventry",
     "Walsall", "Telford", "Ashbourne", "Belper",
     "Ripley", "Long Eaton", "Ilkeston", "Swadlincote"
   ],
-  
+
   // All areas we cover (for the grid display)
   allAreas: [
     { name: "Derby", link: "/locations/derby/" },
