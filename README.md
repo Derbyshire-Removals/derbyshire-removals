@@ -86,21 +86,36 @@ The site can be deployed to any static hosting service like Netlify, Vercel, Git
 
 This project is private and proprietary to Derbyshire Removals.
 
+## Locations to target:
+Primary: Derby, Bakewell, Matlock
+Secondary: Chesterfield,Alfreton, Buxton
+Broader areas: East Midlands, West Midlands
+
 ## Phase 4
-[ ] Swap 0333 number with mobile number or just two numbers
+[ ] Choose top locations and update content accordingly
+[ ]  Add locations to menu
+[ ] Finalise keywords
+
 [ ] Meta tags optimisation
-  [ ] Bakewell and Top 3 areas
+
 [ ] Add locations menu at the top with all the other areas
 [ ] Submit sitemap to google
 
+## Networking
+[ ] Reach out to real estate agents
+[ ] Reach out to auction house
+
 ## SEO Changes - Phase 4.1
+[ ] Swap 0333 number with mobile number or just two numbers
 [ ] Add better validation for contact form
-  [ ] Test on mobile phone
+  [x] Test on mobile phone
 
 ## Phase 5
 [ ] Do Keyword research and assess competitors
 [ ] Go through Tom's plan and create a new plan
 
-
 ## Phase 6
 [ ] Go through each page's health
+
+## Phase 7
+[ ] Start Blog - Also Asked
