@@ -51,9 +51,6 @@ function setupMobileMenu() {
 // Set up mobile menu when DOM is loaded
 document.addEventListener('DOMContentLoaded', setupMobileMenu);
 
-// Also try setting up after a short delay (as a fallback)
-setTimeout(setupMobileMenu, 500);
-
 // Form validation and submission
 document.addEventListener('DOMContentLoaded', function() {
   const contactForm = document.getElementById('contact-form');
