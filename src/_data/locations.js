@@ -50,6 +50,36 @@ module.exports = {
       name: "Swadlincote",
       description: "Top-tier removal services for Swadlincote and surrounding areas.",
       link: "/locations/swadlincote/"
+    },
+    {
+      name: "Ilkeston",
+      description: "Dedicated removal services for Ilkeston and the Erewash valley.",
+      link: "/locations/ilkeston/"
+    },
+    {
+      name: "Long Eaton",
+      description: "Stress-free moving services for Long Eaton and the surrounding areas.",
+      link: "/locations/long-eaton/"
+    },
+    {
+      name: "Heanor",
+      description: "Reliable removal services for Heanor and nearby towns.",
+      link: "/locations/heanor/"
+    },
+    {
+      name: "Dronfield",
+      description: "Professional and efficient removal services for Dronfield and surrounding areas.",
+      link: "/locations/dronfield/"
+    },
+    {
+      name: "Belper",
+      description: "Trusted removal services for Belper and the surrounding Amber Valley.",
+      link: "/locations/belper/"
+    },
+    {
+      name: "Ripley",
+      description: "Your local removal experts in Ripley and the surrounding areas.",
+      link: "/locations/ripley/"
     }
   ],
 
@@ -57,7 +87,6 @@ module.exports = {
   additionalAreas: [
     "Nottingham", "Leicester", "Sheffield", "Birmingham",
     "Stoke-on-Trent", "Stafford", "Wolverhampton", "Coventry",
-    "Walsall", "Telford", "Ashbourne", "Belper",
-    "Ripley", "Long Eaton", "Ilkeston"
+    "Walsall", "Telford", "Ashbourne"
   ],
 };
