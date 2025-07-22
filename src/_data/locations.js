@@ -80,6 +80,11 @@ module.exports = {
       name: "Ripley",
       description: "Your local removal experts in Ripley and the surrounding areas.",
       link: "/locations/ripley/"
+    },
+    {
+      name: "Shirebrook",
+      description: "Professional removal services for Shirebrook and the surrounding areas.",
+      link: "/locations/shirebrook/"
     }
   ],
 
