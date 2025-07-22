@@ -45,6 +45,11 @@ module.exports = {
       name: "Loughborough",
       description: "Reliable and efficient removal services for Loughborough residents and businesses.",
       link: "/locations/loughborough/"
+    },
+    {
+      name: "Swadlincote",
+      description: "Top-tier removal services for Swadlincote and surrounding areas.",
+      link: "/locations/swadlincote/"
     }
   ],
 
@@ -53,27 +58,6 @@ module.exports = {
     "Nottingham", "Leicester", "Sheffield", "Birmingham",
     "Stoke-on-Trent", "Stafford", "Wolverhampton", "Coventry",
     "Walsall", "Telford", "Ashbourne", "Belper",
-    "Ripley", "Long Eaton", "Ilkeston", "Swadlincote"
+    "Ripley", "Long Eaton", "Ilkeston"
   ],
-
-  // All areas we cover (for the grid display)
-  allAreas: [
-    { name: "Derby", link: "/locations/derby/" },
-    { name: "Chesterfield", link: "/locations/chesterfield/" },
-    { name: "Matlock", link: "/locations/matlock/" },
-    { name: "Buxton", link: "/locations/buxton/" },
-    { name: "Alfreton", link: "/locations/alfreton/" },
-    { name: "Ashbourne", link: "/locations/ashbourne/" },
-    { name: "Bakewell", link: "/locations/bakewell/" },
-    { name: "Belper", link: "/locations/belper/" },
-    { name: "Ilkeston", link: "/locations/ilkeston/" },
-    { name: "Swadlincote", link: "/locations/swadlincote/" },
-    { name: "Nottingham", link: "/locations/nottingham/" },
-    { name: "Leicester", link: "/locations/leicester/" },
-    { name: "Birmingham", link: "/locations/birmingham/" },
-    { name: "Sheffield", link: "/locations/sheffield/" },
-    { name: "Lincoln", link: "/locations/lincoln/" },
-    { name: "Mansfield", link: "/locations/mansfield/" },
-    { name: "Loughborough", link: "/locations/loughborough/" }
-  ]
 };
