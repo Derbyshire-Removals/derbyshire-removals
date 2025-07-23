@@ -80,13 +80,48 @@ module.exports = {
       name: "Ripley",
       description: "Your local removal experts in Ripley and the surrounding areas.",
       link: "/locations/ripley/"
+    },
+    {
+      name: "Shirebrook",
+      description: "Professional removal services for Shirebrook and the surrounding areas.",
+      link: "/locations/shirebrook/"
+    },
+    {
+      name: "Clay Cross",
+      description: "Expert removal services in Clay Cross and neighboring communities.",
+      link: "/locations/clay-cross/"
+    },
+    {
+      name: "Ashbourne",
+      description: "Reliable removal services for Ashbourne and the surrounding Peak District areas.",
+      link: "/locations/ashbourne/"
+    },
+    {
+      name: "Castle Donington",
+      description: "Comprehensive removal services for Castle Donington and nearby areas.",
+      link: "/locations/castle-donington/"
+    },
+    {
+      name: "Uttoxeter",
+      description: "Professional moving solutions for Uttoxeter and the surrounding region.",
+      link: "/locations/uttoxeter/"
+    },
+    {
+      name: "Burton on Trent",
+      description: "Expert removal services for Burton on Trent and surrounding areas.",
+      link: "/locations/burton-on-trent/"
+    },
+    {
+      name: "Nottingham",
+      description: "Full-service removals throughout Nottingham and the greater metropolitan area.",
+      link: "/locations/nottingham/"
     }
   ],
 
   // Additional coverage areas
   additionalAreas: [
-    "Nottingham", "Leicester", "Sheffield", "Birmingham",
+    "Leicester", "Sheffield", "Birmingham",
     "Stoke-on-Trent", "Stafford", "Wolverhampton", "Coventry",
-    "Walsall", "Telford", "Ashbourne"
+    "Walsall", "Telford"
   ],
 };
