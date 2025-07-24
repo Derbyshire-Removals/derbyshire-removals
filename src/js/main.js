@@ -48,8 +48,56 @@ function setupMobileMenu() {
   }
 }
 
-// Set up mobile menu when DOM is loaded
-document.addEventListener('DOMContentLoaded', setupMobileMenu);
+// Capture traffic source and store in session
+function captureTrafficSource() {
+  // Only capture on first page load in session
+  if (!sessionStorage.getItem('trafficSource')) {
+    let source = 'direct';
+    const referrer = document.referrer;
+    
+    if (referrer) {
+      const referrerDomain = new URL(referrer).hostname.toLowerCase();
+      
+      // Check for common sources
+      if (referrerDomain.includes('facebook.com') || referrerDomain.includes('fb.com')) {
+        source = 'facebook';
+      } else if (referrerDomain.includes('google.com') || referrerDomain.includes('google.co.uk')) {
+        source = 'google';
+      } else if (referrerDomain.includes('bing.com')) {
+        source = 'bing';
+      } else if (referrerDomain.includes('yahoo.com')) {
+        source = 'yahoo';
+      } else if (referrerDomain.includes('twitter.com') || referrerDomain.includes('t.co')) {
+        source = 'twitter';
+      } else if (referrerDomain.includes('instagram.com')) {
+        source = 'instagram';
+      } else if (referrerDomain.includes('linkedin.com')) {
+        source = 'linkedin';
+      } else {
+        source = 'referral: ' + referrerDomain;
+      }
+    }
+    
+    // Check for UTM parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmSource = urlParams.get('utm_source');
+    if (utmSource) {
+      source = utmSource;
+      const utmMedium = urlParams.get('utm_medium');
+      const utmCampaign = urlParams.get('utm_campaign');
+      if (utmMedium) source += ' (' + utmMedium + ')';
+      if (utmCampaign) source += ' - ' + utmCampaign;
+    }
+    
+    sessionStorage.setItem('trafficSource', source);
+  }
+}
+
+// Set up mobile menu and capture traffic source when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+  setupMobileMenu();
+  captureTrafficSource();
+});
 
 // Form validation and submission
 document.addEventListener('DOMContentLoaded', function() {
@@ -110,8 +158,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // const accessKey = contactForm.querySelector('input[name="access_key"]').value;
         const page = contactForm.querySelector('input[name="page"]').value;
         const movingTo = document.getElementById('moving-to') ? document.getElementById('moving-to').value : '';
-        const preferredCallbackTime = document.getElementById('preferred-callback-time') ?
-          document.getElementById('preferred-callback-time').value : 'anytime';
+        const trafficSource = sessionStorage.getItem('trafficSource') || 'unknown';
 
         // Prepare data for submission
         const formData = {
@@ -123,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function() {
           phone: phone,
           moving_from: movingFrom,
           moving_to: movingTo,
-          preferred_callback_time: preferredCallbackTime
+          traffic_source: trafficSource
         };
 
         // Show loading state
