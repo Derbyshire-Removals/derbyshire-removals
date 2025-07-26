@@ -61,6 +61,8 @@
   </script>
 
   <!-- Additional scripts -->
-  {% block scripts %}{% endblock %}
+  {% if additionalScripts %}
+    {{ additionalScripts | safe }}
+  {% endif %}
 </body>
 </html>

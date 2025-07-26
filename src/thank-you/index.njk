@@ -4,6 +4,18 @@ title: "Thank You - Derbyshire Removals"
 description: "Thank you for your enquiry. We'll be in touch soon to discuss your removal requirements."
 noindex: true
 robots: "noindex, nofollow"
+additionalScripts: |
+  <script>
+    <!-- Conversion tracking script placed here to ensure it executes after content loads -->
+    // Only fire conversion if form was actually submitted
+    if (sessionStorage.getItem('formSubmitted') === 'true') {
+      // Clear the flag so it doesn't fire again
+      sessionStorage.removeItem('formSubmitted');
+      
+      // Fire Google Ads conversion tracking
+      gtag('event', 'conversion', {'send_to': 'AW-16931852969/oUAVCJO3oPgaEKml3ok_'});
+    }
+  </script>
 ---
 
 <section>
@@ -73,10 +85,3 @@ robots: "noindex, nofollow"
     </main>
   </div>
 </section>
-
-{% block scripts %}
-<script>
-  // Direct Google Ads conversion tracking
-  gtag('event', 'conversion', {'send_to': 'AW-16931852969/oUAVCJO3oPgaEKml3ok_'});
-</script>
-{% endblock %}

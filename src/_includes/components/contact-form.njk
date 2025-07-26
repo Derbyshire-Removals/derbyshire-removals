@@ -5,7 +5,7 @@
     {% endif %}
 
     <!-- Contact Form -->
-    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you/" class="space-y-4">
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you/" class="space-y-4" onsubmit="sessionStorage.setItem('formSubmitted', 'true')">
       <input type="hidden" name="form-name" value="contact">
       <input type="hidden" name="page" value="{{ pageName }}">
       <input type="hidden" name="traffic-source" id="traffic-source" value="">
