@@ -76,10 +76,7 @@ robots: "noindex, nofollow"
 
 {% block scripts %}
 <script>
-  // Push conversion tracking event to dataLayer
-  window.dataLayer = window.dataLayer || [];
-  dataLayer.push({
-    'event': 'form_submission'
-  });
+  // Direct Google Ads conversion tracking
+  gtag('event', 'conversion', {'send_to': 'AW-16931852969/oUAVCJO3oPgaEKml3ok_'});
 </script>
 {% endblock %}
