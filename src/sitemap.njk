@@ -1,0 +1,23 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+{%- for page in collections.all %}
+  {%- if page.url and not page.data.noindex %}
+<url>
+<loc>{{ site.url }}{% if page.url == "/" %}{{ page.url }}{% elif page.url.endsWith('/') %}{{ page.url.slice(0, -1) }}{% else %}{{ page.url }}{% endif %}</loc>
+    {%- if page.data.lastmod %}
+<lastmod>{{ page.data.lastmod | date("Y-m-d\TH:i:sP") }}</lastmod>
+    {%- elif page.data.gitLastModified %}
+<lastmod>{{ page.data.gitLastModified | date("Y-m-d\TH:i:sP") }}</lastmod>
+    {%- else %}
+<lastmod>{{ page.date | date("Y-m-d\TH:i:sP") }}</lastmod>
+    {%- endif %}
+<changefreq>{% if page.url == "/" %}weekly{% elif "/services/" in page.url or "/locations/" in page.url %}monthly{% else %}yearly{% endif %}</changefreq>
+<priority>{% if page.url == "/" %}1.0{% elif "/services/" in page.url %}0.8{% elif "/locations/" in page.url %}0.7{% else %}0.6{% endif %}</priority>
+</url>
+  {%- endif %}
+{%- endfor %}
+</urlset>
