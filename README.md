@@ -36,6 +36,14 @@ To build the site for production:
 npm run build
 ```
 
+### Deploying changes to live site
+
+To build the site for production:
+
+```bash
+npm run deploy
+```
+
 This will generate the static site in the `dist` directory.
 
 ## Project Structure
