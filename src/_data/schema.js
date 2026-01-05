@@ -59,45 +59,55 @@ function getOrganizationSchema() {
 
 // For location pages
 function getLocationMovingCompanySchema(location, phone, options = {}) {
-  // Use the main business address but indicate service area
+  const slug = location.toLowerCase().replace(/\s+/g, "-");
+  const pageUrl = `https://derbyshireremovals.com/locations/${slug}/`;
+
   const mainAddress = {
     "@type": "PostalAddress",
     "streetAddress": "48 Farmhouse Road",
     "addressLocality": "Derby",
     "addressRegion": "Derbyshire",
     "postalCode": "DE24 3DB",
-    "addressCountry": "GB"
+    "addressCountry": "GB",
   };
 
-  // Build the schema with appropriate location-specific data
+  const latitude = options.latitude ?? 52.9225;
+  const longitude = options.longitude ?? -1.4746;
+
   return {
     "@type": "MovingCompany",
-    "name": location === "Derby" ? `Derbyshire Removals - ${location}` : `Derbyshire Removals - ${location} Service Area`,
+    "@id": `${pageUrl}#movingcompany`,
+    "name": `Derbyshire Removals - ${location}`,
+    "url": pageUrl,
     "image": "https://derbyshireremovals.com/images/van.jpg",
-    "description": `Professional removal services in ${location}`,
+    "description": `Reliable removals in ${location} and nearby areas.`,
     "priceRange": "££",
-    "address": mainAddress,
-    "url": `https://derbyshireremovals.com/locations/${location.toLowerCase().replace(/\s+/g, '-')}`,
     "telephone": phone || "+443335677001",
+    "email": organization.email,
+    "address": mainAddress,
+
+    "areaServed": { "@type": "City", "name": location },
+
     "serviceArea": {
-      "@type": "GeoCircle",
-      "geoMidpoint": {
+      "@type": "Place",
+      "name": location,
+      "geo": {
         "@type": "GeoCoordinates",
-        "latitude": options.latitude || 52.9225, // Default to Derby
-        "longitude": options.longitude || -1.4746
+        "latitude": latitude,
+        "longitude": longitude,
       },
-      "geoRadius": 16093.4// Service radius from location
     },
-    "areaServed": {
-      "@type": "City",
-      "name": location
+
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": latitude,
+      "longitude": longitude,
     },
-    "branchOf": {
-        "@type": "Organization",
-        "@id": "https://derbyshireremovals.com/#organization"
-      }
+
+    "branchOf": { "@type": "Organization", "@id": "https://derbyshireremovals.com/#organization" },
   };
 }
+
 
 // For service pages
 function getServiceSchema(serviceName, serviceType, description, url) {
@@ -208,11 +218,39 @@ function getContentPageSchema(title, description, url, image = null) {
 
 // For location pages - complete schema with organization included
 function getLocationPageSchema(location, phone, options = {}) {
+  const slug = location.toLowerCase().replace(/\s+/g, "-");
+  const path = `/locations/${slug}/`;
+  const pageUrl = `https://derbyshireremovals.com${path}`;
+
+  const breadcrumbId = `${pageUrl}#breadcrumb`;
+  const webpageId = `${pageUrl}#webpage`;
+
+  const breadcrumb = {
+    ...getBreadcrumbSchema([
+      { name: "Home", url: "/" },
+      { name: "Locations", url: "/areas-we-cover/" },
+      { name: location, url: path },
+    ]),
+    "@id": breadcrumbId,
+  };
+
+  const webPage = {
+    "@type": "WebPage",
+    "@id": webpageId,
+    "url": pageUrl,
+    "name": `${location} Removals | Derbyshire Removals`,
+    "publisher": { "@id": "https://derbyshireremovals.com/#organization" },
+    "breadcrumb": { "@id": breadcrumbId },
+  };
+
   return [
+    webPage,
+    breadcrumb,
     getLocationMovingCompanySchema(location, phone, options),
-    organization
+    organization,
   ];
 }
+
 
 // For service pages - complete schema with organization included
 function getServicePageSchema(serviceName, serviceType, description, url, offerCatalog = null) {
