@@ -416,16 +416,35 @@ function getStoragePageSchema() {
 
 // For areas we cover page schema
 function getAreasPageSchema() {
+  const pageUrl = "https://derbyshireremovals.com/areas-we-cover";
+  const breadcrumbId = `${pageUrl}#breadcrumb`;
+  const webpageId = `${pageUrl}#webpage`;
+
+  const breadcrumb = {
+    ...getBreadcrumbSchema([
+      { name: "Home", url: "/" },
+      { name: "Areas We Cover", url: "/areas-we-cover" }
+    ]),
+    "@id": breadcrumbId
+  };
+
+  const webPage = {
+    "@type": "WebPage",
+    "@id": webpageId,
+    "name": "Areas We Cover | Derbyshire Removals",
+    "description": "Explore the areas we service including Derby, Matlock, Chesterfield, Buxton and throughout the East and West Midlands.",
+    "url": pageUrl,
+    "publisher": { "@id": "https://derbyshireremovals.com/#organization" },
+    "breadcrumb": { "@id": breadcrumbId }
+  };
+
   return [
-    {
-      "@type": "WebPage",
-      "name": "Areas We Cover | Derbyshire Removals",
-      "description": "Explore the areas we service including Derby, Matlock, Chesterfield, Buxton and throughout the East and West Midlands.",
-      "url": "https://derbyshireremovals.com/areas-we-cover"
-    },
+    webPage,
+    breadcrumb,
     organization
   ];
 }
+
 
 // For about page schema
 function getAboutPageSchema() {
