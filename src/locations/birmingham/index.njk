@@ -29,12 +29,11 @@ ogImage: "/images/business/3.jpg"
         <h1 class="text-4xl font-bold text-[#071059]">Removal Companies Birmingham</h1>
       </div>
 
-      {# Services section kept in the same design as your other pages #}
+      {# Services section (kept consistent with other location hub pages) #}
       <section class="bg-white rounded-lg shadow-md p-8 mb-8">
         <h2 class="text-2xl font-semibold mb-4">Your Trusted Birmingham Removal Company</h2>
         <p class="text-gray-700 mb-6">
-          As a trusted removal company serving Birmingham, we provide comprehensive moving services throughout the city and surrounding areas.
-          Use the links below to explore nearby locations we also serve.
+          We provide house removals, office relocations, packing, and storage. Use the links below to choose the nearest service area.
         </p>
 
         <div class="grid md:grid-cols-2 gap-6">
@@ -69,9 +68,9 @@ ogImage: "/images/business/3.jpg"
         </div>
       </section>
 
-      {# Navigation-focused: H2 headings per linked child location page (ONLY live /locations/ pages) #}
+      {# Navigation-focused: H2 headings for each child location page (each H2 contains a functional link) #}
       <section class="bg-white rounded-lg shadow-md p-8 mb-8">
-        <h2 class="text-2xl font-semibold mb-4">Nearby Locations</h2>
+        <h2 class="text-2xl font-semibold mb-4">Nearby Locations We Serve</h2>
 
         <div class="grid md:grid-cols-2 gap-6">
           <section class="bg-gray-50 rounded-lg p-5">
@@ -152,7 +151,6 @@ ogImage: "/images/business/3.jpg"
         </ul>
       </section>
 
-      {# Clear CTA (required) #}
       <section id="contact" class="bg-white rounded-lg shadow-md p-8">
         <h2 class="text-2xl font-semibold mb-4">Get a Quote</h2>
         <p class="text-lg mb-6">Contact us today for a free, no-obligation quote for your Birmingham move.</p>
@@ -167,11 +165,35 @@ ogImage: "/images/business/3.jpg"
 
 <!-- Schema.org JSON-LD -->
 <script type="application/ld+json">
-{{ schema.generateSchemaScript(
+{{ schema.generateSchemaScript([
   schema.getLocationPageSchema("Birmingham", "+443335677001", {
     latitude: 52.4862,
     longitude: -1.8904,
     region: "West Midlands"
-  })
-) | safe }}
+  }),
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://derbyshireremovals.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Locations",
+        "item": "https://derbyshireremovals.com/areas-we-cover/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Birmingham",
+        "item": "https://derbyshireremovals.com/locations/birmingham/"
+      }
+    ]
+  }
+]) | safe }}
 </script>
