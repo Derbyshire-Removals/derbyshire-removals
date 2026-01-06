@@ -1,308 +1,316 @@
 ---
 layout: base.njk
-title: "Packaging Materials Derbyshire | Removal Packing Supplies"
-description: "Discover high-quality packaging materials in Derbyshire. Perfect for removals—order now!"
-keywords: "packaging materials, packaging materials Derbyshire, removal packing supplies, packing materials Derbyshire, moving boxes Derbyshire, bubble wrap, packing tape, removal boxes, eco-friendly packaging"
-ogImage: "/images/business/packaging.jpg"
+title: "Packing Services Derbyshire | Professional & Reliable Moving Help"
+description: "Discover expert packing services in Derbyshire. Save time, protect your belongings, and get a free quote today!"
+keywords: "packing services derbyshire, professional packing service, packing help derbyshire, removal packing services, packing and removals derbyshire, fragile packing, full packing service"
+ogImage: "/images/business/packing-services.webp"
 ---
 
 {% set packagingMaterials = [
-  {
-    description: "Medium box",
-    dimensions: "18x13x13 inch - Book Box",
-    price: "£2.95",
-    info: "Perfect for books, records, CDs, and other heavy items"
-  },
-  {
-    description: "Large box",
-    dimensions: "18x18x20 inch - Glass/China Linen etc",
-    price: "£3.95",
-    info: "Ideal for linens, glassware, and larger household items"
-  },
-  {
-    description: "Bitz box",
-    dimensions: "",
-    price: "£2.10",
-    info: "Essential items box - remotes, chargers, keys, toiletries. Last box on the van and the first one out."
-  },
-  {
-    description: "Wardrobe Cartons (Rental)",
-    dimensions: "",
-    price: "£7.50",
-    info: "Specially designed for hanging clothes, keeps garments wrinkle-free"
-  },
-  {
-    description: "Wardrobe Cartons (Cardboard)",
-    dimensions: "20\"x18\"x48\"",
-    price: "£11.10",
-    info: "Cardboard wardrobe boxes for purchase, perfect for moving hanging clothes"
-  },
-  {
-    description: "Mattress cover",
-    dimensions: "",
-    price: "£3",
-    info: "Protective cover to keep mattresses clean and dry during moving"
-  },
-  {
-    description: "Tape (brown)",
-    dimensions: "",
-    price: "£1.50 per roll",
-    info: "Strong adhesive tape for securing boxes"
-  },
-  {
-    description: "Tape (fragile)",
-    dimensions: "",
-    price: "£1.50 per roll",
-    info: "Warning tape to mark delicate items"
-  },
-  {
-    description: "Packing White Paper",
-    dimensions: "20 x 30 inch - 5kg",
-    price: "£16.25",
-    info: "Clean, ink-free paper for wrapping delicate items"
-  },
-  {
-    description: "Bubble wrap",
-    dimensions: "750mm x 25meters - Green BIO",
-    price: "£16.25",
-    info: "Eco-friendly protection for fragile items"
-  },
-  {
-    description: "Black Marker Pen",
-    dimensions: "",
-    price: "£1.60",
-    info: "For labeling boxes and contents"
-  },
-  {
-    description: "Shrink Wrap",
-    dimensions: "400mmx300mtr - Medium Duty",
-    price: "£9.95",
-    info: "Protects furniture and keeps items together"
-  }
+  { description: "Medium box", dimensions: "18x13x13 inch - Book Box", info: "Great for books, records, and heavier items" },
+  { description: "Large box", dimensions: "18x18x20 inch - Linen/Glass/China", info: "Ideal for bedding, kitchenware and larger household items" },
+  { description: "Bitz box", dimensions: "Essentials box", info: "Remotes, chargers, keys, toiletries — last on the van, first out" },
+  { description: "Wardrobe cartons", dimensions: "Hanging clothes", info: "Keeps garments crease-free and organised" },
+  { description: "Protective wraps", dimensions: "Bubble wrap / paper / shrink wrap", info: "Layered protection for fragile and awkward items" },
+  { description: "Tape & labels", dimensions: "Fragile tape / markers", info: "Clear labelling so unloading is quicker and safer" }
 ] %}
 
 <div class="min-h-screen bg-gray-100">
   <main class="container mx-auto px-4 pt-52 pb-24">
     <div class="max-w-4xl mx-auto">
 
-      <!-- Hero -->
-      <div class="text-center mb-10">
-        <h1 class="text-4xl font-bold mb-4 text-[#071059]">Packaging Materials in Derbyshire</h1>
-        <p class="text-lg text-gray-600 mb-6">
-          Get reliable <strong>removal packing supplies</strong> that keep your items protected from start to finish.
-          From sturdy boxes to eco-friendly bubble wrap, our packaging materials help make packing faster, safer, and less stressful.
-        </p>
+      <!-- Hero / Above the fold -->
+      <section class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
+        <div class="p-8">
+          <p class="text-sm text-gray-500 mb-2">Derbyshire Removals</p>
 
-        <div class="rounded-lg overflow-hidden shadow mb-6 bg-white">
+          <!-- Single H1 (required) -->
+          <h1 class="text-4xl font-bold text-[#071059] mb-4">
+            Packing Services Derbyshire - Stress-Free Moving Solutions
+          </h1>
+
+          <p class="text-lg text-gray-700 mb-6">
+            Looking for <strong>Packing Services Derbyshire</strong> homeowners and businesses can rely on? Our professional team
+            packs, protects, and labels your belongings so your move runs smoothly — whether you need full packing, fragile-only
+            packing, or help with just a few tricky items.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-3">
+            <a
+              href="/contact/"
+              class="inline-flex items-center justify-center bg-primary text-white px-6 py-3 rounded-lg hover:bg-blue-800 transition-colors font-medium"
+            >
+              Request Your Free Packing Quote
+            </a>
+            <a
+              href="/services/"
+              class="inline-flex items-center justify-center bg-white text-[#071059] px-6 py-3 rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors font-medium"
+            >
+              View Our Removals Services
+            </a>
+          </div>
+
+          <div class="mt-6 text-sm text-gray-600">
+            <p>
+              Prefer to pack yourself? We can also supply boxes and protective materials.
+              See our <a href="#materials" class="text-[#071059] underline">packing materials overview</a>.
+            </p>
+          </div>
+        </div>
+
+        <!-- Optional image (ensure WebP < 200KB in your build pipeline) -->
+        <div class="relative">
           <img
-            src="/images/business/packaging.jpg"
-            alt="eco-friendly packing materials for removals in Derbyshire"
-            class="w-full h-64 object-cover"
-            loading="lazy"
+            src="/images/business/packing-services.webp"
+            alt="Packing services Derbyshire - professional team packing boxes for a stress-free move"
+            loading="eager"
+            fetchpriority="high"
             decoding="async"
+            width="1200"
+            height="675"
+            class="w-full h-auto"
           />
         </div>
+      </section>
 
-        <div class="flex items-center justify-center text-sm text-gray-500">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 mr-2">
-            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-            <line x1="12" y1="22.08" x2="12" y2="12"></line>
-          </svg>
-          <span>All prices subject to VAT</span>
-        </div>
-      </div>
-
-      <!-- Price list -->
-      <section class="mb-10">
-        <h2 class="text-2xl font-bold mb-4 text-[#071059]">Removal Packing Supplies Price List</h2>
-        <p class="text-gray-600 mb-6">
-          Choose the right packaging materials for your move—small boxes for heavy items, larger boxes for light bulky items,
-          and specialist protection for fragile belongings. If you’re unsure what to buy, contact us and we’ll help you build a simple packing list.
+      <!-- Intro / context (adds depth and uniqueness) -->
+      <section class="bg-white rounded-lg shadow-md p-8 mb-8">
+        <h2 class="text-2xl font-semibold mb-4 text-[#071059]">Why professional packing makes moving easier</h2>
+        <p class="text-gray-700 mb-4">
+          Packing is often the most time-consuming part of moving. It’s not just putting items into boxes — it’s choosing the right
+          materials, protecting fragile belongings, keeping rooms organised, and making sure the removal team can load and unload
+          efficiently. A well-packed home reduces breakages, speeds up loading, and makes the first night in your new place far less chaotic.
+        </p>
+        <p class="text-gray-700 mb-4">
+          Our packing team works across Derbyshire and surrounding areas, helping customers who want:
+          less stress, fewer trips to the shops for supplies, and confidence that valuables are protected properly. We’re also happy to coordinate
+          with your moving date and any storage needs — if you’re using temporary storage, we can pack with longer-term protection in mind.
         </p>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {% for item in packagingMaterials %}
-          <div class="bg-white rounded-lg shadow hover:shadow-lg transition-shadow p-6">
-            <h3 class="text-xl font-semibold mb-2">{{ item.description }}</h3>
-            {% if item.dimensions %}
-            <p class="text-sm text-gray-600 mb-2">{{ item.dimensions }}</p>
-            {% endif %}
-            <p class="text-[#071059] font-bold text-lg mb-2">{{ item.price }}</p>
-            <div class="flex items-start mt-2 text-sm text-gray-600">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 mr-2 mt-1 flex-shrink-0">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="12" y1="16" x2="12" y2="12"></line>
-                <line x1="12" y1="8" x2="12.01" y2="8"></line>
-              </svg>
-              <p>{{ item.info }}</p>
-            </div>
+        <p class="text-gray-700">
+          If you’re planning a full move, you can combine packing with our removal option for a simpler experience.
+          Explore <a href="/services/" class="text-[#071059] underline">our removals services</a> or ask about combining packing and transport in your quote.
+        </p>
+      </section>
+
+      <!-- Required H2 -->
+      <section class="bg-primary text-white rounded-lg shadow-md p-8 mb-8">
+        <h2 class="text-2xl font-semibold mb-6">Benefits of Our Packing Services</h2>
+
+        <div class="space-y-5 text-white/95">
+          <div>
+            <h3 class="text-xl font-semibold mb-2">1) Better protection for fragile and valuable items</h3>
+            <p>
+              We use the right combination of wrapping, cushioning, and boxing techniques for glassware, electronics, artwork, and sentimental items.
+              Fragile boxes are clearly marked and stacked safely, reducing the chance of damage in transit.
+            </p>
           </div>
+
+          <div>
+            <h3 class="text-xl font-semibold mb-2">2) Faster loading and unloading</h3>
+            <p>
+              Well-packed boxes are consistent, stackable, and labelled by room — so the team can load efficiently and place items into the right rooms
+              at your new property. That means fewer hold-ups on moving day.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-semibold mb-2">3) Save time and energy</h3>
+            <p>
+              Packing always takes longer than expected. With professional support, you can focus on the rest of the move: keys, utilities, paperwork,
+              and family logistics — while we handle the packing workload.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-semibold mb-2">4) Flexible options: full, part, or fragile-only</h3>
+            <p>
+              Not everyone needs a full pack. We can pack the kitchen and breakables, help with lofts/garages, or handle only the items you’re worried about.
+              Your quote reflects what you actually need.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-semibold mb-2">5) Packing that suits storage or long-distance moves</h3>
+            <p>
+              If your items are going into storage, we’ll pack with longer-term protection in mind. If you’re moving further afield, we’ll pack to reduce
+              movement and vibration. Need storage as part of your plan? Ask about our <a class="underline" href="/storage/">storage solutions</a>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Required H2 -->
+      <section class="bg-white rounded-lg shadow-md p-8 mb-8">
+        <h2 class="text-2xl font-semibold mb-6 text-[#071059]">How Our Packing Process Works</h2>
+
+        <ol class="space-y-5 text-gray-700">
+          <li>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Step 1: Quick quote and packing plan</h3>
+            <p>
+              Tell us what you need: full house packing, partial packing, fragile-only, or a specific room (like the kitchen).
+              We’ll discuss timings, access, and anything unusual (large mirrors, antiques, tight staircases, parking).
+            </p>
+          </li>
+
+          <li>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Step 2: Materials and protection strategy</h3>
+            <p>
+              We arrive with suitable materials (boxes, paper, wrap, tape, labels). Fragile items are wrapped individually, and we use the right box sizes
+              to avoid overloading. Heavier items go into smaller boxes for safer lifting.
+            </p>
+          </li>
+
+          <li>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Step 3: Room-by-room packing and clear labels</h3>
+            <p>
+              We pack methodically so rooms stay organised. Boxes are labelled by room and contents type (e.g., “Kitchen – Glassware”), helping you unpack faster.
+              If you have priorities (kids’ rooms first, home office essentials kept accessible), we’ll follow your preferences.
+            </p>
+          </li>
+
+          <li>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Step 4: Moving-day coordination</h3>
+            <p>
+              If we’re also handling the removal, packing ties directly into loading and transport. If another mover is involved, we can still pack and prepare
+              items ready for collection, including “do not load” items if needed.
+            </p>
+          </li>
+
+          <li>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Step 5: Optional unpacking help</h3>
+            <p>
+              Want a quicker settle-in? Ask about unpacking support for essential rooms (kitchen, bedrooms) and removal of packing waste.
+              It’s a popular option for families and busy professionals.
+            </p>
+          </li>
+        </ol>
+
+        <div class="mt-8 p-5 rounded-lg bg-gray-50 border border-gray-200">
+          <p class="text-gray-700">
+            Mid-move tip: if you’re doing any DIY packing, focus on out-of-season items first and keep a clearly labelled “first night” box.
+            For practical packing ideas, you can also read an external guide like
+            <a class="text-[#071059] underline" href="https://www.theguardian.com/ring-in-the-new/2025/may/16/expert-tips-for-stress-free-house-move" target="_blank" rel="noopener noreferrer">
+              this UK moving advice article
+            </a>.
+          </p>
+        </div>
+      </section>
+
+      <!-- Materials (keeps page useful + supports original intent without changing H1/H2 requirements) -->
+      <section id="materials" class="bg-white rounded-lg shadow-md p-8 mb-8">
+        <h2 class="text-2xl font-semibold mb-4 text-[#071059]">Packing materials we use (and can supply)</h2>
+        <p class="text-gray-700 mb-6">
+          Great packing is about the right materials as much as technique. We use sturdy boxes, protective wrap, clean packing paper, and clear labelling.
+          If you’re packing some items yourself, we can advise on what you’ll need and supply suitable materials as part of your plan.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {% for item in packagingMaterials %}
+            <div class="bg-gray-50 rounded-lg border border-gray-200 p-5">
+              <h3 class="text-lg font-semibold mb-1 text-gray-900">{{ item.description }}</h3>
+              {% if item.dimensions %}
+                <p class="text-sm text-gray-600 mb-2">{{ item.dimensions }}</p>
+              {% endif %}
+              <p class="text-gray-700">{{ item.info }}</p>
+            </div>
           {% endfor %}
         </div>
       </section>
 
-      <!-- Main content expansion -->
+      <!-- Required H2 -->
       <section class="bg-white rounded-lg shadow-md p-8 mb-8">
-        <h2 class="text-2xl font-bold mb-4 text-[#071059]">Types of Packaging Materials</h2>
-        <p class="text-gray-700 mb-6">
-          The best packing materials do two jobs: they protect your belongings and they make loading/unloading more efficient.
-          Using the right <strong>packaging materials Derbyshire</strong> customers rely on—strong boxes, proper wrapping, and clear labels—can reduce breakages,
-          prevent scuffs on furniture, and save time on moving day.
-        </p>
+        <h2 class="text-2xl font-semibold mb-6 text-[#071059]">Frequently Asked Questions</h2>
 
-        <div class="space-y-7 text-gray-700">
+        <div class="space-y-6 text-gray-700">
           <div>
-            <h3 class="text-xl font-semibold text-[#071059] mb-2">Moving boxes (small, medium, large)</h3>
-            <p class="mb-2">
-              Boxes are the foundation of any safe move. Small and medium boxes are ideal for heavy items like books, files, and tools,
-              while large boxes work best for light bulky items such as bedding, cushions, and kitchen plastics.
-            </p>
+            <h3 class="text-lg font-semibold text-gray-900">What does the packing service include?</h3>
             <p>
-              For removals, we recommend packing by room and writing <strong>room + contents + priority</strong> on every box.
-              That simple system helps you find essentials quickly and lets the unloading team place boxes in the right rooms first time.
+              We provide the labour and packing know-how, plus suitable materials (boxes, wrap, tape, labels). We can pack a whole property
+              or focus on specific rooms or fragile items — whatever you choose in your quote.
             </p>
           </div>
 
           <div>
-            <h3 class="text-xl font-semibold text-[#071059] mb-2">Wardrobe cartons for hanging clothes</h3>
+            <h3 class="text-lg font-semibold text-gray-900">Do you offer a fragile-only packing service?</h3>
             <p>
-              Wardrobe cartons keep shirts, dresses, and coats on hangers so they arrive crease-free. They’re also a huge time-saver:
-              no folding, no bin-bags, and you can hang items straight into your new wardrobe. If you’re moving a lot of hanging clothes,
-              adding even a couple of wardrobes can make packing feel much easier.
+              Yes. Fragile-only is a popular option for kitchens, ornaments, mirrors, artwork, and electronics — especially if you’re happy
+              to pack clothes and general items yourself.
             </p>
           </div>
 
           <div>
-            <h3 class="text-xl font-semibold text-[#071059] mb-2">Protective wrap for fragile items</h3>
-            <p class="mb-2">
-              Bubble wrap and packing paper are essential for glassware, ceramics, ornaments, and framed items.
-              Packing paper is clean and ink-free, making it ideal for wrapping plates and cups without leaving marks.
-            </p>
+            <h3 class="text-lg font-semibold text-gray-900">How far in advance should I book?</h3>
             <p>
-              A practical approach is “wrap, cushion, then fill gaps”: wrap the item, place it in a box with padding underneath,
-              and fill empty space so nothing shifts during transit. Mark boxes as <strong>Fragile</strong> and keep them upright.
+              Earlier is always better, especially for end-of-month or weekend moves. If your move date is close, still get in touch — we’ll
+              do our best to accommodate.
             </p>
           </div>
 
           <div>
-            <h3 class="text-xl font-semibold text-[#071059] mb-2">Packing tape, fragile tape, and markers</h3>
+            <h3 class="text-lg font-semibold text-gray-900">Will you label boxes by room?</h3>
             <p>
-              Strong tape keeps boxes secure while they’re being stacked and moved. Fragile tape is useful for quick visual identification
-              of delicate boxes. A good marker pen is underrated—clear labels reduce confusion on moving day and help you unpack faster.
-              If you only do one “packing upgrade,” label every box on at least two sides.
+              Absolutely. Clear labelling is part of an efficient move. We label by room and item type to help loading and make unpacking simpler.
             </p>
           </div>
 
           <div>
-            <h3 class="text-xl font-semibold text-[#071059] mb-2">Furniture protection: shrink wrap and mattress covers</h3>
-            <p class="mb-2">
-              Shrink wrap is great for keeping drawers closed, bundling awkward items together, and protecting surfaces from dust and light scuffs.
-              Mattress covers protect against moisture and marks while moving in and out of vans, hallways, and stairwells.
-            </p>
+            <h3 class="text-lg font-semibold text-gray-900">Can you pack for storage?</h3>
             <p>
-              These are particularly helpful for longer-distance moves, shared access buildings, or when weather is unpredictable.
+              Yes. If items are going into storage, we’ll pack to reduce moisture exposure and movement, and we’ll advise on what should stay accessible.
+              See <a href="/storage/" class="text-[#071059] underline">storage solutions</a> if you need space between homes.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900">How do you price packing services?</h3>
+            <p>
+              Pricing depends on the size of the property, how much needs packing, access/parking, and whether you want full packing, part packing,
+              or fragile-only. The fastest way is to request a quote with your move date and property details.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900">Are you insured while packing?</h3>
+            <p>
+              We operate professionally and take care with every item. If you have high-value items, tell us in advance so we can pack and handle them appropriately
+              and confirm the best approach for your move.
             </p>
           </div>
         </div>
-      </section>
 
-      <section class="bg-white rounded-lg shadow-md p-8 mb-8">
-        <h2 class="text-2xl font-bold mb-4 text-[#071059]">Eco-Friendly Options</h2>
-        <p class="text-gray-700 mb-6">
-          If you want to reduce waste, there are several eco-friendly packing choices that still provide strong protection.
-          Many customers looking for <strong>packaging materials Derbyshire</strong> also ask for greener alternatives—these are the easiest wins.
-        </p>
-
-        <div class="space-y-5 text-gray-700">
-          <h3 class="text-xl font-semibold text-[#071059] mb-2">Bio bubble wrap and recyclable paper</h3>
-          <p>
-            Bio bubble wrap provides cushioning similar to standard bubble wrap but is designed with sustainability in mind.
-            Packing paper is widely recyclable and works well for wrapping and void-fill.
-          </p>
-
-          <h3 class="text-xl font-semibold text-[#071059] mb-2">Reuse what you already have</h3>
-          <p>
-            You can cut down on packaging by using towels, blankets, and clothing to wrap non-fragile items.
-            This also saves space in boxes and keeps soft furnishings useful during the move.
-          </p>
-
-          <h3 class="text-xl font-semibold text-[#071059] mb-2">Right-size your materials</h3>
-          <p>
-            Overpacking large boxes leads to splits and damaged items. Using the correct box size reduces wasted materials (and time).
-            Small boxes for heavy items, large boxes for light items, and clearly labelled essentials.
-          </p>
-        </div>
-      </section>
-
-      <section class="bg-white rounded-lg shadow-md p-8 mb-10">
-        <h2 class="text-2xl font-bold mb-4 text-[#071059]">Specialised Packing Supplies</h2>
-        <p class="text-gray-700 mb-6">
-          Some items benefit from specialist protection. If you have lots of fragile décor, valuable electronics, or bulky furniture,
-          ask about the best <strong>removal packing supplies</strong> for those items so they arrive safely.
-        </p>
-
-        <div class="space-y-5 text-gray-700">
-          <h3 class="text-xl font-semibold text-[#071059] mb-2">Electronics and screens</h3>
-          <p>
-            TVs and monitors should be kept upright and protected from pressure. If original packaging isn’t available,
-            use thick wrapping and ensure the item can’t flex or move inside the box/blanket wrap.
-          </p>
-
-          <h3 class="text-xl font-semibold text-[#071059] mb-2">Glass, mirrors, and picture frames</h3>
-          <p>
-            Use protective wrap, add corner protection where possible, and keep these items upright.
-            Avoid stacking heavy boxes on top and clearly label boxes so they’re handled correctly.
-          </p>
-
-          <h3 class="text-xl font-semibold text-[#071059] mb-2">“Open first” essentials (Bitz box)</h3>
-          <p>
-            Your essentials box is the last one loaded and the first one unloaded—chargers, keys, kettle, tea/coffee, toiletries,
-            basic tools, and important documents. It prevents the classic first-night scramble.
-          </p>
-        </div>
-      </section>
-
-      <!-- Internal links requested -->
-      <section class="bg-primary text-white rounded-lg shadow-md p-8 mb-8">
-        <h2 class="text-2xl font-semibold mb-4">Planning a Move in Derbyshire?</h2>
-        <p class="text-white/90 mb-6">
-          Pair the right packaging materials with a clear plan. If you’re booking removals, our team can advise on box quantities,
-          fragile protection, and packing order—especially for tight timelines.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-3 sm:items-center">
+        <div class="mt-8">
           <a
-            href="/services/house-removals/"
-            class="inline-flex items-center justify-center bg-white text-[#071059] px-6 py-2 rounded-lg hover:bg-gray-100 transition-colors font-medium"
+            href="/contact/"
+            class="inline-flex items-center justify-center bg-primary text-white px-6 py-3 rounded-lg hover:bg-blue-800 transition-colors font-medium w-full sm:w-auto"
           >
-            View Moving Services
+            Request Your Free Packing Quote
+          </a>
+        </div>
+      </section>
+
+      <!-- Conclusion (keyword placement requirement) -->
+      <section class="bg-primary text-white rounded-lg shadow-md p-8">
+        <h2 class="text-2xl font-semibold mb-4">Ready to make moving day easier?</h2>
+        <p class="text-white/95 mb-5">
+          If you want a calmer move, fewer breakages, and a quicker set-up in your new home, our <strong>Packing Services Derbyshire</strong>
+          team is here to help. Tell us your move date, what you’d like packed, and any tricky items — we’ll come back with a clear, no-obligation quote.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a
+            href="/contact/"
+            class="inline-flex items-center justify-center bg-white text-[#071059] px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-medium"
+          >
+            Request Your Free Packing Quote
           </a>
           <a
             href="/faqs/"
-            class="inline-flex items-center justify-center border border-white text-white px-6 py-2 rounded-lg hover:bg-white/10 transition-colors font-medium"
+            class="inline-flex items-center justify-center bg-transparent border border-white/40 text-white px-6 py-3 rounded-lg hover:bg-white/10 transition-colors font-medium"
           >
-            Read FAQs
+            Visit FAQs
           </a>
         </div>
-        <p class="text-sm text-white/80 mt-4">
-          Tip: If your site uses a different FAQ URL (e.g. <span class="font-semibold">/faq/</span>), update the link above to match.
-        </p>
       </section>
-
-      <!-- CTA -->
-      <div class="bg-white p-6 rounded-lg shadow">
-        <h2 class="text-2xl font-bold mb-3 text-[#071059]">Need Help with Packing?</h2>
-        <p class="text-gray-600 mb-4">
-          We offer professional packing support for delicate items, kitchens, and full-home packing.
-          If you’d like help choosing the right packaging materials for your move, contact us for guidance.
-        </p>
-        <a
-          href="/contact/"
-          class="inline-block bg-primary text-white px-6 py-2 rounded-lg hover:bg-blue-800 transition-colors"
-        >
-          Contact Us
-        </a>
-      </div>
 
     </div>
   </main>
@@ -312,11 +320,65 @@ ogImage: "/images/business/packaging.jpg"
 <script type="application/ld+json">
 {{ schema.generateSchemaScript([
   schema.getContentPageSchema(
-    "Packaging Materials Derbyshire | Removal Packing Supplies",
-    "Discover high-quality packaging materials in Derbyshire. Perfect for removals—order now!",
+    "Packing Services Derbyshire | Professional & Reliable Moving Help",
+    "Discover expert packing services in Derbyshire. Save time, protect your belongings, and get a free quote today!",
     "/packaging-material/",
-    "/images/business/packaging.jpg"
+    "/images/business/packing-services.webp"
   ),
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What does the packing service include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our packing service includes professional packing labour and suitable materials such as boxes, protective wrap, tape, and labels. You can choose full packing, part packing, or fragile-only packing."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer a fragile-only packing service?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We can pack fragile items such as glassware, ornaments, mirrors, artwork, and electronics, while you pack the rest if you prefer."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How far in advance should I book packing services?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Booking early is recommended, especially for weekends and end-of-month dates. If your move is soon, contact us and we will try to accommodate availability."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will you label boxes by room?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We label boxes by room and item type to support efficient loading, safe stacking, and quicker unpacking in your new home."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you pack items for storage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We can pack for storage with longer-term protection in mind and advise on what should remain accessible."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How are packing services priced?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pricing depends on the amount to pack, property size, access, and whether you choose full, part, or fragile-only packing. Request a free quote with your move details for an accurate price."
+        }
+      }
+    ]
+  },
   schema.organization
 ]) | safe }}
 </script>
