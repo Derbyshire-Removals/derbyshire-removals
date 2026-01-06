@@ -9,8 +9,20 @@ ogImage: "/images/business/3.jpg"
 <div class="min-h-screen bg-gray-100">
   <main class="container mx-auto px-4 pt-52 pb-16">
     <div class="max-w-4xl mx-auto">
+
+      <!-- Breadcrumb navigation (visible) -->
+      <nav aria-label="Breadcrumb" class="mb-6 text-sm text-gray-600">
+        <ol class="flex flex-wrap items-center gap-2">
+          <li><a href="/" class="hover:underline">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li><a href="/areas-we-cover/" class="hover:underline">Locations</a></li>
+          <li aria-hidden="true">/</li>
+          <li class="text-gray-900 font-medium" aria-current="page">Leicester</li>
+        </ol>
+      </nav>
+
       <div class="flex items-center mb-6">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#071059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#071059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2" aria-hidden="true">
           <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
           <circle cx="12" cy="10" r="3"></circle>
         </svg>
@@ -24,30 +36,31 @@ ogImage: "/images/business/3.jpg"
           With our expertise and professional approach, we ensure a smooth and efficient moving experience for all our Leicester customers.
         </p>
 
+        <!-- Services section design kept the same -->
         <div class="grid md:grid-cols-2 gap-6">
           <div class="flex items-center space-x-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
               <polyline points="22 4 12 14.01 9 11.01"></polyline>
             </svg>
             <span>House Removals</span>
           </div>
           <div class="flex items-center space-x-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
               <polyline points="22 4 12 14.01 9 11.01"></polyline>
             </svg>
             <span>Office Relocations</span>
           </div>
           <div class="flex items-center space-x-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
               <polyline points="22 4 12 14.01 9 11.01"></polyline>
             </svg>
             <span>Packing Services</span>
           </div>
           <div class="flex items-center space-x-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
               <polyline points="22 4 12 14.01 9 11.01"></polyline>
             </svg>
@@ -56,71 +69,123 @@ ogImage: "/images/business/3.jpg"
         </div>
       </section>
 
+      <!-- Navigation-focused hub section with H2s + descriptive anchor text -->
+      <section class="bg-white rounded-lg shadow-md p-8 mb-8">
+        <h2 class="text-2xl font-semibold mb-4">Find Your Local Removal Service in Leicester</h2>
+        <p class="text-gray-700 mb-6">
+          Jump to a local page for your area. These links are designed for quick navigation and clearer internal linking.
+        </p>
+
+        <div class="space-y-6">
+          <div>
+            <h2 class="text-xl font-semibold text-[#071059]">
+              <a class="hover:underline" href="/locations/leicester-city-centre/">Removals in Leicester City Centre</a>
+            </h2>
+            <p class="text-gray-700 mt-1">Help with apartments, terraces and city-centre access planning, including loading restrictions where needed.</p>
+          </div>
+
+          <div>
+            <h2 class="text-xl font-semibold text-[#071059]">
+              <a class="hover:underline" href="/locations/oadby/">Removals in Oadby</a>
+            </h2>
+            <p class="text-gray-700 mt-1">Ideal for home moves and family relocations with flexible scheduling around local routes.</p>
+          </div>
+
+          <div>
+            <h2 class="text-xl font-semibold text-[#071059]">
+              <a class="hover:underline" href="/locations/wigston/">Removals in Wigston</a>
+            </h2>
+            <p class="text-gray-700 mt-1">Reliable removals support for houses and businesses across Wigston and nearby areas.</p>
+          </div>
+
+          <div>
+            <h2 class="text-xl font-semibold text-[#071059]">
+              <a class="hover:underline" href="/locations/braunstone/">Removals in Braunstone</a>
+            </h2>
+            <p class="text-gray-700 mt-1">A practical option for local moves, packing support, and straightforward loading access.</p>
+          </div>
+
+          <div>
+            <h2 class="text-xl font-semibold text-[#071059]">
+              <a class="hover:underline" href="/locations/syston/">Removals in Syston</a>
+            </h2>
+            <p class="text-gray-700 mt-1">Great for moves heading towards the A46 corridor and surrounding Leicestershire towns.</p>
+          </div>
+
+          <div class="pt-2">
+            <p class="text-sm text-gray-500">
+              Note: if any of the above child pages don’t exist yet, create them or update the URLs to match your live slugs.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section class="bg-white rounded-lg shadow-md p-8 mb-8">
         <h2 class="text-2xl font-semibold mb-4">Areas We Cover in and around Leicester</h2>
         <div class="grid md:grid-cols-3 gap-4">
           <div class="flex items-center space-x-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#071059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#071059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
               <circle cx="12" cy="10" r="3"></circle>
             </svg>
-            <span>Leicester City Centre</span>
+            <a class="text-[#071059] hover:underline" href="/locations/leicester-city-centre/">Leicester City Centre</a>
           </div>
+
           <div class="flex items-center space-x-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#071059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#071059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
               <circle cx="12" cy="10" r="3"></circle>
             </svg>
-            <span>Oadby</span>
+            <a class="text-[#071059] hover:underline" href="/locations/oadby/">Oadby</a>
           </div>
+
           <div class="flex items-center space-x-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#071059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#071059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
               <circle cx="12" cy="10" r="3"></circle>
             </svg>
-            <span>Wigston</span>
+            <a class="text-[#071059] hover:underline" href="/locations/wigston/">Wigston</a>
           </div>
+
           <div class="flex items-center space-x-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#071059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#071059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
               <circle cx="12" cy="10" r="3"></circle>
             </svg>
-            <span>Braunstone</span>
+            <a class="text-[#071059] hover:underline" href="/locations/braunstone/">Braunstone</a>
           </div>
+
           <div class="flex items-center space-x-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#071059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#071059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
               <circle cx="12" cy="10" r="3"></circle>
             </svg>
-            <span>Syston</span>
+            <a class="text-[#071059] hover:underline" href="/locations/syston/">Syston</a>
           </div>
+
+          <!-- Kept as nearby towns (only link if pages exist) -->
           <div class="flex items-center space-x-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#071059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#071059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
               <circle cx="12" cy="10" r="3"></circle>
             </svg>
-            <span>Melton Mowbray</span>
+            <span>Hinckley</span>
           </div>
+
           <div class="flex items-center space-x-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#071059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#071059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
               <circle cx="12" cy="10" r="3"></circle>
             </svg>
             <span>Loughborough</span>
           </div>
+
           <div class="flex items-center space-x-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#071059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#071059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
               <circle cx="12" cy="10" r="3"></circle>
             </svg>
             <span>Market Harborough</span>
-          </div>
-          <div class="flex items-center space-x-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#071059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-              <circle cx="12" cy="10" r="3"></circle>
-            </svg>
-            <span>Hinckley</span>
           </div>
         </div>
       </section>
@@ -129,28 +194,28 @@ ogImage: "/images/business/3.jpg"
         <h2 class="text-2xl font-semibold mb-4">Why Choose Us for Your Leicester Move?</h2>
         <ul class="space-y-4">
           <li class="flex items-start space-x-3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-1" aria-hidden="true">
               <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
               <polyline points="22 4 12 14.01 9 11.01"></polyline>
             </svg>
-            <span>Experienced team familiar with Leicester's diverse neighborhoods</span>
+            <span>Experienced team familiar with Leicester's diverse neighbourhoods</span>
           </li>
           <li class="flex items-start space-x-3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-1" aria-hidden="true">
               <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
               <polyline points="22 4 12 14.01 9 11.01"></polyline>
             </svg>
             <span>Fully insured and professional removal specialists</span>
           </li>
           <li class="flex items-start space-x-3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-1" aria-hidden="true">
               <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
               <polyline points="22 4 12 14.01 9 11.01"></polyline>
             </svg>
             <span>Competitive rates with no hidden charges</span>
           </li>
           <li class="flex items-start space-x-3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-1" aria-hidden="true">
               <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
               <polyline points="22 4 12 14.01 9 11.01"></polyline>
             </svg>
@@ -158,6 +223,7 @@ ogImage: "/images/business/3.jpg"
           </li>
         </ul>
       </section>
+
     </div>
   </main>
 </div>
@@ -181,4 +247,32 @@ ogImage: "/images/business/3.jpg"
     region: "Leicestershire"
   })
 ) | safe }}
+</script>
+
+<!-- BreadcrumbList schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://derbyshireremovals.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Locations",
+      "item": "https://derbyshireremovals.com/areas-we-cover/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Leicester",
+      "item": "https://derbyshireremovals.com/locations/leicester/"
+    }
+  ]
+}
 </script>
