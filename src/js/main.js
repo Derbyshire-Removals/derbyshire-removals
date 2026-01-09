@@ -123,12 +123,21 @@ document.addEventListener('DOMContentLoaded', function() {
       submitButton.textContent = 'Submitting...';
 
       // Gather form data
-      const formData = {
+        const moveDate = form.querySelector('#move_date').value;
+        let formattedMoveDate = null;
+        if (moveDate) {
+          // Convert YYYY-MM-DD to DD-MM-YYYY
+          const [year, month, day] = moveDate.split('-');
+          formattedMoveDate = `${day}-${month}-${year}`;
+        }
+      
+        const formData = {
         first_name: form.querySelector('#first_name').value,
         email: form.querySelector('#email').value,
         phone: form.querySelector('#phone').value,
         mf_postcode: form.querySelector('#mf_postcode').value,
         mt_postcode: form.querySelector('#mt_postcode').value,
+        move_date: formattedMoveDate,
         // comments: form.querySelector('input[name="page"]').value,
         source: form.querySelector('#traffic-source').value
       };
