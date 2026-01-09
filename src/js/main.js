@@ -52,32 +52,32 @@ function setupMobileMenu() {
 function captureTrafficSource() {
   // Only capture on first page load in session
   if (!sessionStorage.getItem('trafficSource')) {
-    let source = 'direct';
+    let source = 'Directly via website';
     const referrer = document.referrer;
-    
+
     if (referrer) {
       const referrerDomain = new URL(referrer).hostname.toLowerCase();
-      
+
       // Check for common sources
       if (referrerDomain.includes('facebook.com') || referrerDomain.includes('fb.com')) {
-        source = 'facebook';
+        source = 'Facebook';
       } else if (referrerDomain.includes('google.com') || referrerDomain.includes('google.co.uk')) {
-        source = 'google';
+        source = 'Google';
       } else if (referrerDomain.includes('bing.com')) {
-        source = 'bing';
+        source = 'Bing';
       } else if (referrerDomain.includes('yahoo.com')) {
-        source = 'yahoo';
+        source = 'Yahoo';
       } else if (referrerDomain.includes('twitter.com') || referrerDomain.includes('t.co')) {
-        source = 'twitter';
+        source = 'Twitter';
       } else if (referrerDomain.includes('instagram.com')) {
-        source = 'instagram';
+        source = 'Instagram';
       } else if (referrerDomain.includes('linkedin.com')) {
-        source = 'linkedin';
+        source = 'LinkedIn';
       } else {
         source = 'referral: ' + referrerDomain;
       }
     }
-    
+
     // Check for UTM parameters
     const urlParams = new URLSearchParams(window.location.search);
     const utmSource = urlParams.get('utm_source');
@@ -88,7 +88,7 @@ function captureTrafficSource() {
       if (utmMedium) source += ' (' + utmMedium + ')';
       if (utmCampaign) source += ' - ' + utmCampaign;
     }
-    
+
     sessionStorage.setItem('trafficSource', source);
   }
 }
@@ -101,10 +101,62 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Populate traffic source in form
 document.addEventListener('DOMContentLoaded', function() {
-  // Set traffic source in hidden field for Netlify forms
   const trafficSourceField = document.getElementById('traffic-source');
   if (trafficSourceField) {
-    const trafficSource = sessionStorage.getItem('trafficSource') || 'direct';
+    const trafficSource = sessionStorage.getItem('trafficSource') || 'Directly via website';
     trafficSourceField.value = trafficSource;
+  }
+});
+
+// Handle contact form submission
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('contact-form');
+  if (form) {
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      const submitButton = form.querySelector('button[type="submit"]');
+      const originalButtonText = submitButton.textContent;
+
+      // Disable button and show loading state
+      submitButton.disabled = true;
+      submitButton.textContent = 'Submitting...';
+
+      // Gather form data
+      const formData = {
+        first_name: form.querySelector('#first_name').value,
+        email: form.querySelector('#email').value,
+        phone: form.querySelector('#phone').value,
+        mf_postcode: form.querySelector('#mf_postcode').value,
+        mt_postcode: form.querySelector('#mt_postcode').value,
+        // comments: form.querySelector('input[name="page"]').value,
+        source: form.querySelector('#traffic-source').value
+      };
+
+      try {
+        const response = await fetch('https://api.app.i-mve.com/job/user/695abd66812e0a25504c7979', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formData)
+        });
+
+        if (response.ok) {
+          // Store submission flag and redirect
+          sessionStorage.setItem('formSubmitted', 'true');
+          window.location.href = '/thank-you/';
+        } else {
+          throw new Error('Form submission failed');
+        }
+      } catch (error) {
+        console.error('Error submitting form:', error);
+        alert('There was an error submitting your form. Please try again or contact us directly.');
+
+        // Re-enable button
+        submitButton.disabled = false;
+        submitButton.textContent = originalButtonText;
+      }
+    });
   }
 });

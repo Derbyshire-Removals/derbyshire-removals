@@ -5,20 +5,16 @@
     {% endif %}
 
     <!-- Contact Form -->
-    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you/" class="space-y-4" onsubmit="sessionStorage.setItem('formSubmitted', 'true')">
-      <input type="hidden" name="form-name" value="contact">
+    <form id="contact-form" class="space-y-4">
       <input type="hidden" name="page" value="{{ pageName }}">
-      <input type="hidden" name="comments" id="traffic-source" value="">
-      <p class="hidden">
-        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
-      </p>
+      <input type="hidden" name="traffic-source" id="traffic-source" value="">
 
       <!-- Name Field -->
       <div>
-        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name *</label>
+        <label for="first_name" class="block text-sm font-medium text-gray-700 mb-1">Name *</label>
         <input
           type="text"
-          id="name"
+          id="first_name"
           name="first_name"
           required
           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
@@ -51,10 +47,10 @@
 
       <!-- Moving From Field -->
       <div>
-        <label for="moving-from" class="block text-sm font-medium text-gray-700 mb-1">Moving From (Postcode) *</label>
+        <label for="mf_postcode" class="block text-sm font-medium text-gray-700 mb-1">Moving From (Postcode) *</label>
         <input
           type="text"
-          id="moving-from"
+          id="mf_postcode"
           name="mf_postcode"
           required
           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
@@ -63,10 +59,10 @@
 
       <!-- Moving To Field -->
       <div>
-        <label for="moving-to" class="block text-sm font-medium text-gray-700 mb-1">Moving To (Postcode) *</label>
+        <label for="mt_postcode" class="block text-sm font-medium text-gray-700 mb-1">Moving To (Postcode) *</label>
         <input
           type="text"
-          id="moving-to"
+          id="mt_postcode"
           name="mt_postcode"
           required
           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
