@@ -8,7 +8,7 @@
     <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you/" class="space-y-4" onsubmit="sessionStorage.setItem('formSubmitted', 'true')">
       <input type="hidden" name="form-name" value="contact">
       <input type="hidden" name="page" value="{{ pageName }}">
-      <input type="hidden" name="traffic-source" id="traffic-source" value="">
+      <input type="hidden" name="comments" id="traffic-source" value="">
       <p class="hidden">
         <label>Don't fill this out if you're human: <input name="bot-field" /></label>
       </p>
@@ -19,7 +19,7 @@
         <input
           type="text"
           id="name"
-          name="name"
+          name="first_name"
           required
           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
         >
@@ -55,7 +55,7 @@
         <input
           type="text"
           id="moving-from"
-          name="moving_from"
+          name="mf_postcode"
           required
           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
         >
@@ -67,7 +67,7 @@
         <input
           type="text"
           id="moving-to"
-          name="moving_to"
+          name="mt_postcode"
           required
           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
         >
