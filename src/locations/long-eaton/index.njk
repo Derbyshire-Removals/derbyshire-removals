@@ -160,3 +160,12 @@ ogImage: "/images/business/4.jpg"
   </main>
 
 </div>
+<script type="application/ld+json">
+{{ schema.generateSchemaScript(
+  schema.getLocationPageSchema("Long Eaton", "+443335677001", {
+    latitude: 52.9,
+    longitude: -1.27,
+    region: "Derbyshire"
+  })
+) | safe }}
+</script>
