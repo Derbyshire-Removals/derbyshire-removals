@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="google-site-verification" content="_QIlNjGVsLWvf9OPbrw1-myG4XT9GL3GCp91R6rDNyg" />
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3233GSNYC5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-3233GSNYC5');
-</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KW8WZH4K');</script>
+<!-- End Google Tag Manager -->
+<meta name="google-site-verification" content="_QIlNjGVsLWvf9OPbrw1-myG4XT9GL3GCp91R6rDNyg" />
 
   <title>{{ title }}</title>
   <meta name="description" content="{{ description }}">
@@ -47,6 +46,10 @@
   {% block head %}{% endblock %}
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KW8WZH4K"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager -->
   <!-- Header -->
   {% include "partials/header.njk" %}
 
@@ -61,14 +64,6 @@
   <!-- Scripts -->
   <script src="/js/main.js" defer></script>
   
-  <!-- All pages - lightweight Google Ads tracking -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1693185269"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-1693185269');
-  </script>
 
   <!-- Additional scripts -->
   {% if additionalScripts %}
