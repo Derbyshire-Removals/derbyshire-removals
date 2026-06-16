@@ -16,11 +16,15 @@ ogImage: "/images/business/van.jpg"
       wherever you're relocating to or from.
     </p>
 
-    {# Only link additional areas if you actually have a /locations/... page for them #}
+    {# Only link additional areas if you actually have a /locations/... page for them.
+       Keys MUST match the names in locations.additionalAreas exactly (incl. hyphens/case). #}
     {% set additionalAreaLinks = {
-      "Leicester": "/locations/leicester/",
-      "Sheffield": "/locations/sheffield/",
-      "Birmingham": "/locations/birmingham/"
+      "Stoke-on-Trent": "/locations/stoke-on-trent/",
+      "Stafford": "/locations/stafford/",
+      "Wolverhampton": "/locations/wolverhampton/",
+      "Coventry": "/locations/coventry/",
+      "Walsall": "/locations/walsall/",
+      "Telford": "/locations/telford/"
     } %}
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
@@ -89,7 +93,7 @@ ogImage: "/images/business/van.jpg"
       <div class="mt-8 text-center">
         <p class="mb-4">Don't see your location listed? We likely still cover it!</p>
         <a
-          href="/contact"
+          href="/contact/"
           class="inline-block bg-primary text-white px-6 py-2 rounded-lg hover:bg-blue-800 transition-colors"
         >
           Contact Us to Confirm
