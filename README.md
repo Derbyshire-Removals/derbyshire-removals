@@ -36,6 +36,24 @@ To build the site for production:
 npm run build
 ```
 
+### Creating the Terms and Conditions PDF
+
+Pandoc and the Tectonic PDF engine must be installed. On macOS, install them
+with:
+
+```bash
+brew install pandoc tectonic
+```
+
+Then generate the PDF from the repository root with:
+
+```bash
+npm run pdf:terms
+```
+
+This creates `derbyshire-removals-terms-and-conditions.pdf` beside the Markdown
+source file.
+
 ### Deploying changes to live site
 
 To build the site for production:
