@@ -1,12 +1,12 @@
 ---
-version: "2.0"
+version: "2.1"
 header-includes:
   - |
     \usepackage{fancyhdr}
     \pagestyle{fancy}
     \fancyhf{}
     \fancyfoot[L]{Derbyshire Removals}
-    \fancyfoot[C]{Version 2.0}
+    \fancyfoot[C]{Version 2.1}
     \fancyfoot[R]{\thepage}
     \renewcommand{\headrulewidth}{0pt}
 ---
@@ -46,9 +46,9 @@ By signing this Contract you declare that the property to be handled is either y
 You agree:
 
 1. To be present or represented during the removal to ensure that nothing that should be removed is left behind and that no goods are taken away in error, or to provide in advance a list of all items to be removed.
-2. To arrange proper protection for goods left in unoccupied or unattended premises or where other people such as tenants or workmen are present. If such protection is not properly arranged we shall not be liable for damage or loss however caused.
-3. Not to offer for removal or storage items listed in Section 5A below.
-4. Not to offer for removal, packing or warehousing any article or substance which is dangerous, damaging or explosive, nor to offer for warehousing any article or substance including food or anything likely to encourage vermin or other pests or likely to cause infection. You will cover us fully against any claims made and for any loss or damage that we or someone else may suffer through the presence of any such article or substance among goods. If such article or substance is discovered we may remove, self destroy or other dispose of it.
+2. To ensure that goods left at unoccupied or unattended premises are reasonably secured and protected, and to control access to the goods where tenants, contractors, workmen or other third parties are present. We shall not be liable for loss or damage resulting from inadequate security, unauthorised access, or the actions of any third party not employed or appointed by us.
+3. Not to offer for removal or storage any item identified as a Completely Excluded Item in Section 5A below.
+4. Not to offer for removal, packing or warehousing any article or substance which is dangerous, damaging or explosive, nor to offer for warehousing any article or substance including food or anything likely to encourage vermin or other pests or likely to cause infection. You will cover us fully against any claims made and for any loss or damage that we or someone else may suffer through the presence of any such article or substance among the goods. If any such article or substance is discovered, we may remove, destroy or otherwise dispose of it.
 5. To pay or repay to us any parking or meter suspension charges we may have to pay during any work for you.
 6. Pay any toll/road/bridge charges that are incurred during the removal.
 
@@ -64,10 +64,7 @@ You agree:
 
 #### High-Value Items (Require Listing for Full Coverage)
 
-- Items valued over £500 individually must be listed before the move begins
-- Antiques and collectibles
-- Artwork and musical instruments
-- Electronics and computers
+- Any individual item valued at more than £500 must be listed in writing before the move begins to qualify for full coverage. This includes, but is not limited to, antiques, collectibles, artwork, musical instruments, electronics and computers where the individual item has a value exceeding £500.
 
 ## 6. Booking, Cancellation and Date Changes
 
@@ -95,7 +92,7 @@ You agree that we may:
 
 ## 8. Limits of Our Liability
 
-Your belongings are protected during the move up to a maximum of £25,000 total value.
+Your belongings are protected during the move up to a maximum total value of £25,000, subject to the limitations and exclusions set out in Section 9.
 
 **Important Requirements:**
 
@@ -111,9 +108,9 @@ We shall not be liable at all for any loss, failure to produce or damage however
 2. By war, war invasion, acts of foreign enemies, hostilities (whether war is declared or not), civil war, rebellion, insurrection or military coup, wear and tear or graded deterioration, leakage or deficiency of articles of a perishable or leaky nature, acts of God, consequential loss or circumstances beyond our control;
 3. By vermin, moth or other infestations;
 4. Arising from any process of cleaning, repairing or restoring of the goods unless such work was carried out by us in which case our liability is limited as in clause 8;
-5. To any articles in wardrobes or drawers or in any package, bundle, case or any other container not both packed and unpacked by our employees. If goods are only packed and dispatched by us no claim shall be made against us after the goods leave our hands for any loss or damage however caused.
-6. Items listed in Section 5A above;
-7. If goods are removed from or delivered to unattended or unoccupied premises or where third parties present (see clause 5b);
+5. To the contents of boxes, packages, cases, drawers, wardrobes or other containers packed or left therein by the customer or any person other than our employees, unless there is clear evidence that the loss or damage resulted directly from our negligence.
+6. To any items identified as Completely Excluded Items in Section 5A;
+7. If goods are removed from or delivered to unattended or unoccupied premises, or where third parties are present (see Section 5.2);
 8. If goods are proved to be brittle or to have any inherent defect or to suffer from any inherent vice.
 
 ## 10. Deep Freeze
@@ -127,7 +124,7 @@ We shall not be liable for:
 
 ## 11. Self Assembly Kit Furniture
 
-We shall not be liable for any damage to or reduction in quality of any furniture which is unsuitable for removal or carriage (particularly system furniture sold in the form of dismantled kits). Having dismantled such furniture at your instruction, we will not be responsible for the quality or state of that furniture upon re-assembling either by us or by you not for any damage to the furniture during dismantling or re-assembling.
+We shall not be liable for any damage to or reduction in quality of any furniture which is unsuitable for removal or carriage, particularly self-assembly or flat-pack furniture. Where such furniture is dismantled at your instruction, we will not be responsible for its condition or quality upon reassembly, whether reassembled by us or by you, nor for any damage occurring during dismantling or reassembly.
 
 ## 12. Time Limits for Claims
 
@@ -147,7 +144,7 @@ If our charges are not paid (see clause 3) we may take all or any part of the go
 
 ## 15. Lien
 
-("Lien" means the right to keep possession for someone else property until a debt is paid)
+("Lien" means the right to keep possession of someone else's property until a debt is paid.)
 
 ### A. General Lien
 
@@ -157,7 +154,7 @@ We shall be entitled to charge warehouse rent and all other expenses while we ma
 
 ### B. Particular Lien
 
-We shall have a particular lien until money due on those goods is paid and the same condition as in 15a shall apply.
+We shall have a particular lien until money due on those goods is paid, and the same conditions as set out in Section 15A shall apply.
 
 ## 16. End of Agreement/Power of Sale
 
@@ -167,22 +164,20 @@ Any surplus will be paid to you without interest.
 
 ## 17. Storage Additional Conditions
 
-1. **Registered Address:** You must provide an address to which all communications are to be directed and shall notify us in writing of any change. All communications to you will be treated as having been duly served and received 3 days after posting:
-   - If sent by post to the registered address from which the last communication was received from you; or
-   - If there is no registered address, by publication in a public newspaper circulating in the area from which the goods were removed.
-2. **Inventory:** If we provide an inventory or receipt for the goods it need not state the contents of any article, suite, case, bundle, package or other container. The inventory or receipt shall be final except for any specific item which you point out in writing within 7 days of receiving the inventory. No claim may be made in respect of any item not described in the inventory or receipt.
+1. **Registered Address:** You must provide us with an address for all communications and notify us in writing of any change. Any notice or communication sent by post to the last address you provided to us will be treated as having been received 3 days after posting. If you fail to notify us of a change of address, we may continue to use the last address provided by you.
+2. **Inventory:** If we provide an inventory or receipt for the goods it need not state the contents of any article, suite, case, bundle, package or other container. The inventory or receipt shall be final except for any specific item which you point out in writing within 7 days of receiving the inventory. No claim may be made for the loss of an individual item alleged to have been contained within a box, package, case or other container unless that item was specifically identified in writing before storage or there is other clear evidence that the item was in our custody.
 3. **Revision of Your Storage Charges:** Storage charges are subject to revision each year and you agree to pay any increased charge which may result from the revision.
 4. **Termination by Us:** If payments due are not in arrears we may only end this agreement by giving 30 days notice.
-5. **Termination by You:** You must give at least 14 clear working days notice in writing. If we are able to agree to release the goods earlier, the storage charges may still be payable to the date when the notice would have ended.
+5. **Termination by You:** You must give us at least 14 working days' written notice to end the storage agreement. If we agree to release the goods earlier, storage charges may still remain payable up to the date on which the 14 working day notice period would have expired.
 6. The minimum period for storage shall be four weeks.
 7. **Storage Protection:** Storage insurance available - please discuss coverage limits and requirements at time of booking.
 8. **Collection or Removal by a Company You Appoint:** If, after we have moved your goods into storage, you appoint another removal company or third party to collect or move them, we are not responsible for any loss or damage caused by that company or third party or occurring after the goods pass into its custody. We remain responsible for any loss or damage caused by us before handover and for any business we appoint under Section 7.
 
 ### Excluded from Storage Insurance
 
-- Items listed in Section 5A above
-- Items in customer-packed boxes (contents unknown)
-- Perishable items, plants, livestock
+- Items identified as Completely Excluded Items in Section 5A above.
+- Items in customer-packed boxes (contents unknown).
+- Perishable items, plants, livestock.
 
 ## 18. This Agreement
 
