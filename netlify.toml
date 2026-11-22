@@ -4,6 +4,9 @@
   publish = "dist"
   environment = { NODE_VERSION = "18" }
 
+[functions]
+  directory = "netlify/functions"
+
 [[redirects]]
   from = "/services/home-removals"
   to = "/services/house-removals"

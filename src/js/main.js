@@ -108,61 +108,22 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-// Handle contact form submission
+// Mark valid native form submissions for thank-you-page conversion tracking.
 document.addEventListener('DOMContentLoaded', function() {
   const form = document.getElementById('contact-form');
   if (form) {
-    form.addEventListener('submit', async function(e) {
-      e.preventDefault();
+    const submitButton = form.querySelector('button[type="submit"]');
+    const originalButtonText = submitButton.textContent.trim();
 
-      const submitButton = form.querySelector('button[type="submit"]');
-      const originalButtonText = submitButton.textContent;
-
-      // Disable button and show loading state
+    form.addEventListener('submit', function() {
       submitButton.disabled = true;
       submitButton.textContent = 'Submitting...';
+      sessionStorage.setItem('formSubmitted', 'true');
+    });
 
-      // Gather form data
-        const moveDate = form.querySelector('#move_date').value;
-        let formattedMoveDate = null;
-        if (moveDate) {
-          // Convert YYYY-MM-DD to DD-MM-YYYY
-          const [year, month, day] = moveDate.split('-');
-          formattedMoveDate = `${day}-${month}-${year}`;
-        }
-      
-        const formData = {
-        first_name: form.querySelector('#first_name').value,
-        email: form.querySelector('#email').value,
-        phone: form.querySelector('#phone').value,
-        mf_postcode: form.querySelector('#mf_postcode').value,
-        mt_postcode: form.querySelector('#mt_postcode').value,
-        move_date: formattedMoveDate,
-        // comments: form.querySelector('input[name="page"]').value,
-        source: form.querySelector('#traffic-source').value
-      };
-
-      try {
-        const response = await fetch('https://api.app.i-mve.com/job/user/695abd66812e0a25504c7979', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(formData)
-        });
-
-        if (response.ok) {
-          // Store submission flag and redirect
-          sessionStorage.setItem('formSubmitted', 'true');
-          window.location.href = '/thank-you/';
-        } else {
-          throw new Error('Form submission failed');
-        }
-      } catch (error) {
-        console.error('Error submitting form:', error);
-        alert('There was an error submitting your form. Please try again or contact us directly.');
-
-        // Re-enable button
+    // Browsers may preserve button state when restoring a page from history.
+    window.addEventListener('pageshow', function(event) {
+      if (event.persisted) {
         submitButton.disabled = false;
         submitButton.textContent = originalButtonText;
       }

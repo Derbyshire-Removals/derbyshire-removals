@@ -5,9 +5,22 @@
     {% endif %}
 
     <!-- Contact Form -->
-    <form id="contact-form" class="space-y-4">
+    <form
+      id="contact-form"
+      name="contact"
+      method="POST"
+      action="/thank-you/"
+      data-netlify="true"
+      netlify-honeypot="website"
+      class="space-y-4"
+    >
       <input type="hidden" name="page" value="{{ pageName }}">
       <input type="hidden" name="traffic-source" id="traffic-source" value="">
+
+      <!-- Netlify honeypot. -->
+      <div class="sr-only" aria-hidden="true">
+        <input type="text" name="website" tabindex="-1" autocomplete="off">
+      </div>
 
       <!-- Name Field -->
       <div>
@@ -83,7 +96,7 @@
       <!-- Submit Button -->
       <button
         type="submit"
-        class="w-full bg-primary text-white py-2 px-4 rounded-md hover:bg-opacity-90 transition-colors"
+        class="w-full bg-primary text-white py-2 px-4 rounded-md hover:bg-opacity-90 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
       >
         Submit Enquiry
       </button>
