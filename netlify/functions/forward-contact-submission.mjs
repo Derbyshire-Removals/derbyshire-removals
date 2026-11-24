@@ -11,9 +11,22 @@ function formatMoveDate(moveDate) {
   return `${day}-${month}-${year}`;
 }
 
-function getRequiredField(data, fieldName) {
+function getRequiredField(data, fieldName, maxLength) {
   const value = data[fieldName];
-  return typeof value === 'string' ? value.trim() : '';
+
+  if (typeof value !== 'string') {
+    return '';
+  }
+
+  const trimmedValue = value.trim();
+
+  if (maxLength && trimmedValue.length > maxLength) {
+    console.warn(
+      `Truncated ${fieldName} from ${trimmedValue.length} to ${maxLength} characters.`
+    );
+  }
+
+  return maxLength ? trimmedValue.slice(0, maxLength) : trimmedValue;
 }
 
 function summariseFields(data) {
@@ -48,8 +61,8 @@ export default {
       'first_name',
       'email',
       'phone',
-      'mf_postcode',
-      'mt_postcode'
+      'mf_add1',
+      'mt_add1'
     ];
 
     console.log(
@@ -67,8 +80,8 @@ export default {
       first_name: getRequiredField(data, 'first_name'),
       email: getRequiredField(data, 'email'),
       phone: getRequiredField(data, 'phone'),
-      mf_postcode: getRequiredField(data, 'mf_postcode'),
-      mt_postcode: getRequiredField(data, 'mt_postcode'),
+      mf_add1: getRequiredField(data, 'mf_add1', 200),
+      mt_add1: getRequiredField(data, 'mt_add1', 200),
       move_date: formatMoveDate(data.move_date),
       source: getRequiredField(data, 'traffic-source') || 'Directly via website'
     };
