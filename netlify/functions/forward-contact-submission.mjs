@@ -29,21 +29,6 @@ function getRequiredField(data, fieldName, maxLength) {
   return maxLength ? trimmedValue.slice(0, maxLength) : trimmedValue;
 }
 
-function summariseFields(data) {
-  return Object.fromEntries(
-    Object.entries(data)
-      .sort(([firstName], [secondName]) => firstName.localeCompare(secondName))
-      .map(([fieldName, value]) => [
-        fieldName,
-        {
-          type: value === null ? 'null' : typeof value,
-          length: typeof value === 'string' ? value.length : null,
-          trimmedLength: typeof value === 'string' ? value.trim().length : null
-        }
-      ])
-  );
-}
-
 function redactSubmittedValues(responseBody, formData) {
   return Object.entries(formData).reduce((redactedBody, [fieldName, value]) => {
     if (typeof value !== 'string' || value.length < 3) {
@@ -65,11 +50,6 @@ export default {
       'mt_add1'
     ];
 
-    console.log(
-      'Received verified form data:',
-      JSON.stringify(summariseFields(data))
-    );
-
     // Ignore verified submissions from any other forms added to the site later.
     if (requiredFields.some((fieldName) => !getRequiredField(data, fieldName))) {
       console.log('Skipping a verified submission that is not a complete contact enquiry.');
@@ -86,11 +66,6 @@ export default {
       source: getRequiredField(data, 'traffic-source') || 'Directly via website'
     };
 
-    console.log(
-      'Prepared i-Mve payload:',
-      JSON.stringify(summariseFields(formData))
-    );
-
     const response = await fetch(IMVE_ENDPOINT, {
       method: 'POST',
       headers: {
@@ -99,11 +74,8 @@ export default {
       body: JSON.stringify(formData)
     });
 
-    const responseBody = await response.text();
-
-    console.log('i-Mve response status:', response.status);
-
     if (!response.ok) {
+      const responseBody = await response.text();
       const safeResponseBody = redactSubmittedValues(responseBody, formData)
         .slice(0, 2000);
 
